@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\caption{Ambiguity-heavy affordance grounding on the held-out test split (\(512\) queries, \(8\) affordances, \(64\) queries per affordance). All prompts are semantically under-specified functional descriptions such as \texttt{something to carry things in .}, \texttt{something to drink from .}, and \texttt{something to talk on .}.}
+\label{tab:ambiguity-affordance}
+\begin{tabular}{lrrrrr}
+\toprule
+Affordance & Baseline & ThinkDet Stage 2 & ThinkDet Unified & Full Pipeline & Best \(\Delta\) vs Base \\
+\midrule
+\texttt{carry\_in}   & 15.62\% & 20.31\% & \textbf{21.88\%} & 18.75\% & \textbf{+6.25pp} \\
+\texttt{cut\_with}   &  6.25\% &  6.25\% &  6.25\% & \textbf{7.81\%} & \textbf{+1.56pp} \\
+\texttt{drink\_from} & 37.50\% & 39.06\% & 40.62\% & \textbf{50.00\%} & \textbf{+12.50pp} \\
+\texttt{eat\_with}   & \textbf{4.69\%} & \textbf{4.69\%} & \textbf{4.69\%} & 3.12\% & +0.00pp \\
+\texttt{read}        & 18.75\% & 18.75\% & 18.75\% & \textbf{21.88\%} & \textbf{+3.12pp} \\
+\texttt{ride}        & 31.25\% & \textbf{32.81\%} & \textbf{32.81\%} & \textbf{32.81\%} & \textbf{+1.56pp} \\
+\texttt{sit\_on}     &  4.69\% &  4.69\% &  1.56\% & \textbf{7.81\%} & \textbf{+3.12pp} \\
+\texttt{talk\_on}    & 17.19\% & 15.62\% & \textbf{23.44\%} & 20.31\% & \textbf{+6.25pp} \\
+\midrule
+Overall & 16.99\% & 17.77\% & 18.75\% & \textbf{20.31\%} & \textbf{+3.32pp} \\
+\bottomrule
+\end{tabular}
+\end{table*}

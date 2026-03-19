@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThinkDet Architecture - Clean Version</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f4f5f7;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+    }
+
+    .figure-wrapper {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 30px;
+      width: 100%;
+      max-width: 1100px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .svg-container {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+
+    .caption {
+      margin-top: 20px;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #475569;
+      text-align: justify;
+    }
+
+    .caption b {
+      color: #1e293b;
+    }
+
+    .code {
+      font-family: monospace;
+      background: #f1f5f9;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="figure-wrapper">
+    <svg class="svg-container" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg"
+      font-family="'Inter', sans-serif">
+      <defs>
+        <marker id="arrow-dark" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+          <path d="M0,0 L6,2 L0,4 z" fill="#334155" />
+        </marker>
+        <marker id="arrow-blue" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+          <path d="M0,0 L6,2 L0,4 z" fill="#3b82f6" />
+        </marker>
+        <marker id="arrow-purple" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+          <path d="M0,0 L6,2 L0,4 z" fill="#8b5cf6" />
+        </marker>
+        <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+          <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.08" />
+        </filter>
+      </defs>
+
+      <!-- BACKGROUND REGIONS -->
+
+      <!-- GroundingDINO (Frozen) Background -->
+      <rect x="250" y="20" width="730" height="260" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"
+        stroke-dasharray="6,4" />
+      <text x="265" y="45" font-size="12" font-weight="600" fill="#64748b" letter-spacing="1">GROUNDING DINO (Baseline /
+        Frozen)</text>
+
+      <!-- ThinkDet (Trainable) Background -->
+      <rect x="250" y="320" width="730" height="260" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"
+        stroke-dasharray="6,4" />
+      <text x="265" y="345" font-size="12" font-weight="600" fill="#3b82f6" letter-spacing="1">THINKDET AUGMENTATION
+        (Trainable TMA)</text>
+
+      <!-- INPUTS -->
+      <g filter="url(#shadow)">
+        <rect x="20" y="100" width="140" height="60" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+        <text x="90" y="130" text-anchor="middle" font-size="14" font-weight="600" fill="#0f172a">Image</text>
+        <text x="90" y="145" text-anchor="middle" font-size="10" fill="#64748b">[B, 3, H, W]</text>
+      </g>
+      <g filter="url(#shadow)">
+        <rect x="20" y="180" width="140" height="60" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+        <text x="90" y="210" text-anchor="middle" font-size="14" font-weight="600" fill="#0f172a">Text Query</text>
+        <text x="90" y="225" text-anchor="middle" font-size="10" fill="#64748b">e.g., "rightmost sheep"</text>
+      </g>
+
+      <!-- GROUNDING DINO PATH (TOP) -->
+
+      <!-- Adapters / Encoders -->
+      <g filter="url(#shadow)">
+        <rect x="280" y="70" width="160" height="60" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="1.5" />
+        <text x="360" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#065f46">Vision Encoder</text>
+        <text x="360" y="115" text-anchor="middle" font-size="10" fill="#059669">Swin-T</text>
+      </g>
+
+      <g filter="url(#shadow)">
+        <rect x="280" y="180" width="160" height="60" rx="8" fill="#ffffff" stroke="#eab308" stroke-width="1.5" />
+        <text x="360" y="210" text-anchor="middle" font-size="13" font-weight="600" fill="#854d0e">Text Encoder</text>
+        <text x="360" y="225" text-anchor="middle" font-size="10" fill="#ca8a04">BERT</text>
+      </g>
+
+      <!-- Detection Decoder Area -->
+      <rect x="520" y="60" width="280" height="200" rx="8" fill="#ffffff" stroke="#64748b" stroke-width="2"
+        filter="url(#shadow)" />
+      <text x="660" y="85" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Detection Decoder (6
+        Layers)</text>
+
+      <!-- Decoder Memory Buffers -->
+      <rect x="540" y="110" width="240" height="30" rx="4" fill="#f0fdf4" stroke="#86efac" stroke-width="1" />
+      <text x="660" y="129" text-anchor="middle" font-size="11" font-weight="600" fill="#166534">Image Memory →
+        Deformable Attn</text>
+
+      <rect x="540" y="150" width="240" height="30" rx="4" fill="#fefce8" stroke="#fde047" stroke-width="1" />
+      <text x="660" y="169" text-anchor="middle" font-size="11" font-weight="600" fill="#854d0e">Text Memory (Q) →
+        Cross-Attn</text>
+
+      <!-- Injection Layer Indicators -->
+      <circle cx="530" cy="165" r="5" fill="#8b5cf6" />
+      <circle cx="530" cy="205" r="5" fill="#8b5cf6" />
+
+      <!-- THINKDET PATH (BOTTOM) -->
+
+      <!-- InternVL box -->
+      <g filter="url(#shadow)">
+        <rect x="280" y="420" width="180" height="90" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" />
+        <text x="370" y="445" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">InternVL3.5-1B</text>
+        <text x="370" y="460" text-anchor="middle" font-size="10" fill="#3b82f6">(Frozen)</text>
+        <line x1="290" y1="470" x2="450" y2="470" stroke="#bfdbfe" stroke-width="1" />
+        <text x="370" y="485" text-anchor="middle" font-size="10" fill="#1e40af">H_vlm (Layer 9)</text>
+        <text x="370" y="498" text-anchor="middle" font-size="9" fill="#64748b">[B, 256, 1024]</text>
+      </g>
+
+      <!-- TMA Adapter (Augmenter) -->
+      <g filter="url(#shadow)">
+        <rect x="530" y="420" width="160" height="90" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="2" />
+        <text x="610" y="445" text-anchor="middle" font-size="13" font-weight="700" fill="#4c1d95">TMA Augmenter</text>
+        <circle cx="540" cy="442" r="4" fill="#8b5cf6" />
+        <line x1="540" y1="460" x2="680" y2="460" stroke="#ddd6fe" stroke-width="1" />
+        <text x="610" y="475" text-anchor="middle" font-size="10" fill="#5b21b6">MLP → CrossAttn(M=8)</text>
+        <text x="610" y="495" text-anchor="middle" font-size="10" font-weight="600" fill="#8b5cf6">aug_tokens = Y ×
+          tanh(α)</text>
+      </g>
+
+      <!-- Residual Fusion box -->
+      <g filter="url(#shadow)">
+        <rect x="760" y="420" width="160" height="90" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.5" />
+        <text x="840" y="445" text-anchor="middle" font-size="12" font-weight="700" fill="#4c1d95">Residual
+          Fusion</text>
+        <line x1="770" y1="455" x2="910" y2="455" stroke="#ddd6fe" stroke-width="1" />
+        <text x="840" y="470" text-anchor="middle" font-size="9" fill="#5b21b6">Q: Memory, KV: aug_tokens</text>
+        <text x="840" y="485" text-anchor="middle" font-size="10" fill="#7c3aed">δ = zero_init_MLP()</text>
+        <text x="840" y="500" text-anchor="middle" font-size="10" font-weight="600" fill="#6d28d9">TextMemory + δ</text>
+      </g>
+
+      <!-- Output Box -->
+      <g filter="url(#shadow)">
+        <rect x="850" y="130" width="120" height="60" rx="8" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.5" />
+        <text x="910" y="160" text-anchor="middle" font-size="13" font-weight="600" fill="#9f1239">Detections</text>
+        <text x="910" y="175" text-anchor="middle" font-size="10" fill="#e11d48">boxes + logits</text>
+      </g>
+
+      <!-- ARROWS AND CONNECTIONS -->
+
+      <!-- Input to Encoders -->
+      <path d="M 160 130 C 220 130, 220 100, 280 100" fill="none" stroke="#64748b" stroke-width="1.5"
+        marker-end="url(#arrow-dark)" />
+      <path d="M 160 210 L 280 210" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow-dark)" />
+
+      <!-- Input to MLLM -->
+      <path d="M 100 160 C 100 280, 220 460, 280 460" fill="none" stroke="#3b82f6" stroke-width="1.5"
+        marker-end="url(#arrow-blue)" />
+      <path d="M 160 210 C 200 210, 220 480, 280 480" fill="none" stroke="#3b82f6" stroke-width="1.5"
+        marker-end="url(#arrow-blue)" />
+
+      <!-- Label on MLLM inputs -->
+      <text x="210" y="380" font-size="10" fill="#3b82f6" transform="rotate(45,210,380)">[ Image + Text ]</text>
+
+      <!-- Encoders to Decoder -->
+      <path d="M 440 100 C 480 100, 480 120, 540 120" fill="none" stroke="#10b981" stroke-width="1.5"
+        marker-end="url(#arrow-dark)" />
+      <path d="M 440 210 C 480 210, 480 165, 540 165" fill="none" stroke="#eab308" stroke-width="1.5"
+        marker-end="url(#arrow-dark)" />
+
+      <!-- InternVL to Augmenter -->
+      <path d="M 460 465 L 530 465" fill="none" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)" />
+
+      <!-- Augmenter to Fusion -->
+      <path d="M 690 465 L 760 465" fill="none" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow-purple)" />
+
+      <!-- Fusion to Decoder Memory (The Injection) -->
+      <!-- Draws a smooth curve upwards pointing to Text Memory -->
+      <path d="M 840 420 C 840 300, 660 300, 660 180" fill="none" stroke="#8b5cf6" stroke-width="2"
+        stroke-dasharray="6,4" marker-end="url(#arrow-purple)" />
+
+      <!-- Injection Annotation -->
+      <rect x="710" y="275" width="200" height="26" rx="4" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1" />
+      <text x="810" y="292" text-anchor="middle" font-size="10" font-weight="600" fill="#6d28d9">Inject @ Layers {1, 3,
+        5}</text>
+
+      <!-- Decoder to Output -->
+      <path d="M 800 160 L 850 160" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow-dark)" />
+
+      <!-- Initialization details -->
+      <text x="610" y="530" text-anchor="middle" font-size="10" font-style="italic" fill="#64748b">Gate initialized to α
+        = 0</text>
+      <text x="840" y="530" text-anchor="middle" font-size="10" font-style="italic" fill="#64748b">Identity at
+        init</text>
+
+    </svg>
+
+    <div class="caption">
+      <b>Figure: ThinkDet Architecture.</b> The pipeline consists of two parallel streams. Top (<b>Baseline</b>):
+      GroundingDINO processes images via Swin-T and text queries via BERT, feeding into a 6-layer detection decoder.
+      Bottom (<b>Trainable</b>): To handle reasoning-heavy prompts, the same image and query are embedded into a frozen
+      InternVL3.5-1B. Hidden states (<b>H<sub>vlm</sub></b>) from layer 9 are passed to the <b>TMA Augmenter</b>, which
+      produces 8 summary tokens (scaled by <span class="code">tanh(α)</span>). These are integrated seamlessly via
+      <b>Residual Fusion</b>, dynamically adjusting the text memory inside detection decoding layers {1, 3, 5}. The gate
+      <span class="code">α</span> is initialized securely at 0, forcing baseline equivalence at initialization.
+    </div>
+  </div>
+
+</body>
+
+</html>

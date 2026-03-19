@@ -1,0 +1,99 @@
+# ThinkDet
+
+ThinkDet is an experimental adapter for open-vocabulary grounding.
+It keeps GroundingDINO and InternVL frozen, extracts query-conditioned
+InternVL hidden states, compresses them into a small set of summary tokens,
+and injects those tokens into GroundingDINO's decoder text memory.
+
+## Current Status
+
+- This is a research prototype, not a production detector.
+- The repo has one interesting positive result:
+  a small gain on a corrected held-out affordance benchmark built from COCO val
+  (`16.99% -> 17.77%` hit@0.5 top-1 for baseline vs Stage 2).
+- The repo also has clear negative results:
+  the early Stage 1 and Stage 2 checkpoints regress on standard COCO AP and
+  RefCOCO-family referring expression evaluation.
+- The unified residual run mostly recovers baseline COCO AP, but it does not
+  establish a broad win across standard benchmarks.
+
+## What The Evidence Supports
+
+- Adapter mechanism is real and implemented in the active codepath.
+- Query-conditioned InternVL features can produce small gains on a narrow
+  functional-query stress test.
+- Historical artifacts suggested calibration gains, but the corrected
+  query-conditioned scorer rerun does not preserve that result.
+
+## What The Evidence Does Not Support
+
+- ThinkDet is not a general improvement to GroundingDINO.
+- ThinkDet is not a proven reasoning detector.
+- ThinkDet is not close to SOTA on the custom affordance benchmark.
+
+## Active Codepath
+
+- `models/arch.py`
+- `models/projector.py`
+- `models/cross_attention.py`
+- `models/decoder_layer.py`
+- `scripts/training/train_stage1_tma.py`
+- `scripts/training/train_stage2_tma.py`
+- `scripts/training/train_unified.py`
+- `scripts/eval/eval_official_protocol.py`
+- `scripts/eval/eval_affordance_benchmark.py`
+
+## Thesis Framing
+
+If this repo is used for a thesis, the safest claim is:
+
+- ThinkDet is a lightweight MLLM-to-detector adapter for ambiguity-heavy
+  grounding.
+- It can help on some affordance-style prompts.
+- The gains are narrow and sensitive to scoring, ranking, and fallback policy.
+
+The thesis story should use this order:
+
+1. corrected query-conditioned base scoring
+2. ThinkDet as the primary detector
+3. LLM fallback as a secondary recovery policy
+
+The LLM fallback should be described as:
+
+- candidate feedback first
+- prompt refinement second
+- semantic-preservation guard enabled for refinement
+
+Do not present fallback as proof that the base detector is intelligent.
+Treat it as an inference-time recovery mechanism.
+
+## Key Artifacts
+
+- Corrected affordance benchmark summary:
+  `results/eval/affordance_benchmark_eval_v1_test_corrected_20260308.md`
+- Historical affordance benchmark summary:
+  `results/eval/affordance_benchmark_eval_v1_test.md`
+- Official COCO protocol eval:
+  `results/eval/official_protocol_eval.json`
+- RefCOCO family summary:
+  `results/eval/refcoco_full_summary_20260220.md`
+- Thesis readiness plan:
+  `docs/thesis_readiness_plan.md`
+
+Important:
+
+- The historical affordance summary above predates a later query-conditioned
+  scoring fix in `scripts/eval/eval_affordance_benchmark.py`.
+- The corrected rerun is now saved in
+  `results/eval/affordance_benchmark_eval_v1_test_corrected_20260308.json`
+  and `.md`.
+- A concrete ranking-failure diagnostic is saved under
+  `results/inference/diagnostic_topk_carry_in_99114_20260307_112733.json`
+  and the corrected post-fix ranking for that case is in
+  `results/inference/postfix_topk_carry_in_99114_20260307_114742.json`.
+
+## Repo Hygiene
+
+- Broken legacy one-off scripts and tests have been removed.
+- Historical docs remain under `docs/` and `paper/`, but the current repo
+  position is the conservative one described here.

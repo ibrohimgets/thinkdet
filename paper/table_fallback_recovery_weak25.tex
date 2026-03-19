@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\caption{Weak-Case Fallback Recovery on the Held-Out Affordance Test. The slice contains the lowest 25\% of Stage-2 baseline-confidence cases (\(n=128\) of 512). We compare the corrected Stage-2 base detector against the same checkpoint with LLM yes/no reranking enabled. This table should be interpreted as a fallback recovery analysis, not a general base-detector improvement table.}
+\label{tab:fallback-weak25}
+\begin{tabular}{lrrrrr}
+\toprule
+Affordance & \(n\) & Stage 2 & Stage 2 + rerank & \(\Delta\) & Relative \\
+\midrule
+\texttt{carry\_in}   & 24 & 25.00\% & 20.83\% & -4.17pp & -16.7\% \\
+\texttt{cut\_with}   & 24 &  8.33\% &  8.33\% & +0.00pp & +0.0\% \\
+\texttt{drink\_from} & 16 & 25.00\% & \textbf{43.75\%} & \textbf{+18.75pp} & \textbf{+75.0\%} \\
+\texttt{eat\_with}   & 16 &  0.00\% &  0.00\% & +0.00pp & --- \\
+\texttt{read}        &  8 & 12.50\% & \textbf{25.00\%} & \textbf{+12.50pp} & \textbf{+100.0\%} \\
+\texttt{ride}        &  1 &  0.00\% &  0.00\% & +0.00pp & --- \\
+\texttt{sit\_on}     & 16 &  6.25\% & \textbf{12.50\%} & \textbf{+6.25pp} & \textbf{+100.0\%} \\
+\texttt{talk\_on}    & 23 &  4.35\% & \textbf{17.39\%} & \textbf{+13.04pp} & \textbf{+300.0\%} \\
+\midrule
+Overall & 128 & 11.72\% & \textbf{17.19\%} & \textbf{+5.47pp} & \textbf{+46.7\%} \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,418 @@
+\documentclass{uai2026} % for initial submission
+% \documentclass[accepted]{uai2026} % after acceptance
+
+\usepackage[american]{babel}
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\renewcommand{\bibsection}{\subsubsection*{References}}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\title{ThinkDet: An Experimental VLM Adapter for Functional Query Grounding}
+
+% Author block is automatically hidden for anonymous submission when the
+% 'accepted' option is not used.
+\author[1]{Anonymous Authors}
+\affil[1]{Anonymous Institution}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+ThinkDet is an experimental adapter that injects query-conditioned hidden states
+from a frozen vision-language model into a frozen open-vocabulary detector.
+The mechanism is lightweight: InternVL hidden states are pooled into eight
+summary tokens by a Text Memory Augmenter and fused into selected
+GroundingDINO decoder layers. Across the saved repo artifacts, the evidence is
+mixed rather than uniformly positive. Historical repo artifacts show small
+gains on a held-out affordance benchmark together with improved top-1
+calibration, but a corrected rerun with query-conditioned scoring changes that
+picture: Stage 2 improves affordance top-1 hit rate only slightly
+(\(16.99\%\rightarrow17.77\%\)) and does not preserve the earlier calibration
+gain. The main early checkpoints also regress on standard benchmarks,
+including official COCO AP and all reported RefCOCO-family splits for the
+primary Stage-2 checkpoint. We therefore present ThinkDet as a narrow
+functional-query stress-test result, not as a general improvement to
+open-vocabulary detection. The main value of the current project is an honest
+research artifact: a plausible adapter mechanism, a small affordance-specific
+gain, and clear evidence that this gain does not transfer cleanly to standard
+detection settings.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+Open-vocabulary object detectors such as GroundingDINO \citep{groundingdino2023}
+work well on standard referential queries, but they can become unstable on
+functional prompts such as \emph{something to talk on} or
+\emph{something to carry things in}. ThinkDet explores whether a frozen
+vision-language model can supply extra semantics for that narrow regime without
+retraining the detector end-to-end.
+
+The core mechanism is straightforward. We extract query-conditioned InternVL
+hidden states, pool them into a small set of learned summary tokens, and fuse
+those tokens into GroundingDINO's decoder text memory. This yields a compact
+adapter with a low trainable-parameter budget and a clear interface between the
+VLM and detector.
+
+The important repo-level conclusion is not that ThinkDet broadly solves
+reasoning-guided detection. The saved artifacts instead show a mixed result:
+small gains on a custom functional-query benchmark, alongside regressions on
+standard COCO and RefCOCO-family evaluation. This paper draft is therefore
+best read as a narrow experimental study rather than a general detector claim.
+
+\paragraph{Contributions.}
+\begin{enumerate}
+\item We implement a parameter-efficient adapter that injects query-conditioned VLM features into a frozen detector.
+\item We define and evaluate a small held-out affordance benchmark with calibration-focused metrics.
+\item We show a mixed empirical result: a small affordance-benchmark gain under corrected query-conditioned scoring, but regressions on standard COCO and RefCOCO-family evaluation for the main early checkpoints.
+\item We argue that ThinkDet should be framed as a narrow functional-query stress-test study, not a general improvement to open-vocabulary detection.
+\end{enumerate}
+
+\section{Related Work}\label{sec:related}
+\subsection{Uncertainty in Object Detection}
+Uncertainty estimation for deep detectors has been studied using Monte Carlo dropout \citep{gal2016dropout}, deep ensembles \citep{lakshminarayanan2017deep}, and evidential approaches \citep{sensoy2018evidential}. These methods primarily estimate uncertainty after prediction. In contrast, ThinkDet aims to reduce ambiguity-driven uncertainty before prediction by injecting additional semantic information into the detector's text pathway.
+
+\subsection{Open-Vocabulary Object Detection}
+Open-vocabulary and grounded detection systems such as GLIP \citep{glip2022}, DetCLIP \citep{detclip2022}, and GroundingDINO \citep{groundingdino2023} extend detection beyond fixed category vocabularies. GroundingDINO combines DINO-style detection \citep{dino2023} with text conditioning and is the detector backbone in our work.
+
+\subsection{Parameter-Efficient Adaptation}
+Parameter-efficient fine-tuning methods such as adapters \citep{houlsby2019adapter}, LoRA \citep{lora2022}, and prefix tuning \citep{prefix2021} motivate our design. TMA is closest in spirit to memory/prefix augmentation, but its tokens are input-dependent because they are produced from a live VLM forward pass conditioned on both image and query.
+
+\subsection{VLM-Augmented Detection and Calibration}
+Jointly trained multimodal detectors such as GLIP \citep{glip2022} and FIBER \citep{fiber2022} can improve grounding but typically require large-scale retraining. ThinkDet keeps both the detector and VLM frozen and inserts a lightweight bridge. Post-hoc calibration methods such as temperature scaling \citep{guo2017calibration} adjust scores after prediction, whereas ThinkDet modifies internal representations and lets us test whether query-conditioned semantic priors change ranking quality or confidence reliability on ambiguous queries.
+
+\section{Problem Formulation: Uncertainty on Functional Queries}\label{sec:problem}
+\subsection{The Uncertainty Gap}
+Let a detector \(D\) with text encoder \(E_{\text{text}}\) and visual encoder \(E_{\text{vis}}\) take an image \(I\) and query \(q\), and produce candidate boxes with confidence scores \(\{(b_i, c_i)\}\).
+
+For referential queries, \(E_{\text{text}}(q)\) is often sufficiently discriminative, and confidence tends to concentrate on correct detections. For functional queries, \(E_{\text{text}}(q)\) can be diffuse because the text encoder does not reliably encode affordance-level semantics. This often yields:
+\begin{itemize}
+\item high predictive dispersion across candidates,
+\item poor confidence calibration,
+\item and missed detections due to weak ranking.
+\end{itemize}
+
+\subsection{Uncertainty Metrics}
+We use both currently available and planned uncertainty metrics:
+\begin{enumerate}
+\item \textbf{Top-1 confidence calibration (measured)}: expected calibration error (ECE), Brier score, and negative log-likelihood computed from stored per-query top-1 scores and correctness labels.
+\item \textbf{Top-\(K\) predictive entropy (planned next artifact)}: entropy over normalized top-\(K\) detection scores per query, once the evaluator saves candidate score vectors.
+\item \textbf{Accuracy@0.5}: grounding accuracy at intersection-over-union threshold 0.5.
+\end{enumerate}
+
+This lets us evaluate not only whether ThinkDet improves accuracy, but also whether accuracy and confidence reliability move together on functional queries.
+
+\section{Method}\label{sec:method}
+\subsection{Architecture Overview}
+ThinkDet combines a frozen GroundingDINO detector with a frozen InternVL model \citep{internvl2024} and a trainable Text Memory Augmenter.
+
+At inference time:
+\begin{enumerate}
+\item The image is processed by GroundingDINO and InternVL.
+\item The query text is processed by GroundingDINO's BERT encoder and jointly with the image in InternVL.
+\item We extract text-conditioned visual hidden states \(H_{\text{vlm}}\) from an intermediate InternVL layer.
+\item TMA pools \(H_{\text{vlm}}\) into \(M=8\) summary tokens and concatenates them to the detector text memory at decoder layers \(\{1,3,5\}\).
+\end{enumerate}
+
+The injected tokens act as a semantic prior that can improve query disambiguation without modifying the detector backbone or the VLM.
+
+\subsection{Text Memory Augmenter}
+Given text-conditioned InternVL visual features \(H_{\text{vlm}} \in \mathbb{R}^{N_{\text{vis}} \times d_{\text{vlm}}}\), TMA projects them into the detector text-memory dimension and pools them with learned queries:
+\begin{align}
+K &= \mathrm{LN}(W_{\text{proj}} H_{\text{vlm}}), \\
+V &= K, \\
+Q &= Q_{\text{learned}}, \\
+Z &= \mathrm{MHA}(Q, K, V), \\
+\text{aug}_l &= \alpha_l Z.
+\end{align}
+
+Here \(Q_{\text{learned}} \in \mathbb{R}^{M \times d_{\text{dino}}}\) are learned query vectors (broadcast across the batch), \(Z\) are the pooled summary tokens, and \(\alpha_l\) is a learned layerwise scaling factor at decoder layer \(l\).
+
+\subsection{Layerwise Scaling}
+In the current implementation, \(\alpha_l\) is a static scalar per injection layer (not a query-conditioned uncertainty estimator). We therefore interpret \(\alpha_l\) as a layerwise augmentation-strength parameter and treat uncertainty estimates as output-space measurements (calibration metrics now, predictive entropy in a follow-up evaluation pass).
+
+\subsection{Training Protocol}
+\paragraph{Stage 1 (COCO semantic pretraining).}
+TMA is trained on standard COCO detection (train2017) to learn a generic VLM-to-detector feature translation. In the newer TMA pipeline, only TMA parameters are trainable in Stage 1.
+
+\paragraph{Stage 2 (heads + TMA).}
+TMA and selected detection heads are trainable while the detector backbone and VLM remain frozen. The repository contains multiple Stage 2 variants, including COCO-based Stage 2 and a separate RefCOCO-based Stage 2 run.
+
+\paragraph{No affordance supervision.}
+The main ThinkDet affordance results are obtained without affordance-specific training labels; improvements on affordance grounding are emergent from COCO-based training and VLM prior injection.
+
+\section{Experiments}\label{sec:experiments}
+\subsection{Setup}
+\paragraph{Models.}
+The baseline used by the current repo artifacts is GroundingDINO Swin-T OGC.
+ThinkDet adds InternVL-based TMA with \(M=8\) summary tokens and injection
+layers \(\{1,3,5\}\).
+
+\paragraph{Reported checkpoints.}
+The affordance results use:
+\begin{itemize}
+\item a Stage-1 TMA checkpoint trained on COCO (\texttt{layer9\_tma\_m8\_full\_2ep\_7gpu\_20260218\_152649}),
+\item and a Stage-2 checkpoint (\texttt{layer9\_tma\_m8\_8gpu\_20260219\_010134}).
+\end{itemize}
+
+\paragraph{Benchmarks.}
+We report:
+\begin{enumerate}
+\item a held-out affordance grounding benchmark (512 queries, 8 affordance categories),
+\item COCO val2017 sanity-check detection evaluation,
+\item and RefCOCO/RefCOCO+/RefCOCOg referring expression evaluation.
+\end{enumerate}
+
+\subsection{Main Result: Held-Out Affordance Grounding}\label{sec:aff-main}
+\paragraph{Thesis note.}
+The affordance numbers below are the corrected rerun produced by the active
+query-conditioned scoring path. Older historical repo artifacts reported
+larger gains under an earlier max-logit ranking shortcut; those numbers are
+useful only as provenance, not as the canonical thesis result.
+
+Table~\ref{tab:affordance-main} reports top-1 hit rate at intersection-over-union
+threshold 0.5. Under the corrected scorer, ThinkDet improves overall
+performance by only 0.78 percentage points on this benchmark, with the largest
+gain on \texttt{carry\_in}. The gains are narrow and non-uniform across
+categories, and \texttt{talk\_on} regresses, which is why the result should be
+treated as a stress-test outcome rather than as evidence of broad detector
+improvement.
+
+\begin{table*}[t]
+\centering
+\caption{Held-Out Affordance Benchmark (512 Queries): Top-1 Hit Rate at IoU \(\geq 0.5\).}
+\label{tab:affordance-main}
+\begin{tabular}{lrrrr}
+\toprule
+Affordance & Baseline & Stage 1 & Stage 2 & \(\Delta\) (Stage2--Base) \\
+\midrule
+\texttt{carry\_in}   & 15.62\% & 17.19\% & \textbf{20.31\%} & \textbf{+4.69pp} \\
+\texttt{cut\_with}   &  6.25\% & \textbf{7.81\%} &  6.25\%  & +0.00pp \\
+\texttt{drink\_from} & 37.50\% & \textbf{39.06\%} & \textbf{39.06\%} & +1.56pp \\
+\texttt{eat\_with}   &  4.69\% &  4.69\% &  4.69\%         & +0.00pp \\
+\texttt{read}        & 18.75\% & 18.75\% & 18.75\%         & +0.00pp \\
+\texttt{ride}        & 31.25\% & 31.25\% & \textbf{32.81\%} & +1.56pp \\
+\texttt{sit\_on}     &  4.69\% &  4.69\% &  4.69\%         & +0.00pp \\
+\texttt{talk\_on}    & \textbf{17.19\%} & \textbf{17.19\%} & 15.62\% & -1.56pp \\
+\midrule
+Overall (\texttt{hit@0.5\_top1}) & 16.99\% & 17.58\% & \textbf{17.77\%} & \textbf{+0.78pp} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Uncertainty Analysis (Current Artifact + Next Measurement)}\label{sec:uncertainty}
+The current affordance evaluator stores one top-1 score per query (\texttt{top1\_score}) and the resulting top-1 IoU, which enables calibration-focused analysis. It does not yet store top-\(K\) candidate score vectors, so predictive-entropy analysis is specified as a next step.
+
+\subsubsection{Top-1 Confidence Calibration (Measured)}
+Table~\ref{tab:calibration} shows that the corrected scorer rerun does not
+preserve the earlier calibration story from historical artifacts. Stage 2
+improves top-1 hit rate slightly and AUROC modestly, but ECE, Brier score, and
+negative log-likelihood all worsen relative to the baseline. This suggests
+that the earlier large calibration gains were at least partly tied to the
+older ranking shortcut rather than the adapter alone.
+
+\begin{table}[t]
+\centering
+\caption{Calibration-Focused Uncertainty Metrics on the Held-Out Affordance Benchmark (512 Queries).}
+\label{tab:calibration}
+\begin{tabular}{lrrr}
+\toprule
+Metric & Baseline & Stage 1 & Stage 2 \\
+\midrule
+\texttt{hit@0.5\_top1} & 0.1699 & 0.1758 & \textbf{0.1777} \\
+ECE (10 bins) & \textbf{0.0632} & 0.0744 & 0.0773 \\
+Brier score & \textbf{0.1429} & 0.1486 & 0.1498 \\
+Negative log-likelihood & \textbf{0.4654} & 0.4836 & 0.4854 \\
+AUROC (score \(\rightarrow\) correctness) & 0.5882 & 0.5730 & \textbf{0.5997} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Mean top-1 confidence also drops slightly from 0.1067 (baseline) to 0.1004
+(Stage 2) while accuracy increases from 0.1699 to 0.1777, but the bin-based
+calibration metrics worsen. Lower raw confidence alone should therefore not be
+interpreted as improved calibration on this benchmark.
+
+\subsubsection{Predictive Entropy (Next Artifact)}
+To measure predictive dispersion directly, the affordance evaluator should save top-\(K\) scores or logits for each query (for example, \(K=50\)). This enables predictive entropy, entropy reduction by affordance category, and risk-coverage analysis using richer uncertainty signals than top-1 confidence.
+
+\subsection{COCO Sanity Check}
+Table~\ref{tab:coco} reports a clean COCO val2017 evaluation for a Stage-1 checkpoint. ThinkDet regresses on standard category detection in this setting, which is consistent with our claim that the method targets functional-query uncertainty rather than general-purpose COCO detection gains.
+
+\begin{table}[t]
+\centering
+\caption{COCO val2017 Clean Evaluation Sanity Check (4952 Images).}
+\label{tab:coco}
+\begin{tabular}{lrrrr}
+\toprule
+Model & mAP & mAP\(_{50}\) & mAP\(_{75}\) & Trainable Params \\
+\midrule
+Baseline (clean eval) & \textbf{43.23} & \textbf{56.99} & \textbf{47.12} & --- \\
+ThinkDet (Stage 1, TMA only) & 39.66 & 50.84 & 43.40 & 1.58M (0.13\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{RefCOCO / RefCOCO+ / RefCOCOg}
+Table~\ref{tab:refcoco} reports top-1 REC accuracy at IoU \(\geq 0.5\) (confidence threshold 0.05) for a Stage-2 checkpoint evaluated across eight standard splits. The baseline wins all splits, supporting the claim that ThinkDet is not a general REC improvement module and is most useful in the functional-query regime.
+
+\begin{table*}[t]
+\centering
+\caption{RefCOCO Family Evaluation: Top-1 Accuracy at IoU \(\geq 0.5\) (Confidence Threshold 0.05).}
+\label{tab:refcoco}
+\begin{tabular}{lrrr}
+\toprule
+Dataset / Split & Baseline & ThinkDet (Stage 2) & \(\Delta\) \\
+\midrule
+refcoco val   & \textbf{50.62} & 48.61 & -2.01pp \\
+refcoco testA & \textbf{56.43} & 51.83 & -4.60pp \\
+refcoco testB & \textbf{45.53} & 45.22 & -0.31pp \\
+refcoco+ val   & \textbf{51.33} & 47.18 & -4.15pp \\
+refcoco+ testA & \textbf{55.82} & 48.83 & -6.99pp \\
+refcoco+ testB & \textbf{46.23} & 46.00 & -0.23pp \\
+refcocog val  & \textbf{60.50} & 57.58 & -2.92pp \\
+refcocog test & \textbf{60.50} & 57.72 & -2.78pp \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\section{Analysis and Ablations}\label{sec:analysis}
+\subsection{Layerwise Scaling as Augmentation Strength}
+For the Stage-2 checkpoint used in the affordance benchmark, the learned layerwise scaling parameters are approximately:
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Injection Layer & Learned \(\alpha\) \\
+\midrule
+Layer 1 & \(\approx 0.0885\) \\
+Layer 3 & \(\approx 0.0966\) \\
+Layer 5 & \(\approx 0.0983\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+These values are static per layer and should not be interpreted as per-query uncertainty estimates. A better future analysis is to correlate query difficulty with query-dependent effective augmentation statistics, such as \(\lVert \alpha_l Z_l \rVert\) or attention mass onto injected tokens.
+
+\subsection{Planned Ablations for the Submission Version}
+The following ablations are part of our current paper plan and remain to be finalized with artifact-backed uncertainty metrics:
+\begin{itemize}
+\item mixed-query-mode comparison for Stage 1 pretraining,
+\item injection layer ablation \(\{1\}, \{3\}, \{5\}, \{1,3\}, \{1,3,5\}\),
+\item number of summary tokens \(M\),
+\item and InternVL source-layer selection.
+\end{itemize}
+
+\section{Discussion}\label{sec:discussion}
+Under the corrected scorer, ThinkDet improves affordance grounding only
+slightly on average while degrading performance on standard REC and COCO
+settings. The calibration picture is mixed rather than uniformly improved.
+This pattern supports a narrow stress-test interpretation rather than a
+universal accuracy-improvement claim. In particular:
+\begin{itemize}
+\item functional queries appear more uncertainty-limited on the text side, so VLM-derived priors can help;
+\item referential queries are often already handled well by the baseline, so extra tokens may introduce noise;
+\item standard category detection is not primarily limited by the same semantic ambiguity, so augmentation can perturb an already strong solution.
+\end{itemize}
+
+We can interpret TMA as injecting a prior-like signal into the detector's posterior over boxes. In this view, InternVL features provide a prior over likely objects conditioned on image and query context, while the detector combines this with its existing visual-text matching machinery.
+
+\subsection{Limitations}
+\begin{enumerate}
+\item We do not optimize an explicit uncertainty objective.
+\item The layerwise scaling parameter is static per layer and not query-conditioned.
+\item The current affordance benchmark is modest in size (512 queries).
+\item The current artifact stores only top-1 scores, not top-\(K\) candidate score vectors needed for predictive-entropy analysis.
+\item We only evaluate one VLM backbone family in the current draft.
+\end{enumerate}
+
+\section{Conclusion}\label{sec:conclusion}
+We presented ThinkDet, a parameter-efficient method for injecting semantic
+priors from a frozen vision-language model into a frozen detector for
+ambiguity-heavy grounding. On the corrected held-out affordance rerun,
+ThinkDet improves grounding accuracy only slightly, does not improve the main
+top-1 calibration metrics, and regresses on standard COCO and RefCOCO-family
+benchmarks. These results support a narrow interpretation of ThinkDet as an
+experimental functional-query adapter and analysis artifact, not as a general
+open-vocabulary detection improvement.
+
+\bibliography{thinkdet_uai2026}
+
+\newpage
+\onecolumn
+\appendix
+
+\section{Training Details}\label{app:train}
+Table~\ref{tab:train-details} summarizes the training hyperparameters used in the paper draft. Some values are run-dependent because the repository contains older and newer pipelines.
+
+\begin{table}[h]
+\centering
+\caption{Training Hyperparameters (Paper Draft Summary).}
+\label{tab:train-details}
+\begin{tabular}{lcc}
+\toprule
+Hyperparameter & Stage 1 & Stage 2 \\
+\midrule
+GPUs & up to 8 A100 & up to 8 A100 \\
+Batch size per GPU & 2 & 2 \\
+Gradient accumulation & 4 & 4 \\
+Effective batch size & 64 & 64 \\
+Learning rate (TMA) & \(3\times 10^{-5}\) to run-specific & \(3\times 10^{-5}\) to run-specific \\
+Learning rate (heads) & stage-dependent & stage-dependent \\
+Warmup ratio & 0.05 & 0.05 \\
+Reported affordance checkpoints & epoch 2 & epoch 2 \\
+AMP & fp16 & fp16 \\
+\(\alpha\) init & 0.3 & loaded from Stage 1 \\
+\(\alpha\) floor & optional, script-dependent & optional, script-dependent \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Held-Out Affordance Benchmark Construction}\label{app:benchmark}
+The held-out benchmark contains 512 queries split evenly across eight affordance categories. Each sample contains a natural-language functional description paired with a COCO-style image containing at least one valid target.
+
+\begin{table}[h]
+\centering
+\caption{Held-Out Affordance Categories (64 Queries Each).}
+\label{tab:aff-types}
+\begin{tabular}{ll}
+\toprule
+Affordance Type & Example Query \\
+\midrule
+\texttt{talk\_on} & ``something to talk on'' \\
+\texttt{carry\_in} & ``something to carry things in'' \\
+\texttt{sit\_on} & ``something to sit on'' \\
+\texttt{cut\_with} & ``something to cut with'' \\
+\texttt{drink\_from} & ``something to drink from'' \\
+\texttt{eat\_with} & ``something to eat with'' \\
+\texttt{read} & ``something to read'' \\
+\texttt{ride} & ``something to ride'' \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Uncertainty Metrics Details}\label{app:uncertainty}
+\subsection{Current Artifact Metrics}
+The current evaluator stores \texttt{top1\_score} and \texttt{top1\_iou} for each query. This supports:
+\begin{itemize}
+\item ECE with fixed confidence bins,
+\item Brier score,
+\item negative log-likelihood,
+\item and correctness-prediction AUROC.
+\end{itemize}
+
+\subsection{Planned Predictive Entropy}
+Once top-\(K\) candidate scores are logged, we compute entropy from normalized scores:
+\begin{equation}
+H(p) = - \sum_{i=1}^{K} \hat{p}_i \log \hat{p}_i,
+\end{equation}
+where \(\hat{p}_i = \operatorname{softmax}(c_i)\) over top-\(K\) candidate logits \(c_i\).
+
+\section{Artifact Notes on Stage Naming}\label{app:stages}
+The repository contains multiple Stage 2 variants:
+\begin{itemize}
+\item a COCO-based Stage 2 (\texttt{train\_stage2\_tma.py}), and
+\item a separate RefCOCO joint-training Stage 2 (\texttt{train\_refcoco\_stage2\_tma.py}) that trains on RefCOCO, RefCOCO+, and RefCOCOg.
+\end{itemize}
+Both variants train TMA and detector heads while keeping the detector backbone and VLM frozen.
+
+\end{document}

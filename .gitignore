@@ -1,0 +1,27 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Local tooling
+.claude/
+
+# Training artifacts
+checkpoints/
+logs/
+
+# Generated evaluation output; keep only curated artifacts referenced in README
+results/*
+!results/eval/
+!results/inference/
+results/eval/*
+!results/eval/official_protocol_eval.json
+!results/eval/affordance_benchmark_eval_v1_test.md
+!results/eval/refcoco_full_summary_20260220.md
+!results/eval/affordance_benchmark_eval_v1_test_corrected_20260308.json
+!results/eval/affordance_benchmark_eval_v1_test_corrected_20260308.md
+results/inference/*
+!results/inference/diagnostic_topk_carry_in_99114_20260307_112733.json
+!results/inference/postfix_topk_carry_in_99114_20260307_114742.json
+
+# Local screenshots
+data/Screenshot *.png
