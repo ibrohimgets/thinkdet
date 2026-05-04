@@ -66,7 +66,7 @@ class ThinkDetTextAugmenter(nn.Module):
         )
         self.out_norm = nn.LayerNorm(d_model)
 
-        # Learnable gate. Initialise to alpha_init (default 0.0 → tanh(0)=0 = closed).
+        # Learnable residual gate. Initialise to alpha_init (default 0.0 -> tanh(0)=0 = closed).
         # Effective contribution = tanh(alpha) ∈ (-1, 1).
         # Starting at 0 means the adapter is a perfect identity at init.
         self.alpha = nn.Parameter(torch.tensor(float(alpha_init)))
@@ -83,7 +83,7 @@ class ThinkDetTextAugmenter(nn.Module):
         """Effective gate strength in (-1, 1). Useful for logging."""
         return float(torch.tanh(self.alpha).item())
 
-    def forward(self, h_vlm: torch.Tensor) -> torch.Tensor:
+    def forward(self, h_vlm: torch.Tensor, apply_gate: bool = True) -> torch.Tensor:
         """
         Args:
             h_vlm: [B, N_vis, mllm_hidden_dim]
@@ -103,8 +103,11 @@ class ThinkDetTextAugmenter(nn.Module):
         aug_tokens, _ = self.cross_attn(q, kv, kv)            # [B, M, d_model]
         aug_tokens = self.out_norm(aug_tokens)
 
-        # Scale by tanh(alpha): starts at 0 (closed gate), bounded to (-1, 1)
-        gate = torch.tanh(self.alpha)
-        aug_tokens = gate * aug_tokens
+        # Scale by tanh(alpha): starts at 0 (closed gate), bounded to (-1, 1).
+        # Some residual-fusion experiments apply this gate after the final
+        # memory delta instead, so keep this optional.
+        if apply_gate:
+            gate = torch.tanh(self.alpha)
+            aug_tokens = gate * aug_tokens
 
         return aug_tokens

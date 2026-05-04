@@ -11,6 +11,7 @@ sys.path.insert(0, "/home/iibrohimm/project/next_step")
 
 from thinkdet.inference.fallback import (  # noqa: E402
     FallbackPolicyConfig,
+    InternVLYesNoReranker,
     ScoredCandidateSet,
     apply_fallback_policy,
     semantic_preservation_check,
@@ -129,6 +130,12 @@ def test_parse_llm_refinements_strips_numbering_and_dedupes():
     ]
 
 
+def test_cot_reranker_parser_uses_final_answer():
+    text = "The crop has a phone-like object, but no clear handset. Final: no"
+
+    assert InternVLYesNoReranker._llm_text_to_score(text) == 0.0
+
+
 if __name__ == "__main__":
     test_primary_kept_when_confident()
     test_llm_feedback_can_replace_weak_primary()
@@ -136,4 +143,5 @@ if __name__ == "__main__":
     test_prompt_refinement_is_blocked_when_meaning_drifts()
     test_semantic_preservation_check_keeps_shared_action_term()
     test_parse_llm_refinements_strips_numbering_and_dedupes()
+    test_cot_reranker_parser_uses_final_answer()
     print("fallback policy sanity checks passed")

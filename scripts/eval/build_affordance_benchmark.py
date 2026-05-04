@@ -21,10 +21,10 @@ ROOT = "/home/iibrohimm/project/next_step"
 COCO_VAL_ANN = f"{ROOT}/dataSets/coco/annotations/instances_val2017.json"
 COCO_VAL_IMG = f"{ROOT}/dataSets/coco/val2017"
 DEFAULT_VISUAL_ROOT = f"{ROOT}/thinkdet/results/visual_compare"
-DEFAULT_OUT = f"{ROOT}/thinkdet/data/benchmarks/affordance_coco_val_heldout_v1.json"
+DEFAULT_OUT = f"{ROOT}/thinkdet/data/benchmarks/affordance_coco_val_heldout_v2.json"
 
 
-AFFORDANCES = [
+AFFORDANCES_V1 = [
     {
         "id": "drink_from",
         "prompt": "something to drink from .",
@@ -67,6 +67,82 @@ AFFORDANCES = [
     },
 ]
 
+AFFORDANCES_EXPANDED_V2 = AFFORDANCES_V1 + [
+    {
+        "id": "eat",
+        "prompt": "something to eat .",
+        "target_categories": [
+            "apple",
+            "banana",
+            "orange",
+            "sandwich",
+            "pizza",
+            "cake",
+            "donut",
+            "hot dog",
+            "carrot",
+            "broccoli",
+        ],
+    },
+    {
+        "id": "eat_from",
+        "prompt": "something to eat from .",
+        "target_categories": ["bowl", "dining table"],
+    },
+    {
+        "id": "cook_with",
+        "prompt": "something to cook with .",
+        "target_categories": ["oven", "microwave"],
+    },
+    {
+        "id": "type_on",
+        "prompt": "something to type on .",
+        "target_categories": ["keyboard", "laptop"],
+    },
+    {
+        "id": "control_with",
+        "prompt": "something to control a device with .",
+        "target_categories": ["remote", "mouse", "keyboard"],
+    },
+    {
+        "id": "watch",
+        "prompt": "something to watch .",
+        "target_categories": ["tv"],
+    },
+    {
+        "id": "tell_time",
+        "prompt": "something to tell time with .",
+        "target_categories": ["clock"],
+    },
+    {
+        "id": "shelter_under",
+        "prompt": "something to shelter under .",
+        "target_categories": ["umbrella"],
+    },
+    {
+        "id": "wash_at",
+        "prompt": "somewhere to wash things .",
+        "target_categories": ["sink"],
+    },
+    {
+        "id": "sleep_on",
+        "prompt": "something to sleep on .",
+        "target_categories": ["bed", "couch"],
+    },
+    {
+        "id": "travel_in",
+        "prompt": "something to travel in .",
+        "target_categories": ["car", "bus", "truck", "train", "airplane", "boat"],
+    },
+    {
+        "id": "play_with",
+        "prompt": "something to play a sport with .",
+        "target_categories": ["sports ball", "frisbee", "baseball bat", "tennis racket"],
+    },
+]
+
+AFFORDANCES = AFFORDANCES_EXPANDED_V2
+
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -81,8 +157,10 @@ def parse_args():
     parser.add_argument("--seed", type=int, default=20260219)
     parser.add_argument("--min_total_anns", type=int, default=5)
     parser.add_argument("--min_distractor_anns", type=int, default=2)
-    parser.add_argument("--allow_image_reuse", action="store_true",
-                        help="If set, same image_id may appear in multiple affordances.")
+    parser.add_argument("--allow_image_reuse", action="store_true", default=True,
+                        help="Allow the same image_id to appear under multiple affordances.")
+    parser.add_argument("--no_allow_image_reuse", dest="allow_image_reuse", action="store_false",
+                        help="Require image_id uniqueness across affordances.")
     return parser.parse_args()
 
 
@@ -319,8 +397,8 @@ def main():
     payload = {
         "status": "ok",
         "created_at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "benchmark_name": "affordance_coco_val_heldout_v1",
-        "version": 1,
+        "benchmark_name": "affordance_coco_val_heldout_v2",
+        "version": 2,
         "source_dataset": {
             "name": "COCO",
             "split": "val2017",
@@ -337,6 +415,7 @@ def main():
             "min_distractor_anns": args.min_distractor_anns,
             "allow_image_reuse": args.allow_image_reuse,
             "excluded_prior_visual_ids_count": len(excluded_ids),
+            "taxonomy": "expanded_v2_20_affordances",
         },
         "affordances": AFFORDANCES,
         "summary": {
@@ -359,7 +438,8 @@ def main():
         f.write(f"- total_samples: {len(all_samples)}\n")
         f.write(f"- unique_images: {unique_images}\n")
         f.write(f"- split_counts: {dict(split_counts)}\n")
-        f.write(f"- excluded_prior_visual_ids_count: {len(excluded_ids)}\n\n")
+        f.write(f"- excluded_prior_visual_ids_count: {len(excluded_ids)}\n")
+        f.write(f"- allow_image_reuse: {args.allow_image_reuse}\n\n")
         f.write("| affordance | pool | selected |\n")
         f.write("|---|---:|---:|\n")
         for row in per_aff_stats:

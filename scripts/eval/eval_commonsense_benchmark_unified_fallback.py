@@ -86,7 +86,7 @@ def parse_args():
     p.add_argument("--fallback_min_gate", type=float, default=None)
     p.add_argument("--llm_feedback_top_k", type=int, default=20)
     p.add_argument("--llm_feedback_weight", type=float, default=0.20)
-    p.add_argument("--llm_feedback_max_new_tokens", type=int, default=6)
+    p.add_argument("--llm_feedback_max_new_tokens", type=int, default=48)
     p.add_argument("--llm_feedback_temperature", type=float, default=0.0)
     p.add_argument("--llm_feedback_improve_margin", type=float, default=0.01)
     p.add_argument("--prompt_refine", action="store_true")

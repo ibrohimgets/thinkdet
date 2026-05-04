@@ -67,11 +67,13 @@ class InternVLFeatureExtractor(nn.Module):
         max_text_len: int = 256,
         freeze: bool = True,
         use_flash_attn: bool = False,
+        use_official_prompt_extraction: bool = False,
     ):
         super().__init__()
 
         self.model_path = model_path
         self.layer_fusion = layer_fusion
+        self.use_official_prompt_extraction = bool(use_official_prompt_extraction)
         self.extract_layers = self._canonicalize_extract_layers(
             extract_layer=extract_layer,
             extract_layers=extract_layers,
@@ -99,7 +101,8 @@ class InternVLFeatureExtractor(nn.Module):
             layer_desc = f"{self.extract_layers} (fusion={self.layer_fusion})"
         print(
             f"[ThinkDet v2] InternVL loaded | layer={layer_desc}/{self.num_llm_layers} | "
-            f"vis_tokens={self.num_image_token} | dim={self.llm_hidden_dim}"
+            f"vis_tokens={self.num_image_token} | dim={self.llm_hidden_dim} | "
+            f"official_extraction={self.use_official_prompt_extraction}"
         )
 
     @staticmethod
@@ -125,9 +128,19 @@ class InternVLFeatureExtractor(nn.Module):
             low_cpu_mem_usage=False,
         )
 
-        self.tokenizer = AutoTokenizer.from_pretrained(
-            model_path, trust_remote_code=True,
-        )
+        try:
+            self.tokenizer = AutoTokenizer.from_pretrained(
+                model_path,
+                trust_remote_code=True,
+                use_fast=False,
+                fix_mistral_regex=True,
+            )
+        except TypeError:
+            self.tokenizer = AutoTokenizer.from_pretrained(
+                model_path,
+                trust_remote_code=True,
+                use_fast=False,
+            )
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
 
@@ -237,6 +250,94 @@ class InternVLFeatureExtractor(nn.Module):
 
         return selected_features
 
+    def _build_official_queries(self, text_queries, num_patches=1):
+        queries = []
+        for text_query in text_queries:
+            question = text_query if '<image>' in text_query else '<image>\n' + text_query
+            if hasattr(self.internvl, 'conv_template'):
+                template = self.internvl.conv_template.copy()
+                template.system_message = getattr(
+                    self.internvl,
+                    'system_message',
+                    template.system_message,
+                )
+            else:
+                from conversation import get_conv_template
+                template = get_conv_template(self.internvl.template)
+                template.system_message = getattr(
+                    self.internvl,
+                    'system_message',
+                    template.system_message,
+                )
+            template.append_message(template.roles[0], question)
+            template.append_message(template.roles[1], None)
+            query = template.get_prompt()
+            image_tokens = (
+                '<img>'
+                + '<IMG_CONTEXT>' * self.num_image_token * int(num_patches)
+                + '</img>'
+            )
+            queries.append(query.replace('<image>', image_tokens, 1))
+        return queries
+
+    def _extract_selected_layers_official(self, pixel_values, text_queries):
+        """
+        Official InternVL chat-style extraction.
+
+        Visual embeddings are inserted at <IMG_CONTEXT> token positions inside
+        the tokenized chat prompt. Returned features are the hidden states at
+        those image-token positions for each selected Qwen layer.
+        """
+        device = pixel_values.device
+        B = pixel_values.shape[0]
+        vit_embeds = self.internvl.extract_feature(pixel_values)
+        num_vis = vit_embeds.shape[1]
+
+        if len(text_queries) != B:
+            raise ValueError(f"text_queries length {len(text_queries)} != batch size {B}")
+
+        queries = self._build_official_queries(text_queries, num_patches=1)
+        model_inputs = self.tokenizer(
+            queries,
+            return_tensors='pt',
+            padding=True,
+            truncation=True,
+            max_length=self.max_text_len + self.num_image_token + 64,
+        ).to(device)
+
+        input_ids = model_inputs.input_ids
+        attention_mask = model_inputs.attention_mask
+        image_mask = input_ids == self.img_context_token_id
+        expected = B * num_vis
+        actual = int(image_mask.sum().item())
+        if actual != expected:
+            raise RuntimeError(
+                f"<IMG_CONTEXT> token count mismatch: tokenizer={actual}, "
+                f"visual_features={expected}"
+            )
+
+        input_embeds = self.internvl.language_model.get_input_embeddings()(input_ids).clone()
+        _, seq_len, hidden_dim = input_embeds.shape
+        flat_embeds = input_embeds.reshape(B * seq_len, hidden_dim)
+        flat_mask = image_mask.reshape(B * seq_len)
+        flat_embeds[flat_mask] = vit_embeds.reshape(-1, hidden_dim).to(flat_embeds.dtype)
+        input_embeds = flat_embeds.reshape(B, seq_len, hidden_dim)
+
+        outputs = self.internvl.language_model(
+            inputs_embeds=input_embeds,
+            attention_mask=attention_mask,
+            output_hidden_states=True,
+            return_dict=True,
+            use_cache=False,
+        )
+
+        selected_features = {}
+        for layer_idx in self.extract_layers:
+            hidden_states = outputs.hidden_states[layer_idx + 1]
+            image_features = hidden_states[image_mask].reshape(B, num_vis, hidden_dim)
+            selected_features[layer_idx] = image_features
+        return selected_features
+
     def extract_selected_layers(self, pixel_values, text_queries):
         """
         Extract selected InternVL layers for the given image/text batch.
@@ -244,6 +345,9 @@ class InternVLFeatureExtractor(nn.Module):
         Returns:
             dict[layer_idx] -> [B, 256, D]
         """
+        if self.use_official_prompt_extraction:
+            return self._extract_selected_layers_official(pixel_values, text_queries)
+
         input_embeds, attention_mask, num_vis = self._build_input_embeds(
             pixel_values, text_queries
         )

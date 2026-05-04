@@ -9,8 +9,8 @@ Wires together:
        DINO's native `ca_text` cross-attention runs.
 
 Fusion modes:
+    - residual (default): zero-init residual delta, same sequence length
     - concat   (legacy): append TMA tokens to memory_text
-    - residual (recommended): zero-init residual delta, same sequence length
 
 Training stages:
     Stage 1 (TMA warmup): Only TMA/fusion parameters trainable
@@ -39,22 +39,23 @@ class ThinkDetModel(nn.Module):
     ThinkDet TMA: VLM-Guided Object Detection via Text Memory Augmentation
 
     InternVL3.5-1B extracts text-conditioned visual features H_vlm,
-    which are summarized into M=8 tokens and prepended to DINO's
+    which are summarized into M=8 tokens and fused into DINO's
     memory_text at each injection layer. DINO's own ca_text then
-    attends to both BERT tokens and InternVL tokens naturally.
+    attends to reasoning-augmented text memory.
 
     Args:
         grounding_dino:   Pre-loaded GroundingDINO model
         internvl_path:    Path to InternVL model
         extract_layer:    LLM layer to extract H_vlm from
         extract_layers:   Optional list of LLM layers to fuse
-        layer_fusion:     Fusion strategy ('mean' or 'last')
+        layer_fusion:     Fusion strategy ('mean', 'last', or 'learned')
         injection_layers: DINO decoder layer indices to augment
         d_model:          GroundingDINO hidden dim (256)
         mllm_hidden_dim:  InternVL LLM hidden dim (None = auto-detect)
         tma_m:            Number of summary tokens per injection layer
         tma_n_heads:      Attention heads in TextAugmenter
         tma_alpha_init:   Initial scaling for injected summary tokens
+        fusion_mode:      'residual' for the diagram path, 'concat' for legacy runs
     """
 
     def __init__(
@@ -69,10 +70,12 @@ class ThinkDetModel(nn.Module):
         mllm_hidden_dim: Optional[int] = None,
         tma_m: int = DEFAULT_TMA_M,
         tma_n_heads: int = DEFAULT_TMA_HEADS,
-        tma_alpha_init: float = 0.3,
-        fusion_mode: str = "concat",
+        tma_alpha_init: float = 0.0,
+        fusion_mode: str = "residual",
         residual_fusion_hidden_mult: int = 2,
         preserve_kd_enabled: bool = False,
+        gate_after_delta: bool = False,
+        use_official_internvl_extraction: bool = False,
     ):
         super().__init__()
 
@@ -97,6 +100,7 @@ class ThinkDetModel(nn.Module):
             extract_layers=extract_layers,
             layer_fusion=layer_fusion,
             freeze=True,
+            use_official_prompt_extraction=use_official_internvl_extraction,
         )
 
         self.mllm_hidden_dim = (
@@ -113,6 +117,7 @@ class ThinkDetModel(nn.Module):
             fusion_mode,
             residual_fusion_hidden_mult,
             preserve_kd_enabled,
+            gate_after_delta,
         )
 
         print(
@@ -147,6 +152,7 @@ class ThinkDetModel(nn.Module):
         fusion_mode,
         residual_fusion_hidden_mult,
         preserve_kd_enabled,
+        gate_after_delta,
     ):
         """Replace specified decoder layers with ThinkDetDecoderLayer wrappers."""
         decoder = self._get_decoder()
@@ -173,6 +179,7 @@ class ThinkDetModel(nn.Module):
                 fusion_mode=fusion_mode,
                 residual_hidden_mult=residual_fusion_hidden_mult,
                 preserve_kd_enabled=preserve_kd_enabled,
+                gate_after_delta=gate_after_delta,
             )
             decoder.layers[layer_idx] = wrapped
             self.adapted_layers.append(wrapped)
@@ -232,7 +239,9 @@ class ThinkDetModel(nn.Module):
 
         self._clear_h_vlm()
 
-        # Collect gate values (tanh(alpha)) from each adapted layer
+        # Collect gate values (tanh(alpha)) from each adapted layer.
+        # tanh keeps the adapter exactly closed at alpha=0; the residual
+        # fuser also starts as an exact identity on memory_text.
         gates = [
             float(torch.tanh(layer.augmenter.alpha).item())
             for layer in self.adapted_layers

@@ -2,6 +2,7 @@
 
 from .fallback import (
     FallbackPolicyConfig,
+    InternVLCoTReranker,
     InternVLYesNoReranker,
     InternVLPromptRefiner,
     ScoredCandidateSet,
@@ -13,6 +14,7 @@ from .fallback import (
 
 __all__ = [
     "FallbackPolicyConfig",
+    "InternVLCoTReranker",
     "InternVLYesNoReranker",
     "InternVLPromptRefiner",
     "ScoredCandidateSet",

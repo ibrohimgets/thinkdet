@@ -71,7 +71,6 @@ def test_trainability_protocol():
             d_model=256,
             tma_n_heads=2,
             injection_layers=[1, 3, 5],
-            fusion_mode="residual",
         )
 
     head_params = _head_params(model)

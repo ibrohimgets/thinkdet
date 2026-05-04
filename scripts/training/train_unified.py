@@ -37,6 +37,7 @@ import json
 import math
 import argparse
 import tempfile
+import random
 
 import numpy as np
 import torch
@@ -52,7 +53,8 @@ os.environ.setdefault("OMP_NUM_THREADS", "1")
 
 ROOT = "/home/iibrohimm/project/next_step"
 sys.path.insert(0, ROOT)
-sys.path.insert(0, os.path.join(ROOT, "GroundingDINO", "GroundingDINO"))
+GROUNDING_DINO_ROOT = os.path.join(ROOT, "GroundingDINO")
+sys.path.insert(0, GROUNDING_DINO_ROOT)
 
 from thinkdet.models.arch import ThinkDetModel, DEFAULT_INJECTION_LAYERS
 from thinkdet.data.coco_grounding import (
@@ -76,11 +78,11 @@ class Cfg:
     val_img_dir   = f"{coco_root}/val2017"
 
     gd_config  = (
-        f"{ROOT}/GroundingDINO/GroundingDINO/groundingdino/config/"
+        f"{ROOT}/GroundingDINO/groundingdino/config/"
         "GroundingDINO_SwinT_OGC.py"
     )
     gd_weights = (
-        f"{ROOT}/GroundingDINO/GroundingDINO/weights/groundingdino_swint_ogc.pth"
+        f"{ROOT}/GroundingDINO/weights/groundingdino_swint_ogc.pth"
     )
     internvl_path = f"{ROOT}/InternVL3_5-1B"
 
@@ -120,6 +122,7 @@ class Cfg:
     output_dir   = f"{ROOT}/thinkdet/checkpoints/unified"
     log_interval = 100
     save_interval = 2000
+    seed = 1337
 
 
 def format_layer_tag(extract_layers):
@@ -127,6 +130,13 @@ def format_layer_tag(extract_layers):
     if len(layers) == 1:
         return f"layer{layers[0]}"
     return "layers_" + "_".join(str(x) for x in layers)
+
+
+def set_seed(seed: int):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
 
 
 # ===================================================================
@@ -484,6 +494,7 @@ def main():
     parser.add_argument("--output_dir",     type=str,   default=None)
     parser.add_argument("--num_workers",    type=int,   default=cfg.num_workers)
     parser.add_argument("--val_every_ep",   type=int,   default=cfg.val_every_ep)
+    parser.add_argument("--seed",           type=int,   default=cfg.seed)
     parser.add_argument("--resume",         type=str,   default=None)
     parser.add_argument(
         "--resume_weights_only",
@@ -519,6 +530,7 @@ def main():
     cfg.log_interval   = args.log_interval
     cfg.num_workers    = args.num_workers
     cfg.val_every_ep   = args.val_every_ep
+    cfg.seed           = int(args.seed)
     cfg.injection_layers = list(args.injection_layers)
     if args.extract_layers:
         cfg.extract_layers = sorted(set(int(x) for x in args.extract_layers))
@@ -539,6 +551,7 @@ def main():
 
     ddp, local_rank, device, world_size = init_distributed()
     is_main = (local_rank == 0)
+    set_seed(cfg.seed)
 
     if is_main:
         os.makedirs(cfg.output_dir, exist_ok=True)
@@ -561,6 +574,7 @@ def main():
         print(f"  GPUs:             {world_size}")
         print(f"  Effective batch:  {cfg.per_gpu_batch * cfg.grad_accum * world_size}")
         print(f"  Epochs:           {cfg.epochs}")
+        print(f"  Seed:             {cfg.seed}")
         print(f"  Warmup:           {cfg.warmup_ratio:.0%} of total steps")
         print(f"  Output:           {cfg.output_dir}")
         print()
@@ -615,7 +629,7 @@ def main():
         if is_main:
             print(f"  [DEBUG] limited to {cfg.debug_limit} images")
 
-    sampler      = DistributedSampler(train_ds, shuffle=True) if ddp else None
+    sampler      = DistributedSampler(train_ds, shuffle=True, seed=cfg.seed) if ddp else None
     train_loader = torch.utils.data.DataLoader(
         train_ds,
         batch_size  = cfg.per_gpu_batch,

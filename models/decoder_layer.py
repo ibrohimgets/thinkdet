@@ -5,8 +5,8 @@ Wraps a GroundingDINO decoder layer and fuses InternVL-derived summary tokens
 into `memory_text` before the original layer runs.
 
 Supports two fusion modes:
-  - `concat`   : append TMA tokens to memory_text (legacy behavior)
   - `residual` : baseline-safe delta fusion with zero-init residual branch
+  - `concat`   : append TMA tokens to memory_text (legacy behavior)
 """
 
 import torch
@@ -48,11 +48,23 @@ class ResidualTextMemoryFusion(nn.Module):
         nn.init.zeros_(last.weight)
         nn.init.zeros_(last.bias)
 
-    def forward(self, memory_text: torch.Tensor, aug_tokens: torch.Tensor) -> torch.Tensor:
+    def forward(
+        self,
+        memory_text: torch.Tensor,
+        aug_tokens: torch.Tensor,
+        gate: Optional[torch.Tensor] = None,
+    ) -> torch.Tensor:
         q = self.q_norm(memory_text)
         kv = self.kv_norm(aug_tokens)
         delta, _ = self.cross_attn(q, kv, kv)
         delta = self.delta_mlp(delta)
+        if gate is not None:
+            delta = torch.tanh(gate) * delta
+        max_delta = 0.5 * memory_text.norm(dim=-1, keepdim=True)
+        delta = delta * torch.clamp(
+            max_delta / (delta.norm(dim=-1, keepdim=True) + 1e-6),
+            max=1.0,
+        )
         return memory_text + delta
 
 
@@ -67,16 +79,17 @@ class ThinkDetDecoderLayer(nn.Module):
     Args:
         original_layer: GroundingDINO DeformableTransformerDecoderLayer
         augmenter:      ThinkDetTextAugmenter instance
-        fusion_mode:    'concat' or 'residual'
+        fusion_mode:    'residual' or legacy 'concat'
     """
 
     def __init__(
         self,
         original_layer,
         augmenter,
-        fusion_mode: str = "concat",
+        fusion_mode: str = "residual",
         residual_hidden_mult: int = 2,
         preserve_kd_enabled: bool = False,
+        gate_after_delta: bool = False,
     ):
         super().__init__()
         self.original_layer = original_layer
@@ -84,7 +97,9 @@ class ThinkDetDecoderLayer(nn.Module):
         self.h_vlm: Optional[torch.Tensor] = None
         self.fusion_mode = fusion_mode
         self.preserve_kd_enabled = preserve_kd_enabled
+        self.gate_after_delta = bool(gate_after_delta)
         self.last_preserve_kd_loss: Optional[torch.Tensor] = None
+        self.last_delta_l2: Optional[torch.Tensor] = None
 
         if fusion_mode not in {"concat", "residual"}:
             raise ValueError(f"Unsupported fusion_mode={fusion_mode!r}")
@@ -120,10 +135,12 @@ class ThinkDetDecoderLayer(nn.Module):
         cross_attn_mask=None,
     ):
         self.last_preserve_kd_loss = None
+        self.last_delta_l2 = None
 
         # Augment memory_text BEFORE the original layer runs
         if self.h_vlm is not None and memory_text is not None:
-            aug = self.augmenter(self.h_vlm)                   # [B, M, d_model]
+            apply_gate = not (self.fusion_mode == "residual" and self.gate_after_delta)
+            aug = self.augmenter(self.h_vlm, apply_gate=apply_gate)  # [B, M, d_model]
             if self.fusion_mode == "concat":
                 B, M = aug.shape[0], aug.shape[1]
                 memory_text = torch.cat([memory_text, aug], dim=1)  # [B, T+M, d_model]
@@ -138,7 +155,9 @@ class ThinkDetDecoderLayer(nn.Module):
                     )
             else:
                 pre_text = memory_text
-                memory_text = self.residual_fuser(memory_text, aug)
+                gate = self.augmenter.alpha if self.gate_after_delta else None
+                memory_text = self.residual_fuser(memory_text, aug, gate=gate)
+                self.last_delta_l2 = (memory_text - pre_text).pow(2).mean()
 
                 if self.preserve_kd_enabled:
                     # Optional baseline-preservation KD target:

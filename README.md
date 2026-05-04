@@ -3,7 +3,22 @@
 ThinkDet is an experimental adapter for open-vocabulary grounding.
 It keeps GroundingDINO and InternVL frozen, extracts query-conditioned
 InternVL hidden states, compresses them into a small set of summary tokens,
-and injects those tokens into GroundingDINO's decoder text memory.
+and fuses those tokens into GroundingDINO's decoder text memory.
+
+## Active Architecture
+
+The default code path now matches the architecture diagram:
+
+- InternVL3.5 receives the image and text query jointly.
+- Intermediate visual-position hidden states are extracted as `H_vlm`
+  with shape `[B, 256, D]`.
+- A trainable TMA block maps `D -> 256`, pools with `M=8` learnable
+  cross-attention queries, and produces `aug_tokens`.
+- Decoder layers `[1, 3, 5]` use baseline-safe residual text-memory fusion.
+- The adapter gate starts closed (`alpha_init=0.0`) and the residual branch
+  is zero-initialized, so new runs begin equivalent to frozen GroundingDINO.
+- If confidence is weak, inference can route to InternVL evidence-check
+  reranking and optional prompt refinement.
 
 ## Current Status
 
@@ -60,7 +75,7 @@ The thesis story should use this order:
 
 The LLM fallback should be described as:
 
-- candidate feedback first
+- evidence-check candidate reranking first
 - prompt refinement second
 - semantic-preservation guard enabled for refinement
 

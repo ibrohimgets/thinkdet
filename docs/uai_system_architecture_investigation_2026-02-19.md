@@ -23,7 +23,8 @@ Current ThinkDet is a **Text Memory Augmentation (TMA)** system on top of Ground
 - InternVL (feature extractor): frozen
 - Learned module: small TMA augmenters injected into DINO decoder text memory path
 - Injection layers: `[1, 3, 5]`
-- No delta injection, no confidence gate, no uncertainty weighting, no KD in current TMA path
+- Residual text-memory delta fusion is the default active path
+- No uncertainty weighting in the base detector path; confidence is handled by the inference fallback policy
 
 This is explicit in `thinkdet/models/arch.py` and `thinkdet/models/cross_attention.py`.
 
@@ -43,11 +44,11 @@ This is explicit in `thinkdet/models/arch.py` and `thinkdet/models/cross_attenti
 3. TMA augmenter per injected decoder layer:
 - Project `H_vlm` from InternVL dim (1024) to DINO dim (256)
 - M learnable query tokens (`M=8`) cross-attend over InternVL visual tokens
-- Output scaled by learnable `alpha` (init 0.1)
+- Output scaled by learnable `alpha` (default init `0.0`, so the adapter gate starts closed)
 
 4. Decoder integration:
-- Before each wrapped DINO decoder layer executes, prepend augmented tokens to `memory_text`
-- DINO's native text cross-attention then attends over original text tokens + TMA tokens
+- Before each wrapped DINO decoder layer executes, use the augmented tokens as residual key/value memory
+- The residual fusion branch is zero-initialized, so `memory_text` is unchanged at step 0
 
 ### 3.2 Mathematical sketch
 
@@ -56,8 +57,9 @@ For each injected layer:
 - `K,V = LN(W_proj * H_vlm)`
 - `Q = learned_queries`
 - `A = MHA(Q, K, V)`  (shape `[B, M, 256]`)
-- `A_scaled = alpha * A`
-- `memory_text' = concat(memory_text, A_scaled)`
+- `A_scaled = tanh(alpha) * A`
+- `delta = zero_init_MLP(MHA(memory_text, A_scaled, A_scaled))`
+- `memory_text' = memory_text + delta`
 
 ## 4) Training System (How It Was Built Operationally)
 
@@ -232,4 +234,3 @@ What should be framed carefully:
 - Layer probe result JSONs:
   - `thinkdet/results/layer_probe_flickr_val/layer_probe_results.json`
   - `thinkdet/results/layer_probe_flickr_test/layer_probe_results.json`
-

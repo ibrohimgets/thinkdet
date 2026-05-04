@@ -1,0 +1,2384 @@
+{
+  "status": "ok",
+  "created_at": "2026-02-20 03:35:34",
+  "benchmark_name": "affordance_coco_val_three_prompts_test_balanced30",
+  "version": 1,
+  "source_dataset": {
+    "name": "COCO",
+    "split": "val2017",
+    "annotation_file": "/home/iibrohimm/project/next_step/dataSets/coco/annotations/instances_val2017.json",
+    "image_dir": "/home/iibrohimm/project/next_step/dataSets/coco/val2017"
+  },
+  "construction_protocol": {
+    "model_inference_used": false,
+    "sampling": "deterministic random (seeded), balanced by affordance",
+    "seed": 20260219,
+    "samples_per_affordance_target": 80,
+    "dev_ratio": 0.2,
+    "min_total_anns": 5,
+    "min_distractor_anns": 2,
+    "allow_image_reuse": false,
+    "excluded_prior_visual_ids_count": 24
+  },
+  "affordances": [
+    {
+      "id": "drink_from",
+      "prompt": "something to drink from .",
+      "target_categories": [
+        "cup",
+        "bottle",
+        "wine glass"
+      ]
+    },
+    {
+      "id": "sit_on",
+      "prompt": "something to sit on .",
+      "target_categories": [
+        "chair",
+        "bench",
+        "couch",
+        "bed"
+      ]
+    },
+    {
+      "id": "ride",
+      "prompt": "something to ride .",
+      "target_categories": [
+        "bicycle",
+        "motorcycle",
+        "horse"
+      ]
+    },
+    {
+      "id": "cut_with",
+      "prompt": "something to cut with .",
+      "target_categories": [
+        "knife",
+        "scissors"
+      ]
+    },
+    {
+      "id": "carry_in",
+      "prompt": "something to carry things in .",
+      "target_categories": [
+        "backpack",
+        "handbag",
+        "suitcase"
+      ]
+    },
+    {
+      "id": "talk_on",
+      "prompt": "something to talk on .",
+      "target_categories": [
+        "cell phone"
+      ]
+    },
+    {
+      "id": "eat_with",
+      "prompt": "something to eat with .",
+      "target_categories": [
+        "fork",
+        "spoon",
+        "knife"
+      ]
+    },
+    {
+      "id": "read",
+      "prompt": "something to read .",
+      "target_categories": [
+        "book"
+      ]
+    }
+  ],
+  "summary": {
+    "source": "/home/iibrohimm/project/next_step/thinkdet/data/benchmarks/affordance_coco_val_three_prompts_test.json",
+    "filter": "first 10 test samples per affordance",
+    "n_samples": 30,
+    "counts": {
+      "cut_with": 10,
+      "drink_from": 10,
+      "sit_on": 10
+    }
+  },
+  "samples": [
+    {
+      "benchmark_id": "cut_with_17714",
+      "image_id": 17714,
+      "image_file": "000000017714.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000017714.jpg",
+      "width": 640,
+      "height": 480,
+      "prompt": "something to cut with .",
+      "affordance_id": "cut_with",
+      "target_categories": [
+        "knife",
+        "scissors"
+      ],
+      "num_annotations": 17,
+      "num_distractor_annotations": 16,
+      "category_histogram": {
+        "dining table": 1,
+        "cup": 2,
+        "fork": 2,
+        "knife": 1,
+        "pizza": 1,
+        "spoon": 1,
+        "banana": 9
+      },
+      "positive_category_histogram": {
+        "knife": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 695922,
+          "category_name": "knife",
+          "bbox_xywh": [
+            301.04,
+            372.51,
+            185.34,
+            63.51
+          ],
+          "bbox_norm_cxcywh": [
+            0.615171875,
+            0.84221875,
+            0.28959375,
+            0.1323125
+          ],
+          "area": 2427.6952500000007,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "cut_with_18575",
+      "image_id": 18575,
+      "image_file": "000000018575.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000018575.jpg",
+      "width": 640,
+      "height": 480,
+      "prompt": "something to cut with .",
+      "affordance_id": "cut_with",
+      "target_categories": [
+        "knife",
+        "scissors"
+      ],
+      "num_annotations": 8,
+      "num_distractor_annotations": 7,
+      "category_histogram": {
+        "bottle": 3,
+        "dining table": 1,
+        "knife": 1,
+        "bowl": 1,
+        "sandwich": 1,
+        "wine glass": 1
+      },
+      "positive_category_histogram": {
+        "knife": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 1524383,
+          "category_name": "knife",
+          "bbox_xywh": [
+            0.01,
+            134.85,
+            20.81,
+            63.28
+          ],
+          "bbox_norm_cxcywh": [
+            0.016273437499999998,
+            0.3468541666666667,
+            0.032515625,
+            0.13183333333333333
+          ],
+          "area": 748.6730000000002,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "cut_with_40471",
+      "image_id": 40471,
+      "image_file": "000000040471.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000040471.jpg",
+      "width": 427,
+      "height": 640,
+      "prompt": "something to cut with .",
+      "affordance_id": "cut_with",
+      "target_categories": [
+        "knife",
+        "scissors"
+      ],
+      "num_annotations": 20,
+      "num_distractor_annotations": 17,
+      "category_histogram": {
+        "bottle": 4,
+        "refrigerator": 1,
+        "cup": 3,
+        "bowl": 1,
+        "microwave": 1,
+        "spoon": 3,
+        "banana": 1,
+        "apple": 1,
+        "sink": 1,
+        "knife": 3,
+        "oven": 1
+      },
+      "positive_category_histogram": {
+        "knife": 3
+      },
+      "positive_targets": [
+        {
+          "ann_id": 1891714,
+          "category_name": "knife",
+          "bbox_xywh": [
+            16.06,
+            306.79,
+            20.36,
+            24.4
+          ],
+          "bbox_norm_cxcywh": [
+            0.061451990632318494,
+            0.498421875,
+            0.04768149882903981,
+            0.038125
+          ],
+          "area": 124.38569999999987,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1892294,
+          "category_name": "knife",
+          "bbox_xywh": [
+            22.18,
+            318.61,
+            10.12,
+            12.36
+          ],
+          "bbox_norm_cxcywh": [
+            0.06379391100702576,
+            0.507484375,
+            0.02370023419203747,
+            0.0193125
+          ],
+          "area": 38.517399999999974,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1892685,
+          "category_name": "knife",
+          "bbox_xywh": [
+            15.55,
+            300.98,
+            15.64,
+            16.22
+          ],
+          "bbox_norm_cxcywh": [
+            0.054730679156908664,
+            0.48295312500000004,
+            0.03662763466042155,
+            0.025343749999999998
+          ],
+          "area": 102.81455000000001,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "cut_with_47112",
+      "image_id": 47112,
+      "image_file": "000000047112.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000047112.jpg",
+      "width": 640,
+      "height": 480,
+      "prompt": "something to cut with .",
+      "affordance_id": "cut_with",
+      "target_categories": [
+        "knife",
+        "scissors"
+      ],
+      "num_annotations": 25,
+      "num_distractor_annotations": 24,
+      "category_histogram": {
+        "chair": 8,
+        "wine glass": 2,
+        "pizza": 1,
+        "dining table": 2,
+        "person": 1,
+        "bottle": 9,
+        "knife": 1,
+        "bowl": 1
+      },
+      "positive_category_histogram": {
+        "knife": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 1520876,
+          "category_name": "knife",
+          "bbox_xywh": [
+            96.84,
+            228.92,
+            55.73,
+            9.08
+          ],
+          "bbox_norm_cxcywh": [
+            0.1948515625,
+            0.48637499999999995,
+            0.08707812499999999,
+            0.01891666666666667
+          ],
+          "area": 272.68710000000056,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "cut_with_62808",
+      "image_id": 62808,
+      "image_file": "000000062808.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000062808.jpg",
+      "width": 640,
+      "height": 481,
+      "prompt": "something to cut with .",
+      "affordance_id": "cut_with",
+      "target_categories": [
+        "knife",
+        "scissors"
+      ],
+      "num_annotations": 14,
+      "num_distractor_annotations": 12,
+      "category_histogram": {
+        "cell phone": 1,
+        "chair": 2,
+        "person": 3,
+        "knife": 2,
+        "pizza": 1,
+        "bottle": 1,
+        "dining table": 4
+      },
+      "positive_category_histogram": {
+        "knife": 2
+      },
+      "positive_targets": [
+        {
+          "ann_id": 695554,
+          "category_name": "knife",
+          "bbox_xywh": [
+            488.97,
+            273.98,
+            87.23,
+            51.02
+          ],
+          "bbox_norm_cxcywh": [
+            0.8321640625000001,
+            0.6226403326403327,
+            0.136296875,
+            0.10607068607068608
+          ],
+          "area": 2002.6580000000001,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 698122,
+          "category_name": "knife",
+          "bbox_xywh": [
+            464.75,
+            432.79,
+            175.25,
+            43.34
+          ],
+          "bbox_norm_cxcywh": [
+            0.8630859375,
+            0.9448232848232849,
+            0.273828125,
+            0.09010395010395011
+          ],
+          "area": 1376.0776499999997,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "cut_with_66231",
+      "image_id": 66231,
+      "image_file": "000000066231.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000066231.jpg",
+      "width": 640,
+      "height": 427,
+      "prompt": "something to cut with .",
+      "affordance_id": "cut_with",
+      "target_categories": [
+        "knife",
+        "scissors"
+      ],
+      "num_annotations": 26,
+      "num_distractor_annotations": 24,
+      "category_histogram": {
+        "person": 9,
+        "bowl": 4,
+        "banana": 1,
+        "apple": 2,
+        "orange": 2,
+        "bottle": 4,
+        "sink": 1,
+        "refrigerator": 1,
+        "knife": 2
+      },
+      "positive_category_histogram": {
+        "knife": 2
+      },
+      "positive_targets": [
+        {
+          "ann_id": 2104753,
+          "category_name": "knife",
+          "bbox_xywh": [
+            297.68,
+            205.09,
+            10.18,
+            25.47
+          ],
+          "bbox_norm_cxcywh": [
+            0.47307812499999996,
+            0.5101288056206089,
+            0.01590625,
+            0.05964871194379391
+          ],
+          "area": 96.57645000000043,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 2105086,
+          "category_name": "knife",
+          "bbox_xywh": [
+            314.57,
+            204.96,
+            3.4,
+            9.87
+          ],
+          "bbox_norm_cxcywh": [
+            0.494171875,
+            0.49155737704918034,
+            0.0053124999999999995,
+            0.023114754098360654
+          ],
+          "area": 26.293849999999907,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "cut_with_88040",
+      "image_id": 88040,
+      "image_file": "000000088040.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000088040.jpg",
+      "width": 427,
+      "height": 640,
+      "prompt": "something to cut with .",
+      "affordance_id": "cut_with",
+      "target_categories": [
+        "knife",
+        "scissors"
+      ],
+      "num_annotations": 13,
+      "num_distractor_annotations": 12,
+      "category_histogram": {
+        "bottle": 2,
+        "cup": 2,
+        "fork": 2,
+        "spoon": 2,
+        "bowl": 3,
+        "knife": 1,
+        "dining table": 1
+      },
+      "positive_category_histogram": {
+        "knife": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 1523981,
+          "category_name": "knife",
+          "bbox_xywh": [
+            0.0,
+            62.32,
+            50.85,
+            191.8
+          ],
+          "bbox_norm_cxcywh": [
+            0.05954332552693209,
+            0.24721875,
+            0.11908665105386418,
+            0.2996875
+          ],
+          "area": 2449.27275,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "cut_with_92939",
+      "image_id": 92939,
+      "image_file": "000000092939.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000092939.jpg",
+      "width": 424,
+      "height": 640,
+      "prompt": "something to cut with .",
+      "affordance_id": "cut_with",
+      "target_categories": [
+        "knife",
+        "scissors"
+      ],
+      "num_annotations": 14,
+      "num_distractor_annotations": 12,
+      "category_histogram": {
+        "chair": 5,
+        "person": 3,
+        "wine glass": 2,
+        "cake": 1,
+        "cup": 1,
+        "knife": 2
+      },
+      "positive_category_histogram": {
+        "knife": 2
+      },
+      "positive_targets": [
+        {
+          "ann_id": 1894261,
+          "category_name": "knife",
+          "bbox_xywh": [
+            91.06,
+            530.3,
+            54.33,
+            78.72
+          ],
+          "bbox_norm_cxcywh": [
+            0.2788325471698113,
+            0.8900937499999999,
+            0.1281367924528302,
+            0.123
+          ],
+          "area": 408.54805000000124,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1894359,
+          "category_name": "knife",
+          "bbox_xywh": [
+            266.3,
+            478.87,
+            8.34,
+            16.84
+          ],
+          "bbox_norm_cxcywh": [
+            0.6379009433962265,
+            0.761390625,
+            0.019669811320754717,
+            0.0263125
+          ],
+          "area": 58.74129999999994,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "cut_with_95707",
+      "image_id": 95707,
+      "image_file": "000000095707.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000095707.jpg",
+      "width": 640,
+      "height": 360,
+      "prompt": "something to cut with .",
+      "affordance_id": "cut_with",
+      "target_categories": [
+        "knife",
+        "scissors"
+      ],
+      "num_annotations": 9,
+      "num_distractor_annotations": 7,
+      "category_histogram": {
+        "knife": 2,
+        "bowl": 2,
+        "cake": 4,
+        "dining table": 1
+      },
+      "positive_category_histogram": {
+        "knife": 2
+      },
+      "positive_targets": [
+        {
+          "ann_id": 696747,
+          "category_name": "knife",
+          "bbox_xywh": [
+            569.28,
+            107.52,
+            35.52,
+            208.32
+          ],
+          "bbox_norm_cxcywh": [
+            0.9172499999999999,
+            0.588,
+            0.05550000000000001,
+            0.5786666666666667
+          ],
+          "area": 3615.4368000000077,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 2230913,
+          "category_name": "knife",
+          "bbox_xywh": [
+            503.77,
+            300.15,
+            27.96,
+            59.85
+          ],
+          "bbox_norm_cxcywh": [
+            0.808984375,
+            0.916875,
+            0.043687500000000004,
+            0.16625
+          ],
+          "area": 990.1771500000021,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "cut_with_104669",
+      "image_id": 104669,
+      "image_file": "000000104669.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000104669.jpg",
+      "width": 500,
+      "height": 375,
+      "prompt": "something to cut with .",
+      "affordance_id": "cut_with",
+      "target_categories": [
+        "knife",
+        "scissors"
+      ],
+      "num_annotations": 15,
+      "num_distractor_annotations": 14,
+      "category_histogram": {
+        "dining table": 1,
+        "fork": 1,
+        "knife": 1,
+        "orange": 1,
+        "broccoli": 2,
+        "carrot": 9
+      },
+      "positive_category_histogram": {
+        "knife": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 696654,
+          "category_name": "knife",
+          "bbox_xywh": [
+            0.59,
+            162.77,
+            74.68,
+            212.23
+          ],
+          "bbox_norm_cxcywh": [
+            0.07586000000000001,
+            0.7170266666666666,
+            0.14936000000000002,
+            0.5659466666666666
+          ],
+          "area": 3868.2924500000004,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "drink_from_6471",
+      "image_id": 6471,
+      "image_file": "000000006471.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000006471.jpg",
+      "width": 500,
+      "height": 333,
+      "prompt": "something to drink from .",
+      "affordance_id": "drink_from",
+      "target_categories": [
+        "cup",
+        "bottle",
+        "wine glass"
+      ],
+      "num_annotations": 16,
+      "num_distractor_annotations": 14,
+      "category_histogram": {
+        "person": 10,
+        "baseball bat": 1,
+        "bench": 2,
+        "baseball glove": 1,
+        "bottle": 2
+      },
+      "positive_category_histogram": {
+        "bottle": 2
+      },
+      "positive_targets": [
+        {
+          "ann_id": 1485643,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            147.25,
+            103.0,
+            5.32,
+            15.71
+          ],
+          "bbox_norm_cxcywh": [
+            0.29982,
+            0.3328978978978979,
+            0.01064,
+            0.047177177177177176
+          ],
+          "area": 65.56289999999989,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 2096622,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            86.46,
+            107.35,
+            4.67,
+            16.48
+          ],
+          "bbox_norm_cxcywh": [
+            0.17758999999999997,
+            0.34711711711711707,
+            0.00934,
+            0.04948948948948949
+          ],
+          "area": 62.18539999999998,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "drink_from_7818",
+      "image_id": 7818,
+      "image_file": "000000007818.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000007818.jpg",
+      "width": 640,
+      "height": 427,
+      "prompt": "something to drink from .",
+      "affordance_id": "drink_from",
+      "target_categories": [
+        "cup",
+        "bottle",
+        "wine glass"
+      ],
+      "num_annotations": 11,
+      "num_distractor_annotations": 8,
+      "category_histogram": {
+        "dining table": 1,
+        "wine glass": 3,
+        "knife": 3,
+        "vase": 1,
+        "fork": 1,
+        "chair": 2
+      },
+      "positive_category_histogram": {
+        "wine glass": 3
+      },
+      "positive_targets": [
+        {
+          "ann_id": 661523,
+          "category_name": "wine glass",
+          "bbox_xywh": [
+            332.5,
+            158.89,
+            80.92,
+            193.78
+          ],
+          "bbox_norm_cxcywh": [
+            0.58275,
+            0.5990163934426229,
+            0.1264375,
+            0.45381733021077286
+          ],
+          "area": 8883.12245,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 662163,
+          "category_name": "wine glass",
+          "bbox_xywh": [
+            399.86,
+            187.2,
+            43.16,
+            97.53
+          ],
+          "bbox_norm_cxcywh": [
+            0.6585,
+            0.5526112412177986,
+            0.0674375,
+            0.22840749414519906
+          ],
+          "area": 2293.8057000000003,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 664730,
+          "category_name": "wine glass",
+          "bbox_xywh": [
+            136.56,
+            150.03,
+            91.37,
+            179.84
+          ],
+          "bbox_norm_cxcywh": [
+            0.2847578125,
+            0.561943793911007,
+            0.142765625,
+            0.4211709601873536
+          ],
+          "area": 7386.368500000002,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "drink_from_18150",
+      "image_id": 18150,
+      "image_file": "000000018150.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000018150.jpg",
+      "width": 640,
+      "height": 480,
+      "prompt": "something to drink from .",
+      "affordance_id": "drink_from",
+      "target_categories": [
+        "cup",
+        "bottle",
+        "wine glass"
+      ],
+      "num_annotations": 7,
+      "num_distractor_annotations": 6,
+      "category_histogram": {
+        "bottle": 1,
+        "couch": 1,
+        "person": 2,
+        "pizza": 2,
+        "backpack": 1
+      },
+      "positive_category_histogram": {
+        "bottle": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 91276,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            274.71,
+            230.24,
+            33.7,
+            57.07
+          ],
+          "bbox_norm_cxcywh": [
+            0.4555625,
+            0.5391145833333334,
+            0.05265625,
+            0.11889583333333334
+          ],
+          "area": 1157.656850000001,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "drink_from_25986",
+      "image_id": 25986,
+      "image_file": "000000025986.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000025986.jpg",
+      "width": 640,
+      "height": 480,
+      "prompt": "something to drink from .",
+      "affordance_id": "drink_from",
+      "target_categories": [
+        "cup",
+        "bottle",
+        "wine glass"
+      ],
+      "num_annotations": 18,
+      "num_distractor_annotations": 17,
+      "category_histogram": {
+        "cup": 1,
+        "spoon": 1,
+        "bowl": 2,
+        "broccoli": 7,
+        "donut": 7
+      },
+      "positive_category_histogram": {
+        "cup": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 680146,
+          "category_name": "cup",
+          "bbox_xywh": [
+            370.13,
+            203.05,
+            78.54,
+            116.91
+          ],
+          "bbox_norm_cxcywh": [
+            0.6396875,
+            0.5448020833333334,
+            0.12271875000000002,
+            0.2435625
+          ],
+          "area": 7464.683949999998,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "drink_from_31296",
+      "image_id": 31296,
+      "image_file": "000000031296.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000031296.jpg",
+      "width": 640,
+      "height": 425,
+      "prompt": "something to drink from .",
+      "affordance_id": "drink_from",
+      "target_categories": [
+        "cup",
+        "bottle",
+        "wine glass"
+      ],
+      "num_annotations": 53,
+      "num_distractor_annotations": 37,
+      "category_histogram": {
+        "bottle": 9,
+        "clock": 1,
+        "chair": 14,
+        "dining table": 7,
+        "cup": 7,
+        "person": 13,
+        "tie": 1,
+        "cell phone": 1
+      },
+      "positive_category_histogram": {
+        "bottle": 9,
+        "cup": 7
+      },
+      "positive_targets": [
+        {
+          "ann_id": 87130,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            276.85,
+            181.19,
+            8.79,
+            25.56
+          ],
+          "bbox_norm_cxcywh": [
+            0.4394453125,
+            0.4564,
+            0.013734374999999998,
+            0.06014117647058823
+          ],
+          "area": 120.33474999999936,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 370794,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            287.92,
+            151.48,
+            4.91,
+            11.54
+          ],
+          "bbox_norm_cxcywh": [
+            0.4537109375,
+            0.37,
+            0.007671875,
+            0.027152941176470585
+          ],
+          "area": 36.60525000000004,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 371538,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            280.17,
+            152.1,
+            4.36,
+            12.62
+          ],
+          "bbox_norm_cxcywh": [
+            0.44117187500000005,
+            0.37272941176470586,
+            0.006812500000000001,
+            0.029694117647058822
+          ],
+          "area": 40.48009999999976,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 371859,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            291.76,
+            140.17,
+            5.97,
+            9.59
+          ],
+          "bbox_norm_cxcywh": [
+            0.4605390625,
+            0.34109411764705877,
+            0.009328125,
+            0.02256470588235294
+          ],
+          "area": 45.321699999999915,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 372024,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            274.27,
+            137.92,
+            6.08,
+            24.85
+          ],
+          "bbox_norm_cxcywh": [
+            0.433296875,
+            0.3537529411764706,
+            0.0095,
+            0.05847058823529412
+          ],
+          "area": 109.28490000000069,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 372229,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            303.3,
+            167.77,
+            7.66,
+            15.05
+          ],
+          "bbox_norm_cxcywh": [
+            0.479890625,
+            0.4124588235294118,
+            0.01196875,
+            0.03541176470588236
+          ],
+          "area": 92.1995499999998,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 372425,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            296.88,
+            137.38,
+            6.48,
+            15.95
+          ],
+          "bbox_norm_cxcywh": [
+            0.4689375,
+            0.34201176470588235,
+            0.010125,
+            0.03752941176470588
+          ],
+          "area": 78.7242999999999,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 372486,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            294.88,
+            193.35,
+            5.21,
+            18.53
+          ],
+          "bbox_norm_cxcywh": [
+            0.4648203125,
+            0.4767411764705883,
+            0.008140625,
+            0.0436
+          ],
+          "area": 36.536699999999826,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 673744,
+          "category_name": "cup",
+          "bbox_xywh": [
+            230.64,
+            169.37,
+            16.87,
+            16.17
+          ],
+          "bbox_norm_cxcywh": [
+            0.3735546875,
+            0.41754117647058825,
+            0.026359375,
+            0.03804705882352941
+          ],
+          "area": 236.9237499999998,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 680229,
+          "category_name": "cup",
+          "bbox_xywh": [
+            248.78,
+            159.63,
+            15.27,
+            13.86
+          ],
+          "bbox_norm_cxcywh": [
+            0.4006484375,
+            0.39190588235294116,
+            0.023859375,
+            0.032611764705882354
+          ],
+          "area": 170.50455000000028,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 681785,
+          "category_name": "cup",
+          "bbox_xywh": [
+            248.35,
+            173.98,
+            17.1,
+            12.72
+          ],
+          "bbox_norm_cxcywh": [
+            0.40140624999999996,
+            0.4243294117647059,
+            0.026718750000000003,
+            0.029929411764705885
+          ],
+          "area": 155.72009999999997,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1509787,
+          "category_name": "cup",
+          "bbox_xywh": [
+            319.16,
+            141.32,
+            8.82,
+            17.96
+          ],
+          "bbox_norm_cxcywh": [
+            0.5055781250000001,
+            0.35364705882352937,
+            0.01378125,
+            0.042258823529411765
+          ],
+          "area": 103.25149999999948,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1509957,
+          "category_name": "cup",
+          "bbox_xywh": [
+            6.26,
+            158.23,
+            7.88,
+            13.25
+          ],
+          "bbox_norm_cxcywh": [
+            0.0159375,
+            0.3878941176470588,
+            0.0123125,
+            0.031176470588235295
+          ],
+          "area": 91.77794999999993,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1864945,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            287.08,
+            169.37,
+            10.66,
+            30.74
+          ],
+          "bbox_norm_cxcywh": [
+            0.45689062499999994,
+            0.4346823529411765,
+            0.01665625,
+            0.07232941176470588
+          ],
+          "area": 197.1831999999999,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 2098412,
+          "category_name": "cup",
+          "bbox_xywh": [
+            12.43,
+            157.14,
+            8.75,
+            12.25
+          ],
+          "bbox_norm_cxcywh": [
+            0.026257812499999998,
+            0.38415294117647053,
+            0.013671875,
+            0.028823529411764706
+          ],
+          "area": 79.42555000000004,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 2099611,
+          "category_name": "cup",
+          "bbox_xywh": [
+            211.54,
+            91.86,
+            7.62,
+            7.37
+          ],
+          "bbox_norm_cxcywh": [
+            0.336484375,
+            0.22481176470588235,
+            0.01190625,
+            0.017341176470588235
+          ],
+          "area": 46.613849999999985,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "drink_from_32334",
+      "image_id": 32334,
+      "image_file": "000000032334.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000032334.jpg",
+      "width": 640,
+      "height": 480,
+      "prompt": "something to drink from .",
+      "affordance_id": "drink_from",
+      "target_categories": [
+        "cup",
+        "bottle",
+        "wine glass"
+      ],
+      "num_annotations": 10,
+      "num_distractor_annotations": 7,
+      "category_histogram": {
+        "chair": 1,
+        "person": 5,
+        "wine glass": 3,
+        "car": 1
+      },
+      "positive_category_histogram": {
+        "wine glass": 3
+      },
+      "positive_targets": [
+        {
+          "ann_id": 662422,
+          "category_name": "wine glass",
+          "bbox_xywh": [
+            166.37,
+            248.07,
+            60.21,
+            93.88
+          ],
+          "bbox_norm_cxcywh": [
+            0.3069921875,
+            0.6146041666666666,
+            0.094078125,
+            0.19558333333333333
+          ],
+          "area": 4777.1711000000005,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 664403,
+          "category_name": "wine glass",
+          "bbox_xywh": [
+            262.11,
+            251.33,
+            76.59,
+            108.94
+          ],
+          "bbox_norm_cxcywh": [
+            0.4693828125,
+            0.6370833333333333,
+            0.11967187500000001,
+            0.22695833333333332
+          ],
+          "area": 6754.254699999999,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1496388,
+          "category_name": "wine glass",
+          "bbox_xywh": [
+            0.0,
+            277.17,
+            18.91,
+            85.54
+          ],
+          "bbox_norm_cxcywh": [
+            0.0147734375,
+            0.6665416666666667,
+            0.029546875,
+            0.17820833333333336
+          ],
+          "area": 1070.4494,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "drink_from_34873",
+      "image_id": 34873,
+      "image_file": "000000034873.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000034873.jpg",
+      "width": 640,
+      "height": 480,
+      "prompt": "something to drink from .",
+      "affordance_id": "drink_from",
+      "target_categories": [
+        "cup",
+        "bottle",
+        "wine glass"
+      ],
+      "num_annotations": 9,
+      "num_distractor_annotations": 8,
+      "category_histogram": {
+        "chair": 3,
+        "dining table": 1,
+        "bowl": 1,
+        "apple": 1,
+        "sink": 1,
+        "cup": 1,
+        "tv": 1
+      },
+      "positive_category_histogram": {
+        "cup": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 1876809,
+          "category_name": "cup",
+          "bbox_xywh": [
+            125.08,
+            201.18,
+            23.28,
+            24.35
+          ],
+          "bbox_norm_cxcywh": [
+            0.213625,
+            0.4444895833333334,
+            0.036375000000000005,
+            0.05072916666666667
+          ],
+          "area": 538.0768999999999,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "drink_from_35326",
+      "image_id": 35326,
+      "image_file": "000000035326.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000035326.jpg",
+      "width": 640,
+      "height": 480,
+      "prompt": "something to drink from .",
+      "affordance_id": "drink_from",
+      "target_categories": [
+        "cup",
+        "bottle",
+        "wine glass"
+      ],
+      "num_annotations": 6,
+      "num_distractor_annotations": 2,
+      "category_histogram": {
+        "bottle": 4,
+        "knife": 1,
+        "oven": 1
+      },
+      "positive_category_histogram": {
+        "bottle": 4
+      },
+      "positive_targets": [
+        {
+          "ann_id": 95805,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            132.59,
+            260.01,
+            57.7,
+            31.2
+          ],
+          "bbox_norm_cxcywh": [
+            0.25225,
+            0.5741875000000001,
+            0.09015625000000001,
+            0.065
+          ],
+          "area": 937.92005,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 96838,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            134.93,
+            284.76,
+            55.15,
+            32.46
+          ],
+          "bbox_norm_cxcywh": [
+            0.2539140625,
+            0.6270625,
+            0.086171875,
+            0.067625
+          ],
+          "area": 936.1727500000003,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1866616,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            127.64,
+            212.53,
+            60.72,
+            29.08
+          ],
+          "bbox_norm_cxcywh": [
+            0.246875,
+            0.4730625,
+            0.094875,
+            0.06058333333333333
+          ],
+          "area": 1155.8105,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1869697,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            130.6,
+            234.23,
+            55.98,
+            31.18
+          ],
+          "bbox_norm_cxcywh": [
+            0.247796875,
+            0.5204583333333334,
+            0.08746875,
+            0.06495833333333333
+          ],
+          "area": 899.3367500000003,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "drink_from_64868",
+      "image_id": 64868,
+      "image_file": "000000064868.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000064868.jpg",
+      "width": 500,
+      "height": 375,
+      "prompt": "something to drink from .",
+      "affordance_id": "drink_from",
+      "target_categories": [
+        "cup",
+        "bottle",
+        "wine glass"
+      ],
+      "num_annotations": 6,
+      "num_distractor_annotations": 5,
+      "category_histogram": {
+        "dog": 1,
+        "person": 1,
+        "oven": 1,
+        "bottle": 1,
+        "chair": 2
+      },
+      "positive_category_histogram": {
+        "bottle": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 1492380,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            358.12,
+            0.39,
+            19.7,
+            50.3
+          ],
+          "bbox_norm_cxcywh": [
+            0.73594,
+            0.06810666666666666,
+            0.0394,
+            0.13413333333333333
+          ],
+          "area": 708.5954499999999,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "drink_from_81738",
+      "image_id": 81738,
+      "image_file": "000000081738.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000081738.jpg",
+      "width": 640,
+      "height": 480,
+      "prompt": "something to drink from .",
+      "affordance_id": "drink_from",
+      "target_categories": [
+        "cup",
+        "bottle",
+        "wine glass"
+      ],
+      "num_annotations": 5,
+      "num_distractor_annotations": 4,
+      "category_histogram": {
+        "bottle": 1,
+        "person": 1,
+        "knife": 1,
+        "cake": 1,
+        "dining table": 1
+      },
+      "positive_category_histogram": {
+        "bottle": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 89049,
+          "category_name": "bottle",
+          "bbox_xywh": [
+            0.0,
+            158.39,
+            37.0,
+            250.79
+          ],
+          "bbox_norm_cxcywh": [
+            0.02890625,
+            0.5912187499999999,
+            0.0578125,
+            0.5224791666666666
+          ],
+          "area": 6099.285549999999,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "sit_on_12120",
+      "image_id": 12120,
+      "image_file": "000000012120.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000012120.jpg",
+      "width": 640,
+      "height": 428,
+      "prompt": "something to sit on .",
+      "affordance_id": "sit_on",
+      "target_categories": [
+        "chair",
+        "bench",
+        "couch",
+        "bed"
+      ],
+      "num_annotations": 25,
+      "num_distractor_annotations": 17,
+      "category_histogram": {
+        "sports ball": 1,
+        "chair": 8,
+        "tennis racket": 2,
+        "person": 14
+      },
+      "positive_category_histogram": {
+        "chair": 8
+      },
+      "positive_targets": [
+        {
+          "ann_id": 373319,
+          "category_name": "chair",
+          "bbox_xywh": [
+            375.02,
+            19.25,
+            11.05,
+            14.59
+          ],
+          "bbox_norm_cxcywh": [
+            0.5946015625,
+            0.06202102803738318,
+            0.017265625,
+            0.03408878504672897
+          ],
+          "area": 145.84575000000024,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 380029,
+          "category_name": "chair",
+          "bbox_xywh": [
+            359.85,
+            18.84,
+            11.67,
+            15.04
+          ],
+          "bbox_norm_cxcywh": [
+            0.5713828125,
+            0.06158878504672897,
+            0.018234375,
+            0.03514018691588785
+          ],
+          "area": 141.66634999999977,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 385411,
+          "category_name": "chair",
+          "bbox_xywh": [
+            349.56,
+            7.55,
+            11.03,
+            12.28
+          ],
+          "bbox_norm_cxcywh": [
+            0.5548046875,
+            0.03198598130841122,
+            0.017234375,
+            0.028691588785046726
+          ],
+          "area": 61.62440000000016,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1586452,
+          "category_name": "chair",
+          "bbox_xywh": [
+            299.74,
+            7.72,
+            12.36,
+            13.49
+          ],
+          "bbox_norm_cxcywh": [
+            0.47800000000000004,
+            0.03379672897196262,
+            0.0193125,
+            0.03151869158878505
+          ],
+          "area": 112.83430000000028,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1597360,
+          "category_name": "chair",
+          "bbox_xywh": [
+            375.81,
+            8.64,
+            11.94,
+            13.47
+          ],
+          "bbox_norm_cxcywh": [
+            0.5965312500000001,
+            0.03592289719626168,
+            0.01865625,
+            0.03147196261682243
+          ],
+          "area": 118.48469999999995,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1599619,
+          "category_name": "chair",
+          "bbox_xywh": [
+            131.66,
+            27.02,
+            16.9,
+            9.52
+          ],
+          "bbox_norm_cxcywh": [
+            0.218921875,
+            0.07425233644859813,
+            0.02640625,
+            0.022242990654205607
+          ],
+          "area": 155.92200000000005,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1600157,
+          "category_name": "chair",
+          "bbox_xywh": [
+            472.25,
+            123.95,
+            8.39,
+            31.2
+          ],
+          "bbox_norm_cxcywh": [
+            0.7444453125,
+            0.32605140186915893,
+            0.013109375000000001,
+            0.07289719626168224
+          ],
+          "area": 131.0995500000004,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 2192396,
+          "category_name": "chair",
+          "bbox_xywh": [
+            285.19,
+            7.08,
+            12.43,
+            15.59
+          ],
+          "bbox_norm_cxcywh": [
+            0.45532031249999994,
+            0.03475467289719626,
+            0.019421874999999998,
+            0.03642523364485981
+          ],
+          "area": 136.48975000000027,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "sit_on_13546",
+      "image_id": 13546,
+      "image_file": "000000013546.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000013546.jpg",
+      "width": 640,
+      "height": 425,
+      "prompt": "something to sit on .",
+      "affordance_id": "sit_on",
+      "target_categories": [
+        "chair",
+        "bench",
+        "couch",
+        "bed"
+      ],
+      "num_annotations": 8,
+      "num_distractor_annotations": 4,
+      "category_histogram": {
+        "person": 2,
+        "skateboard": 2,
+        "bench": 4
+      },
+      "positive_category_histogram": {
+        "bench": 4
+      },
+      "positive_targets": [
+        {
+          "ann_id": 1395158,
+          "category_name": "bench",
+          "bbox_xywh": [
+            205.18,
+            115.07,
+            93.86,
+            27.37
+          ],
+          "bbox_norm_cxcywh": [
+            0.39392187500000003,
+            0.3029529411764706,
+            0.14665625,
+            0.0644
+          ],
+          "area": 986.5886000000002,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 1395366,
+          "category_name": "bench",
+          "bbox_xywh": [
+            102.78,
+            115.16,
+            73.81,
+            29.59
+          ],
+          "bbox_norm_cxcywh": [
+            0.2182578125,
+            0.30577647058823526,
+            0.115328125,
+            0.06962352941176471
+          ],
+          "area": 969.7507500000003,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 2061131,
+          "category_name": "bench",
+          "bbox_xywh": [
+            315.58,
+            110.37,
+            81.68,
+            24.5
+          ],
+          "bbox_norm_cxcywh": [
+            0.5569062499999999,
+            0.28851764705882355,
+            0.12762500000000002,
+            0.05764705882352941
+          ],
+          "area": 816.1281500000002,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 2062913,
+          "category_name": "bench",
+          "bbox_xywh": [
+            413.73,
+            107.77,
+            77.61,
+            25.92
+          ],
+          "bbox_norm_cxcywh": [
+            0.7070859375,
+            0.2840705882352941,
+            0.121265625,
+            0.06098823529411765
+          ],
+          "area": 832.2201000000006,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "sit_on_13729",
+      "image_id": 13729,
+      "image_file": "000000013729.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000013729.jpg",
+      "width": 640,
+      "height": 480,
+      "prompt": "something to sit on .",
+      "affordance_id": "sit_on",
+      "target_categories": [
+        "chair",
+        "bench",
+        "couch",
+        "bed"
+      ],
+      "num_annotations": 11,
+      "num_distractor_annotations": 10,
+      "category_histogram": {
+        "bottle": 2,
+        "person": 4,
+        "remote": 2,
+        "dining table": 1,
+        "cup": 1,
+        "couch": 1
+      },
+      "positive_category_histogram": {
+        "couch": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 2231408,
+          "category_name": "couch",
+          "bbox_xywh": [
+            312.54,
+            206.81,
+            88.96,
+            133.07
+          ],
+          "bbox_norm_cxcywh": [
+            0.5578437500000001,
+            0.5694687500000001,
+            0.13899999999999998,
+            0.27722916666666664
+          ],
+          "area": 7926.755249999999,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "sit_on_13923",
+      "image_id": 13923,
+      "image_file": "000000013923.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000013923.jpg",
+      "width": 640,
+      "height": 427,
+      "prompt": "something to sit on .",
+      "affordance_id": "sit_on",
+      "target_categories": [
+        "chair",
+        "bench",
+        "couch",
+        "bed"
+      ],
+      "num_annotations": 19,
+      "num_distractor_annotations": 13,
+      "category_histogram": {
+        "potted plant": 4,
+        "tv": 1,
+        "chair": 5,
+        "couch": 1,
+        "dining table": 1,
+        "vase": 2,
+        "bottle": 2,
+        "bowl": 3
+      },
+      "positive_category_histogram": {
+        "chair": 5,
+        "couch": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 108331,
+          "category_name": "chair",
+          "bbox_xywh": [
+            213.5,
+            232.37,
+            122.39,
+            138.03
+          ],
+          "bbox_norm_cxcywh": [
+            0.4292109375,
+            0.7058196721311475,
+            0.191234375,
+            0.3232552693208431
+          ],
+          "area": 7257.563049999998,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 108430,
+          "category_name": "chair",
+          "bbox_xywh": [
+            244.23,
+            286.67,
+            93.42,
+            123.76
+          ],
+          "bbox_norm_cxcywh": [
+            0.45459375,
+            0.8162763466042154,
+            0.14596875,
+            0.2898360655737705
+          ],
+          "area": 7032.8252999999995,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 108630,
+          "category_name": "chair",
+          "bbox_xywh": [
+            444.65,
+            313.01,
+            126.16,
+            109.4
+          ],
+          "bbox_norm_cxcywh": [
+            0.7933281249999999,
+            0.8611475409836065,
+            0.197125,
+            0.25620608899297426
+          ],
+          "area": 5709.348249999997,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 109275,
+          "category_name": "chair",
+          "bbox_xywh": [
+            406.71,
+            244.16,
+            85.77,
+            94.07
+          ],
+          "bbox_norm_cxcywh": [
+            0.7024921875,
+            0.6819555035128806,
+            0.134015625,
+            0.22030444964871193
+          ],
+          "area": 4938.046050000001,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 114321,
+          "category_name": "couch",
+          "bbox_xywh": [
+            14.72,
+            201.08,
+            164.73,
+            126.07
+          ],
+          "bbox_norm_cxcywh": [
+            0.15169531249999998,
+            0.6185362997658079,
+            0.257390625,
+            0.2952459016393442
+          ],
+          "area": 11637.646799999997,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 2123120,
+          "category_name": "chair",
+          "bbox_xywh": [
+            240.48,
+            369.41,
+            98.82,
+            57.59
+          ],
+          "bbox_norm_cxcywh": [
+            0.45295312499999996,
+            0.9325644028103045,
+            0.15440625,
+            0.1348711943793911
+          ],
+          "area": 2115.54865,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "sit_on_20553",
+      "image_id": 20553,
+      "image_file": "000000020553.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000020553.jpg",
+      "width": 500,
+      "height": 375,
+      "prompt": "something to sit on .",
+      "affordance_id": "sit_on",
+      "target_categories": [
+        "chair",
+        "bench",
+        "couch",
+        "bed"
+      ],
+      "num_annotations": 11,
+      "num_distractor_annotations": 10,
+      "category_histogram": {
+        "bottle": 3,
+        "teddy bear": 3,
+        "umbrella": 1,
+        "chair": 1,
+        "vase": 1,
+        "cup": 1,
+        "dining table": 1
+      },
+      "positive_category_histogram": {
+        "chair": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 1932983,
+          "category_name": "chair",
+          "bbox_xywh": [
+            123.44,
+            192.65,
+            117.9,
+            103.38
+          ],
+          "bbox_norm_cxcywh": [
+            0.36478,
+            0.6515733333333333,
+            0.2358,
+            0.27568
+          ],
+          "area": 5852.168600000001,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "sit_on_22892",
+      "image_id": 22892,
+      "image_file": "000000022892.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000022892.jpg",
+      "width": 500,
+      "height": 334,
+      "prompt": "something to sit on .",
+      "affordance_id": "sit_on",
+      "target_categories": [
+        "chair",
+        "bench",
+        "couch",
+        "bed"
+      ],
+      "num_annotations": 5,
+      "num_distractor_annotations": 4,
+      "category_histogram": {
+        "dog": 1,
+        "potted plant": 1,
+        "cat": 1,
+        "dining table": 1,
+        "chair": 1
+      },
+      "positive_category_histogram": {
+        "chair": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 1930326,
+          "category_name": "chair",
+          "bbox_xywh": [
+            314.1,
+            0.0,
+            185.9,
+            259.59
+          ],
+          "bbox_norm_cxcywh": [
+            0.8141,
+            0.3886077844311377,
+            0.3718,
+            0.7772155688622754
+          ],
+          "area": 9397.759800000002,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "sit_on_27620",
+      "image_id": 27620,
+      "image_file": "000000027620.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000027620.jpg",
+      "width": 640,
+      "height": 480,
+      "prompt": "something to sit on .",
+      "affordance_id": "sit_on",
+      "target_categories": [
+        "chair",
+        "bench",
+        "couch",
+        "bed"
+      ],
+      "num_annotations": 7,
+      "num_distractor_annotations": 6,
+      "category_histogram": {
+        "chair": 1,
+        "laptop": 1,
+        "keyboard": 3,
+        "mouse": 1,
+        "bottle": 1
+      },
+      "positive_category_histogram": {
+        "chair": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 372674,
+          "category_name": "chair",
+          "bbox_xywh": [
+            298.2,
+            172.29,
+            314.97,
+            307.41
+          ],
+          "bbox_norm_cxcywh": [
+            0.7120078125,
+            0.67915625,
+            0.49214062500000005,
+            0.6404375000000001
+          ],
+          "area": 49083.70119999999,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "sit_on_31620",
+      "image_id": 31620,
+      "image_file": "000000031620.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000031620.jpg",
+      "width": 480,
+      "height": 640,
+      "prompt": "something to sit on .",
+      "affordance_id": "sit_on",
+      "target_categories": [
+        "chair",
+        "bench",
+        "couch",
+        "bed"
+      ],
+      "num_annotations": 10,
+      "num_distractor_annotations": 8,
+      "category_histogram": {
+        "chair": 2,
+        "person": 4,
+        "cake": 1,
+        "tie": 1,
+        "knife": 1,
+        "cup": 1
+      },
+      "positive_category_histogram": {
+        "chair": 2
+      },
+      "positive_targets": [
+        {
+          "ann_id": 373129,
+          "category_name": "chair",
+          "bbox_xywh": [
+            404.62,
+            436.94,
+            70.11,
+            203.06
+          ],
+          "bbox_norm_cxcywh": [
+            0.9159895833333334,
+            0.841359375,
+            0.1460625,
+            0.31728125
+          ],
+          "area": 6858.258950000001,
+          "iscrowd": 0
+        },
+        {
+          "ann_id": 2121001,
+          "category_name": "chair",
+          "bbox_xywh": [
+            0.84,
+            364.63,
+            17.4,
+            31.19
+          ],
+          "bbox_norm_cxcywh": [
+            0.019874999999999997,
+            0.5941015625,
+            0.03625,
+            0.048734375
+          ],
+          "area": 153.79899999999986,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "sit_on_48396",
+      "image_id": 48396,
+      "image_file": "000000048396.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000048396.jpg",
+      "width": 640,
+      "height": 427,
+      "prompt": "something to sit on .",
+      "affordance_id": "sit_on",
+      "target_categories": [
+        "chair",
+        "bench",
+        "couch",
+        "bed"
+      ],
+      "num_annotations": 7,
+      "num_distractor_annotations": 6,
+      "category_histogram": {
+        "chair": 1,
+        "dining table": 1,
+        "person": 2,
+        "cup": 1,
+        "knife": 1,
+        "cake": 1
+      },
+      "positive_category_histogram": {
+        "chair": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 104221,
+          "category_name": "chair",
+          "bbox_xywh": [
+            311.3,
+            215.8,
+            41.32,
+            200.18
+          ],
+          "bbox_norm_cxcywh": [
+            0.5186875000000001,
+            0.7397892271662763,
+            0.0645625,
+            0.4688056206088993
+          ],
+          "area": 2642.0748499999986,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "benchmark_id": "sit_on_50380",
+      "image_id": 50380,
+      "image_file": "000000050380.jpg",
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000050380.jpg",
+      "width": 640,
+      "height": 427,
+      "prompt": "something to sit on .",
+      "affordance_id": "sit_on",
+      "target_categories": [
+        "chair",
+        "bench",
+        "couch",
+        "bed"
+      ],
+      "num_annotations": 5,
+      "num_distractor_annotations": 4,
+      "category_histogram": {
+        "horse": 1,
+        "chair": 1,
+        "person": 3
+      },
+      "positive_category_histogram": {
+        "chair": 1
+      },
+      "positive_targets": [
+        {
+          "ann_id": 102188,
+          "category_name": "chair",
+          "bbox_xywh": [
+            1.44,
+            252.51,
+            118.6,
+            173.84
+          ],
+          "bbox_norm_cxcywh": [
+            0.09490625,
+            0.7949180327868852,
+            0.1853125,
+            0.4071194379391101
+          ],
+          "area": 10208.366350000004,
+          "iscrowd": 0
+        }
+      ],
+      "split": "test"
+    }
+  ]
+}

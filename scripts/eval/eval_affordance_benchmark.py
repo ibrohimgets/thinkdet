@@ -76,7 +76,7 @@ def parse_args():
     parser.add_argument(
         "--llm_rerank",
         action="store_true",
-        help="Enable InternVL candidate-box reranking via yes/no feedback.",
+        help="Enable InternVL candidate-box reranking via evidence-check feedback.",
     )
     parser.add_argument(
         "--llm_rerank_weight",
@@ -87,8 +87,8 @@ def parse_args():
     parser.add_argument(
         "--llm_rerank_max_new_tokens",
         type=int,
-        default=6,
-        help="Max generation tokens for InternVL yes/no response.",
+        default=48,
+        help="Max generation tokens for InternVL evidence-check response.",
     )
     parser.add_argument(
         "--llm_rerank_temperature",

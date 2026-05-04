@@ -75,6 +75,8 @@ def test_forward_pass():
     print(f"       mllm_hidden_dim: {model.mllm_hidden_dim}")
     print(f"       adapted layers:  {len(model.adapted_layers)}")
     print(f"       injection at:    {model.injection_layers}")
+    print(f"       fusion mode:     {model.fusion_mode}")
+    assert model.fusion_mode == "residual"
 
     print("\n[3/5] Preparing inputs ...")
     dummy_pil = Image.fromarray(

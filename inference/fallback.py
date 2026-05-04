@@ -4,7 +4,8 @@ This module is for inference-only recovery when ThinkDet looks uncertain.
 The intended routing is:
 
 1. Run ThinkDet normally.
-2. If the result looks weak, ask the MLLM to rerank detector candidates.
+2. If the result looks weak, ask the MLLM to rerank detector candidates
+   with a short evidence check and final yes/no answer.
 3. If it still looks weak, ask the MLLM to rewrite the prompt and retry.
 """
 
@@ -465,7 +466,7 @@ def apply_fallback_policy(
 
 
 class InternVLYesNoReranker:
-    """Candidate-box reranker using InternVL yes/no feedback."""
+    """Candidate-box reranker using InternVL evidence-check feedback."""
 
     def __init__(
         self,
@@ -474,14 +475,16 @@ class InternVLYesNoReranker:
         device,
         image_transform,
         weight: float = 0.2,
-        max_new_tokens: int = 6,
+        max_new_tokens: int = 48,
         temperature: float = 0.0,
+        use_cot: bool = True,
     ):
         self.model = internvl_model
         self.tokenizer = tokenizer
         self.device = device
         self.image_transform = image_transform
         self.weight = float(weight)
+        self.use_cot = bool(use_cot)
         self.base_generation_config = {
             "max_new_tokens": int(max_new_tokens),
             "do_sample": bool(temperature > 0),
@@ -503,10 +506,20 @@ class InternVLYesNoReranker:
     @staticmethod
     def _llm_text_to_score(text: str) -> float:
         t = text.strip().lower()
+        for pattern in (
+            r"final\s*(?:answer)?\s*[:\-]\s*(yes|no)\b",
+            r"answer\s*[:\-]\s*(yes|no)\b",
+        ):
+            match = re.search(pattern, t)
+            if match:
+                return 1.0 if match.group(1) == "yes" else 0.0
         if t.startswith("yes"):
             return 1.0
         if t.startswith("no"):
             return 0.0
+        decisions = re.findall(r"\b(yes|no)\b", t)
+        if decisions:
+            return 1.0 if decisions[-1] == "yes" else 0.0
         has_yes = "yes" in t
         has_no = "no" in t
         if has_yes and not has_no:
@@ -514,6 +527,18 @@ class InternVLYesNoReranker:
         if has_no and not has_yes:
             return 0.0
         return 0.5
+
+    def _build_question(self, prompt: str) -> str:
+        if self.use_cot:
+            return (
+                "Check the crop against the grounding query. "
+                "Briefly mention the visible evidence, then end with exactly "
+                f"'Final: yes' or 'Final: no'. Query: {prompt}"
+            )
+        return (
+            "Answer only yes or no. "
+            f"Does this crop contain the target described by the query: {prompt}"
+        )
 
     @torch.no_grad()
     def rerank_predictions(
@@ -537,10 +562,7 @@ class InternVLYesNoReranker:
                 continue
             crop = image_pil.crop((int(x1), int(y1), int(x2), int(y2)))
             crops.append(self.image_transform(crop))
-            questions.append(
-                "Answer only yes or no. "
-                f"Does this crop contain the target described by the query: {prompt}"
-            )
+            questions.append(self._build_question(prompt))
             valid_idx.append(i)
 
         if not crops:
@@ -560,15 +582,28 @@ class InternVLYesNoReranker:
         )
 
         llm_scores = [0.5] * len(preds)
+        responses_by_pred_idx = {}
         for idx_in_valid, pred_idx in enumerate(valid_idx):
-            llm_scores[pred_idx] = self._llm_text_to_score(responses[idx_in_valid])
+            response = responses[idx_in_valid]
+            llm_scores[pred_idx] = self._llm_text_to_score(response)
+            responses_by_pred_idx[pred_idx] = response
 
         for i, pred in enumerate(preds):
             llm_score = float(llm_scores[i])
             pred["llm_score"] = llm_score
+            if i in responses_by_pred_idx:
+                pred["llm_response"] = responses_by_pred_idx[i]
             pred["combined_score"] = float(pred["score"]) + self.weight * llm_score
 
         return sorted(preds, key=lambda r: r["combined_score"], reverse=True)
+
+
+class InternVLCoTReranker(InternVLYesNoReranker):
+    """Compatibility alias for the diagram's LLM fallback / CoT reranking block."""
+
+    def __init__(self, *args, **kwargs):
+        kwargs["use_cot"] = True
+        super().__init__(*args, **kwargs)
 
 
 class InternVLPromptRefiner:

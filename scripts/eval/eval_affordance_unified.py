@@ -22,7 +22,8 @@ import torchvision.transforms.functional as TF
 
 ROOT = "/home/iibrohimm/project/next_step"
 sys.path.insert(0, ROOT)
-sys.path.insert(0, os.path.join(ROOT, "GroundingDINO", "GroundingDINO"))
+GROUNDING_DINO_ROOT = os.path.join(ROOT, "GroundingDINO")
+sys.path.insert(0, GROUNDING_DINO_ROOT)
 
 from thinkdet.models.arch import ThinkDetModel, DEFAULT_INJECTION_LAYERS
 from groundingdino.util.inference import load_model as load_gd_model
@@ -40,9 +41,36 @@ DEFAULT_OUT = (
     f"{ROOT}/thinkdet/results/layer_ablation/"
     f"affordance_layer_eval_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
 )
-GD_CONFIG = f"{ROOT}/GroundingDINO/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"
-GD_WEIGHTS = f"{ROOT}/GroundingDINO/GroundingDINO/weights/groundingdino_swint_ogc.pth"
+GD_CONFIG = f"{GROUNDING_DINO_ROOT}/groundingdino/config/GroundingDINO_SwinT_OGC.py"
+GD_WEIGHTS = f"{GROUNDING_DINO_ROOT}/weights/groundingdino_swint_ogc.pth"
 INTERNVL_PATH = f"{ROOT}/InternVL3_5-1B"
+
+
+def patch_groundingdino_ms_deform_attn():
+    """Use the PyTorch attention fallback when GroundingDINO custom ops are absent."""
+    try:
+        from groundingdino.models.GroundingDINO import ms_deform_attn
+    except Exception:
+        return
+    if hasattr(ms_deform_attn, "_C"):
+        return
+
+    def fallback_apply(
+        value,
+        value_spatial_shapes,
+        value_level_start_index,
+        sampling_locations,
+        attention_weights,
+        im2col_step,
+    ):
+        return ms_deform_attn.multi_scale_deformable_attn_pytorch(
+            value,
+            value_spatial_shapes,
+            sampling_locations,
+            attention_weights,
+        )
+
+    ms_deform_attn.MultiScaleDeformableAttnFunction.apply = staticmethod(fallback_apply)
 
 
 def parse_args():
@@ -106,7 +134,7 @@ def parse_args():
     parser.add_argument(
         "--llm_judge",
         action="store_true",
-        help="Use InternVL yes/no feedback to rerank a small candidate set.",
+        help="Use InternVL evidence-check feedback to rerank a small candidate set.",
     )
     parser.add_argument(
         "--llm_judge_pool_k",
@@ -123,8 +151,8 @@ def parse_args():
     parser.add_argument(
         "--llm_judge_max_new_tokens",
         type=int,
-        default=6,
-        help="Max generation tokens for the InternVL yes/no judge.",
+        default=48,
+        help="Max generation tokens for the InternVL evidence-check judge.",
     )
     parser.add_argument(
         "--llm_judge_temperature",
@@ -385,6 +413,7 @@ def summarize_rows(rows, top_k):
 
 def main():
     args = parse_args()
+    patch_groundingdino_ms_deform_attn()
     if args.rerank_vlm_delta and (args.force_gate0 or args.force_gate_value is not None):
         raise ValueError("Use either VLM-delta reranking or force_gate overrides, not both.")
     if args.llm_judge and (args.force_gate0 or args.force_gate_value is not None):

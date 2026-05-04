@@ -19,7 +19,7 @@ This fallback is LLM-only:
    - top-1 score
    - top-1 vs top-2 margin
    - optional gate threshold
-3. If the result looks weak, ask InternVL to rerank detector candidates with yes/no box feedback.
+3. If the result looks weak, ask InternVL to rerank detector candidates with a short evidence check and final yes/no decision.
 4. If it still looks weak, ask InternVL to rewrite the query into clearer grounding prompts and retry ThinkDet.
 5. Accept a refined query only if it clears a semantic-preservation guard.
 
@@ -32,7 +32,7 @@ Primary is treated as weak if any of these hold:
 - `margin < fallback_min_margin`
 - `gate_mean < fallback_min_gate` when gate checking is enabled
 
-LLM feedback replaces the primary result only when:
+LLM evidence-check reranking replaces the primary result only when:
 - the primary result is weak, and
 - feedback improves reliability by `feedback_improve_margin`
 
@@ -65,7 +65,7 @@ equivalence; its purpose is to block obvious drift in thesis-facing results.
   - `thinkdet/scripts/eval/eval_prompt_robustness.py`
 - RefCOCO eval:
   - `thinkdet/scripts/eval/eval_refcoco.py`
-- Shared InternVL yes/no reranker:
+- Shared InternVL evidence-check reranker:
   - reused by `thinkdet/scripts/eval/eval_affordance_benchmark.py`
 
 ## What This Does Not Claim
@@ -76,6 +76,6 @@ equivalence; its purpose is to block obvious drift in thesis-facing results.
 - It does not prove the refined prompt is a logically perfect paraphrase.
 
 It only gives us an LLM-based second chance:
-- verify detector candidates with the MLLM
+- verify detector candidates with the MLLM evidence-check reranker
 - refine the query with the MLLM
 - keep the best-scoring pass that still respects the semantic guard

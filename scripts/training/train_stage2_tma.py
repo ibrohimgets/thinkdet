@@ -80,8 +80,8 @@ class Cfg:
     d_model          = 256
     tma_m            = 8
     tma_n_heads      = 8
-    tma_alpha_init   = 0.3
-    alpha_floor      = 0.2
+    tma_alpha_init   = 0.0
+    alpha_floor      = 0.0
     # Safer default for baseline-preserving tuning.
     injection_layers = [3]
     tma_fusion_mode = "residual"  # concat | residual

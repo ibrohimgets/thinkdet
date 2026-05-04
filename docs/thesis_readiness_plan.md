@@ -96,14 +96,14 @@ correctly.
 ### Primary policy
 
 - run ThinkDet normally
-- if confidence or margin is weak, try LLM feedback
+- if confidence or margin is weak, try LLM evidence-check reranking
 - if still weak, try LLM prompt refinement
 - accept refined output only if semantic-preservation guard passes
 
 ### What to emphasize
 
 - fallback is a recovery mechanism
-- refinement currently appears stronger than yes/no feedback
+- refinement currently appears stronger than candidate-level LLM feedback
 - fallback should be evaluated separately from the base model
 
 ### What to avoid

@@ -111,7 +111,7 @@ At inference time:
 \item The image is processed by GroundingDINO and InternVL.
 \item The query text is processed by GroundingDINO's BERT encoder and jointly with the image in InternVL.
 \item We extract text-conditioned visual hidden states \(H_{\text{vlm}}\) from an intermediate InternVL layer.
-\item TMA pools \(H_{\text{vlm}}\) into \(M=8\) summary tokens and concatenates them to the detector text memory at decoder layers \(\{1,3,5\}\).
+\item TMA pools \(H_{\text{vlm}}\) into \(M=8\) summary tokens and fuses them into the detector text memory with a zero-initialized residual branch at decoder layers \(\{1,3,5\}\).
 \end{enumerate}
 
 The injected tokens act as a semantic prior that can improve query disambiguation without modifying the detector backbone or the VLM.
@@ -145,8 +145,8 @@ The main ThinkDet affordance results are obtained without affordance-specific tr
 \subsection{Setup}
 \paragraph{Models.}
 The baseline used by the current repo artifacts is GroundingDINO Swin-T OGC.
-ThinkDet adds InternVL-based TMA with \(M=8\) summary tokens and injection
-layers \(\{1,3,5\}\).
+ThinkDet adds InternVL-based TMA with \(M=8\) summary tokens, residual
+text-memory fusion, and injection layers \(\{1,3,5\}\).
 
 \paragraph{Reported checkpoints.}
 The affordance results use:

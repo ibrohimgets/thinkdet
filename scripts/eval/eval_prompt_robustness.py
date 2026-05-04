@@ -989,7 +989,7 @@ def main():
     parser.add_argument("--fallback_min_gate", type=float, default=None)
     parser.add_argument("--llm_feedback_top_k", type=int, default=20)
     parser.add_argument("--llm_feedback_weight", type=float, default=0.20)
-    parser.add_argument("--llm_feedback_max_new_tokens", type=int, default=6)
+    parser.add_argument("--llm_feedback_max_new_tokens", type=int, default=48)
     parser.add_argument("--llm_feedback_temperature", type=float, default=0.0)
     parser.add_argument("--llm_feedback_improve_margin", type=float, default=0.01)
     parser.add_argument("--prompt_refine", action="store_true")

@@ -3,10 +3,9 @@ Build a larger weakly-labeled affordance benchmark (default 5k samples)
 from COCO val2017 by expanding each affordance with prompt variants.
 
 Why this exists:
-- The original held-out benchmark builder uses 8 affordances x 80 samples = 640
-  total (512 test split after dev split).
-- COCO val candidate coverage for those 8 affordances is not enough to reach 5k
-  unique image-affordance pairs.
+- The held-out builder produces a compact balanced set for the active taxonomy.
+- COCO val candidate coverage is not enough to reach 5k unique
+  image-affordance pairs for every affordance.
 - This script scales sample count by reusing the same GT category targets across
   multiple prompt variants per affordance (weak prompt-paraphrase expansion).
 
@@ -40,7 +39,7 @@ from thinkdet.scripts.eval.build_affordance_benchmark import (
 
 DEFAULT_OUT = (
     f"{ROOT}/thinkdet/data/benchmarks/"
-    "affordance_coco_val_promptvar_weak5k_v1.json"
+    "affordance_coco_val_promptvar_weak5k_v2.json"
 )
 
 
@@ -101,6 +100,90 @@ PROMPT_VARIANTS = {
         "a thing to read .",
         "reading material .",
         "something used for reading .",
+    ],
+    "eat": [
+        "something to eat .",
+        "something you can eat .",
+        "food to eat .",
+        "an edible thing .",
+        "something for a meal or snack .",
+    ],
+    "eat_from": [
+        "something to eat from .",
+        "something food can be eaten from .",
+        "a surface or container for eating .",
+        "something used to serve food for eating .",
+        "a thing to eat food from .",
+    ],
+    "cook_with": [
+        "something to cook with .",
+        "something used for cooking food .",
+        "an appliance for cooking .",
+        "something you can use to heat food .",
+        "a thing for preparing hot food .",
+    ],
+    "type_on": [
+        "something to type on .",
+        "something used for typing .",
+        "a device to enter text on .",
+        "something you can type with .",
+        "a thing for keyboard input .",
+    ],
+    "control_with": [
+        "something to control a device with .",
+        "something used to control a computer or screen .",
+        "a device controller .",
+        "something you can use to point or select .",
+        "an input device for controlling something .",
+    ],
+    "watch": [
+        "something to watch .",
+        "something you can watch video on .",
+        "a screen for watching .",
+        "something used for viewing shows .",
+        "a display to look at .",
+    ],
+    "tell_time": [
+        "something to tell time with .",
+        "something that shows the time .",
+        "a thing used to know the time .",
+        "something you can read time from .",
+        "a time-telling object .",
+    ],
+    "shelter_under": [
+        "something to shelter under .",
+        "something used for cover from rain .",
+        "something you can stand under for shade .",
+        "a thing for protection overhead .",
+        "something to hold over yourself in bad weather .",
+    ],
+    "wash_at": [
+        "somewhere to wash things .",
+        "a place to wash hands or dishes .",
+        "something used for washing .",
+        "a basin for cleaning things .",
+        "somewhere water is used for cleaning .",
+    ],
+    "sleep_on": [
+        "something to sleep on .",
+        "something you can lie on to rest .",
+        "a place to sleep .",
+        "furniture for sleeping .",
+        "something used as a bed or resting place .",
+    ],
+    "travel_in": [
+        "something to travel in .",
+        "a vehicle for transportation .",
+        "something people can ride inside .",
+        "something used to move from place to place .",
+        "a conveyance for travel .",
+    ],
+    "play_with": [
+        "something to play a sport with .",
+        "sports equipment to play with .",
+        "something used in a game .",
+        "a thing for athletic play .",
+        "equipment for playing sports .",
     ],
 }
 
@@ -300,8 +383,8 @@ def main():
     payload = {
         "status": "ok",
         "created_at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "benchmark_name": "affordance_coco_val_promptvar_weak5k_v1",
-        "version": 1,
+        "benchmark_name": "affordance_coco_val_promptvar_weak5k_v2",
+        "version": 2,
         "label_quality": "weak",
         "source_dataset": {
             "name": "COCO",

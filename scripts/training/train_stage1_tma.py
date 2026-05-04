@@ -71,7 +71,7 @@ class Cfg:
     d_model        = 256
     tma_m          = 8
     tma_n_heads    = 8
-    tma_alpha_init = 0.3
+    tma_alpha_init = 0.0
     # Safer default for baseline preservation experiments.
     injection_layers = [3]
     tma_fusion_mode = "residual"  # concat | residual
