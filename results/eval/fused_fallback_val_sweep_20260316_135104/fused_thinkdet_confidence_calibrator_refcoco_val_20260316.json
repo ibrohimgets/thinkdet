@@ -1,0 +1,56 @@
+{
+  "status": "ok",
+  "inputs": [
+    "/home/iibrohimm/project/next_step/thinkdet/results/eval/fused_fallback_val_sweep_20260316_135104/refcoco_val_fused_t0p09_m0p0075.json"
+  ],
+  "duplicates_skipped": 0,
+  "feature_names": [
+    "top1",
+    "margin",
+    "gate_mean"
+  ],
+  "feature_means": [
+    0.16015704378564077,
+    0.022823555634499906,
+    0.0004488915243806941
+  ],
+  "feature_stds": [
+    0.05620728456301912,
+    0.029206891148830228,
+    1.0
+  ],
+  "weights": [
+    -0.08050646650753027,
+    0.5106487350436378,
+    -5.082671824214621e-21
+  ],
+  "bias": 0.01989390291336655,
+  "metrics": {
+    "n_samples": 10834,
+    "positive_rate": 0.5008307181096547,
+    "raw_top1": {
+      "log_loss": 1.0227752234765608,
+      "brier": 0.36506223268614674,
+      "ece": 0.340673674324014,
+      "auc": 0.5416977407976498,
+      "prob_stats": {
+        "mean": 0.16015704378564077,
+        "p50": 0.1621420830488205,
+        "mean_on_correct": 0.16430504059016024,
+        "mean_on_incorrect": 0.1559952407787394
+      }
+    },
+    "calibrated": {
+      "log_loss": 0.6697148594257023,
+      "brier": 0.23779587749321585,
+      "ece": 0.03315559295182197,
+      "auc": 0.6243609043516097,
+      "prob_stats": {
+        "mean": 0.50083078523152,
+        "p50": 0.463536784364959,
+        "mean_on_correct": 0.523819787453125,
+        "mean_on_incorrect": 0.47776526636050887
+      }
+    }
+  }
+}

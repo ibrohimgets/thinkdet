@@ -1,0 +1,2313 @@
+{
+  "status": "ok",
+  "timestamp": "20260305_031557",
+  "benchmark_path": "/home/iibrohimm/project/next_step/thinkdet/data/benchmarks/affordance_coco_val_heldout_v1.json",
+  "split": "test",
+  "n_samples": 64,
+  "top_k": 5,
+  "shard": {
+    "rank": 5,
+    "world_size": 8
+  },
+  "llm_rerank": {
+    "enabled": true,
+    "weight": 0.2,
+    "max_new_tokens": 6,
+    "temperature": 0.0
+  },
+  "checkpoints": {
+    "stage1": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage1_tma/layer9_tma_m8_full_2ep_7gpu_20260218_152649/thinkdet_tma_stage1_epoch2.pth",
+    "stage2": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage2_tma/layer9_tma_m8_20260218_234913/thinkdet_tma_stage2_epoch2.pth"
+  },
+  "results": {
+    "baseline": {
+      "overall": {
+        "n_samples": 64,
+        "mean_best_iou_top1": 0.2548609534987082,
+        "mean_best_iou_topk": 0.4314110646332496,
+        "hit@0.5_top1": 0.21875,
+        "hit@0.5_topk": 0.484375,
+        "hit@0.75_top1": 0.15625,
+        "hit@0.75_topk": 0.296875,
+        "precision@0.5_top1": 0.21875,
+        "precision@0.5_topk": 0.14687500000000003,
+        "recall@0.5_top1": 0.21875,
+        "recall@0.5_topk": 0.484375
+      },
+      "per_affordance": {
+        "carry_in": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.2521608514825473,
+          "mean_best_iou_topk": 0.32034869513242636,
+          "hit@0.5_top1": 0.25,
+          "hit@0.5_topk": 0.375,
+          "hit@0.75_top1": 0.125,
+          "hit@0.75_topk": 0.25,
+          "precision@0.5_top1": 0.25,
+          "precision@0.5_topk": 0.175,
+          "recall@0.5_top1": 0.25,
+          "recall@0.5_topk": 0.375
+        },
+        "cut_with": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.1818351097910696,
+          "mean_best_iou_topk": 0.42715384902425624,
+          "hit@0.5_top1": 0.125,
+          "hit@0.5_topk": 0.5,
+          "hit@0.75_top1": 0.125,
+          "hit@0.75_topk": 0.25,
+          "precision@0.5_top1": 0.125,
+          "precision@0.5_topk": 0.1,
+          "recall@0.5_top1": 0.125,
+          "recall@0.5_topk": 0.5
+        },
+        "drink_from": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.6231942264929198,
+          "mean_best_iou_topk": 0.6831951139135952,
+          "hit@0.5_top1": 0.75,
+          "hit@0.5_topk": 0.75,
+          "hit@0.75_top1": 0.5,
+          "hit@0.75_topk": 0.625,
+          "precision@0.5_top1": 0.75,
+          "precision@0.5_topk": 0.25,
+          "recall@0.5_top1": 0.75,
+          "recall@0.5_topk": 0.75
+        },
+        "eat_with": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.030437417401154444,
+          "mean_best_iou_topk": 0.1125745094447774,
+          "hit@0.5_top1": 0.0,
+          "hit@0.5_topk": 0.125,
+          "hit@0.75_top1": 0.0,
+          "hit@0.75_topk": 0.0,
+          "precision@0.5_top1": 0.0,
+          "precision@0.5_topk": 0.025,
+          "recall@0.5_top1": 0.0,
+          "recall@0.5_topk": 0.125
+        },
+        "read": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.25099816634275274,
+          "mean_best_iou_topk": 0.528604675490932,
+          "hit@0.5_top1": 0.25,
+          "hit@0.5_topk": 0.625,
+          "hit@0.75_top1": 0.125,
+          "hit@0.75_topk": 0.375,
+          "precision@0.5_top1": 0.25,
+          "precision@0.5_topk": 0.19999999999999998,
+          "recall@0.5_top1": 0.25,
+          "recall@0.5_topk": 0.625
+        },
+        "ride": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.18289023359963325,
+          "mean_best_iou_topk": 0.38228563500798146,
+          "hit@0.5_top1": 0.125,
+          "hit@0.5_topk": 0.375,
+          "hit@0.75_top1": 0.125,
+          "hit@0.75_topk": 0.25,
+          "precision@0.5_top1": 0.125,
+          "precision@0.5_topk": 0.1,
+          "recall@0.5_top1": 0.125,
+          "recall@0.5_topk": 0.375
+        },
+        "sit_on": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.31938776361469606,
+          "mean_best_iou_topk": 0.5052106684004103,
+          "hit@0.5_top1": 0.25,
+          "hit@0.5_topk": 0.5,
+          "hit@0.75_top1": 0.25,
+          "hit@0.75_topk": 0.375,
+          "precision@0.5_top1": 0.25,
+          "precision@0.5_topk": 0.1,
+          "recall@0.5_top1": 0.25,
+          "recall@0.5_topk": 0.5
+        },
+        "talk_on": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.19798385926489218,
+          "mean_best_iou_topk": 0.49191537065161706,
+          "hit@0.5_top1": 0.0,
+          "hit@0.5_topk": 0.625,
+          "hit@0.75_top1": 0.0,
+          "hit@0.75_topk": 0.25,
+          "precision@0.5_top1": 0.0,
+          "precision@0.5_topk": 0.225,
+          "recall@0.5_top1": 0.0,
+          "recall@0.5_topk": 0.625
+        }
+      },
+      "per_sample": [
+        {
+          "benchmark_id": "carry_in_57597",
+          "image_id": 57597,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.03071165475512828,
+          "top1_score": 0.29496774077415466,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4949677407741547
+        },
+        {
+          "benchmark_id": "carry_in_145597",
+          "image_id": 145597,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.08494831117518928,
+          "top1_score": 0.22573833167552948,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4257383316755295
+        },
+        {
+          "benchmark_id": "carry_in_193926",
+          "image_id": 193926,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.6529188488696523,
+          "top1_score": 0.29948312044143677,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4994831204414368
+        },
+        {
+          "benchmark_id": "carry_in_289741",
+          "image_id": 289741,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.20843951404094696,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.40843951404094697
+        },
+        {
+          "benchmark_id": "carry_in_356428",
+          "image_id": 356428,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.24434852600097656,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4443485260009766
+        },
+        {
+          "benchmark_id": "carry_in_436883",
+          "image_id": 436883,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.4045204520225525,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.6045204520225524
+        },
+        {
+          "benchmark_id": "carry_in_500257",
+          "image_id": 500257,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.43189770130301436,
+          "top1_score": 0.3048838973045349,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5048838973045349
+        },
+        {
+          "benchmark_id": "carry_in_549390",
+          "image_id": 549390,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.8168102957573944,
+          "top1_score": 0.2524172365665436,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4524172365665436
+        },
+        {
+          "benchmark_id": "cut_with_66231",
+          "image_id": 66231,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2659287750720978,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4659287750720978
+        },
+        {
+          "benchmark_id": "cut_with_143998",
+          "image_id": 143998,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.13279337326383822,
+          "top1_score": 0.3516719937324524,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5516719937324523
+        },
+        {
+          "benchmark_id": "cut_with_189475",
+          "image_id": 189475,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.24181471275885044,
+          "top1_score": 0.3032471537590027,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5032471537590026
+        },
+        {
+          "benchmark_id": "cut_with_277051",
+          "image_id": 277051,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.8634158419654253,
+          "top1_score": 0.25836503505706787,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4583650350570679
+        },
+        {
+          "benchmark_id": "cut_with_331817",
+          "image_id": 331817,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.13859955649088726,
+          "top1_score": 0.32597988843917847,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5259798884391784
+        },
+        {
+          "benchmark_id": "cut_with_367095",
+          "image_id": 367095,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1926126629114151,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.3926126629114151
+        },
+        {
+          "benchmark_id": "cut_with_458663",
+          "image_id": 458663,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.07805739384955553,
+          "top1_score": 0.26488736271858215,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.46488736271858216
+        },
+        {
+          "benchmark_id": "cut_with_530146",
+          "image_id": 530146,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.37135693430900574,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5713569343090057
+        },
+        {
+          "benchmark_id": "drink_from_32334",
+          "image_id": 32334,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.5117088348148684,
+          "top1_score": 0.383196622133255,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.583196622133255
+        },
+        {
+          "benchmark_id": "drink_from_117425",
+          "image_id": 117425,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.9540396704023697,
+          "top1_score": 0.2564146816730499,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.45641468167304994
+        },
+        {
+          "benchmark_id": "drink_from_215072",
+          "image_id": 215072,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.043212207168753944,
+          "top1_score": 0.22872768342494965,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.42872768342494966
+        },
+        {
+          "benchmark_id": "drink_from_284623",
+          "image_id": 284623,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8419943198178177,
+          "top1_score": 0.28728848695755005,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.48728848695755006
+        },
+        {
+          "benchmark_id": "drink_from_337498",
+          "image_id": 337498,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8939140394449485,
+          "top1_score": 0.2115195393562317,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4115195393562317
+        },
+        {
+          "benchmark_id": "drink_from_413395",
+          "image_id": 413395,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.7734540643094049,
+          "top1_score": 0.2943992018699646,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4943992018699646
+        },
+        {
+          "benchmark_id": "drink_from_482436",
+          "image_id": 482436,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.2216996576764766,
+          "top1_score": 0.20045188069343567,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4004518806934357
+        },
+        {
+          "benchmark_id": "drink_from_571857",
+          "image_id": 571857,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.7455310183087177,
+          "top1_score": 0.21483206748962402,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.41483206748962403
+        },
+        {
+          "benchmark_id": "eat_with_66817",
+          "image_id": 66817,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.09270410659608758,
+          "top1_score": 0.30185842514038086,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5018584251403808
+        },
+        {
+          "benchmark_id": "eat_with_141328",
+          "image_id": 141328,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.04304880552230316,
+          "top1_score": 0.511914849281311,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.711914849281311
+        },
+        {
+          "benchmark_id": "eat_with_221872",
+          "image_id": 221872,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.42606550455093384,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.6260655045509338
+        },
+        {
+          "benchmark_id": "eat_with_289415",
+          "image_id": 289415,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.03977965598992942,
+          "top1_score": 0.30739253759384155,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5073925375938415
+        },
+        {
+          "benchmark_id": "eat_with_397133",
+          "image_id": 397133,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.009620449492062743,
+          "top1_score": 0.20781362056732178,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4078136205673218
+        },
+        {
+          "benchmark_id": "eat_with_468925",
+          "image_id": 468925,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.002429595743699177,
+          "top1_score": 0.3997534215450287,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5997534215450286
+        },
+        {
+          "benchmark_id": "eat_with_520264",
+          "image_id": 520264,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.25256583094596863,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.45256583094596864
+        },
+        {
+          "benchmark_id": "eat_with_568195",
+          "image_id": 568195,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.055916725865153484,
+          "top1_score": 0.36001259088516235,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5600125908851623
+        },
+        {
+          "benchmark_id": "read_55150",
+          "image_id": 55150,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.38610542858887326,
+          "top1_score": 0.298193097114563,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.498193097114563
+        },
+        {
+          "benchmark_id": "read_139684",
+          "image_id": 139684,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.5361894236582857,
+          "top1_score": 0.2929632067680359,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4929632067680359
+        },
+        {
+          "benchmark_id": "read_205514",
+          "image_id": 205514,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.8603288704856419,
+          "top1_score": 0.20134183764457703,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.40134183764457704
+        },
+        {
+          "benchmark_id": "read_264535",
+          "image_id": 264535,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.013744077651224621,
+          "top1_score": 0.3782883584499359,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5782883584499359
+        },
+        {
+          "benchmark_id": "read_340175",
+          "image_id": 340175,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.30299466848373413,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.30299466848373413
+        },
+        {
+          "benchmark_id": "read_400161",
+          "image_id": 400161,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0462108487279582,
+          "top1_score": 0.4009314179420471,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.4009314179420471
+        },
+        {
+          "benchmark_id": "read_466125",
+          "image_id": 466125,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.19964422285556793,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.39964422285556794
+        },
+        {
+          "benchmark_id": "read_555005",
+          "image_id": 555005,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.1654066816300385,
+          "top1_score": 0.19042333960533142,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.39042333960533143
+        },
+        {
+          "benchmark_id": "ride_50145",
+          "image_id": 50145,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.38484666825804725,
+          "top1_score": 0.30645129084587097,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5064512908458709
+        },
+        {
+          "benchmark_id": "ride_81394",
+          "image_id": 81394,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0017521344535858037,
+          "top1_score": 0.5911827683448792,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.7911827683448791
+        },
+        {
+          "benchmark_id": "ride_157756",
+          "image_id": 157756,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.23714306950569153,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.43714306950569154
+        },
+        {
+          "benchmark_id": "ride_230450",
+          "image_id": 230450,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.38032349944114685,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5803234994411468
+        },
+        {
+          "benchmark_id": "ride_295809",
+          "image_id": 295809,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.7640600861879749,
+          "top1_score": 0.44100072979927063,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.6410007297992706
+        },
+        {
+          "benchmark_id": "ride_380706",
+          "image_id": 380706,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.31246297989745775,
+          "top1_score": 0.3706601858139038,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5706601858139038
+        },
+        {
+          "benchmark_id": "ride_429109",
+          "image_id": 429109,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.43905171751976013,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.6390517175197601
+        },
+        {
+          "benchmark_id": "ride_531134",
+          "image_id": 531134,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.221522718667984,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.421522718667984
+        },
+        {
+          "benchmark_id": "sit_on_22892",
+          "image_id": 22892,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2741563022136688,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.47415630221366883
+        },
+        {
+          "benchmark_id": "sit_on_93353",
+          "image_id": 93353,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.04851782535012345,
+          "top1_score": 0.5002963542938232,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.5002963542938232
+        },
+        {
+          "benchmark_id": "sit_on_133969",
+          "image_id": 133969,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0481349521832357,
+          "top1_score": 0.382805198431015,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.582805198431015
+        },
+        {
+          "benchmark_id": "sit_on_224807",
+          "image_id": 224807,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0068598396587731866,
+          "top1_score": 0.2558337450027466,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4558337450027466
+        },
+        {
+          "benchmark_id": "sit_on_335529",
+          "image_id": 335529,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.9457157556726278,
+          "top1_score": 0.33246466517448425,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5324646651744842
+        },
+        {
+          "benchmark_id": "sit_on_394677",
+          "image_id": 394677,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.3858706442046113,
+          "top1_score": 0.21064041554927826,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.41064041554927827
+        },
+        {
+          "benchmark_id": "sit_on_440475",
+          "image_id": 440475,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.16180914305124208,
+          "top1_score": 0.3360501229763031,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5360501229763031
+        },
+        {
+          "benchmark_id": "sit_on_568710",
+          "image_id": 568710,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.958193948796955,
+          "top1_score": 0.26574283838272095,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.46574283838272096
+        },
+        {
+          "benchmark_id": "talk_on_50811",
+          "image_id": 50811,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.09238700837917184,
+          "top1_score": 0.2748185694217682,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.2748185694217682
+        },
+        {
+          "benchmark_id": "talk_on_99428",
+          "image_id": 99428,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.4492787719885421,
+          "top1_score": 0.3577713370323181,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5577713370323181
+        },
+        {
+          "benchmark_id": "talk_on_160556",
+          "image_id": 160556,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.33192453020397,
+          "top1_score": 0.196869358420372,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.396869358420372
+        },
+        {
+          "benchmark_id": "talk_on_250127",
+          "image_id": 250127,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.00189362514162005,
+          "top1_score": 0.26390570402145386,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.46390570402145387
+        },
+        {
+          "benchmark_id": "talk_on_338304",
+          "image_id": 338304,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.4389420685570786,
+          "top1_score": 0.2860940396785736,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.2860940396785736
+        },
+        {
+          "benchmark_id": "talk_on_411817",
+          "image_id": 411817,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.22143641114234924,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.42143641114234925
+        },
+        {
+          "benchmark_id": "talk_on_507575",
+          "image_id": 507575,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.2680300700532282,
+          "top1_score": 0.20910215377807617,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4091021537780762
+        },
+        {
+          "benchmark_id": "talk_on_553731",
+          "image_id": 553731,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0014147997955264214,
+          "top1_score": 0.3412739336490631,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5412739336490631
+        }
+      ]
+    },
+    "stage1": {
+      "overall": {
+        "n_samples": 64,
+        "mean_best_iou_top1": 0.25592375708857884,
+        "mean_best_iou_topk": 0.397839407231557,
+        "hit@0.5_top1": 0.21875,
+        "hit@0.5_topk": 0.40625,
+        "hit@0.75_top1": 0.15625,
+        "hit@0.75_topk": 0.296875,
+        "precision@0.5_top1": 0.21875,
+        "precision@0.5_topk": 0.12812500000000002,
+        "recall@0.5_top1": 0.21875,
+        "recall@0.5_topk": 0.40625
+      },
+      "per_affordance": {
+        "carry_in": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.2513073229781573,
+          "mean_best_iou_topk": 0.3094336194886975,
+          "hit@0.5_top1": 0.25,
+          "hit@0.5_topk": 0.375,
+          "hit@0.75_top1": 0.125,
+          "hit@0.75_topk": 0.25,
+          "precision@0.5_top1": 0.25,
+          "precision@0.5_topk": 0.175,
+          "recall@0.5_top1": 0.25,
+          "recall@0.5_topk": 0.375
+        },
+        "cut_with": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.19216328615777187,
+          "mean_best_iou_topk": 0.3157051909608014,
+          "hit@0.5_top1": 0.125,
+          "hit@0.5_topk": 0.25,
+          "hit@0.75_top1": 0.125,
+          "hit@0.75_topk": 0.25,
+          "precision@0.5_top1": 0.125,
+          "precision@0.5_topk": 0.05,
+          "recall@0.5_top1": 0.125,
+          "recall@0.5_topk": 0.25
+        },
+        "drink_from": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.6228755887836106,
+          "mean_best_iou_topk": 0.6858741547559628,
+          "hit@0.5_top1": 0.75,
+          "hit@0.5_topk": 0.75,
+          "hit@0.75_top1": 0.5,
+          "hit@0.75_topk": 0.625,
+          "precision@0.5_top1": 0.75,
+          "precision@0.5_topk": 0.27499999999999997,
+          "recall@0.5_top1": 0.75,
+          "recall@0.5_topk": 0.75
+        },
+        "eat_with": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.030160622592038822,
+          "mean_best_iou_topk": 0.05612134772909593,
+          "hit@0.5_top1": 0.0,
+          "hit@0.5_topk": 0.0,
+          "hit@0.75_top1": 0.0,
+          "hit@0.75_topk": 0.0,
+          "precision@0.5_top1": 0.0,
+          "precision@0.5_topk": 0.0,
+          "recall@0.5_top1": 0.0,
+          "recall@0.5_topk": 0.0
+        },
+        "read": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.25121606993032164,
+          "mean_best_iou_topk": 0.4370543866627779,
+          "hit@0.5_top1": 0.25,
+          "hit@0.5_topk": 0.5,
+          "hit@0.75_top1": 0.125,
+          "hit@0.75_topk": 0.375,
+          "precision@0.5_top1": 0.25,
+          "precision@0.5_topk": 0.15000000000000002,
+          "recall@0.5_top1": 0.25,
+          "recall@0.5_topk": 0.5
+        },
+        "ride": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.18303187946202937,
+          "mean_best_iou_topk": 0.3834223969220474,
+          "hit@0.5_top1": 0.125,
+          "hit@0.5_topk": 0.375,
+          "hit@0.75_top1": 0.125,
+          "hit@0.75_topk": 0.25,
+          "precision@0.5_top1": 0.125,
+          "precision@0.5_topk": 0.1,
+          "recall@0.5_top1": 0.125,
+          "recall@0.5_topk": 0.375
+        },
+        "sit_on": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.3194520814569888,
+          "mean_best_iou_topk": 0.5049242266795475,
+          "hit@0.5_top1": 0.25,
+          "hit@0.5_topk": 0.5,
+          "hit@0.75_top1": 0.25,
+          "hit@0.75_topk": 0.375,
+          "precision@0.5_top1": 0.25,
+          "precision@0.5_topk": 0.1,
+          "recall@0.5_top1": 0.25,
+          "recall@0.5_topk": 0.5
+        },
+        "talk_on": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.19718320534771183,
+          "mean_best_iou_topk": 0.4901799346535257,
+          "hit@0.5_top1": 0.0,
+          "hit@0.5_topk": 0.5,
+          "hit@0.75_top1": 0.0,
+          "hit@0.75_topk": 0.25,
+          "precision@0.5_top1": 0.0,
+          "precision@0.5_topk": 0.175,
+          "recall@0.5_top1": 0.0,
+          "recall@0.5_topk": 0.5
+        }
+      },
+      "per_sample": [
+        {
+          "benchmark_id": "carry_in_57597",
+          "image_id": 57597,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.030424969180131028,
+          "top1_score": 0.3088550269603729,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5088550269603729
+        },
+        {
+          "benchmark_id": "carry_in_145597",
+          "image_id": 145597,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.08466324944059317,
+          "top1_score": 0.23876477777957916,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4387647777795792
+        },
+        {
+          "benchmark_id": "carry_in_193926",
+          "image_id": 193926,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.6535839027092777,
+          "top1_score": 0.32088547945022583,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5208854794502258
+        },
+        {
+          "benchmark_id": "carry_in_289741",
+          "image_id": 289741,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2213738113641739,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4213738113641739
+        },
+        {
+          "benchmark_id": "carry_in_356428",
+          "image_id": 356428,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2535061240196228,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4535061240196228
+        },
+        {
+          "benchmark_id": "carry_in_436883",
+          "image_id": 436883,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.4063868820667267,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.6063868820667266
+        },
+        {
+          "benchmark_id": "carry_in_500257",
+          "image_id": 500257,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.4317874663205814,
+          "top1_score": 0.3190940022468567,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5190940022468566
+        },
+        {
+          "benchmark_id": "carry_in_549390",
+          "image_id": 549390,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.809998996174675,
+          "top1_score": 0.26550528407096863,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.46550528407096864
+        },
+        {
+          "benchmark_id": "cut_with_66231",
+          "image_id": 66231,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.23257189989089966,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.43257189989089967
+        },
+        {
+          "benchmark_id": "cut_with_143998",
+          "image_id": 143998,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.1331126993523374,
+          "top1_score": 0.3552147448062897,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5552147448062896
+        },
+        {
+          "benchmark_id": "cut_with_189475",
+          "image_id": 189475,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.24213919312074234,
+          "top1_score": 0.289082795381546,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.48908279538154603
+        },
+        {
+          "benchmark_id": "cut_with_277051",
+          "image_id": 277051,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.8624761744135392,
+          "top1_score": 0.26383867859840393,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.46383867859840394
+        },
+        {
+          "benchmark_id": "cut_with_331817",
+          "image_id": 331817,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.13833663233647878,
+          "top1_score": 0.32640743255615234,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5264074325561523
+        },
+        {
+          "benchmark_id": "cut_with_367095",
+          "image_id": 367095,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.18575337529182434,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.38575337529182435
+        },
+        {
+          "benchmark_id": "cut_with_458663",
+          "image_id": 458663,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.14025602496665746,
+          "top1_score": 0.36276042461395264,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.36276042461395264
+        },
+        {
+          "benchmark_id": "cut_with_530146",
+          "image_id": 530146,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.020985565072419818,
+          "top1_score": 0.23894348740577698,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.438943487405777
+        },
+        {
+          "benchmark_id": "drink_from_32334",
+          "image_id": 32334,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.5138373218286624,
+          "top1_score": 0.3849698305130005,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5849698305130004
+        },
+        {
+          "benchmark_id": "drink_from_117425",
+          "image_id": 117425,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.9538004141400798,
+          "top1_score": 0.2633695602416992,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.46336956024169923
+        },
+        {
+          "benchmark_id": "drink_from_215072",
+          "image_id": 215072,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.043308514746888974,
+          "top1_score": 0.2280264049768448,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4280264049768448
+        },
+        {
+          "benchmark_id": "drink_from_284623",
+          "image_id": 284623,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8413064399786504,
+          "top1_score": 0.3044149577617645,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5044149577617645
+        },
+        {
+          "benchmark_id": "drink_from_337498",
+          "image_id": 337498,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8940361462653214,
+          "top1_score": 0.2146136313676834,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4146136313676834
+        },
+        {
+          "benchmark_id": "drink_from_413395",
+          "image_id": 413395,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.7697330590324991,
+          "top1_score": 0.30503326654434204,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.505033266544342
+        },
+        {
+          "benchmark_id": "drink_from_482436",
+          "image_id": 482436,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.21961884206015245,
+          "top1_score": 0.20268671214580536,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.40268671214580537
+        },
+        {
+          "benchmark_id": "drink_from_571857",
+          "image_id": 571857,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.7473639722166294,
+          "top1_score": 0.23390257358551025,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.43390257358551027
+        },
+        {
+          "benchmark_id": "eat_with_66817",
+          "image_id": 66817,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.09296403991156005,
+          "top1_score": 0.30633795261383057,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5063379526138305
+        },
+        {
+          "benchmark_id": "eat_with_141328",
+          "image_id": 141328,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.04304876426576138,
+          "top1_score": 0.5661582946777344,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.7661582946777343
+        },
+        {
+          "benchmark_id": "eat_with_221872",
+          "image_id": 221872,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.4131084680557251,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.613108468055725
+        },
+        {
+          "benchmark_id": "eat_with_289415",
+          "image_id": 289415,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.03943552338308066,
+          "top1_score": 0.31126707792282104,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.511267077922821
+        },
+        {
+          "benchmark_id": "eat_with_397133",
+          "image_id": 397133,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.009608508065606864,
+          "top1_score": 0.18525207042694092,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.38525207042694093
+        },
+        {
+          "benchmark_id": "eat_with_468925",
+          "image_id": 468925,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0023571075554995376,
+          "top1_score": 0.40411612391471863,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.6041161239147186
+        },
+        {
+          "benchmark_id": "eat_with_520264",
+          "image_id": 520264,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.24870610237121582,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.44870610237121583
+        },
+        {
+          "benchmark_id": "eat_with_568195",
+          "image_id": 568195,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.053871037554802104,
+          "top1_score": 0.3486243188381195,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5486243188381195
+        },
+        {
+          "benchmark_id": "read_55150",
+          "image_id": 55150,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.38798158965969975,
+          "top1_score": 0.30293571949005127,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5029357194900512
+        },
+        {
+          "benchmark_id": "read_139684",
+          "image_id": 139684,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.5369808981324149,
+          "top1_score": 0.2803899645805359,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4803899645805359
+        },
+        {
+          "benchmark_id": "read_205514",
+          "image_id": 205514,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.8610166782041702,
+          "top1_score": 0.1930629312992096,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.3930629312992096
+        },
+        {
+          "benchmark_id": "read_264535",
+          "image_id": 264535,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.013739911231320588,
+          "top1_score": 0.3579646348953247,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5579646348953247
+        },
+        {
+          "benchmark_id": "read_340175",
+          "image_id": 340175,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2989140450954437,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.2989140450954437
+        },
+        {
+          "benchmark_id": "read_400161",
+          "image_id": 400161,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.04606169187527118,
+          "top1_score": 0.4012022614479065,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.4012022614479065
+        },
+        {
+          "benchmark_id": "read_466125",
+          "image_id": 466125,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.19026972353458405,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.39026972353458406
+        },
+        {
+          "benchmark_id": "read_555005",
+          "image_id": 555005,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.16394779033969625,
+          "top1_score": 0.19213749468326569,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.3921374946832657
+        },
+        {
+          "benchmark_id": "ride_50145",
+          "image_id": 50145,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.3847197507056046,
+          "top1_score": 0.3127174377441406,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5127174377441406
+        },
+        {
+          "benchmark_id": "ride_81394",
+          "image_id": 81394,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0016681753054391877,
+          "top1_score": 0.5796932578086853,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.7796932578086853
+        },
+        {
+          "benchmark_id": "ride_157756",
+          "image_id": 157756,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2360791563987732,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4360791563987732
+        },
+        {
+          "benchmark_id": "ride_230450",
+          "image_id": 230450,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.38997727632522583,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5899772763252258
+        },
+        {
+          "benchmark_id": "ride_295809",
+          "image_id": 295809,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.7654814716306177,
+          "top1_score": 0.45554202795028687,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.6555420279502868
+        },
+        {
+          "benchmark_id": "ride_380706",
+          "image_id": 380706,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.31238563805457353,
+          "top1_score": 0.369619220495224,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.569619220495224
+        },
+        {
+          "benchmark_id": "ride_429109",
+          "image_id": 429109,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.4325355887413025,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.6325355887413024
+        },
+        {
+          "benchmark_id": "ride_531134",
+          "image_id": 531134,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2845829427242279,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.2845829427242279
+        },
+        {
+          "benchmark_id": "sit_on_22892",
+          "image_id": 22892,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2923440635204315,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.49234406352043153
+        },
+        {
+          "benchmark_id": "sit_on_93353",
+          "image_id": 93353,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.048256678167032545,
+          "top1_score": 0.4999871253967285,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.4999871253967285
+        },
+        {
+          "benchmark_id": "sit_on_133969",
+          "image_id": 133969,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.04816666660590223,
+          "top1_score": 0.3851296007633209,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5851296007633209
+        },
+        {
+          "benchmark_id": "sit_on_224807",
+          "image_id": 224807,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.006931583867470026,
+          "top1_score": 0.2476288080215454,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4476288080215454
+        },
+        {
+          "benchmark_id": "sit_on_335529",
+          "image_id": 335529,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.946856152227479,
+          "top1_score": 0.3342565596103668,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5342565596103668
+        },
+        {
+          "benchmark_id": "sit_on_394677",
+          "image_id": 394677,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.3862967342569243,
+          "top1_score": 0.22607629001140594,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.42607629001140596
+        },
+        {
+          "benchmark_id": "sit_on_440475",
+          "image_id": 440475,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.1612245186903424,
+          "top1_score": 0.33717501163482666,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5371750116348266
+        },
+        {
+          "benchmark_id": "sit_on_568710",
+          "image_id": 568710,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.9578843178407597,
+          "top1_score": 0.2510528862476349,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4510528862476349
+        },
+        {
+          "benchmark_id": "talk_on_50811",
+          "image_id": 50811,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.07684415405276937,
+          "top1_score": 0.19770635664463043,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.39770635664463044
+        },
+        {
+          "benchmark_id": "talk_on_99428",
+          "image_id": 99428,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.4503520145275349,
+          "top1_score": 0.3623358905315399,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5623358905315399
+        },
+        {
+          "benchmark_id": "talk_on_160556",
+          "image_id": 160556,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.3334315689492872,
+          "top1_score": 0.18434083461761475,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.38434083461761476
+        },
+        {
+          "benchmark_id": "talk_on_250127",
+          "image_id": 250127,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0018952005706786537,
+          "top1_score": 0.26094183325767517,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4609418332576752
+        },
+        {
+          "benchmark_id": "talk_on_338304",
+          "image_id": 338304,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.4447977565794565,
+          "top1_score": 0.2851986885070801,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.2851986885070801
+        },
+        {
+          "benchmark_id": "talk_on_411817",
+          "image_id": 411817,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.21410973370075226,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.41410973370075227
+        },
+        {
+          "benchmark_id": "talk_on_507575",
+          "image_id": 507575,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.2687241547836769,
+          "top1_score": 0.1949819028377533,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.3949819028377533
+        },
+        {
+          "benchmark_id": "talk_on_553731",
+          "image_id": 553731,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0014207933182911988,
+          "top1_score": 0.3212709426879883,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5212709426879882
+        }
+      ]
+    },
+    "stage2": {
+      "overall": {
+        "n_samples": 64,
+        "mean_best_iou_top1": 0.2494585350794437,
+        "mean_best_iou_topk": 0.4069209930216817,
+        "hit@0.5_top1": 0.21875,
+        "hit@0.5_topk": 0.421875,
+        "hit@0.75_top1": 0.15625,
+        "hit@0.75_topk": 0.3125,
+        "precision@0.5_top1": 0.21875,
+        "precision@0.5_topk": 0.134375,
+        "recall@0.5_top1": 0.21875,
+        "recall@0.5_topk": 0.421875
+      },
+      "per_affordance": {
+        "carry_in": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.25090854377705707,
+          "mean_best_iou_topk": 0.3767181385281772,
+          "hit@0.5_top1": 0.25,
+          "hit@0.5_topk": 0.375,
+          "hit@0.75_top1": 0.125,
+          "hit@0.75_topk": 0.25,
+          "precision@0.5_top1": 0.25,
+          "precision@0.5_topk": 0.2,
+          "recall@0.5_top1": 0.25,
+          "recall@0.5_topk": 0.375
+        },
+        "cut_with": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.185015392550954,
+          "mean_best_iou_topk": 0.3172521655973085,
+          "hit@0.5_top1": 0.125,
+          "hit@0.5_topk": 0.25,
+          "hit@0.75_top1": 0.125,
+          "hit@0.75_topk": 0.25,
+          "precision@0.5_top1": 0.125,
+          "precision@0.5_topk": 0.05,
+          "recall@0.5_top1": 0.125,
+          "recall@0.5_topk": 0.25
+        },
+        "drink_from": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.6199943617987502,
+          "mean_best_iou_topk": 0.6723139540183891,
+          "hit@0.5_top1": 0.75,
+          "hit@0.5_topk": 0.75,
+          "hit@0.75_top1": 0.5,
+          "hit@0.75_topk": 0.625,
+          "precision@0.5_top1": 0.75,
+          "precision@0.5_topk": 0.27499999999999997,
+          "recall@0.5_top1": 0.75,
+          "recall@0.5_topk": 0.75
+        },
+        "eat_with": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.03046351906601745,
+          "mean_best_iou_topk": 0.05573279321763685,
+          "hit@0.5_top1": 0.0,
+          "hit@0.5_topk": 0.0,
+          "hit@0.75_top1": 0.0,
+          "hit@0.75_topk": 0.0,
+          "precision@0.5_top1": 0.0,
+          "precision@0.5_topk": 0.0,
+          "recall@0.5_top1": 0.0,
+          "recall@0.5_topk": 0.0
+        },
+        "read": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.23318068882466433,
+          "mean_best_iou_topk": 0.44346533457677284,
+          "hit@0.5_top1": 0.25,
+          "hit@0.5_topk": 0.5,
+          "hit@0.75_top1": 0.125,
+          "hit@0.75_topk": 0.5,
+          "precision@0.5_top1": 0.25,
+          "precision@0.5_topk": 0.15000000000000002,
+          "recall@0.5_top1": 0.25,
+          "recall@0.5_topk": 0.5
+        },
+        "ride": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.18413051302256567,
+          "mean_best_iou_topk": 0.38865107992210446,
+          "hit@0.5_top1": 0.125,
+          "hit@0.5_topk": 0.375,
+          "hit@0.75_top1": 0.125,
+          "hit@0.75_topk": 0.25,
+          "precision@0.5_top1": 0.125,
+          "precision@0.5_topk": 0.1,
+          "recall@0.5_top1": 0.125,
+          "recall@0.5_topk": 0.375
+        },
+        "sit_on": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.31921016398442753,
+          "mean_best_iou_topk": 0.5029944894903133,
+          "hit@0.5_top1": 0.25,
+          "hit@0.5_topk": 0.5,
+          "hit@0.75_top1": 0.25,
+          "hit@0.75_topk": 0.375,
+          "precision@0.5_top1": 0.25,
+          "precision@0.5_topk": 0.1,
+          "recall@0.5_top1": 0.25,
+          "recall@0.5_topk": 0.5
+        },
+        "talk_on": {
+          "n_samples": 8,
+          "mean_best_iou_top1": 0.17276509761111358,
+          "mean_best_iou_topk": 0.4982399888227512,
+          "hit@0.5_top1": 0.0,
+          "hit@0.5_topk": 0.625,
+          "hit@0.75_top1": 0.0,
+          "hit@0.75_topk": 0.25,
+          "precision@0.5_top1": 0.0,
+          "precision@0.5_topk": 0.19999999999999998,
+          "recall@0.5_top1": 0.0,
+          "recall@0.5_topk": 0.625
+        }
+      },
+      "per_sample": [
+        {
+          "benchmark_id": "carry_in_57597",
+          "image_id": 57597,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.03061374552485559,
+          "top1_score": 0.2790912389755249,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4790912389755249
+        },
+        {
+          "benchmark_id": "carry_in_145597",
+          "image_id": 145597,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.08319027268310025,
+          "top1_score": 0.20509073138237,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.40509073138237
+        },
+        {
+          "benchmark_id": "carry_in_193926",
+          "image_id": 193926,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.6533955983481103,
+          "top1_score": 0.3009405732154846,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5009405732154846
+        },
+        {
+          "benchmark_id": "carry_in_289741",
+          "image_id": 289741,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.19393625855445862,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.39393625855445863
+        },
+        {
+          "benchmark_id": "carry_in_356428",
+          "image_id": 356428,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.22829538583755493,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.42829538583755494
+        },
+        {
+          "benchmark_id": "carry_in_436883",
+          "image_id": 436883,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.3620453178882599,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5620453178882598
+        },
+        {
+          "benchmark_id": "carry_in_500257",
+          "image_id": 500257,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.43706999939784186,
+          "top1_score": 0.29045140743255615,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.49045140743255616
+        },
+        {
+          "benchmark_id": "carry_in_549390",
+          "image_id": 549390,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.8029987342625485,
+          "top1_score": 0.2382374107837677,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4382374107837677
+        },
+        {
+          "benchmark_id": "cut_with_66231",
+          "image_id": 66231,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.20216883718967438,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4021688371896744
+        },
+        {
+          "benchmark_id": "cut_with_143998",
+          "image_id": 143998,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.13391573385881053,
+          "top1_score": 0.3131483793258667,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5131483793258667
+        },
+        {
+          "benchmark_id": "cut_with_189475",
+          "image_id": 189475,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.24486992104735103,
+          "top1_score": 0.2734689712524414,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4734689712524414
+        },
+        {
+          "benchmark_id": "cut_with_277051",
+          "image_id": 277051,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.8811287520682584,
+          "top1_score": 0.23013935983181,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.43013935983181
+        },
+        {
+          "benchmark_id": "cut_with_331817",
+          "image_id": 331817,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.1389264201170412,
+          "top1_score": 0.283346951007843,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.48334695100784303
+        },
+        {
+          "benchmark_id": "cut_with_367095",
+          "image_id": 367095,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1430143266916275,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.3430143266916275
+        },
+        {
+          "benchmark_id": "cut_with_458663",
+          "image_id": 458663,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.08128231331617097,
+          "top1_score": 0.23632405698299408,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4363240569829941
+        },
+        {
+          "benchmark_id": "cut_with_530146",
+          "image_id": 530146,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.32867035269737244,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5286703526973724
+        },
+        {
+          "benchmark_id": "drink_from_32334",
+          "image_id": 32334,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.5123905785798097,
+          "top1_score": 0.33686935901641846,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5368693590164184
+        },
+        {
+          "benchmark_id": "drink_from_117425",
+          "image_id": 117425,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.9491307100795259,
+          "top1_score": 0.23670744895935059,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4367074489593506
+        },
+        {
+          "benchmark_id": "drink_from_215072",
+          "image_id": 215072,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.04374251638805727,
+          "top1_score": 0.20267850160598755,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.40267850160598756
+        },
+        {
+          "benchmark_id": "drink_from_284623",
+          "image_id": 284623,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8371949804935973,
+          "top1_score": 0.26661258935928345,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.46661258935928346
+        },
+        {
+          "benchmark_id": "drink_from_337498",
+          "image_id": 337498,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.9037553184698143,
+          "top1_score": 0.19205231964588165,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.39205231964588166
+        },
+        {
+          "benchmark_id": "drink_from_413395",
+          "image_id": 413395,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.7561883857199189,
+          "top1_score": 0.2633955776691437,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4633955776691437
+        },
+        {
+          "benchmark_id": "drink_from_482436",
+          "image_id": 482436,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.21639616678826387,
+          "top1_score": 0.1826448142528534,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.3826448142528534
+        },
+        {
+          "benchmark_id": "drink_from_571857",
+          "image_id": 571857,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.7411562378710149,
+          "top1_score": 0.2050321400165558,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4050321400165558
+        },
+        {
+          "benchmark_id": "eat_with_66817",
+          "image_id": 66817,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.09680891640071825,
+          "top1_score": 0.27523407340049744,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.47523407340049745
+        },
+        {
+          "benchmark_id": "eat_with_141328",
+          "image_id": 141328,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.04340629438167007,
+          "top1_score": 0.52713942527771,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.7271394252777099
+        },
+        {
+          "benchmark_id": "eat_with_221872",
+          "image_id": 221872,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.38145482540130615,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5814548254013061
+        },
+        {
+          "benchmark_id": "eat_with_289415",
+          "image_id": 289415,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0385165446299974,
+          "top1_score": 0.2761264443397522,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4761264443397522
+        },
+        {
+          "benchmark_id": "eat_with_397133",
+          "image_id": 397133,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.009741786449062182,
+          "top1_score": 0.1639438271522522,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.3639438271522522
+        },
+        {
+          "benchmark_id": "eat_with_468925",
+          "image_id": 468925,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0024695765735164806,
+          "top1_score": 0.3645639717578888,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5645639717578887
+        },
+        {
+          "benchmark_id": "eat_with_520264",
+          "image_id": 520264,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.22000780701637268,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4200078070163727
+        },
+        {
+          "benchmark_id": "eat_with_568195",
+          "image_id": 568195,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.05276503409317522,
+          "top1_score": 0.3341657817363739,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5341657817363739
+        },
+        {
+          "benchmark_id": "read_55150",
+          "image_id": 55150,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.39393263526811656,
+          "top1_score": 0.27427607774734497,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.474276077747345
+        },
+        {
+          "benchmark_id": "read_139684",
+          "image_id": 139684,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.5504580362657888,
+          "top1_score": 0.25935572385787964,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.45935572385787965
+        },
+        {
+          "benchmark_id": "read_205514",
+          "image_id": 205514,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.8620303827311976,
+          "top1_score": 0.18090544641017914,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.38090544641017915
+        },
+        {
+          "benchmark_id": "read_264535",
+          "image_id": 264535,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.013741221095311371,
+          "top1_score": 0.31566640734672546,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5156664073467254
+        },
+        {
+          "benchmark_id": "read_340175",
+          "image_id": 340175,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2687515318393707,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.2687515318393707
+        },
+        {
+          "benchmark_id": "read_400161",
+          "image_id": 400161,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.045283235236900414,
+          "top1_score": 0.36509969830513,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.36509969830513
+        },
+        {
+          "benchmark_id": "read_466125",
+          "image_id": 466125,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.17640523612499237,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.3764052361249924
+        },
+        {
+          "benchmark_id": "read_555005",
+          "image_id": 555005,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.22027723491191864,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.22027723491191864
+        },
+        {
+          "benchmark_id": "ride_50145",
+          "image_id": 50145,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.3878593719252047,
+          "top1_score": 0.26850882172584534,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.46850882172584535
+        },
+        {
+          "benchmark_id": "ride_81394",
+          "image_id": 81394,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0017737455610468634,
+          "top1_score": 0.49755045771598816,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.6975504577159881
+        },
+        {
+          "benchmark_id": "ride_157756",
+          "image_id": 157756,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.21241013705730438,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4124101370573044
+        },
+        {
+          "benchmark_id": "ride_230450",
+          "image_id": 230450,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.3694891333580017,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5694891333580017
+        },
+        {
+          "benchmark_id": "ride_295809",
+          "image_id": 295809,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.7698221694351076,
+          "top1_score": 0.42543619871139526,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.6254361987113952
+        },
+        {
+          "benchmark_id": "ride_380706",
+          "image_id": 380706,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.3135888172591661,
+          "top1_score": 0.3298555612564087,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5298555612564086
+        },
+        {
+          "benchmark_id": "ride_429109",
+          "image_id": 429109,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.4081662893295288,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.6081662893295288
+        },
+        {
+          "benchmark_id": "ride_531134",
+          "image_id": 531134,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1861349642276764,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.3861349642276764
+        },
+        {
+          "benchmark_id": "sit_on_22892",
+          "image_id": 22892,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.25086134672164917,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4508613467216492
+        },
+        {
+          "benchmark_id": "sit_on_93353",
+          "image_id": 93353,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.048188195232484486,
+          "top1_score": 0.4260888993740082,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.4260888993740082
+        },
+        {
+          "benchmark_id": "sit_on_133969",
+          "image_id": 133969,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.048275235348272064,
+          "top1_score": 0.34508639574050903,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.545086395740509
+        },
+        {
+          "benchmark_id": "sit_on_224807",
+          "image_id": 224807,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.006685678398451757,
+          "top1_score": 0.23369376361370087,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.4336937636137009
+        },
+        {
+          "benchmark_id": "sit_on_335529",
+          "image_id": 335529,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.9409887477324786,
+          "top1_score": 0.29947787523269653,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.49947787523269654
+        },
+        {
+          "benchmark_id": "sit_on_394677",
+          "image_id": 394677,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.3866298568011127,
+          "top1_score": 0.19928865134716034,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.39928865134716035
+        },
+        {
+          "benchmark_id": "sit_on_440475",
+          "image_id": 440475,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.15966596222898885,
+          "top1_score": 0.3072018623352051,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.507201862335205
+        },
+        {
+          "benchmark_id": "sit_on_568710",
+          "image_id": 568710,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.9632476361336315,
+          "top1_score": 0.21489889919757843,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.41489889919757844
+        },
+        {
+          "benchmark_id": "talk_on_50811",
+          "image_id": 50811,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.09170067952274018,
+          "top1_score": 0.24736522138118744,
+          "top1_llm_score": 0.0,
+          "top1_combined_score": 0.24736522138118744
+        },
+        {
+          "benchmark_id": "talk_on_99428",
+          "image_id": 99428,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.4514164944596332,
+          "top1_score": 0.33304789662361145,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.5330478966236114
+        },
+        {
+          "benchmark_id": "talk_on_160556",
+          "image_id": 160556,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.34907115676542777,
+          "top1_score": 0.16772742569446564,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.36772742569446565
+        },
+        {
+          "benchmark_id": "talk_on_250127",
+          "image_id": 250127,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0018985196014897228,
+          "top1_score": 0.23098936676979065,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.43098936676979066
+        },
+        {
+          "benchmark_id": "talk_on_338304",
+          "image_id": 338304,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.21291336172875253,
+          "top1_score": 0.19631896913051605,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.39631896913051606
+        },
+        {
+          "benchmark_id": "talk_on_411817",
+          "image_id": 411817,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1916496455669403,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.3916496455669403
+        },
+        {
+          "benchmark_id": "talk_on_507575",
+          "image_id": 507575,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.2736916687746899,
+          "top1_score": 0.18636037409305573,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.38636037409305574
+        },
+        {
+          "benchmark_id": "talk_on_553731",
+          "image_id": 553731,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.001428900036175306,
+          "top1_score": 0.27790674567222595,
+          "top1_llm_score": 1.0,
+          "top1_combined_score": 0.47790674567222596
+        }
+      ]
+    }
+  }
+}

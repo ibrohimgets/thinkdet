@@ -1,0 +1,36 @@
+{
+  "status": "ok",
+  "timestamp": "20260222_132426",
+  "dataset": {
+    "name": "omnilabel",
+    "json": "/home/iibrohimm/project/next_step/dataSets/omnilabel/dataset_all_val_v0.1.3.json",
+    "subset": "all"
+  },
+  "config": {
+    "model_type": "thinkdet",
+    "iou_thresh": 0.5,
+    "conf_thresh": 0.0,
+    "max_samples": 0,
+    "distributed": true,
+    "world_size": 8,
+    "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage2_tma/layer9_tma_m8_fixmix_8gpu_20260222_062457/thinkdet_tma_stage2_best.pth"
+  },
+  "data_meta": {
+    "num_images_total_in_json": 12202,
+    "num_annotations_total_in_json": 165703,
+    "num_descriptions_total_in_json": 16835,
+    "num_images_resolved_local": 641,
+    "num_images_missing_local": 11561,
+    "num_images_dropped_by_subset": 0,
+    "num_annotations_dropped": 160158,
+    "num_samples_total_before_cap": 6536,
+    "num_samples_after_cap": 6536
+  },
+  "summary": {
+    "samples": 6536,
+    "top1_acc": 0.3730110159118727,
+    "mean_top1_iou": 0.36311264248258124,
+    "mean_top1_score": 0.3333416164754645,
+    "no_det_rate": 0.0
+  }
+}

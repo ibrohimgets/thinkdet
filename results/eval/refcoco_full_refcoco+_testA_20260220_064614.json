@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "timestamp": "20260220_073515",
+  "dataset": {
+    "name": "refcoco+",
+    "split_by": "unc",
+    "split": "testA",
+    "total_samples": 5726,
+    "evaluated_samples": 5726
+  },
+  "config": {
+    "conf_thresh": 0.05,
+    "iou_thresh": 0.5,
+    "thinkdet_checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage2_tma/layer9_tma_m8_8gpu_20260219_010134/thinkdet_tma_stage2_epoch2.pth"
+  },
+  "summary": {
+    "baseline": {
+      "samples": 5726,
+      "top1_acc": 0.5581557806496682,
+      "top1_fp_rate": 0.4418442193503318,
+      "det_fp_rate": 0.7481559056552226,
+      "no_det_rate": 0.001047851903597625,
+      "img_has_fp_rate": 0.8840377226685295
+    },
+    "thinkdet": {
+      "samples": 5726,
+      "top1_acc": 0.48829898707649316,
+      "top1_fp_rate": 0.5117010129235068,
+      "det_fp_rate": 0.692164038330944,
+      "no_det_rate": 0.022004889975550123,
+      "img_has_fp_rate": 0.8566189311910584
+    }
+  }
+}

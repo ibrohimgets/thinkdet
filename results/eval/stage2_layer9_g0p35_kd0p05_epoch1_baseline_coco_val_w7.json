@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "mode": "baseline",
+  "dataset": "COCO val2017",
+  "checkpoint": null,
+  "layer_setup": "layer9",
+  "extract_layers": [
+    9
+  ],
+  "layer_fusion": "mean",
+  "world_size": 7,
+  "conf_thresh": 0.3,
+  "max_dets": 100,
+  "max_images": 4952,
+  "metrics": {
+    "mAP": 0.4322319688890781,
+    "mAP_50": 0.5702250951490778,
+    "mAP_75": 0.470719706213224,
+    "mAP_S": 0.28073224886113635,
+    "mAP_M": 0.4596867817211801,
+    "mAP_L": 0.5844901002221935,
+    "mAR_1": 0.34309991953643815,
+    "mAR_10": 0.5154389327725369,
+    "mAR_100": 0.5311616587464187,
+    "num_predictions": 50987,
+    "num_images": 4952,
+    "eval_time_min": 2.3773595253626505
+  },
+  "runtime": {
+    "processed_images_sum": 4952,
+    "errors_sum": 0,
+    "error_rate_pct": 0.0,
+    "error_types": {},
+    "sample_errors": []
+  },
+  "checkpoint_meta": {},
+  "load_info": {
+    "missing_keys_count": 0,
+    "unexpected_keys_count": 0,
+    "missing_keys_head": [],
+    "unexpected_keys_head": []
+  },
+  "timestamp": "2026-02-18 05:22:24"
+}

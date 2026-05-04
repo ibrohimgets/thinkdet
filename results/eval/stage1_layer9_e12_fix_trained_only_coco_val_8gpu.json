@@ -1,0 +1,29 @@
+{
+  "dataset": "COCO val2017",
+  "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage1/layer9_e12_fix/thinkdet_stage1_epoch12.pth",
+  "world_size": 8,
+  "conf_thresh": 0.3,
+  "max_dets": 100,
+  "metrics": {
+    "mAP": 0.39658066112919144,
+    "mAP_50": 0.5083563668574045,
+    "mAP_75": 0.43403161011107844,
+    "mAP_S": 0.23958235547576234,
+    "mAP_M": 0.4301369612487573,
+    "mAP_L": 0.5559597841226149,
+    "mAR_1": 0.315228971801591,
+    "mAR_10": 0.4572403308782444,
+    "mAR_100": 0.46661428594208515,
+    "num_predictions": 31970,
+    "num_images": 4952,
+    "eval_time_min": 4.163602018356324
+  },
+  "runtime": {
+    "processed_images_sum": 4952,
+    "errors_sum": 0,
+    "error_rate_pct": 0.0,
+    "error_types": {},
+    "sample_errors": []
+  },
+  "timestamp": "2026-02-17 10:20:09"
+}

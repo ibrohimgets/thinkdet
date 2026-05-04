@@ -1,0 +1,19 @@
+image_id: 572678
+image_path: /home/iibrohimm/project/next_step/dataSets/coco/val2017/000000572678.jpg
+target_category: spoon (count_in_image=7)
+prompt: the spoon .
+
+[baseline] top-5 predictions
+  rank=1 score=0.444588 box_xyxy=(239.1,341.4,276.1,371.0)
+  rank=2 score=0.384618 box_xyxy=(248.1,340.8,292.0,374.3)
+  rank=3 score=0.220541 box_xyxy=(240.2,339.0,292.6,374.9)
+  rank=4 score=0.147246 box_xyxy=(233.3,330.5,299.4,382.3)
+  rank=5 score=0.126760 box_xyxy=(466.1,329.7,520.0,348.5)
+
+[delta] top-5 predictions
+  rank=1 score=0.422914 box_xyxy=(239.1,341.3,276.1,370.8)
+  rank=2 score=0.341675 box_xyxy=(248.1,340.9,292.0,373.9)
+  rank=3 score=0.219897 box_xyxy=(242.3,339.4,292.5,374.4)
+  rank=4 score=0.138321 box_xyxy=(233.0,330.7,300.7,381.4)
+  rank=5 score=0.115256 box_xyxy=(466.6,329.3,520.0,348.3)
+

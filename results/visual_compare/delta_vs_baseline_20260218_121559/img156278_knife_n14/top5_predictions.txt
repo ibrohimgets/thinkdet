@@ -1,0 +1,19 @@
+image_id: 156278
+image_path: /home/iibrohimm/project/next_step/dataSets/coco/val2017/000000156278.jpg
+target_category: knife (count_in_image=14)
+prompt: the knife .
+
+[baseline] top-5 predictions
+  rank=1 score=0.257601 box_xyxy=(535.8,181.6,574.0,190.2)
+  rank=2 score=0.241057 box_xyxy=(129.3,189.1,138.0,230.3)
+  rank=3 score=0.220330 box_xyxy=(535.4,168.4,572.3,177.6)
+  rank=4 score=0.212200 box_xyxy=(534.9,158.0,579.0,169.2)
+  rank=5 score=0.205155 box_xyxy=(519.7,205.5,526.5,241.5)
+
+[delta] top-5 predictions
+  rank=1 score=0.257780 box_xyxy=(535.9,181.6,574.0,190.0)
+  rank=2 score=0.239318 box_xyxy=(129.4,189.1,138.0,230.3)
+  rank=3 score=0.216054 box_xyxy=(535.5,168.4,572.3,177.5)
+  rank=4 score=0.206076 box_xyxy=(535.1,158.0,578.9,169.1)
+  rank=5 score=0.200134 box_xyxy=(519.8,205.5,526.4,241.5)
+

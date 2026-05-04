@@ -1,0 +1,128 @@
+{
+  "status": "ok",
+  "timestamp": "20260307_084927",
+  "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+  "ckpt_meta": {
+    "extract_layers": [
+      9
+    ],
+    "injection_layers": [
+      1,
+      3,
+      5
+    ],
+    "tma_m": 8,
+    "tma_n_heads": 8,
+    "fusion_mode": "residual"
+  },
+  "case": {
+    "benchmark_id": "carry_in_99114",
+    "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000099114.jpg",
+    "prompt": "something to carry things in .",
+    "primary_top1": {
+      "score": 0.174110546708107,
+      "box_abs_xyxy": [
+        87.36976981163025,
+        107.84590810537338,
+        164.07960653305054,
+        211.75077974796295
+      ]
+    },
+    "primary_top1_iou": 0.00019851628432552721,
+    "primary_scores": [
+      0.174110546708107,
+      0.16428108513355255,
+      0.16393177211284637,
+      0.16225020587444305,
+      0.1450698971748352
+    ],
+    "primary_margin": 0.009829461574554443,
+    "feedback_top1": {
+      "score": 0.174110546708107,
+      "box_abs_xyxy": [
+        87.36976981163025,
+        107.84590810537338,
+        164.07960653305054,
+        211.75077974796295
+      ],
+      "llm_score": 1.0,
+      "combined_score": 0.374110546708107
+    },
+    "feedback_top1_iou": 0.00019851628432552721,
+    "refined_reports": [
+      {
+        "name": "refine_1",
+        "query_text": "sure, here are three alternatives: .",
+        "top1": {
+          "score": 0.20573902130126953,
+          "box_abs_xyxy": [
+            6.894722580909729,
+            4.314499646425247,
+            497.49068915843964,
+            327.7533246576786
+          ]
+        },
+        "top1_iou": 0.005402245883915002,
+        "top1_score": 0.20573902130126953
+      },
+      {
+        "name": "refine_2",
+        "query_text": "a person carrying a suitcase is crossing the street .",
+        "top1": {
+          "score": 0.5400941371917725,
+          "box_abs_xyxy": [
+            361.0355453565717,
+            218.17967135459185,
+            384.5942420884967,
+            250.02792816609144
+          ]
+        },
+        "top1_iou": 0.6534742939142433,
+        "top1_score": 0.5400941371917725
+      },
+      {
+        "name": "refine_3",
+        "query_text": "a person with a bag is walking on the sidewalk .",
+        "top1": {
+          "score": 0.5048989653587341,
+          "box_abs_xyxy": [
+            360.85030902177095,
+            218.06106781587005,
+            384.65341459959745,
+            249.87657034769654
+          ]
+        },
+        "top1_iou": 0.6474303079363134,
+        "top1_score": 0.5048989653587341
+      }
+    ],
+    "selected_stage": "prompt_refine",
+    "selected_query_text": "a person carrying a suitcase is crossing the street .",
+    "selected_top1": {
+      "score": 0.5400941371917725,
+      "box_abs_xyxy": [
+        361.0355453565717,
+        218.17967135459185,
+        384.5942420884967,
+        250.02792816609144
+      ]
+    },
+    "selected_top1_iou": 0.6534742939142433,
+    "top1_iou_gain": 0.6532757776299177,
+    "gt_boxes": [
+      [
+        362.97,
+        220.3,
+        381.77000000000004,
+        246.38
+      ],
+      [
+        164.03,
+        174.56,
+        188.3,
+        209.88
+      ]
+    ]
+  },
+  "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/inference/llm_fallback_focus_carry_in_99114_20260307_084927.png"
+}

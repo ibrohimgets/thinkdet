@@ -1,0 +1,967 @@
+{
+  "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage2/heads_kd/layer9_g0.35_kd0.05_e1_delta/thinkdet_stage2_epoch1.pth",
+  "thinkdet_meta": {
+    "extract_layers": [
+      9
+    ],
+    "layer_fusion": "mean",
+    "uncertainty_enabled": true,
+    "uncertainty_num_variants": 2,
+    "uncertainty_beta": 8.0,
+    "uncertainty_min_reliability": 0.05,
+    "missing_keys": 1589,
+    "unexpected_keys": 0
+  },
+  "cases": [
+    {
+      "image_id": 309391,
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000309391.jpg",
+      "target_category": "person",
+      "target_count": 14,
+      "prompt": "the person .",
+      "thresholds": {
+        "conf_030": {
+          "baseline_count": 1,
+          "delta_count": 1,
+          "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img309391_person_n14/baseline_conf030.png",
+          "delta_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img309391_person_n14/delta_conf030.png"
+        },
+        "conf_010": {
+          "baseline_count": 12,
+          "delta_count": 12,
+          "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img309391_person_n14/baseline_conf010.png",
+          "delta_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img309391_person_n14/delta_conf010.png"
+        }
+      },
+      "top5": {
+        "baseline": [
+          {
+            "rank": 1,
+            "score": 0.32758480310440063,
+            "box_cxcywh_norm": [
+              0.9615906476974487,
+              0.8128608465194702,
+              0.040463078767061234,
+              0.22841063141822815
+            ],
+            "box_xyxy_px": [
+              602.4698293209076,
+              268.28372383117676,
+              628.3661997318268,
+              355.99340629577637
+            ]
+          },
+          {
+            "rank": 2,
+            "score": 0.28737252950668335,
+            "box_cxcywh_norm": [
+              0.14350663125514984,
+              0.7513806819915771,
+              0.03868977352976799,
+              0.1869564950466156
+            ],
+            "box_xyxy_px": [
+              79.46351647377014,
+              252.63453483581543,
+              104.22497153282166,
+              324.4258289337158
+            ]
+          },
+          {
+            "rank": 3,
+            "score": 0.2603886127471924,
+            "box_cxcywh_norm": [
+              0.684948205947876,
+              0.5208547115325928,
+              0.03208418935537338,
+              0.08310520648956299
+            ],
+            "box_xyxy_px": [
+              428.09991121292114,
+              184.05200958251953,
+              448.6337924003601,
+              215.96440887451172
+            ]
+          },
+          {
+            "rank": 4,
+            "score": 0.23476627469062805,
+            "box_cxcywh_norm": [
+              0.2108609974384308,
+              0.6500838398933411,
+              0.02791190706193447,
+              0.15676310658454895
+            ],
+            "box_xyxy_px": [
+              126.01922810077667,
+              219.53367805480957,
+              143.88284862041473,
+              279.73071098327637
+            ]
+          },
+          {
+            "rank": 5,
+            "score": 0.23176956176757812,
+            "box_cxcywh_norm": [
+              0.32790011167526245,
+              0.6382717490196228,
+              0.026945991441607475,
+              0.12444283813238144
+            ],
+            "box_xyxy_px": [
+              201.23335421085358,
+              221.20332670211792,
+              218.47878873348236,
+              268.9893765449524
+            ]
+          }
+        ],
+        "delta": [
+          {
+            "rank": 1,
+            "score": 0.3180205225944519,
+            "box_cxcywh_norm": [
+              0.9615446925163269,
+              0.8115041851997375,
+              0.03962206095457077,
+              0.22471573948860168
+            ],
+            "box_xyxy_px": [
+              602.7095437049866,
+              268.4721851348877,
+              628.0676627159119,
+              354.76302909851074
+            ]
+          },
+          {
+            "rank": 2,
+            "score": 0.2815207540988922,
+            "box_cxcywh_norm": [
+              0.14340735971927643,
+              0.750555694103241,
+              0.03824871405959129,
+              0.1836477369070053
+            ],
+            "box_xyxy_px": [
+              79.5411217212677,
+              252.9530210494995,
+              104.02029871940613,
+              323.47375202178955
+            ]
+          },
+          {
+            "rank": 3,
+            "score": 0.2506158947944641,
+            "box_cxcywh_norm": [
+              0.6846185326576233,
+              0.5193389058113098,
+              0.03119775466620922,
+              0.08006133139133453
+            ],
+            "box_xyxy_px": [
+              428.17257940769196,
+              184.05436420440674,
+              448.13914239406586,
+              214.7979154586792
+            ]
+          },
+          {
+            "rank": 4,
+            "score": 0.22622084617614746,
+            "box_cxcywh_norm": [
+              0.21057192981243134,
+              0.6486760973930359,
+              0.027294335886836052,
+              0.15266838669776917
+            ],
+            "box_xyxy_px": [
+              126.03184759616852,
+              219.7792911529541,
+              143.5002225637436,
+              278.40395164489746
+            ]
+          },
+          {
+            "rank": 5,
+            "score": 0.22340986132621765,
+            "box_cxcywh_norm": [
+              0.3278616964817047,
+              0.6378672122955322,
+              0.02634601853787899,
+              0.12183891236782074
+            ],
+            "box_xyxy_px": [
+              201.40075981616974,
+              221.5479383468628,
+              218.2622116804123,
+              268.33408069610596
+            ]
+          }
+        ]
+      },
+      "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img309391_person_n14",
+      "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img309391_person_n14/comparison_grid.png",
+      "top5_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img309391_person_n14/top5_predictions.txt"
+    },
+    {
+      "image_id": 156278,
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000156278.jpg",
+      "target_category": "knife",
+      "target_count": 14,
+      "prompt": "the knife .",
+      "thresholds": {
+        "conf_030": {
+          "baseline_count": 0,
+          "delta_count": 0,
+          "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img156278_knife_n14/baseline_conf030.png",
+          "delta_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img156278_knife_n14/delta_conf030.png"
+        },
+        "conf_010": {
+          "baseline_count": 12,
+          "delta_count": 12,
+          "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img156278_knife_n14/baseline_conf010.png",
+          "delta_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img156278_knife_n14/delta_conf010.png"
+        }
+      },
+      "top5": {
+        "baseline": [
+          {
+            "rank": 1,
+            "score": 0.25760066509246826,
+            "box_cxcywh_norm": [
+              0.8670493364334106,
+              0.4374154210090637,
+              0.059720832854509354,
+              0.02002542093396187
+            ],
+            "box_xyxy_px": [
+              535.8009088039398,
+              181.64615198038518,
+              574.0222418308258,
+              190.15695587731898
+            ]
+          },
+          {
+            "rank": 2,
+            "score": 0.24105697870254517,
+            "box_cxcywh_norm": [
+              0.2088872790336609,
+              0.4934242069721222,
+              0.013595533557236195,
+              0.0969967395067215
+            ],
+            "box_xyxy_px": [
+              129.3372878432274,
+              189.0934808179736,
+              138.03842931985855,
+              230.31709510833025
+            ]
+          },
+          {
+            "rank": 3,
+            "score": 0.2203296720981598,
+            "box_cxcywh_norm": [
+              0.865433931350708,
+              0.40704917907714844,
+              0.05764103680849075,
+              0.021784422919154167
+            ],
+            "box_xyxy_px": [
+              535.4325842857361,
+              168.36671123746783,
+              572.3228478431702,
+              177.62509097810835
+            ]
+          },
+          {
+            "rank": 4,
+            "score": 0.21220001578330994,
+            "box_cxcywh_norm": [
+              0.8702766299247742,
+              0.3849696218967438,
+              0.06892004609107971,
+              0.026212668046355247
+            ],
+            "box_xyxy_px": [
+              534.92262840271,
+              158.0418973462656,
+              579.031457901001,
+              169.1822812659666
+            ]
+          },
+          {
+            "rank": 5,
+            "score": 0.20515459775924683,
+            "box_cxcywh_norm": [
+              0.8173601627349854,
+              0.525879979133606,
+              0.010513771325349808,
+              0.08468295633792877
+            ],
+            "box_xyxy_px": [
+              519.7460973262787,
+              205.50386290997267,
+              526.4749109745026,
+              241.4941193535924
+            ]
+          }
+        ],
+        "delta": [
+          {
+            "rank": 1,
+            "score": 0.2577801048755646,
+            "box_cxcywh_norm": [
+              0.8671268820762634,
+              0.43715593218803406,
+              0.05950414761900902,
+              0.01977776736021042
+            ],
+            "box_xyxy_px": [
+              535.9198772907257,
+              181.58849561586976,
+              574.0025317668915,
+              189.9940467439592
+            ]
+          },
+          {
+            "rank": 2,
+            "score": 0.23931792378425598,
+            "box_cxcywh_norm": [
+              0.20894302427768707,
+              0.4933198392391205,
+              0.013416597619652748,
+              0.09697035700082779
+            ],
+            "box_xyxy_px": [
+              129.43022429943085,
+              189.0547308139503,
+              138.0168467760086,
+              230.2671325393021
+            ]
+          },
+          {
+            "rank": 3,
+            "score": 0.21605432033538818,
+            "box_cxcywh_norm": [
+              0.865480899810791,
+              0.4069352447986603,
+              0.05739415064454079,
+              0.021568959578871727
+            ],
+            "box_xyxy_px": [
+              535.5416476726532,
+              168.36407512892038,
+              572.2739040851593,
+              177.53088294994086
+            ]
+          },
+          {
+            "rank": 4,
+            "score": 0.20607620477676392,
+            "box_cxcywh_norm": [
+              0.8702825307846069,
+              0.3847563862800598,
+              0.06843611598014832,
+              0.026064511388540268
+            ],
+            "box_xyxy_px": [
+              535.081262588501,
+              157.9827554989606,
+              578.8803768157959,
+              169.06017283909023
+            ]
+          },
+          {
+            "rank": 5,
+            "score": 0.2001335322856903,
+            "box_cxcywh_norm": [
+              0.8174004554748535,
+              0.5258930921554565,
+              0.01032287534326315,
+              0.08454350382089615
+            ],
+            "box_xyxy_px": [
+              519.832971394062,
+              205.5390696041286,
+              526.4396116137505,
+              241.47005872800946
+            ]
+          }
+        ]
+      },
+      "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img156278_knife_n14",
+      "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img156278_knife_n14/comparison_grid.png",
+      "top5_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img156278_knife_n14/top5_predictions.txt"
+    },
+    {
+      "image_id": 572678,
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000572678.jpg",
+      "target_category": "spoon",
+      "target_count": 7,
+      "prompt": "the spoon .",
+      "thresholds": {
+        "conf_030": {
+          "baseline_count": 2,
+          "delta_count": 2,
+          "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img572678_spoon_n7/baseline_conf030.png",
+          "delta_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img572678_spoon_n7/delta_conf030.png"
+        },
+        "conf_010": {
+          "baseline_count": 7,
+          "delta_count": 6,
+          "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img572678_spoon_n7/baseline_conf010.png",
+          "delta_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img572678_spoon_n7/delta_conf010.png"
+        }
+      },
+      "top5": {
+        "baseline": [
+          {
+            "rank": 1,
+            "score": 0.4445880949497223,
+            "box_cxcywh_norm": [
+              0.402432918548584,
+              0.8380778431892395,
+              0.05779669061303139,
+              0.06968703120946884
+            ],
+            "box_xyxy_px": [
+              239.0621268749237,
+              341.37458922341466,
+              276.0520088672638,
+              370.9915774874389
+            ]
+          },
+          {
+            "rank": 2,
+            "score": 0.3846176266670227,
+            "box_cxcywh_norm": [
+              0.4219711720943451,
+              0.8412907123565674,
+              0.0686546042561531,
+              0.07898734509944916
+            ],
+            "box_xyxy_px": [
+              248.09207677841187,
+              340.7637419179082,
+              292.03102350234985,
+              374.3333635851741
+            ]
+          },
+          {
+            "rank": 3,
+            "score": 0.2205410897731781,
+            "box_cxcywh_norm": [
+              0.41622835397720337,
+              0.8398965001106262,
+              0.08195570856332779,
+              0.08439525961875916
+            ],
+            "box_xyxy_px": [
+              240.16031980514526,
+              339.0220198780298,
+              292.61197328567505,
+              374.89000521600246
+            ]
+          },
+          {
+            "rank": 4,
+            "score": 0.1472463607788086,
+            "box_cxcywh_norm": [
+              0.416139155626297,
+              0.8385801315307617,
+              0.10329326242208481,
+              0.12169475108385086
+            ],
+            "box_xyxy_px": [
+              233.27521562576294,
+              330.5364212952554,
+              299.3829035758972,
+              382.25669050589204
+            ]
+          },
+          {
+            "rank": 5,
+            "score": 0.1267603188753128,
+            "box_cxcywh_norm": [
+              0.7703277468681335,
+              0.7978933453559875,
+              0.08418881893157959,
+              0.04433554783463478
+            ],
+            "box_xyxy_px": [
+              466.0693359375,
+              329.6833678614348,
+              519.9501800537109,
+              348.5259756911546
+            ]
+          }
+        ],
+        "delta": [
+          {
+            "rank": 1,
+            "score": 0.42291396856307983,
+            "box_cxcywh_norm": [
+              0.40243515372276306,
+              0.8377843499183655,
+              0.05781794711947441,
+              0.06959682703018188
+            ],
+            "box_xyxy_px": [
+              239.05675530433655,
+              341.2690229713917,
+              276.06024146080017,
+              370.847674459219
+            ]
+          },
+          {
+            "rank": 2,
+            "score": 0.34167516231536865,
+            "box_cxcywh_norm": [
+              0.42197147011756897,
+              0.8409014344215393,
+              0.06853075325489044,
+              0.0776204764842987
+            ],
+            "box_xyxy_px": [
+              248.1318998336792,
+              340.88875837624073,
+              291.9915819168091,
+              373.8774608820677
+            ]
+          },
+          {
+            "rank": 3,
+            "score": 0.21989727020263672,
+            "box_cxcywh_norm": [
+              0.41783756017684937,
+              0.8398656249046326,
+              0.0784851610660553,
+              0.08232054859399796
+            ],
+            "box_xyxy_px": [
+              242.3007869720459,
+              339.4497740082443,
+              292.5312900543213,
+              374.4360071606934
+            ]
+          },
+          {
+            "rank": 4,
+            "score": 0.13832132518291473,
+            "box_cxcywh_norm": [
+              0.4169842004776001,
+              0.8378055691719055,
+              0.10576650500297546,
+              0.1193654015660286
+            ],
+            "box_xyxy_px": [
+              233.0246067047119,
+              330.70221906527877,
+              300.7151699066162,
+              381.4325147308409
+            ]
+          },
+          {
+            "rank": 5,
+            "score": 0.11525555700063705,
+            "box_cxcywh_norm": [
+              0.7707667946815491,
+              0.7971963882446289,
+              0.08351980149745941,
+              0.0447341725230217
+            ],
+            "box_xyxy_px": [
+              466.5644121170044,
+              329.3024533428252,
+              520.0170850753784,
+              348.3144766651094
+            ]
+          }
+        ]
+      },
+      "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img572678_spoon_n7",
+      "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img572678_spoon_n7/comparison_grid.png",
+      "top5_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img572678_spoon_n7/top5_predictions.txt"
+    },
+    {
+      "image_id": 170670,
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000170670.jpg",
+      "target_category": "fork",
+      "target_count": 5,
+      "prompt": "the fork .",
+      "thresholds": {
+        "conf_030": {
+          "baseline_count": 2,
+          "delta_count": 2,
+          "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img170670_fork_n5/baseline_conf030.png",
+          "delta_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img170670_fork_n5/delta_conf030.png"
+        },
+        "conf_010": {
+          "baseline_count": 7,
+          "delta_count": 7,
+          "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img170670_fork_n5/baseline_conf010.png",
+          "delta_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img170670_fork_n5/delta_conf010.png"
+        }
+      },
+      "top5": {
+        "baseline": [
+          {
+            "rank": 1,
+            "score": 0.44374212622642517,
+            "box_cxcywh_norm": [
+              0.874146580696106,
+              0.5930615663528442,
+              0.15155084431171417,
+              0.25560691952705383
+            ],
+            "box_xyxy_px": [
+              510.9575414657593,
+              198.19995340704918,
+              607.9500818252563,
+              307.0885011255741
+            ]
+          },
+          {
+            "rank": 2,
+            "score": 0.4076538681983948,
+            "box_cxcywh_norm": [
+              0.9200766086578369,
+              0.5674899220466614,
+              0.1337728500366211,
+              0.19619543850421906
+            ],
+            "box_xyxy_px": [
+              546.0417175292969,
+              199.9610783904791,
+              631.6563415527344,
+              283.5403351932764
+            ]
+          },
+          {
+            "rank": 3,
+            "score": 0.1443829983472824,
+            "box_cxcywh_norm": [
+              0.8884568810462952,
+              0.5928522944450378,
+              0.1885792762041092,
+              0.2719326317310333
+            ],
+            "box_xyxy_px": [
+              508.26703548431396,
+              194.63342687487602,
+              628.9577722549438,
+              310.4767279922962
+            ]
+          },
+          {
+            "rank": 4,
+            "score": 0.13611459732055664,
+            "box_cxcywh_norm": [
+              0.8834782838821411,
+              0.5989087224006653,
+              0.2021188884973526,
+              0.33565762639045715
+            ],
+            "box_xyxy_px": [
+              500.7480573654175,
+              183.64004132151604,
+              630.1041460037231,
+              326.6301901638508
+            ]
+          },
+          {
+            "rank": 5,
+            "score": 0.13508297502994537,
+            "box_cxcywh_norm": [
+              0.8233475089073181,
+              0.5013432502746582,
+              0.049114830791950226,
+              0.0703926756978035
+            ],
+            "box_xyxy_px": [
+              511.2256598472595,
+              198.57858469337225,
+              542.6591515541077,
+              228.56586454063654
+            ]
+          }
+        ],
+        "delta": [
+          {
+            "rank": 1,
+            "score": 0.43980860710144043,
+            "box_cxcywh_norm": [
+              0.8748888969421387,
+              0.5917966365814209,
+              0.1524524688720703,
+              0.25152724981307983
+            ],
+            "box_xyxy_px": [
+              511.14410400390625,
+              198.5300629734993,
+              608.7136840820312,
+              305.6806713938713
+            ]
+          },
+          {
+            "rank": 2,
+            "score": 0.41447359323501587,
+            "box_cxcywh_norm": [
+              0.9203734993934631,
+              0.5654853582382202,
+              0.13348530232906342,
+              0.19408126175403595
+            ],
+            "box_xyxy_px": [
+              546.3237428665161,
+              199.55745385587215,
+              631.7543363571167,
+              282.23607136309147
+            ]
+          },
+          {
+            "rank": 3,
+            "score": 0.1388445496559143,
+            "box_cxcywh_norm": [
+              0.8233045339584351,
+              0.501248836517334,
+              0.04771805927157402,
+              0.06934579461812973
+            ],
+            "box_xyxy_px": [
+              511.64512276649475,
+              198.76135010272264,
+              542.1846807003021,
+              228.3026586100459
+            ]
+          },
+          {
+            "rank": 4,
+            "score": 0.13137711584568024,
+            "box_cxcywh_norm": [
+              0.8813074827194214,
+              0.5108045935630798,
+              0.05344663932919502,
+              0.08391959220170975
+            ],
+            "box_xyxy_px": [
+              546.9338643550873,
+              199.72788371890783,
+              581.1397135257721,
+              235.47762999683619
+            ]
+          },
+          {
+            "rank": 5,
+            "score": 0.12101590633392334,
+            "box_cxcywh_norm": [
+              0.8797867894172668,
+              0.5941844582557678,
+              0.2070084810256958,
+              0.33429980278015137
+            ],
+            "box_xyxy_px": [
+              496.8208312988281,
+              181.91672122478485,
+              629.3062591552734,
+              324.32843720912933
+            ]
+          }
+        ]
+      },
+      "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img170670_fork_n5",
+      "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img170670_fork_n5/comparison_grid.png",
+      "top5_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img170670_fork_n5/top5_predictions.txt"
+    },
+    {
+      "image_id": 372819,
+      "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000372819.jpg",
+      "target_category": "dog",
+      "target_count": 4,
+      "prompt": "the dog .",
+      "thresholds": {
+        "conf_030": {
+          "baseline_count": 3,
+          "delta_count": 3,
+          "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img372819_dog_n4/baseline_conf030.png",
+          "delta_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img372819_dog_n4/delta_conf030.png"
+        },
+        "conf_010": {
+          "baseline_count": 12,
+          "delta_count": 12,
+          "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img372819_dog_n4/baseline_conf010.png",
+          "delta_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img372819_dog_n4/delta_conf010.png"
+        }
+      },
+      "top5": {
+        "baseline": [
+          {
+            "rank": 1,
+            "score": 0.3368954658508301,
+            "box_cxcywh_norm": [
+              0.698296070098877,
+              0.5511839985847473,
+              0.06430096924304962,
+              0.19998237490653992
+            ],
+            "box_xyxy_px": [
+              426.33317470550537,
+              192.20813754200935,
+              467.48579502105713,
+              277.40062925219536
+            ]
+          },
+          {
+            "rank": 2,
+            "score": 0.33387523889541626,
+            "box_cxcywh_norm": [
+              0.3853495419025421,
+              0.427411288022995,
+              0.0692533478140831,
+              0.20942692458629608
+            ],
+            "box_xyxy_px": [
+              224.46263551712036,
+              137.4692737609148,
+              268.78477811813354,
+              226.68514363467693
+            ]
+          },
+          {
+            "rank": 3,
+            "score": 0.32523924112319946,
+            "box_cxcywh_norm": [
+              0.38218751549720764,
+              0.6374162435531616,
+              0.09384377300739288,
+              0.21949346363544464
+            ],
+            "box_xyxy_px": [
+              214.57000255584717,
+              224.78721199929714,
+              274.6300172805786,
+              318.29142750799656
+            ]
+          },
+          {
+            "rank": 4,
+            "score": 0.2956073582172394,
+            "box_cxcywh_norm": [
+              0.46403923630714417,
+              0.34523218870162964,
+              0.05497139319777489,
+              0.18868136405944824
+            ],
+            "box_xyxy_px": [
+              279.3942654132843,
+              106.87978184223175,
+              314.57595705986023,
+              187.2580429315567
+            ]
+          },
+          {
+            "rank": 5,
+            "score": 0.24479568004608154,
+            "box_cxcywh_norm": [
+              0.7005478739738464,
+              0.5514020323753357,
+              0.0966595709323883,
+              0.22959251701831818
+            ],
+            "box_xyxy_px": [
+              417.41957664489746,
+              185.99405966699123,
+              479.281702041626,
+              283.8004719167948
+            ]
+          }
+        ],
+        "delta": [
+          {
+            "rank": 1,
+            "score": 0.3377818763256073,
+            "box_cxcywh_norm": [
+              0.38538360595703125,
+              0.4269590675830841,
+              0.06884291768074036,
+              0.20807719230651855
+            ],
+            "box_xyxy_px": [
+              224.6157741546631,
+              137.56412082910538,
+              268.6752414703369,
+              226.20500475168228
+            ]
+          },
+          {
+            "rank": 2,
+            "score": 0.3374297618865967,
+            "box_cxcywh_norm": [
+              0.6984404921531677,
+              0.55094975233078,
+              0.0638127326965332,
+              0.198863685131073
+            ],
+            "box_xyxy_px": [
+              426.5818405151367,
+              192.34662955999374,
+              467.42198944091797,
+              277.06255942583084
+            ]
+          },
+          {
+            "rank": 3,
+            "score": 0.3242202699184418,
+            "box_cxcywh_norm": [
+              0.38225412368774414,
+              0.6369193196296692,
+              0.09311020374298096,
+              0.2175024002790451
+            ],
+            "box_xyxy_px": [
+              214.84737396240234,
+              224.99961890280247,
+              274.43790435791016,
+              317.6556414216757
+            ]
+          },
+          {
+            "rank": 4,
+            "score": 0.2971731424331665,
+            "box_cxcywh_norm": [
+              0.46410486102104187,
+              0.34502512216567993,
+              0.054562538862228394,
+              0.1878329962491989
+            ],
+            "box_xyxy_px": [
+              279.5670986175537,
+              106.97227384150028,
+              314.4871234893799,
+              186.98913024365902
+            ]
+          },
+          {
+            "rank": 5,
+            "score": 0.24998795986175537,
+            "box_cxcywh_norm": [
+              0.7006856203079224,
+              0.5505537390708923,
+              0.09570654481649399,
+              0.22616757452487946
+            ],
+            "box_xyxy_px": [
+              417.81270265579224,
+              186.3621994704008,
+              479.0648913383484,
+              282.70958621799946
+            ]
+          }
+        ]
+      },
+      "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img372819_dog_n4",
+      "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img372819_dog_n4/comparison_grid.png",
+      "top5_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/delta_vs_baseline_20260218_121559/img372819_dog_n4/top5_predictions.txt"
+    }
+  ]
+}

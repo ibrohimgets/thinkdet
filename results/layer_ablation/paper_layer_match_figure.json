@@ -1,0 +1,65 @@
+{
+  "status": "ok",
+  "layers": [
+    0,
+    4,
+    8,
+    9,
+    10,
+    13,
+    20,
+    27
+  ],
+  "datasets": {
+    "flickr_val": {
+      "title": "Flickr30k Entities Val",
+      "baseline": 0.7725,
+      "best_layer": 0,
+      "best_metric": 0.7729227593325305,
+      "layer9_metric": 0.7729227593325305,
+      "delta_best_vs_baseline": 0.0004227593325305534,
+      "trained_reference": 0.7774,
+      "sources": {
+        "baseline": "/home/iibrohimm/project/next_step/thinkdet/results/eval/fused_flickr_fallback_balanced_20260316_204655/flickr30k_grounding_compare_fused_fallback_balanced_20260316_204655.json",
+        "trained_reference": "/home/iibrohimm/project/next_step/thinkdet/results/eval/fused_flickr_fallback_balanced_20260316_204655/flickr30k_grounding_compare_fused_fallback_balanced_20260316_204655.json",
+        "layer_points": [
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/flickr_val_layer0.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/flickr_val_layer4.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/flickr_val_layer8.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/flickr_val_layer9.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/flickr_val_layer10.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/flickr_val_layer13.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/flickr_val_layer20.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/flickr_val_layer27.json"
+        ]
+      }
+    },
+    "affordance": {
+      "title": "Affordance Held-Out Test",
+      "baseline": 0.169921875,
+      "best_layer": 0,
+      "best_metric": 0.1875,
+      "layer9_metric": 0.1875,
+      "delta_best_vs_baseline": 0.017578125,
+      "trained_reference": 0.201171875,
+      "sources": {
+        "baseline": "/home/iibrohimm/project/next_step/thinkdet/results/eval/affordance_benchmark_eval_v1_test_corrected_20260308.json",
+        "trained_reference": "/home/iibrohimm/project/next_step/thinkdet/results/eval/affordance_refcocoplus_learned_8_9_10_test_20260316.json",
+        "layer_points": [
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/affordance_layer0.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/affordance_layer4.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/affordance_layer8.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/affordance_layer9.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/affordance_layer10.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/affordance_layer13.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/affordance_layer20.json",
+          "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/affordance_layer27.json"
+        ]
+      }
+    }
+  },
+  "figures": {
+    "png": "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/paper_layer_match_figure.png",
+    "pdf": "/home/iibrohimm/project/next_step/thinkdet/results/layer_ablation/paper_layer_match_figure.pdf"
+  }
+}

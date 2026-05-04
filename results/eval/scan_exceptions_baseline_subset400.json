@@ -1,0 +1,11 @@
+{
+  "mode": "baseline",
+  "subset": 400,
+  "ok_images": 400,
+  "error_images": 0,
+  "error_rate_pct": 0.0,
+  "error_types": {},
+  "first_errors": [],
+  "avg_det03_per_ok_image": 11.005,
+  "avg_det03_per_all_images": 11.005
+}

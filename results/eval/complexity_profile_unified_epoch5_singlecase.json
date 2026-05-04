@@ -1,0 +1,122 @@
+{
+  "protocol": {
+    "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/train2017/000000521618.jpg",
+    "prompt": "the rightmost sheep towards the bottom of the image its not the one being fed",
+    "gpu_name": "NVIDIA GeForce RTX 2080 Ti",
+    "internvl_input_shape": [
+      1,
+      3,
+      448,
+      448
+    ],
+    "dino_tensor_shape": [
+      1,
+      3,
+      800,
+      1199
+    ],
+    "flops_profiler": "torch.profiler(with_flops=True)",
+    "custom_ms_deform_attn_cpp": false
+  },
+  "baseline": {
+    "params_total": 172839682,
+    "latency_ms_mean": 228.40062942504883,
+    "latency_ms_std": 16.93566170653147,
+    "flops": 746984881219,
+    "flops_top": {
+      "aten::addmm": 710222321664,
+      "aten::bmm": 25065772800,
+      "aten::mm": 6665011200,
+      "aten::conv2d": 4012474368,
+      "aten::mul": 703743044,
+      "aten::add": 261917951,
+      "aten::baddbmm": 53640192
+    }
+  },
+  "thinkdet_unified": {
+    "latency_ms_mean": 334.8368408203125,
+    "latency_ms_std": 2.9146972385611183,
+    "flops": 1657381414729,
+    "flops_top": {
+      "aten::addmm": 1332244682752,
+      "aten::mm": 168732917760,
+      "aten::bmm": 149828073216,
+      "aten::conv2d": 5245599744,
+      "aten::mul": 894847562,
+      "aten::add": 381653503,
+      "aten::baddbmm": 53640192
+    },
+    "delta_vs_baseline": {
+      "latency_ms": 106.43621139526365,
+      "flops": 910396533510
+    },
+    "trainable_groups": {
+      "tma_adapter": 2764803,
+      "residual_fusion": 1582848,
+      "det_heads": 132612,
+      "other": 0,
+      "total_trainable": 4480263,
+      "trainable_bbox_indices": [
+        0
+      ]
+    }
+  },
+  "submodules": {
+    "tma_adapter": {
+      "params": 2764803,
+      "latency_ms_mean": 2.5938204860687257,
+      "latency_ms_std": 0.014587917146308199,
+      "flops": 1220548613,
+      "flops_top": {
+        "aten::mm": 1006632960,
+        "aten::addmm": 207618048,
+        "aten::bmm": 6291456,
+        "aten::mul": 6147,
+        "aten::add": 2
+      }
+    },
+    "residual_fusion_only": {
+      "params": 1582848,
+      "latency_ms_mean": 2.5794979095458985,
+      "latency_ms_std": 0.011117505176219756,
+      "flops": 51614210,
+      "flops_top": {
+        "aten::addmm": 51118080,
+        "aten::bmm": 466944,
+        "aten::add": 14594,
+        "aten::mul": 14592
+      }
+    },
+    "trainable_detection_heads_module_compute": {
+      "params": 132612,
+      "latency_ms_mean": 0.2814335995912552,
+      "latency_ms_std": 0.006117966954904346,
+      "flops": 237772800,
+      "flops_top": {
+        "aten::addmm": 237772800
+      },
+      "note": "head unfreezing does not change inference graph vs baseline; module compute shown for reference only"
+    },
+    "residual_fusion_plus_detection_heads_incremental": {
+      "params": 1715460,
+      "latency_ms_mean": 2.5794979095458985,
+      "latency_ms_std": 0.011117505176219756,
+      "flops": 51614210,
+      "note": "incremental inference overhead is dominated by residual fusion; head unfreezing changes trainability but not forward compute graph"
+    },
+    "captured": {
+      "h_vlm_shape": [
+        1,
+        256,
+        1024
+      ],
+      "num_residual_caps": 3,
+      "trainable_bbox_indices": [
+        0
+      ],
+      "head_caps": [
+        "bbox_embed.0"
+      ]
+    }
+  }
+}

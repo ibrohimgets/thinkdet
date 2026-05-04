@@ -1,0 +1,44 @@
+{
+  "image_path": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/unified_single_carry_in_20260226_033826/Screenshot 2026-02-26 124234.png",
+  "user_prompt": "I am running out my phone battery",
+  "dino_prompt": "I am running out my phone battery .",
+  "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+  "top3": [
+    {
+      "rank": 1,
+      "score": 0.2999069392681122,
+      "box_xyxy": [
+        569.402775913477,
+        297.4093132317066,
+        680.1818703114986,
+        451.1550278365612
+      ]
+    },
+    {
+      "rank": 2,
+      "score": 0.2729232609272003,
+      "box_xyxy": [
+        434.5532137155533,
+        256.95104080438614,
+        757.1416562795639,
+        529.4834923148155
+      ]
+    },
+    {
+      "rank": 3,
+      "score": 0.21135713160037994,
+      "box_xyxy": [
+        569.7027783095837,
+        297.9586798250675,
+        679.6120734512806,
+        450.9718182981014
+      ]
+    }
+  ],
+  "gate_values": [
+    0.0016425460344180465,
+    0.0009118875022977591,
+    0.0020155126694589853
+  ],
+  "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/unified_single_custom_prompt_20260226_034545/Screenshot 2026-02-26 124234_unified_epoch5_phone_battery_prompt.jpg"
+}

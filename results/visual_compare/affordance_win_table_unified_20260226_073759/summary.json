@@ -1,0 +1,275 @@
+{
+  "status": "ok",
+  "timestamp": "20260226_074143",
+  "benchmark": "/home/iibrohimm/project/next_step/thinkdet/data/benchmarks/affordance_coco_val_heldout_v1.json",
+  "benchmark_name": "affordance_coco_val_heldout_v1",
+  "split": "test",
+  "baseline_eval_json": "/home/iibrohimm/project/next_step/thinkdet/results/eval/affordance_benchmark_eval_v1_test.json",
+  "baseline_eval_timestamp": "20260220_034952",
+  "unified_ckpt": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+  "unified_scan_json": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/affordance_win_table_unified_20260226_073759/unified_scan_top1.json",
+  "output_table_image": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/affordance_win_table_unified_20260226_073759/affordance_win_table_unified_epoch5.jpg",
+  "selection_meta": {
+    "n_rows": 512,
+    "n_strict_candidates": 9,
+    "n_selected": 8,
+    "strict_thresholds": {
+      "min_unified_top1_iou": 0.5,
+      "max_baseline_top1_iou": 0.49,
+      "min_gap": 0.05
+    }
+  },
+  "ckpt_meta": {
+    "extract_layers": [
+      9
+    ],
+    "injection_layers": [
+      1,
+      3,
+      5
+    ],
+    "tma_m": 8,
+    "tma_n_heads": 8,
+    "fusion_mode": "residual"
+  },
+  "cases": [
+    {
+      "rank": 1,
+      "benchmark_id": "carry_in_190923",
+      "image_id": 190923,
+      "image_file": "000000190923.jpg",
+      "affordance_id": "carry_in",
+      "prompt": "something to carry things in .",
+      "target_categories": [
+        "backpack",
+        "handbag",
+        "suitcase"
+      ],
+      "baseline_top1_iou": 0.41296591017233014,
+      "baseline_top1_score": 0.23645664751529694,
+      "baseline_top1_box_abs_xyxy": [
+        306.4791737124324,
+        380.2074957638979,
+        355.6358339264989,
+        441.4637517184019
+      ],
+      "unified_top1_iou": 0.9169627839545557,
+      "unified_top1_score": 0.19753317534923553,
+      "unified_top1_box_abs_xyxy": [
+        303.7396017462015,
+        349.37501698732376,
+        372.43263982236385,
+        461.0140845179558
+      ],
+      "iou_gap": 0.5039968737822256,
+      "case_image": "cases/case01_carry_in_190923.jpg"
+    },
+    {
+      "rank": 2,
+      "benchmark_id": "drink_from_548339",
+      "image_id": 548339,
+      "image_file": "000000548339.jpg",
+      "affordance_id": "drink_from",
+      "prompt": "something to drink from .",
+      "target_categories": [
+        "cup",
+        "bottle",
+        "wine glass"
+      ],
+      "baseline_top1_iou": 0.0,
+      "baseline_top1_score": 0.3150642514228821,
+      "baseline_top1_box_abs_xyxy": [
+        180.5390167236328,
+        30.050697326660156,
+        538.0634307861328,
+        502.163875579834
+      ],
+      "unified_top1_iou": 0.7604478374941487,
+      "unified_top1_score": 0.2528884708881378,
+      "unified_top1_box_abs_xyxy": [
+        99.44477915763855,
+        122.94903016090393,
+        127.71283268928528,
+        186.37375044822693
+      ],
+      "iou_gap": 0.7604478374941487,
+      "case_image": "cases/case02_drink_from_548339.jpg"
+    },
+    {
+      "rank": 3,
+      "benchmark_id": "eat_with_562059",
+      "image_id": 562059,
+      "image_file": "000000562059.jpg",
+      "affordance_id": "eat_with",
+      "prompt": "something to eat with .",
+      "target_categories": [
+        "fork",
+        "spoon",
+        "knife"
+      ],
+      "baseline_top1_iou": 0.10231211720784997,
+      "baseline_top1_score": 0.26615142822265625,
+      "baseline_top1_box_abs_xyxy": [
+        118.91272601485252,
+        124.60141181945801,
+        424.34848299622536,
+        426.2173366546631
+      ],
+      "unified_top1_iou": 0.9483133070591054,
+      "unified_top1_score": 0.21825557947158813,
+      "unified_top1_box_abs_xyxy": [
+        199.1590980887413,
+        370.2509593963623,
+        424.39586037397385,
+        545.6714344024658
+      ],
+      "iou_gap": 0.8460011898512555,
+      "case_image": "cases/case03_eat_with_562059.jpg"
+    },
+    {
+      "rank": 4,
+      "benchmark_id": "talk_on_579655",
+      "image_id": 579655,
+      "image_file": "000000579655.jpg",
+      "affordance_id": "talk_on",
+      "prompt": "something to talk on .",
+      "target_categories": [
+        "cell phone"
+      ],
+      "baseline_top1_iou": 0.03367680199408725,
+      "baseline_top1_score": 0.32798686623573303,
+      "baseline_top1_box_abs_xyxy": [
+        177.74011611938477,
+        2.9244917929172516,
+        635.0032615661621,
+        394.26272973418236
+      ],
+      "unified_top1_iou": 0.8701650740336336,
+      "unified_top1_score": 0.24112054705619812,
+      "unified_top1_box_abs_xyxy": [
+        275.9791111946106,
+        174.43101981282234,
+        336.1029887199402,
+        276.6897859275341
+      ],
+      "iou_gap": 0.8364882720395463,
+      "case_image": "cases/case04_talk_on_579655.jpg"
+    },
+    {
+      "rank": 5,
+      "benchmark_id": "talk_on_537991",
+      "image_id": 537991,
+      "image_file": "000000537991.jpg",
+      "affordance_id": "talk_on",
+      "prompt": "something to talk on .",
+      "target_categories": [
+        "cell phone"
+      ],
+      "baseline_top1_iou": 0.020222982417003085,
+      "baseline_top1_score": 0.2799963355064392,
+      "baseline_top1_box_abs_xyxy": [
+        84.94800567626953,
+        2.3848342895507812,
+        380.10643005371094,
+        475.77924728393555
+      ],
+      "unified_top1_iou": 0.8560528683326772,
+      "unified_top1_score": 0.2319677770137787,
+      "unified_top1_box_abs_xyxy": [
+        155.24925231933594,
+        166.9494867324829,
+        205.67886352539062,
+        232.40365505218506
+      ],
+      "iou_gap": 0.8358298859156742,
+      "case_image": "cases/case05_talk_on_537991.jpg"
+    },
+    {
+      "rank": 6,
+      "benchmark_id": "talk_on_156076",
+      "image_id": 156076,
+      "image_file": "000000156076.jpg",
+      "affordance_id": "talk_on",
+      "prompt": "something to talk on .",
+      "target_categories": [
+        "cell phone"
+      ],
+      "baseline_top1_iou": 0.0,
+      "baseline_top1_score": 0.24030110239982605,
+      "baseline_top1_box_abs_xyxy": [
+        138.43948364257812,
+        255.5098196864128,
+        486.73755645751953,
+        451.5858469605446
+      ],
+      "unified_top1_iou": 0.7008828505442458,
+      "unified_top1_score": 0.1843220591545105,
+      "unified_top1_box_abs_xyxy": [
+        207.46743202209473,
+        145.87493069842458,
+        237.66913414001465,
+        164.27116398140788
+      ],
+      "iou_gap": 0.7008828505442458,
+      "case_image": "cases/case06_talk_on_156076.jpg"
+    },
+    {
+      "rank": 7,
+      "benchmark_id": "talk_on_398377",
+      "image_id": 398377,
+      "image_file": "000000398377.jpg",
+      "affordance_id": "talk_on",
+      "prompt": "something to talk on .",
+      "target_categories": [
+        "cell phone"
+      ],
+      "baseline_top1_iou": 0.0015450256913987117,
+      "baseline_top1_score": 0.2505545914173126,
+      "baseline_top1_box_abs_xyxy": [
+        160.66057235002518,
+        74.2778442800045,
+        374.07445162534714,
+        366.35688319802284
+      ],
+      "unified_top1_iou": 0.6276284541450788,
+      "unified_top1_score": 0.1977904587984085,
+      "unified_top1_box_abs_xyxy": [
+        16.730678267776966,
+        128.32569633610547,
+        32.909381203353405,
+        148.19503272883594
+      ],
+      "iou_gap": 0.6260834284536801,
+      "case_image": "cases/case07_talk_on_398377.jpg"
+    },
+    {
+      "rank": 8,
+      "benchmark_id": "talk_on_250127",
+      "image_id": 250127,
+      "image_file": "000000250127.jpg",
+      "affordance_id": "talk_on",
+      "prompt": "something to talk on .",
+      "target_categories": [
+        "cell phone"
+      ],
+      "baseline_top1_iou": 0.00189362514162005,
+      "baseline_top1_score": 0.26390570402145386,
+      "baseline_top1_box_abs_xyxy": [
+        138.53683471679688,
+        134.8042869567871,
+        411.1980438232422,
+        605.7348823547363
+      ],
+      "unified_top1_iou": 0.5862412366991137,
+      "unified_top1_score": 0.1975078135728836,
+      "unified_top1_box_abs_xyxy": [
+        323.30633878707886,
+        285.22503912448883,
+        345.4249691963196,
+        303.9766973257065
+      ],
+      "iou_gap": 0.5843476115574936,
+      "case_image": "cases/case08_talk_on_250127.jpg"
+    }
+  ]
+}

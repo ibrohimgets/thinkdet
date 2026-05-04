@@ -1,0 +1,9 @@
+rank,benchmark_id,affordance_id,image_id,prompt,baseline_top1_iou,unified_top1_iou,iou_gap,baseline_top1_score,unified_top1_score,case_image
+1,carry_in_190923,carry_in,190923,something to carry things in .,0.412966,0.916963,0.503997,0.236457,0.197533,cases/case01_carry_in_190923.jpg
+2,drink_from_548339,drink_from,548339,something to drink from .,0.000000,0.760448,0.760448,0.315064,0.252888,cases/case02_drink_from_548339.jpg
+3,eat_with_562059,eat_with,562059,something to eat with .,0.102312,0.948313,0.846001,0.266151,0.218256,cases/case03_eat_with_562059.jpg
+4,talk_on_579655,talk_on,579655,something to talk on .,0.033677,0.870165,0.836488,0.327987,0.241121,cases/case04_talk_on_579655.jpg
+5,talk_on_537991,talk_on,537991,something to talk on .,0.020223,0.856053,0.835830,0.279996,0.231968,cases/case05_talk_on_537991.jpg
+6,talk_on_156076,talk_on,156076,something to talk on .,0.000000,0.700883,0.700883,0.240301,0.184322,cases/case06_talk_on_156076.jpg
+7,talk_on_398377,talk_on,398377,something to talk on .,0.001545,0.627628,0.626083,0.250555,0.197790,cases/case07_talk_on_398377.jpg
+8,talk_on_250127,talk_on,250127,something to talk on .,0.001894,0.586241,0.584348,0.263906,0.197508,cases/case08_talk_on_250127.jpg

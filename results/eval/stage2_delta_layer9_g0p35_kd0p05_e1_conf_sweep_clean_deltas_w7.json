@@ -1,0 +1,76 @@
+{
+  "status": "ok",
+  "all_clean": true,
+  "rows": [
+    {
+      "conf_tag": "0p05",
+      "conf_thresh": 0.05,
+      "mAP_baseline": 0.46681742018603156,
+      "mAP_trained": 0.4769628033668528,
+      "mAP_delta": 0.010145383180821255,
+      "mAP50_delta": 0.007237644667926646,
+      "mAP75_delta": 0.012297289958235313,
+      "recall_delta": 0.018727904003611684,
+      "num_predictions_delta": 21121,
+      "errors_sum_baseline": 0,
+      "errors_sum_trained": 0,
+      "clean": true
+    },
+    {
+      "conf_tag": "0p10",
+      "conf_thresh": 0.1,
+      "mAP_baseline": 0.46508816545055515,
+      "mAP_trained": 0.475171542848563,
+      "mAP_delta": 0.010083377398007853,
+      "mAP50_delta": 0.0073078536572277475,
+      "mAP75_delta": 0.01206911806616251,
+      "recall_delta": 0.01516371963164087,
+      "num_predictions_delta": -6026,
+      "errors_sum_baseline": 0,
+      "errors_sum_trained": 0,
+      "clean": true
+    },
+    {
+      "conf_tag": "0p20",
+      "conf_thresh": 0.2,
+      "mAP_baseline": 0.4547868973059401,
+      "mAP_trained": 0.4617887323000536,
+      "mAP_delta": 0.007001834994113498,
+      "mAP50_delta": 0.0028349815515524845,
+      "mAP75_delta": 0.008786901440614059,
+      "recall_delta": 0.0021657356035708064,
+      "num_predictions_delta": -16299,
+      "errors_sum_baseline": 0,
+      "errors_sum_trained": 0,
+      "clean": true
+    },
+    {
+      "conf_tag": "0p30",
+      "conf_thresh": 0.3,
+      "mAP_baseline": 0.4322319688890781,
+      "mAP_trained": 0.4307301890361743,
+      "mAP_delta": -0.001501779852903784,
+      "mAP50_delta": -0.010432483985252983,
+      "mAP75_delta": -0.00017691511113582248,
+      "recall_delta": -0.011946132747637228,
+      "num_predictions_delta": -10891,
+      "errors_sum_baseline": 0,
+      "errors_sum_trained": 0,
+      "clean": true
+    },
+    {
+      "conf_tag": "0p40",
+      "conf_thresh": 0.4,
+      "mAP_baseline": 0.38881605024956717,
+      "mAP_trained": 0.37227508318441915,
+      "mAP_delta": -0.016540967065148016,
+      "mAP50_delta": -0.02991249489165687,
+      "mAP75_delta": -0.01691712041558907,
+      "recall_delta": -0.02982566032215489,
+      "num_predictions_delta": -7393,
+      "errors_sum_baseline": 0,
+      "errors_sum_trained": 0,
+      "clean": true
+    }
+  ]
+}

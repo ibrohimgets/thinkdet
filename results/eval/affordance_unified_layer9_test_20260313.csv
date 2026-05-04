@@ -1,0 +1,4 @@
+model,n_samples,hit@0.5_top1,hit@0.5_topk,mean_best_iou_top1,mean_best_iou_topk,mean_top1_score
+baseline,512,0.169922,0.408203,0.186635,0.393275,0.106711
+thinkdet,512,0.187500,0.425781,0.196964,0.401686,0.085792
+thinkdet_fallback,512,0.187500,0.425781,0.196964,0.401686,0.085792

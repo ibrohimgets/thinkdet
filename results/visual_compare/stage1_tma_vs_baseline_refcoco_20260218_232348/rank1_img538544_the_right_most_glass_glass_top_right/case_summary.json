@@ -1,0 +1,39 @@
+{
+  "rank": 1,
+  "idx": 797,
+  "image_id": 538544,
+  "ref_id": 3791,
+  "prompt": "the right most glass glass top right corner lowest .",
+  "expression": "the right most glass glass top right corner lowest",
+  "baseline": {
+    "top_iou": 0.0,
+    "top_score": 0.3895878791809082,
+    "top_box": [
+      0.7159697413444519,
+      0.20155906677246094,
+      0.16195213794708252,
+      0.3612280786037445
+    ]
+  },
+  "tma": {
+    "top_iou": 0.9632543325424194,
+    "top_score": 0.23881292343139648,
+    "top_box": [
+      0.9135830402374268,
+      0.24061818420886993,
+      0.16845163702964783,
+      0.40199869871139526
+    ]
+  },
+  "gt_box": [
+    0.9155625104904175,
+    0.24179157614707947,
+    0.16887499392032623,
+    0.4077049195766449
+  ],
+  "iou_gap": 0.9632543325424194,
+  "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank1_img538544_the_right_most_glass_glass_top_right",
+  "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank1_img538544_the_right_most_glass_glass_top_right/comparison_grid.png",
+  "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank1_img538544_the_right_most_glass_glass_top_right/baseline.png",
+  "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank1_img538544_the_right_most_glass_glass_top_right/stage1_tma.png"
+}

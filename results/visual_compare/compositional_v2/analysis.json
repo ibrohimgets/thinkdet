@@ -1,0 +1,622 @@
+[
+  {
+    "image": "000000372819.jpg",
+    "prompt": "dog .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.9850022604703298
+    },
+    "baseline_top3_scores": [
+      "0.656",
+      "0.639",
+      "0.634"
+    ],
+    "tma_top3_scores": [
+      "0.514",
+      "0.503",
+      "0.502"
+    ],
+    "baseline_top3_qidx": [
+      0,
+      3,
+      1
+    ],
+    "tma_top3_qidx": [
+      0,
+      1,
+      3
+    ],
+    "output_file": "1_1_000000372819_dog_.jpg"
+  },
+  {
+    "image": "000000372819.jpg",
+    "prompt": "the husky .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.98203636199911
+    },
+    "baseline_top3_scores": [
+      "0.375",
+      "0.314",
+      "0.301"
+    ],
+    "tma_top3_scores": [
+      "0.411",
+      "0.370",
+      "0.352"
+    ],
+    "baseline_top3_qidx": [
+      0,
+      1,
+      3
+    ],
+    "tma_top3_qidx": [
+      0,
+      1,
+      3
+    ],
+    "output_file": "1_2_000000372819_the_husky_.jpg"
+  },
+  {
+    "image": "000000372819.jpg",
+    "prompt": "a small dog .",
+    "reranking": {
+      "reranked": true,
+      "tma_top1_was_baseline_rank": 2,
+      "baseline_top1_is_tma_rank": 2,
+      "match_iou": 0.9906448945930085
+    },
+    "baseline_top3_scores": [
+      "0.364",
+      "0.353",
+      "0.304"
+    ],
+    "tma_top3_scores": [
+      "0.403",
+      "0.398",
+      "0.363"
+    ],
+    "baseline_top3_qidx": [
+      0,
+      1,
+      3
+    ],
+    "tma_top3_qidx": [
+      1,
+      0,
+      3
+    ],
+    "output_file": "1_3_000000372819_a_small_dog_.jpg"
+  },
+  {
+    "image": "000000372819.jpg",
+    "prompt": "the white dog running .",
+    "reranking": {
+      "reranked": true,
+      "tma_top1_was_baseline_rank": 3,
+      "baseline_top1_is_tma_rank": 2,
+      "match_iou": 0.9792853028611719
+    },
+    "baseline_top3_scores": [
+      "0.358",
+      "0.345",
+      "0.308"
+    ],
+    "tma_top3_scores": [
+      "0.388",
+      "0.387",
+      "0.377"
+    ],
+    "baseline_top3_qidx": [
+      1,
+      0,
+      2
+    ],
+    "tma_top3_qidx": [
+      2,
+      1,
+      0
+    ],
+    "output_file": "1_4_000000372819_the_white_dog_running_.jpg"
+  },
+  {
+    "image": "000000512836.jpg",
+    "prompt": "dog .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.9959911921004644
+    },
+    "baseline_top3_scores": [
+      "0.678",
+      "0.548",
+      "0.266"
+    ],
+    "tma_top3_scores": [
+      "0.526",
+      "0.505",
+      "0.221"
+    ],
+    "baseline_top3_qidx": [
+      0,
+      1,
+      3
+    ],
+    "tma_top3_qidx": [
+      0,
+      1,
+      237
+    ],
+    "output_file": "2_1_000000512836_dog_.jpg"
+  },
+  {
+    "image": "000000512836.jpg",
+    "prompt": "person .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.9961545115911732
+    },
+    "baseline_top3_scores": [
+      "0.798",
+      "0.724",
+      "0.118"
+    ],
+    "tma_top3_scores": [
+      "0.551",
+      "0.498",
+      "0.118"
+    ],
+    "baseline_top3_qidx": [
+      0,
+      1,
+      2
+    ],
+    "tma_top3_qidx": [
+      0,
+      1,
+      24
+    ],
+    "output_file": "2_2_000000512836_person_.jpg"
+  },
+  {
+    "image": "000000512836.jpg",
+    "prompt": "umbrella .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.9972408923388828
+    },
+    "baseline_top3_scores": [
+      "0.779",
+      "0.082",
+      "0.080"
+    ],
+    "tma_top3_scores": [
+      "0.604",
+      "0.143",
+      "0.102"
+    ],
+    "baseline_top3_qidx": [
+      0,
+      2,
+      6
+    ],
+    "tma_top3_qidx": [
+      0,
+      5,
+      1
+    ],
+    "output_file": "2_3_000000512836_umbrella_.jpg"
+  },
+  {
+    "image": "000000512836.jpg",
+    "prompt": "the black dog .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.9864035036380292
+    },
+    "baseline_top3_scores": [
+      "0.578",
+      "0.230",
+      "0.203"
+    ],
+    "tma_top3_scores": [
+      "0.417",
+      "0.305",
+      "0.305"
+    ],
+    "baseline_top3_qidx": [
+      0,
+      2,
+      8
+    ],
+    "tma_top3_qidx": [
+      0,
+      48,
+      17
+    ],
+    "output_file": "2_4_000000512836_the_black_dog_.jpg"
+  },
+  {
+    "image": "000000210032.jpg",
+    "prompt": "bird .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.9919921835905556
+    },
+    "baseline_top3_scores": [
+      "0.524",
+      "0.320",
+      "0.315"
+    ],
+    "tma_top3_scores": [
+      "0.400",
+      "0.323",
+      "0.315"
+    ],
+    "baseline_top3_qidx": [
+      1,
+      2,
+      0
+    ],
+    "tma_top3_qidx": [
+      1,
+      0,
+      2
+    ],
+    "output_file": "3_1_000000210032_bird_.jpg"
+  },
+  {
+    "image": "000000210032.jpg",
+    "prompt": "sandwich .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.9886198236224136
+    },
+    "baseline_top3_scores": [
+      "0.360",
+      "0.261",
+      "0.221"
+    ],
+    "tma_top3_scores": [
+      "0.339",
+      "0.265",
+      "0.255"
+    ],
+    "baseline_top3_qidx": [
+      0,
+      5,
+      2
+    ],
+    "tma_top3_qidx": [
+      0,
+      5,
+      2
+    ],
+    "output_file": "3_2_000000210032_sandwich_.jpg"
+  },
+  {
+    "image": "000000210032.jpg",
+    "prompt": "person .",
+    "reranking": {
+      "reranked": true,
+      "tma_top1_was_baseline_rank": 2,
+      "baseline_top1_is_tma_rank": 2,
+      "match_iou": 0.9969626374150604
+    },
+    "baseline_top3_scores": [
+      "0.417",
+      "0.395",
+      "0.298"
+    ],
+    "tma_top3_scores": [
+      "0.341",
+      "0.294",
+      "0.276"
+    ],
+    "baseline_top3_qidx": [
+      1,
+      0,
+      2
+    ],
+    "tma_top3_qidx": [
+      0,
+      1,
+      3
+    ],
+    "output_file": "3_3_000000210032_person_.jpg"
+  },
+  {
+    "image": "000000210032.jpg",
+    "prompt": "the sparrow .",
+    "reranking": {
+      "reranked": true,
+      "tma_top1_was_baseline_rank": 2,
+      "baseline_top1_is_tma_rank": 2,
+      "match_iou": 0.9961123287276891
+    },
+    "baseline_top3_scores": [
+      "0.437",
+      "0.341",
+      "0.199"
+    ],
+    "tma_top3_scores": [
+      "0.389",
+      "0.334",
+      "0.218"
+    ],
+    "baseline_top3_qidx": [
+      1,
+      0,
+      4
+    ],
+    "tma_top3_qidx": [
+      0,
+      1,
+      4
+    ],
+    "output_file": "3_4_000000210032_the_sparrow_.jpg"
+  },
+  {
+    "image": "000000060823.jpg",
+    "prompt": "bird .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.9962147378943171
+    },
+    "baseline_top3_scores": [
+      "0.498",
+      "0.493",
+      "0.481"
+    ],
+    "tma_top3_scores": [
+      "0.432",
+      "0.414",
+      "0.412"
+    ],
+    "baseline_top3_qidx": [
+      1,
+      2,
+      0
+    ],
+    "tma_top3_qidx": [
+      1,
+      2,
+      0
+    ],
+    "output_file": "4_1_000000060823_bird_.jpg"
+  },
+  {
+    "image": "000000060823.jpg",
+    "prompt": "cow .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.9911178089468128
+    },
+    "baseline_top3_scores": [
+      "0.738",
+      "0.675",
+      "0.462"
+    ],
+    "tma_top3_scores": [
+      "0.566",
+      "0.474",
+      "0.370"
+    ],
+    "baseline_top3_qidx": [
+      0,
+      1,
+      2
+    ],
+    "tma_top3_qidx": [
+      0,
+      1,
+      2
+    ],
+    "output_file": "4_2_000000060823_cow_.jpg"
+  },
+  {
+    "image": "000000060823.jpg",
+    "prompt": "the black bird .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.9915243470615213
+    },
+    "baseline_top3_scores": [
+      "0.582",
+      "0.200",
+      "0.143"
+    ],
+    "tma_top3_scores": [
+      "0.537",
+      "0.257",
+      "0.176"
+    ],
+    "baseline_top3_qidx": [
+      0,
+      1,
+      2
+    ],
+    "tma_top3_qidx": [
+      0,
+      1,
+      2
+    ],
+    "output_file": "4_3_000000060823_the_black_bird_.jpg"
+  },
+  {
+    "image": "000000060823.jpg",
+    "prompt": "the white cow .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.993649650084601
+    },
+    "baseline_top3_scores": [
+      "0.889",
+      "0.099",
+      "0.073"
+    ],
+    "tma_top3_scores": [
+      "0.522",
+      "0.129",
+      "0.103"
+    ],
+    "baseline_top3_qidx": [
+      0,
+      1,
+      2
+    ],
+    "tma_top3_qidx": [
+      0,
+      10,
+      1
+    ],
+    "output_file": "4_4_000000060823_the_white_cow_.jpg"
+  },
+  {
+    "image": "000000279278.jpg",
+    "prompt": "dog .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.9957273032760138
+    },
+    "baseline_top3_scores": [
+      "0.866",
+      "0.066",
+      "0.053"
+    ],
+    "tma_top3_scores": [
+      "0.719",
+      "0.142",
+      "0.107"
+    ],
+    "baseline_top3_qidx": [
+      0,
+      1,
+      3
+    ],
+    "tma_top3_qidx": [
+      0,
+      3,
+      1
+    ],
+    "output_file": "5_1_000000279278_dog_.jpg"
+  },
+  {
+    "image": "000000279278.jpg",
+    "prompt": "skateboard .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.9925194434483633
+    },
+    "baseline_top3_scores": [
+      "0.795",
+      "0.200",
+      "0.140"
+    ],
+    "tma_top3_scores": [
+      "0.577",
+      "0.258",
+      "0.250"
+    ],
+    "baseline_top3_qidx": [
+      0,
+      1,
+      2
+    ],
+    "tma_top3_qidx": [
+      0,
+      412,
+      1
+    ],
+    "output_file": "5_2_000000279278_skateboard_.jpg"
+  },
+  {
+    "image": "000000279278.jpg",
+    "prompt": "bicycle .",
+    "reranking": {
+      "reranked": false,
+      "tma_top1_was_baseline_rank": 1,
+      "baseline_top1_is_tma_rank": 1,
+      "match_iou": 0.9952725224369278
+    },
+    "baseline_top3_scores": [
+      "0.455",
+      "0.442",
+      "0.371"
+    ],
+    "tma_top3_scores": [
+      "0.381",
+      "0.367",
+      "0.282"
+    ],
+    "baseline_top3_qidx": [
+      1,
+      0,
+      2
+    ],
+    "tma_top3_qidx": [
+      1,
+      0,
+      3
+    ],
+    "output_file": "5_3_000000279278_bicycle_.jpg"
+  },
+  {
+    "image": "000000279278.jpg",
+    "prompt": "the person with the dog .",
+    "reranking": {
+      "reranked": true,
+      "tma_top1_was_baseline_rank": 2,
+      "baseline_top1_is_tma_rank": 2,
+      "match_iou": 0.996550594701337
+    },
+    "baseline_top3_scores": [
+      "0.401",
+      "0.333",
+      "0.253"
+    ],
+    "tma_top3_scores": [
+      "0.335",
+      "0.317",
+      "0.209"
+    ],
+    "baseline_top3_qidx": [
+      1,
+      0,
+      3
+    ],
+    "tma_top3_qidx": [
+      0,
+      1,
+      3
+    ],
+    "output_file": "5_4_000000279278_the_person_with_the_dog_.jpg"
+  }
+]

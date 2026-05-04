@@ -1,0 +1,23 @@
+{
+  "status": "ok",
+  "paths": {
+    "baseline_coco": "/home/iibrohimm/project/next_step/thinkdet/results/eval/stage2_delta_layer9_g0p35_kd0p05_e1_baseline_coco_val_w7.json",
+    "trained_coco": "/home/iibrohimm/project/next_step/thinkdet/results/eval/stage2_delta_layer9_g0p35_kd0p05_e1_trained_coco_val_w7.json",
+    "robustness": "/home/iibrohimm/project/next_step/thinkdet/results/eval/prompt_robustness_stage2_delta_layer9_g0p35_kd0p05_e1_refcoco_plus_val_w7.json"
+  },
+  "coco_clean_deltas": {
+    "mAP_delta": -0.001501779852903784,
+    "mAP50_delta": -0.010432483985252983,
+    "mAP75_delta": -0.00017691511113582248,
+    "recall_delta": -0.011946132747637228,
+    "num_predictions_delta": -10891,
+    "errors_sum_baseline": 0,
+    "errors_sum_trained": 0
+  },
+  "refcoco_plus_ambiguous_clean_deltas": {
+    "acc_at_05_delta": -0.0021379438557352914,
+    "detection_fpr_delta": 0.003979875650228504,
+    "image_fp_rate_delta": 0.006320877486521659,
+    "mean_dets_per_image_delta": 0.011247443762781195
+  }
+}

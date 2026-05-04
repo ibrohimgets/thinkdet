@@ -1,0 +1,42 @@
+{
+  "status": "ok",
+  "output_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_best3_20260218_231509",
+  "cases": [
+    {
+      "index": 1,
+      "tag": "second_guy_right_white_shirt",
+      "prompt": "second guy from right white shirt .",
+      "image_id": 572949,
+      "ref_id": 785,
+      "baseline_iou": 0.0,
+      "tma_iou": 0.8112266659736633,
+      "iou_gap": 0.8112266659736633,
+      "grid_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_best3_20260218_231509/01_second_guy_right_white_shirt.png",
+      "source_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank3_img572949_second_guy_from_right_white_shirt/comparison_grid.png"
+    },
+    {
+      "index": 2,
+      "tag": "player_head_down_back",
+      "prompt": "player with head down in the back .",
+      "image_id": 570440,
+      "ref_id": 1036,
+      "baseline_iou": 0.02438163198530674,
+      "tma_iou": 0.9426507949829102,
+      "iou_gap": 0.9182691629976034,
+      "grid_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_best3_20260218_231509/02_player_head_down_back.png",
+      "source_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank1_img570440_player_with_head_down_in_the_back/comparison_grid.png"
+    },
+    {
+      "index": 3,
+      "tag": "black_man_next_to_white_elderly",
+      "prompt": "a black behind next to the white elderly guy .",
+      "image_id": 550311,
+      "ref_id": 2793,
+      "baseline_iou": 0.14378537237644196,
+      "tma_iou": 0.9773706793785095,
+      "iou_gap": 0.8335853070020676,
+      "grid_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_best3_20260218_231509/03_black_man_next_to_white_elderly.png",
+      "source_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank1_img550311_a_black_behind_next_to_the_white_eld/comparison_grid.png"
+    }
+  ]
+}

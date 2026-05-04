@@ -1,0 +1,60 @@
+{
+  "timestamp": "20260221_101622",
+  "stage1_ckpt": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage1_tma/layer9_tma_m8_full_2ep_7gpu_20260218_152649/thinkdet_tma_stage1_epoch2.pth",
+  "stage2_ckpt": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage2_tma/layer9_tma_m8_20260218_234913/thinkdet_tma_stage2_epoch2.pth",
+  "source_summary": "/home/iibrohimm/project/next_step/thinkdet/results/eval/affordance_heldout_single_case_source.json",
+  "source_meta": {
+    "dataset": {
+      "name": "affordance_coco_val_heldout_v1",
+      "split": "test"
+    },
+    "selection_criteria": {
+      "source": "heldout_benchmark_eval",
+      "single_positive_only": true,
+      "min_stage2_minus_baseline_iou": 0.35,
+      "max_baseline_iou": 0.4,
+      "pick": "max_gap"
+    }
+  },
+  "cases": [
+    {
+      "case": 1,
+      "image_id": 59598,
+      "image_file": "000000059598.jpg",
+      "prompt": "something to talk on .",
+      "prompt_type": "Hard-mined baseline-failure",
+      "baseline_top1": {
+        "box": [
+          168.54223251342773,
+          84.02924537658691,
+          454.2968559265137,
+          331.6894340515137
+        ],
+        "score": 0.27362534403800964
+      },
+      "stage1_top1": {
+        "box": [
+          169.7542667388916,
+          85.06845474243164,
+          452.7328395843506,
+          331.6428279876709
+        ],
+        "score": 0.21182209253311157
+      },
+      "stage2_top1": {
+        "box": [
+          170.94303131103516,
+          85.78059196472168,
+          452.53856658935547,
+          330.64839363098145
+        ],
+        "score": 0.17606084048748016
+      },
+      "output_file": "case1_59598_hard-mined_baseline-failure.jpg",
+      "source_rank": 1,
+      "source_iou_gap": 0.9386995819001932,
+      "source_baseline_iou": 0.0,
+      "source_tma_iou": 0.9386995819001932
+    }
+  ]
+}

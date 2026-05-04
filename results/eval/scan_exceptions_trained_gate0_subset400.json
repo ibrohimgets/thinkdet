@@ -1,0 +1,39 @@
+{
+  "mode": "trained_gate0",
+  "subset": 400,
+  "ok_images": 71,
+  "error_images": 329,
+  "error_rate_pct": 82.25,
+  "error_types": {
+    "OutOfMemoryError": 329
+  },
+  "first_errors": [
+    {
+      "idx": 1,
+      "type": "OutOfMemoryError",
+      "msg": "CUDA out of memory. Tried to allocate 316.00 MiB. GPU "
+    },
+    {
+      "idx": 2,
+      "type": "OutOfMemoryError",
+      "msg": "CUDA out of memory. Tried to allocate 316.00 MiB. GPU "
+    },
+    {
+      "idx": 3,
+      "type": "OutOfMemoryError",
+      "msg": "CUDA out of memory. Tried to allocate 316.00 MiB. GPU "
+    },
+    {
+      "idx": 4,
+      "type": "OutOfMemoryError",
+      "msg": "CUDA out of memory. Tried to allocate 80.00 MiB. GPU "
+    },
+    {
+      "idx": 5,
+      "type": "OutOfMemoryError",
+      "msg": "CUDA out of memory. Tried to allocate 80.00 MiB. GPU "
+    }
+  ],
+  "avg_det03_per_ok_image": 12.380281690140846,
+  "avg_det03_per_all_images": 2.1975
+}

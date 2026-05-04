@@ -1,0 +1,135 @@
+{
+  "config": {
+    "source": "affordance",
+    "max_samples": 256,
+    "seed": 42,
+    "device": "cuda:0",
+    "internvl_path": "/home/iibrohimm/project/next_step/InternVL3_5-1B"
+  },
+  "summary": {
+    "num_samples": 256,
+    "num_layers": 28,
+    "grouping_method": "largest_adjacent_similarity_gaps_with_contiguous_groups",
+    "split_info": {
+      "splits": [
+        15,
+        21
+      ],
+      "score": 0.27712,
+      "gap_score": 0.289786,
+      "within_group_similarity": 0.728442,
+      "boundary_similarity": 0.855107,
+      "group_sizes": [
+        15,
+        6,
+        7
+      ]
+    },
+    "groups": {
+      "early": {
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "start": 0,
+        "end": 14,
+        "count": 15
+      },
+      "mid": {
+        "layers": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "start": 15,
+        "end": 20,
+        "count": 6
+      },
+      "late": {
+        "layers": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "start": 21,
+        "end": 27,
+        "count": 7
+      }
+    }
+  },
+  "groups": {
+    "early": {
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "start": 0,
+      "end": 14,
+      "count": 15
+    },
+    "mid": {
+      "layers": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "start": 15,
+      "end": 20,
+      "count": 6
+    },
+    "late": {
+      "layers": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "start": 21,
+      "end": 27,
+      "count": 7
+    }
+  },
+  "selected_boundaries": [
+    15,
+    21
+  ]
+}

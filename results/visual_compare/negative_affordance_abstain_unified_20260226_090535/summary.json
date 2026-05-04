@@ -1,0 +1,80 @@
+{
+  "status": "ok",
+  "timestamp": "20260226_091015",
+  "benchmark": "/home/iibrohimm/project/next_step/thinkdet/data/benchmarks/affordance_coco_val_heldout_v1.json",
+  "benchmark_name": "affordance_coco_val_heldout_v1",
+  "split": "test",
+  "device": "cuda:0",
+  "affordance_id": "talk_on",
+  "prompt": "something to talk on .",
+  "target_categories": [
+    "cell phone"
+  ],
+  "target_absence_definition": "all target_categories absent from sample.category_histogram (COCO annotations)",
+  "num_candidates_scanned": 420,
+  "score_thresholds_tried": [
+    0.25,
+    0.22,
+    0.2,
+    0.18,
+    0.15,
+    0.12
+  ],
+  "min_score_gap": 0.05,
+  "selection_mode": "threshold_match",
+  "selected_threshold": 0.25,
+  "unified_ckpt": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+  "ckpt_meta": {
+    "extract_layers": [
+      9
+    ],
+    "injection_layers": [
+      1,
+      3,
+      5
+    ],
+    "tma_m": 8,
+    "tma_n_heads": 8,
+    "fusion_mode": "residual"
+  },
+  "selected_case": {
+    "image_id": 284623,
+    "image_file": "000000284623.jpg",
+    "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000284623.jpg",
+    "source_affordance_id": "drink_from",
+    "prompt_affordance_id": "talk_on",
+    "prompt": "something to talk on .",
+    "target_categories": [
+      "cell phone"
+    ],
+    "category_histogram": {
+      "cat": 1,
+      "bottle": 2,
+      "sink": 1,
+      "toothbrush": 1
+    },
+    "baseline_top1": {
+      "score": 0.3595581650733948,
+      "box_abs_xyxy": [
+        37.20878601074219,
+        3.0088376998901367,
+        474.1978454589844,
+        414.09637928009033
+      ]
+    },
+    "unified_top1": {
+      "score": 0.2443120926618576,
+      "box_abs_xyxy": [
+        38.737220764160156,
+        3.7299728393554688,
+        472.70923614501953,
+        412.88583755493164
+      ]
+    },
+    "score_gap_baseline_minus_unified": 0.11524607241153717,
+    "target_absent_by_coco": true,
+    "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/negative_affordance_abstain_unified_20260226_090535/negative_talk_on_img284623.jpg"
+  },
+  "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/negative_affordance_abstain_unified_20260226_090535/negative_talk_on_img284623.jpg",
+  "candidates_csv": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/negative_affordance_abstain_unified_20260226_090535/candidates_scores.csv"
+}

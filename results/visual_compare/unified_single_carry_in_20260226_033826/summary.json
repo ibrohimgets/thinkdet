@@ -1,0 +1,55 @@
+{
+  "image_id": 373382,
+  "image_file": "000000373382.jpg",
+  "prompt": "something to carry things in .",
+  "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+  "benchmark_id": "carry_in_373382",
+  "gt_box_norm": [
+    0.6929062500000001,
+    0.5235624999999999,
+    0.08297916666666666,
+    0.02109375
+  ],
+  "gt_box_xyxy": [
+    312.68000000000006,
+    328.33,
+    352.51,
+    341.8299999999999
+  ],
+  "top3": [
+    {
+      "rank": 1,
+      "score": 0.2008795589208603,
+      "box_xyxy": [
+        134.30007219314575,
+        78.18206787109375,
+        335.055148601532,
+        602.337646484375
+      ],
+      "iou_to_gt": 0.0028641878346955326
+    },
+    {
+      "rank": 2,
+      "score": 0.16564153134822845,
+      "box_xyxy": [
+        311.5564674139023,
+        424.0250062942505,
+        354.6409660577774,
+        455.03047466278076
+      ],
+      "iou_to_gt": 0.0
+    },
+    {
+      "rank": 3,
+      "score": 0.1600126326084137,
+      "box_xyxy": [
+        131.87478303909302,
+        428.3962309360504,
+        160.32987356185913,
+        458.50058913230896
+      ],
+      "iou_to_gt": 0.0
+    }
+  ],
+  "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/unified_single_carry_in_20260226_033826/unified_carry_in_373382.jpg"
+}

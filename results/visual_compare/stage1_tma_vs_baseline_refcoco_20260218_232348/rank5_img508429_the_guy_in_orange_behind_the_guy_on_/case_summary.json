@@ -1,0 +1,39 @@
+{
+  "rank": 5,
+  "idx": 1327,
+  "image_id": 508429,
+  "ref_id": 6397,
+  "prompt": "the guy in orange behind the guy on phone .",
+  "expression": "the guy in orange behind the guy on phone",
+  "baseline": {
+    "top_iou": 0.04628022015094757,
+    "top_score": 0.13185837864875793,
+    "top_box": [
+      0.5124708414077759,
+      0.4599303901195526,
+      0.8167172074317932,
+      0.9155775904655457
+    ]
+  },
+  "tma": {
+    "top_iou": 0.93699049949646,
+    "top_score": 0.08420982956886292,
+    "top_box": [
+      0.92142254114151,
+      0.2843914031982422,
+      0.15216568112373352,
+      0.4606509208679199
+    ]
+  },
+  "gt_box": [
+    0.921288251876831,
+    0.29167187213897705,
+    0.15742351114749908,
+    0.46396875381469727
+  ],
+  "iou_gap": 0.8907102793455124,
+  "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank5_img508429_the_guy_in_orange_behind_the_guy_on_",
+  "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank5_img508429_the_guy_in_orange_behind_the_guy_on_/comparison_grid.png",
+  "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank5_img508429_the_guy_in_orange_behind_the_guy_on_/baseline.png",
+  "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank5_img508429_the_guy_in_orange_behind_the_guy_on_/stage1_tma.png"
+}

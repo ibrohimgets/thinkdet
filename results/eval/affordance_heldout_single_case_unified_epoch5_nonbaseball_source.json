@@ -1,0 +1,72 @@
+{
+  "status": "ok",
+  "timestamp": "20260225_unified_epoch5_single_case_nonbaseball",
+  "dataset": {
+    "name": "affordance_coco_val_heldout_v1",
+    "split": "test"
+  },
+  "selection_criteria": {
+    "source": "heldout_benchmark_scan_unified_epoch5_nonbaseball",
+    "exclude_categories": [
+      "baseball bat",
+      "baseball glove"
+    ],
+    "exclude_image_ids": [
+      548339
+    ],
+    "single_positive_only": true,
+    "min_unified_minus_baseline_iou": 0.5,
+    "max_baseline_iou": 0.1,
+    "min_unified_iou": 0.5,
+    "pick": "first_single_positive_win_else_best_gap"
+  },
+  "num_candidates": 504,
+  "num_selected": 1,
+  "selected_cases": [
+    {
+      "rank": 1,
+      "idx": 459,
+      "image_id": 156076,
+      "prompt": "something to talk on .",
+      "expression": "something to talk on ",
+      "benchmark_id": "talk_on_156076",
+      "affordance_id": "talk_on",
+      "baseline": {
+        "top_iou": 0.0,
+        "top_score": 0.23997192084789276
+      },
+      "stage1": {
+        "top_iou": null,
+        "top_score": null
+      },
+      "stage2": {
+        "top_iou": 0.7008136906459352,
+        "top_score": 0.1844019889831543
+      },
+      "tma": {
+        "top_iou": 0.7008136906459352,
+        "top_score": 0.1844019889831543
+      },
+      "iou_gap": 0.7008136906459352,
+      "gt_box": [
+        0.34690624999999997,
+        0.3251359832635983,
+        0.040375,
+        0.03152719665271966
+      ],
+      "category_histogram": {
+        "bottle": 3,
+        "person": 3,
+        "cup": 1,
+        "knife": 1,
+        "spoon": 1,
+        "pizza": 6,
+        "bowl": 1,
+        "cell phone": 1,
+        "fork": 1,
+        "dining table": 1
+      },
+      "checkpoint": "thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth"
+    }
+  ]
+}

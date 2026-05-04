@@ -1,0 +1,39 @@
+{
+  "rank": 6,
+  "idx": 1240,
+  "image_id": 513643,
+  "ref_id": 5974,
+  "prompt": "piece of broccoli at far right .",
+  "expression": "piece of broccoli at far right",
+  "baseline": {
+    "top_iou": 0.07761821150779724,
+    "top_score": 0.13444775342941284,
+    "top_box": [
+      0.512977659702301,
+      0.5211116075515747,
+      0.9008156657218933,
+      0.9303169846534729
+    ]
+  },
+  "tma": {
+    "top_iou": 0.9256712198257446,
+    "top_score": 0.11265598237514496,
+    "top_box": [
+      0.8483414649963379,
+      0.5912328362464905,
+      0.2300824671983719,
+      0.2727077305316925
+    ]
+  },
+  "gt_box": [
+    0.852343738079071,
+    0.5960705876350403,
+    0.23593750596046448,
+    0.28470587730407715
+  ],
+  "iou_gap": 0.8480530083179474,
+  "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank6_img513643_piece_of_broccoli_at_far_right",
+  "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank6_img513643_piece_of_broccoli_at_far_right/comparison_grid.png",
+  "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank6_img513643_piece_of_broccoli_at_far_right/baseline.png",
+  "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank6_img513643_piece_of_broccoli_at_far_right/stage1_tma.png"
+}

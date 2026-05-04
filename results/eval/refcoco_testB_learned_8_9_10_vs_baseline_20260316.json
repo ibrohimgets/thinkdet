@@ -1,0 +1,58 @@
+{
+  "status": "ok",
+  "timestamp": "20260316_034446",
+  "dataset": {
+    "name": "refcoco",
+    "split_by": "unc",
+    "split": "testB",
+    "total_samples": 5095,
+    "evaluated_samples": 5095
+  },
+  "config": {
+    "conf_thresh": 0.3,
+    "iou_thresh": 0.5,
+    "thinkdet_checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/refcocoplus_full/learned_8_9_10_full_layers_8_9_10_learned_residual_e10_20260314_062540/thinkdet_refcocoplus_final.pth",
+    "skip_baseline": false,
+    "fallback": {
+      "enabled": false,
+      "min_top1": 0.2,
+      "min_margin": 0.02,
+      "min_gate": null,
+      "llm_feedback_top_k": 20,
+      "llm_feedback_weight": 0.2,
+      "llm_feedback_max_new_tokens": 6,
+      "llm_feedback_temperature": 0.0,
+      "llm_feedback_improve_margin": 0.01,
+      "prompt_refine": false,
+      "prompt_refine_max_variants": 2,
+      "prompt_refine_max_new_tokens": 96,
+      "prompt_refine_temperature": 0.0,
+      "prompt_refine_improve_margin": 0.01,
+      "prompt_refine_require_semantic_preservation": true,
+      "prompt_refine_min_shared_terms": 1
+    }
+  },
+  "summary": {
+    "thinkdet": {
+      "samples": 5095,
+      "top1_acc": 0.45986261040235527,
+      "top1_fp_rate": 0.5401373895976448,
+      "det_fp_rate": 0.11764705882352941,
+      "no_det_rate": 0.9968596663395486,
+      "img_has_fp_rate": 0.0003925417075564279
+    },
+    "baseline": {
+      "samples": 5095,
+      "top1_acc": 0.45574092247301273,
+      "top1_fp_rate": 0.5442590775269872,
+      "det_fp_rate": 0.46920821114369504,
+      "no_det_rate": 0.6294406280667321,
+      "img_has_fp_rate": 0.17409224730127576
+    }
+  },
+  "fallback_stage_counts": {
+    "primary": 0,
+    "llm_feedback": 0,
+    "prompt_refine": 0
+  }
+}

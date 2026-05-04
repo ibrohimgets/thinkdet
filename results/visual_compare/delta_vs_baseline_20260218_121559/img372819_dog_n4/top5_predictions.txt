@@ -1,0 +1,19 @@
+image_id: 372819
+image_path: /home/iibrohimm/project/next_step/dataSets/coco/val2017/000000372819.jpg
+target_category: dog (count_in_image=4)
+prompt: the dog .
+
+[baseline] top-5 predictions
+  rank=1 score=0.336895 box_xyxy=(426.3,192.2,467.5,277.4)
+  rank=2 score=0.333875 box_xyxy=(224.5,137.5,268.8,226.7)
+  rank=3 score=0.325239 box_xyxy=(214.6,224.8,274.6,318.3)
+  rank=4 score=0.295607 box_xyxy=(279.4,106.9,314.6,187.3)
+  rank=5 score=0.244796 box_xyxy=(417.4,186.0,479.3,283.8)
+
+[delta] top-5 predictions
+  rank=1 score=0.337782 box_xyxy=(224.6,137.6,268.7,226.2)
+  rank=2 score=0.337430 box_xyxy=(426.6,192.3,467.4,277.1)
+  rank=3 score=0.324220 box_xyxy=(214.8,225.0,274.4,317.7)
+  rank=4 score=0.297173 box_xyxy=(279.6,107.0,314.5,187.0)
+  rank=5 score=0.249988 box_xyxy=(417.8,186.4,479.1,282.7)
+

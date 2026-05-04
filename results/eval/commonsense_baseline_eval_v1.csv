@@ -1,0 +1,79 @@
+object_id,object_name,n_samples,hit@0.5_top1,mean_best_iou_top1
+elephant,elephant,10,1.000000,0.951188
+fire_hydrant,fire hydrant,10,1.000000,0.845640
+person,person,10,1.000000,0.973160
+sandwich,sandwich,10,1.000000,0.866092
+airplane,airplane,10,0.900000,0.808067
+bear,bear,10,0.900000,0.833741
+cake,cake,10,0.900000,0.803870
+couch,couch,10,0.900000,0.794313
+cat,cat,10,0.800000,0.708042
+dining_table,dining table,10,0.800000,0.703004
+horse,horse,10,0.800000,0.619022
+pizza,pizza,10,0.800000,0.789191
+remote,remote,10,0.800000,0.663190
+baseball_bat,baseball bat,10,0.700000,0.595559
+bench,bench,10,0.700000,0.772966
+clock,clock,10,0.700000,0.438409
+toothbrush,toothbrush,10,0.700000,0.554085
+bed,bed,10,0.600000,0.645565
+cow,cow,10,0.600000,0.567971
+spoon,spoon,10,0.600000,0.578455
+wine_glass,wine glass,10,0.600000,0.590065
+zebra,zebra,10,0.600000,0.541449
+banana,banana,10,0.500000,0.427166
+book,book,10,0.500000,0.358402
+broccoli,broccoli,10,0.500000,0.604663
+bus,bus,10,0.500000,0.491029
+carrot,carrot,10,0.500000,0.494136
+donut,donut,10,0.500000,0.624821
+frisbee,frisbee,10,0.500000,0.419396
+giraffe,giraffe,10,0.500000,0.477231
+hot_dog,hot dog,10,0.500000,0.498619
+teddy_bear,teddy bear,10,0.500000,0.453369
+bird,bird,10,0.400000,0.306143
+bowl,bowl,10,0.400000,0.385808
+cell_phone,cell phone,10,0.400000,0.302217
+dog,dog,10,0.400000,0.345577
+kite,kite,10,0.400000,0.319643
+surfboard,surfboard,10,0.400000,0.407919
+tennis_racket,tennis racket,10,0.400000,0.413186
+traffic_light,traffic light,10,0.400000,0.251528
+train,train,10,0.400000,0.409089
+backpack,backpack,10,0.300000,0.245039
+boat,boat,10,0.300000,0.195618
+handbag,handbag,10,0.300000,0.244269
+knife,knife,10,0.300000,0.323854
+sports_ball,sports ball,10,0.300000,0.243042
+stop_sign,stop sign,10,0.300000,0.306529
+toilet,toilet,10,0.300000,0.354609
+truck,truck,10,0.300000,0.286392
+tv,tv,10,0.300000,0.324596
+bottle,bottle,10,0.200000,0.176242
+fork,fork,10,0.200000,0.170417
+laptop,laptop,10,0.200000,0.244226
+oven,oven,10,0.200000,0.174041
+sheep,sheep,10,0.200000,0.342219
+sink,sink,10,0.200000,0.192669
+suitcase,suitcase,10,0.200000,0.191132
+umbrella,umbrella,10,0.200000,0.271067
+baseball_glove,baseball glove,10,0.100000,0.097197
+car,car,10,0.100000,0.117811
+chair,chair,10,0.100000,0.124719
+microwave,microwave,10,0.100000,0.083169
+potted_plant,potted plant,10,0.100000,0.120140
+refrigerator,refrigerator,10,0.100000,0.097208
+scissors,scissors,10,0.100000,0.062091
+skateboard,skateboard,10,0.100000,0.180065
+vase,vase,10,0.100000,0.074103
+apple,apple,10,0.000000,0.199149
+bicycle,bicycle,10,0.000000,0.005758
+cup,cup,10,0.000000,0.045124
+keyboard,keyboard,10,0.000000,0.006093
+motorcycle,motorcycle,10,0.000000,0.051049
+mouse,mouse,10,0.000000,0.002427
+orange,orange,10,0.000000,0.004551
+parking_meter,parking meter,10,0.000000,0.122705
+skis,skis,10,0.000000,0.043772
+snowboard,snowboard,10,0.000000,0.081750
+tie,tie,10,0.000000,0.114666

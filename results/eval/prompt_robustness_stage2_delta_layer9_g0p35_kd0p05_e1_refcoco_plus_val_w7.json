@@ -1,0 +1,159 @@
+{
+  "config": {
+    "dataset_name": "refcoco+",
+    "split_by": "unc",
+    "split": "val",
+    "max_samples": 10758,
+    "conf_thresh": 0.3,
+    "iou_thresh": 0.5,
+    "world_size": 7,
+    "elapsed_min": 45.17,
+    "thinkdet_checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage2/heads_kd/layer9_g0.35_kd0.05_e1_delta/thinkdet_stage2_epoch1.pth",
+    "thinkdet_meta": {
+      "extract_layers": [
+        9
+      ],
+      "layer_fusion": "mean",
+      "uncertainty_enabled": true,
+      "uncertainty_num_variants": 2,
+      "uncertainty_beta": 8.0,
+      "uncertainty_min_reliability": 0.05,
+      "missing_keys": 1589,
+      "unexpected_keys": 0
+    }
+  },
+  "summary": {
+    "baseline": {
+      "clean": {
+        "num_samples": 10758,
+        "acc_at_05": 0.5131065253764641,
+        "top1_hallucination_rate": 0.486893474623536,
+        "detection_fpr": 0.4962953500255493,
+        "image_fp_rate": 0.2876928797174196,
+        "no_detection_rate": 0.46458449525934187,
+        "mean_detections_per_image": 0.7276445435954638,
+        "raw": {
+          "samples": 10758,
+          "top1_correct": 5520,
+          "top1_fp": 5238,
+          "det_total": 7828,
+          "det_fp": 3885,
+          "no_det": 4998,
+          "img_has_fp": 3095
+        }
+      },
+      "ambiguous": {
+        "num_samples": 10758,
+        "acc_at_05": 0.35880275144078827,
+        "top1_hallucination_rate": 0.6411972485592118,
+        "detection_fpr": 0.7043944515677818,
+        "image_fp_rate": 0.5553076780070645,
+        "no_detection_rate": 0.2483733035880275,
+        "mean_detections_per_image": 1.594906116378509,
+        "raw": {
+          "samples": 10758,
+          "top1_correct": 3860,
+          "top1_fp": 6898,
+          "det_total": 17158,
+          "det_fp": 12086,
+          "no_det": 2672,
+          "img_has_fp": 5974
+        }
+      },
+      "adversarial": {
+        "num_samples": 10758,
+        "acc_at_05": 0.3575943483918944,
+        "top1_hallucination_rate": 0.6424056516081056,
+        "detection_fpr": 0.6811145510835913,
+        "image_fp_rate": 0.2832310838445808,
+        "no_detection_rate": 0.6134039784346533,
+        "mean_detections_per_image": 0.480386688975646,
+        "raw": {
+          "samples": 10758,
+          "top1_correct": 3847,
+          "top1_fp": 6911,
+          "det_total": 5168,
+          "det_fp": 3520,
+          "no_det": 6599,
+          "img_has_fp": 3047
+        }
+      }
+    },
+    "thinkdet": {
+      "clean": {
+        "num_samples": 10758,
+        "acc_at_05": 0.5095742703104666,
+        "top1_hallucination_rate": 0.49042572968953335,
+        "detection_fpr": 0.5027939898174594,
+        "image_fp_rate": 0.2936419408812047,
+        "no_detection_rate": 0.46021565346718724,
+        "mean_detections_per_image": 0.7485592117493958,
+        "raw": {
+          "samples": 10758,
+          "top1_correct": 5482,
+          "top1_fp": 5276,
+          "det_total": 8053,
+          "det_fp": 4049,
+          "no_det": 4951,
+          "img_has_fp": 3159
+        }
+      },
+      "ambiguous": {
+        "num_samples": 10758,
+        "acc_at_05": 0.356664807585053,
+        "top1_hallucination_rate": 0.643335192414947,
+        "detection_fpr": 0.7083743272180103,
+        "image_fp_rate": 0.5616285554935861,
+        "no_detection_rate": 0.24530581892545084,
+        "mean_detections_per_image": 1.6061535601412902,
+        "raw": {
+          "samples": 10758,
+          "top1_correct": 3837,
+          "top1_fp": 6921,
+          "det_total": 17279,
+          "det_fp": 12240,
+          "no_det": 2639,
+          "img_has_fp": 6042
+        }
+      },
+      "adversarial": {
+        "num_samples": 10758,
+        "acc_at_05": 0.35685071574642124,
+        "top1_hallucination_rate": 0.6431492842535788,
+        "detection_fpr": 0.6913879743545313,
+        "image_fp_rate": 0.3038668897564603,
+        "no_detection_rate": 0.594906116378509,
+        "mean_detections_per_image": 0.5364379996281837,
+        "raw": {
+          "samples": 10758,
+          "top1_correct": 3839,
+          "top1_fp": 6919,
+          "det_total": 5771,
+          "det_fp": 3990,
+          "no_det": 6400,
+          "img_has_fp": 3269
+        }
+      }
+    }
+  },
+  "deltas": {
+    "clean": {
+      "delta_acc_at_05": -0.003532255065997414,
+      "delta_top1_hallucination_rate": 0.0035322550659973584,
+      "delta_detection_fpr": 0.006498639791910066,
+      "delta_image_fp_rate": 0.00594906116378513
+    },
+    "ambiguous": {
+      "delta_acc_at_05": -0.0021379438557352914,
+      "delta_top1_hallucination_rate": 0.0021379438557351804,
+      "delta_detection_fpr": 0.003979875650228504,
+      "delta_image_fp_rate": 0.006320877486521659
+    },
+    "adversarial": {
+      "delta_acc_at_05": -0.000743632645473169,
+      "delta_top1_hallucination_rate": 0.000743632645473169,
+      "delta_detection_fpr": 0.010273423270939941,
+      "delta_image_fp_rate": 0.020635805911879523
+    }
+  }
+}

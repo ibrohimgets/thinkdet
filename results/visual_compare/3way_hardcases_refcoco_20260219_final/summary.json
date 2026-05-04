@@ -1,0 +1,217 @@
+{
+  "timestamp": "20260219_062539",
+  "stage1_ckpt": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage1_tma/layer9_tma_m8_full_2ep_7gpu_20260218_152649/thinkdet_tma_stage1_epoch2.pth",
+  "stage2_ckpt": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage2_tma/layer9_tma_m8_8gpu_20260219_010134/thinkdet_tma_stage2_epoch2.pth",
+  "source_summary": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/visual_comparison_summary.json",
+  "source_meta": {
+    "dataset": {
+      "name": "refcoco",
+      "split_by": "unc",
+      "split": "val",
+      "evaluated_samples": 2200
+    },
+    "selection_criteria": {
+      "compositional_prompt": true,
+      "min_gap": 0.3,
+      "max_base_iou": 0.35,
+      "min_tma_iou": 0.55
+    }
+  },
+  "cases": [
+    {
+      "case": 1,
+      "image_id": 538544,
+      "image_file": "000000538544.jpg",
+      "prompt": "the right most glass glass top right corner lowest .",
+      "prompt_type": "Hard-mined baseline-failure",
+      "baseline_top1": {
+        "box": [
+          406.3985204696655,
+          8.945518285036087,
+          510.0455713272095,
+          163.1829851269722
+        ],
+        "score": 0.45044323801994324
+      },
+      "stage1_top1": {
+        "box": [
+          530.7804107666016,
+          16.914945513010025,
+          638.5954284667969,
+          188.57154580950737
+        ],
+        "score": 0.30473843216896057
+      },
+      "stage2_top1": {
+        "box": [
+          530.9784507751465,
+          17.034050688147545,
+          638.8069343566895,
+          188.69179628789425
+        ],
+        "score": 0.21352072060108185
+      },
+      "output_file": "case1_538544_hard-mined_baseline-failure.jpg",
+      "source_rank": 1,
+      "source_iou_gap": 0.9632543325424194,
+      "source_baseline_iou": 0.0,
+      "source_tma_iou": 0.9632543325424194
+    },
+    {
+      "case": 2,
+      "image_id": 485014,
+      "image_file": "000000485014.jpg",
+      "prompt": "chair on left by standing person .",
+      "prompt_type": "Hard-mined baseline-failure",
+      "baseline_top1": {
+        "box": [
+          154.94304656982422,
+          62.69219398498535,
+          589.7058486938477,
+          477.96360969543457
+        ],
+        "score": 0.5530359745025635
+      },
+      "stage1_top1": {
+        "box": [
+          40.985398292541504,
+          237.4874782562256,
+          149.6713399887085,
+          411.57872200012207
+        ],
+        "score": 0.3677549660205841
+      },
+      "stage2_top1": {
+        "box": [
+          41.20330333709717,
+          237.22041606903076,
+          149.27233219146729,
+          411.8681573867798
+        ],
+        "score": 0.26302507519721985
+      },
+      "output_file": "case2_485014_hard-mined_baseline-failure.jpg",
+      "source_rank": 2,
+      "source_iou_gap": 0.92561274766922,
+      "source_baseline_iou": 0.0,
+      "source_tma_iou": 0.92561274766922
+    },
+    {
+      "case": 3,
+      "image_id": 538263,
+      "image_file": "000000538263.jpg",
+      "prompt": "guy on the left in back .",
+      "prompt_type": "Hard-mined baseline-failure",
+      "baseline_top1": {
+        "box": [
+          258.794660449028,
+          0.9505367279052734,
+          348.00723803043365,
+          169.0412998199463
+        ],
+        "score": 0.4119951128959656
+      },
+      "stage1_top1": {
+        "box": [
+          259.3510921895504,
+          1.082162857055664,
+          347.7135163843632,
+          169.15139198303223
+        ],
+        "score": 0.4335002899169922
+      },
+      "stage2_top1": {
+        "box": [
+          259.79507875442505,
+          1.4917373657226562,
+          347.78005170822144,
+          168.65362167358398
+        ],
+        "score": 0.313218355178833
+      },
+      "output_file": "case3_538263_hard-mined_baseline-failure.jpg",
+      "source_rank": 3,
+      "source_iou_gap": 0.9129770994186401,
+      "source_baseline_iou": 0.0,
+      "source_tma_iou": 0.9129770994186401
+    },
+    {
+      "case": 4,
+      "image_id": 505884,
+      "image_file": "000000505884.jpg",
+      "prompt": "the wonderful father in the middle he is glorious .",
+      "prompt_type": "Hard-mined baseline-failure",
+      "baseline_top1": {
+        "box": [
+          279.3709421157837,
+          118.33299517631531,
+          407.7647542953491,
+          480.8860558271408
+        ],
+        "score": 0.4968580901622772
+      },
+      "stage1_top1": {
+        "box": [
+          396.54816150665283,
+          65.18857717514038,
+          523.03382396698,
+          474.9894630908966
+        ],
+        "score": 0.34926047921180725
+      },
+      "stage2_top1": {
+        "box": [
+          397.1997833251953,
+          65.40343657135963,
+          522.9344177246094,
+          473.70778128504753
+        ],
+        "score": 0.30343136191368103
+      },
+      "output_file": "case4_505884_hard-mined_baseline-failure.jpg",
+      "source_rank": 4,
+      "source_iou_gap": 0.8935571573674679,
+      "source_baseline_iou": 0.04522344842553139,
+      "source_tma_iou": 0.9387806057929993
+    },
+    {
+      "case": 5,
+      "image_id": 508429,
+      "image_file": "000000508429.jpg",
+      "prompt": "the guy in orange behind the guy on phone .",
+      "prompt_type": "Hard-mined baseline-failure",
+      "baseline_top1": {
+        "box": [
+          64.61785107851028,
+          1.4013099670410156,
+          571.8364364504814,
+          587.481632232666
+        ],
+        "score": 0.37905046343803406
+      },
+      "stage1_top1": {
+        "box": [
+          338.2349092103541,
+          11.821317672729492,
+          358.57179125770926,
+          71.14167213439941
+        ],
+        "score": 0.2863728106021881
+      },
+      "stage2_top1": {
+        "box": [
+          338.6966267321259,
+          12.780008316040039,
+          358.40493111871183,
+          70.28695106506348
+        ],
+        "score": 0.23434825241565704
+      },
+      "output_file": "case5_508429_hard-mined_baseline-failure.jpg",
+      "source_rank": 5,
+      "source_iou_gap": 0.8907102793455124,
+      "source_baseline_iou": 0.04628022015094757,
+      "source_tma_iou": 0.93699049949646
+    }
+  ]
+}

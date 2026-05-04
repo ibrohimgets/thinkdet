@@ -1,0 +1,19 @@
+image_id: 309391
+image_path: /home/iibrohimm/project/next_step/dataSets/coco/val2017/000000309391.jpg
+target_category: person (count_in_image=14)
+prompt: the person .
+
+[baseline] top-5 predictions
+  rank=1 score=0.327585 box_xyxy=(602.5,268.3,628.4,356.0)
+  rank=2 score=0.287373 box_xyxy=(79.5,252.6,104.2,324.4)
+  rank=3 score=0.260389 box_xyxy=(428.1,184.1,448.6,216.0)
+  rank=4 score=0.234766 box_xyxy=(126.0,219.5,143.9,279.7)
+  rank=5 score=0.231770 box_xyxy=(201.2,221.2,218.5,269.0)
+
+[delta] top-5 predictions
+  rank=1 score=0.318021 box_xyxy=(602.7,268.5,628.1,354.8)
+  rank=2 score=0.281521 box_xyxy=(79.5,253.0,104.0,323.5)
+  rank=3 score=0.250616 box_xyxy=(428.2,184.1,448.1,214.8)
+  rank=4 score=0.226221 box_xyxy=(126.0,219.8,143.5,278.4)
+  rank=5 score=0.223410 box_xyxy=(201.4,221.5,218.3,268.3)
+

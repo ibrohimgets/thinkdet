@@ -1,0 +1,53 @@
+{
+  "status": "ok",
+  "timestamp": "20260225_unified_epoch5_single_case",
+  "dataset": {
+    "name": "affordance_coco_val_heldout_v1",
+    "split": "test"
+  },
+  "selection_criteria": {
+    "source": "heldout_benchmark_scan_unified_epoch5",
+    "single_positive_only": true,
+    "min_unified_minus_baseline_iou": 0.5,
+    "max_baseline_iou": 0.1,
+    "min_unified_iou": 0.5,
+    "pick": "first_single_positive_win_else_best_gap"
+  },
+  "num_candidates": 512,
+  "num_selected": 1,
+  "selected_cases": [
+    {
+      "rank": 1,
+      "idx": 187,
+      "image_id": 548339,
+      "prompt": "something to drink from .",
+      "expression": "something to drink from ",
+      "benchmark_id": "drink_from_548339",
+      "affordance_id": "drink_from",
+      "baseline": {
+        "top_iou": 0.0,
+        "top_score": 0.31495749950408936
+      },
+      "stage1": {
+        "top_iou": null,
+        "top_score": null
+      },
+      "stage2": {
+        "top_iou": 0.7603765118699453,
+        "top_score": 0.25296032428741455
+      },
+      "tma": {
+        "top_iou": 0.7603765118699453,
+        "top_score": 0.25296032428741455
+      },
+      "iou_gap": 0.7603765118699453,
+      "gt_box": [
+        0.1783046875,
+        0.2714670138888889,
+        0.036421875,
+        0.10154513888888889
+      ],
+      "checkpoint": "thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth"
+    }
+  ]
+}

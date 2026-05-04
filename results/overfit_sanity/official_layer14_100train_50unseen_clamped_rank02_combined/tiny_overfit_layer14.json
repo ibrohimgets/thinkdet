@@ -1,0 +1,4937 @@
+{
+  "status": "ok",
+  "benchmark": "data/benchmarks/affordance_coco_val_three_prompts_test.json",
+  "layer_setup": [
+    14
+  ],
+  "layer_fusion": "last",
+  "train_n": 100,
+  "unseen_n": 50,
+  "train_split": "test",
+  "unseen_split": "test",
+  "steps": 100,
+  "lr": 0.001,
+  "alpha_init": 0.1,
+  "gate_after_delta": true,
+  "lambda_delta": 0.01,
+  "lambda_rank": 0.2,
+  "rank_margin": 0.5,
+  "eval_every": 20,
+  "selection_metric": "combined_top1",
+  "official_internvl_extraction": true,
+  "checkpoint": "results/overfit_sanity/official_layer14_100train_50unseen_clamped_rank02_combined/tiny_overfit_layer14_best.pth",
+  "best_checkpoint": "results/overfit_sanity/official_layer14_100train_50unseen_clamped_rank02_combined/tiny_overfit_layer14_best.pth",
+  "final_checkpoint": "results/overfit_sanity/official_layer14_100train_50unseen_clamped_rank02_combined/tiny_overfit_layer14_final.pth",
+  "best_step": 80,
+  "checkpoint_history": [
+    {
+      "step": 20,
+      "checkpoint": "results/overfit_sanity/official_layer14_100train_50unseen_clamped_rank02_combined/tiny_overfit_layer14_step0020.pth",
+      "selection_summary": {
+        "n": 50,
+        "top1_hit@0.5": 0.1,
+        "top5_hit@0.5": 0.28,
+        "mean_top1_iou": 0.11766150401646523,
+        "mean_top5_iou": 0.3014774406712186
+      },
+      "selection_metric": "combined_top1",
+      "selection_key": [
+        0.38,
+        0.1,
+        0.28,
+        0.11766150401646523,
+        0.3014774406712186
+      ],
+      "is_best": true
+    },
+    {
+      "step": 40,
+      "checkpoint": "results/overfit_sanity/official_layer14_100train_50unseen_clamped_rank02_combined/tiny_overfit_layer14_step0040.pth",
+      "selection_summary": {
+        "n": 50,
+        "top1_hit@0.5": 0.1,
+        "top5_hit@0.5": 0.26,
+        "mean_top1_iou": 0.1099688634804394,
+        "mean_top5_iou": 0.30166417296229114
+      },
+      "selection_metric": "combined_top1",
+      "selection_key": [
+        0.36,
+        0.1,
+        0.26,
+        0.1099688634804394,
+        0.30166417296229114
+      ],
+      "is_best": false
+    },
+    {
+      "step": 60,
+      "checkpoint": "results/overfit_sanity/official_layer14_100train_50unseen_clamped_rank02_combined/tiny_overfit_layer14_step0060.pth",
+      "selection_summary": {
+        "n": 50,
+        "top1_hit@0.5": 0.1,
+        "top5_hit@0.5": 0.26,
+        "mean_top1_iou": 0.1086144459560347,
+        "mean_top5_iou": 0.3086250180776363
+      },
+      "selection_metric": "combined_top1",
+      "selection_key": [
+        0.36,
+        0.1,
+        0.26,
+        0.1086144459560347,
+        0.3086250180776363
+      ],
+      "is_best": false
+    },
+    {
+      "step": 80,
+      "checkpoint": "results/overfit_sanity/official_layer14_100train_50unseen_clamped_rank02_combined/tiny_overfit_layer14_step0080.pth",
+      "selection_summary": {
+        "n": 50,
+        "top1_hit@0.5": 0.1,
+        "top5_hit@0.5": 0.32,
+        "mean_top1_iou": 0.10839043725731362,
+        "mean_top5_iou": 0.3396059618053635
+      },
+      "selection_metric": "combined_top1",
+      "selection_key": [
+        0.42000000000000004,
+        0.1,
+        0.32,
+        0.10839043725731362,
+        0.3396059618053635
+      ],
+      "is_best": true
+    },
+    {
+      "step": 100,
+      "checkpoint": "results/overfit_sanity/official_layer14_100train_50unseen_clamped_rank02_combined/tiny_overfit_layer14_step0100.pth",
+      "selection_summary": {
+        "n": 50,
+        "top1_hit@0.5": 0.12,
+        "top5_hit@0.5": 0.28,
+        "mean_top1_iou": 0.13728349557407954,
+        "mean_top5_iou": 0.32723759191964386
+      },
+      "selection_metric": "combined_top1",
+      "selection_key": [
+        0.4,
+        0.12,
+        0.28,
+        0.13728349557407954,
+        0.32723759191964386
+      ],
+      "is_best": false
+    }
+  ],
+  "train_affordance_counts": {
+    "cut_with": 30,
+    "drink_from": 31,
+    "sit_on": 39
+  },
+  "unseen_affordance_counts": {
+    "cut_with": 22,
+    "drink_from": 15,
+    "sit_on": 13
+  },
+  "loss_first": 0.6054472327232361,
+  "loss_last": 0.5902811288833618,
+  "loss_mean_last10": 0.6788234055042267,
+  "det_loss_mean_last10": 0.5737984895706176,
+  "rank_loss_mean_last10": 0.5239069998264313,
+  "delta_loss_mean_last10": 0.0243533231317997,
+  "baseline_train": {
+    "n": 100,
+    "top1_hit@0.5": 0.17,
+    "top5_hit@0.5": 0.46,
+    "mean_top1_iou": 0.18217986543362244,
+    "mean_top5_iou": 0.4376814056280358
+  },
+  "trained_train": {
+    "n": 100,
+    "top1_hit@0.5": 0.17,
+    "top5_hit@0.5": 0.48,
+    "mean_top1_iou": 0.1865968326393826,
+    "mean_top5_iou": 0.459973395390368
+  },
+  "baseline_unseen": {
+    "n": 50,
+    "top1_hit@0.5": 0.1,
+    "top5_hit@0.5": 0.26,
+    "mean_top1_iou": 0.11458169362367887,
+    "mean_top5_iou": 0.2958710135377684
+  },
+  "trained_unseen": {
+    "n": 50,
+    "top1_hit@0.5": 0.1,
+    "top5_hit@0.5": 0.32,
+    "mean_top1_iou": 0.10839043725731362,
+    "mean_top5_iou": 0.3396059618053635
+  },
+  "prediction_change_train": {
+    "top1_box_changed_rate": 0.23,
+    "top1_hit_changed_count": 4,
+    "mean_abs_top1_score_delta": 0.05454628009349108
+  },
+  "prediction_change_unseen": {
+    "top1_box_changed_rate": 0.22,
+    "top1_hit_changed_count": 2,
+    "mean_abs_top1_score_delta": 0.0519547213986516
+  },
+  "delta_norm_train": {
+    "1": {
+      "delta_norm": 6.617871789932251,
+      "delta_over_memory": 0.49999993948038407,
+      "gate": 0.10154426842927933,
+      "memory_norm": 13.235745182037354
+    },
+    "3": {
+      "delta_norm": 6.617871956825256,
+      "delta_over_memory": 0.49999995208475306,
+      "gate": 0.10685007274150848,
+      "memory_norm": 13.235745182037354
+    },
+    "5": {
+      "delta_norm": 6.6178720188140865,
+      "delta_over_memory": 0.4999999567656241,
+      "gate": 0.11050571501255035,
+      "memory_norm": 13.235745182037354
+    }
+  },
+  "delta_norm_unseen": {
+    "1": {
+      "delta_norm": 6.617253170013428,
+      "delta_over_memory": 0.4999999373169539,
+      "gate": 0.10154426842927933,
+      "memory_norm": 13.234507999420167
+    },
+    "3": {
+      "delta_norm": 6.617253227233887,
+      "delta_over_memory": 0.49999994163461653,
+      "gate": 0.10685007274150848,
+      "memory_norm": 13.234507999420167
+    },
+    "5": {
+      "delta_norm": 6.617253379821777,
+      "delta_over_memory": 0.4999999531531932,
+      "gate": 0.11050571501255035,
+      "memory_norm": 13.234507999420167
+    }
+  },
+  "train_rows_baseline": [
+    {
+      "benchmark_id": "sit_on_221708",
+      "image_id": 221708,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.20341653923442674,
+      "top5_iou": 0.20341653923442674,
+      "top1_box": [
+        305.8997905254364,
+        250.4581594467163,
+        360.2495205402374,
+        300.1321268081665
+      ],
+      "top1_score": 0.07768440246582031,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_548780",
+      "image_id": 548780,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.9528237112656044,
+      "top5_iou": 0.9528237112656044,
+      "top1_box": [
+        169.64962005615234,
+        104.75479266047478,
+        566.3953018188477,
+        370.0410025417805
+      ],
+      "top1_score": 0.09430129826068878,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_117425",
+      "image_id": 117425,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.9542426449842872,
+      "top1_box": [
+        381.03582859039307,
+        178.65601721405983,
+        433.4830617904663,
+        361.98508152365685
+      ],
+      "top1_score": 0.09759719669818878,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_419312",
+      "image_id": 419312,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.044788413219616394,
+      "top5_iou": 0.7951041343735704,
+      "top1_box": [
+        5.5245570838451385,
+        160.71151196956635,
+        371.7208541929722,
+        481.9492846727371
+      ],
+      "top1_score": 0.10219968855381012,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_177213",
+      "image_id": 177213,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.9462828216301851,
+      "top1_box": [
+        93.4916877746582,
+        84.2370767891407,
+        512.6338005065918,
+        316.77858504652977
+      ],
+      "top1_score": 0.11242979764938354,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_568710",
+      "image_id": 568710,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.009527988931480148,
+      "top5_iou": 0.9581865956999904,
+      "top1_box": [
+        515.8730137348175,
+        238.84699810482562,
+        537.2530543804169,
+        258.1597393658012
+      ],
+      "top1_score": 0.08931586891412735,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_218439",
+      "image_id": 218439,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.012133113631709635,
+      "top1_box": [
+        280.53255558013916,
+        305.7913827896118,
+        351.6728925704956,
+        328.49259853363037
+      ],
+      "top1_score": 0.09021680802106857,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_93353",
+      "image_id": 93353,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.048529025606761395,
+      "top5_iou": 0.8425378309576146,
+      "top1_box": [
+        154.99069213867188,
+        80.47576904296875,
+        636.5497589111328,
+        442.81917572021484
+      ],
+      "top1_score": 0.15612514317035675,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_335529",
+      "image_id": 335529,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.9457145876617374,
+      "top5_iou": 0.9457145876617374,
+      "top1_box": [
+        36.247615814208984,
+        283.1790232658386,
+        429.09074783325195,
+        463.7746739387512
+      ],
+      "top1_score": 0.1040949821472168,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_349152",
+      "image_id": 349152,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        1.6958069801330566,
+        374.94258880615234,
+        227.84666776657104,
+        637.1286392211914
+      ],
+      "top1_score": 0.1058933213353157,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_252294",
+      "image_id": 252294,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.014125555606796734,
+      "top5_iou": 0.02302544010370347,
+      "top1_box": [
+        236.71775590628386,
+        456.94640651345253,
+        280.793328769505,
+        492.25839599967003
+      ],
+      "top1_score": 0.11003239452838898,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_256868",
+      "image_id": 256868,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.02617943261803063,
+      "top5_iou": 0.06890682953006115,
+      "top1_box": [
+        138.59896659851074,
+        177.34912925958633,
+        309.6885395050049,
+        385.52854961156845
+      ],
+      "top1_score": 0.1081007570028305,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_425361",
+      "image_id": 425361,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.07198233802309943,
+      "top5_iou": 0.07198233802309943,
+      "top1_box": [
+        337.51627922058105,
+        379.4249094501138,
+        531.4124774932861,
+        465.02913930267096
+      ],
+      "top1_score": 0.09680937230587006,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_214539",
+      "image_id": 214539,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.014844838251293024,
+      "top5_iou": 0.014844838251293024,
+      "top1_box": [
+        226.29979133605957,
+        91.96763458848,
+        446.26452445983887,
+        355.74484381079674
+      ],
+      "top1_score": 0.11580797284841537,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_133969",
+      "image_id": 133969,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0481366285112038,
+      "top5_iou": 0.0481366285112038,
+      "top1_box": [
+        58.90555381774902,
+        205.08776672184467,
+        261.50628089904785,
+        376.05462722480297
+      ],
+      "top1_score": 0.11909951269626617,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_547336",
+      "image_id": 547336,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.880298626603961,
+      "top5_iou": 0.880298626603961,
+      "top1_box": [
+        162.13218688964844,
+        377.2861969470978,
+        207.02674865722656,
+        433.80871653556824
+      ],
+      "top1_score": 0.09247007220983505,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_356531",
+      "image_id": 356531,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.8106505973789175,
+      "top5_iou": 0.8106505973789175,
+      "top1_box": [
+        441.00525856018066,
+        224.85122323036194,
+        502.26820945739746,
+        333.96726965904236
+      ],
+      "top1_score": 0.09037160873413086,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_351530",
+      "image_id": 351530,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.16015570742408983,
+      "top5_iou": 0.39372298618834695,
+      "top1_box": [
+        135.14533519744873,
+        112.48121970891953,
+        250.49519062042236,
+        279.4418976902962
+      ],
+      "top1_score": 0.08891183137893677,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_420840",
+      "image_id": 420840,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.02842572757375791,
+      "top1_box": [
+        539.6083331108093,
+        264.72528302669525,
+        609.5411419868469,
+        311.484081864357
+      ],
+      "top1_score": 0.12474921345710754,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_31296",
+      "image_id": 31296,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        241.7500603199005,
+        222.59463649243116,
+        265.92312693595886,
+        243.43140739947557
+      ],
+      "top1_score": 0.08819350600242615,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_224807",
+      "image_id": 224807,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.006846089766417274,
+      "top5_iou": 0.006846089766417274,
+      "top1_box": [
+        143.1584358215332,
+        166.8663319349289,
+        435.79111099243164,
+        316.96514999866486
+      ],
+      "top1_score": 0.08328388631343842,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_78404",
+      "image_id": 78404,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0050533383274645564,
+      "top5_iou": 0.9091721176908255,
+      "top1_box": [
+        380.30584156513214,
+        274.7254863381386,
+        439.93113934993744,
+        323.4577640891075
+      ],
+      "top1_score": 0.09660757333040237,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_13729",
+      "image_id": 13729,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.056776706797327714,
+      "top1_box": [
+        223.68974447250366,
+        256.9503057003021,
+        270.5682969093323,
+        286.7377817630768
+      ],
+      "top1_score": 0.08661901205778122,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_133645",
+      "image_id": 133645,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.7999800966699974,
+      "top1_box": [
+        207.3573112487793,
+        173.8163940757513,
+        351.9837760925293,
+        296.8887342363596
+      ],
+      "top1_score": 0.12399119883775711,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_48396",
+      "image_id": 48396,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.08271819202185698,
+      "top1_box": [
+        376.6851854324341,
+        372.75245390087366,
+        490.37314891815186,
+        425.3865254148841
+      ],
+      "top1_score": 0.12879401445388794,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_31620",
+      "image_id": 31620,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        126.90902352333069,
+        274.02870655059814,
+        206.67380690574646,
+        341.3950300216675
+      ],
+      "top1_score": 0.11471395194530487,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_423506",
+      "image_id": 423506,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.6958435119753535,
+      "top5_iou": 0.6958435119753535,
+      "top1_box": [
+        273.73976446688175,
+        476.8333798274398,
+        342.90567599236965,
+        498.63108340650797
+      ],
+      "top1_score": 0.12731033563613892,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_379476",
+      "image_id": 379476,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.5273827124488436,
+      "top1_box": [
+        96.79353689774871,
+        348.2509970664978,
+        144.35266071930528,
+        402.2640633583069
+      ],
+      "top1_score": 0.08673523366451263,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_226171",
+      "image_id": 226171,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.8574644789952119,
+      "top5_iou": 0.9161288785257737,
+      "top1_box": [
+        199.74631547927856,
+        150.43901681900024,
+        257.9089426994324,
+        324.7773241996765
+      ],
+      "top1_score": 0.10022366791963577,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_483999",
+      "image_id": 483999,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.002441923013341232,
+      "top5_iou": 0.002441923013341232,
+      "top1_box": [
+        217.10247039794922,
+        283.2967454791069,
+        292.01385498046875,
+        425.8841798901558
+      ],
+      "top1_score": 0.07357517629861832,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_276285",
+      "image_id": 276285,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.7159036338018592,
+      "top5_iou": 0.8687908537782131,
+      "top1_box": [
+        1.752826176583767,
+        71.66174411773682,
+        93.78528492897749,
+        201.31850719451904
+      ],
+      "top1_score": 0.08819379657506943,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_194724",
+      "image_id": 194724,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.01616358395723497,
+      "top5_iou": 0.02170572647191874,
+      "top1_box": [
+        1.2427520751953125,
+        188.52516889572144,
+        184.62844848632812,
+        410.61171770095825
+      ],
+      "top1_score": 0.12611080706119537,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_331817",
+      "image_id": 331817,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.1386091769175567,
+      "top5_iou": 0.21616185672063415,
+      "top1_box": [
+        42.9331111907959,
+        230.81051588058472,
+        357.73457527160645,
+        429.9764370918274
+      ],
+      "top1_score": 0.09925565868616104,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_183716",
+      "image_id": 183716,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.32581828181726413,
+      "top5_iou": 0.32581828181726413,
+      "top1_box": [
+        7.811505168676376,
+        16.843467950820923,
+        346.83638206124306,
+        493.32472681999207
+      ],
+      "top1_score": 0.09758634120225906,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_441247",
+      "image_id": 441247,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.5091145496761632,
+      "top5_iou": 0.5091145496761632,
+      "top1_box": [
+        286.109881401062,
+        195.02089446783066,
+        303.16009998321533,
+        233.5763517022133
+      ],
+      "top1_score": 0.0924987867474556,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_337498",
+      "image_id": 337498,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.9241348178835359,
+      "top1_box": [
+        98.35952758789062,
+        83.54122638702393,
+        589.4651031494141,
+        408.2836675643921
+      ],
+      "top1_score": 0.11761114001274109,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_376264",
+      "image_id": 376264,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.28441806660628766,
+      "top1_box": [
+        261.12759590148926,
+        215.97444055974483,
+        429.16903495788574,
+        400.6279689222574
+      ],
+      "top1_score": 0.08736087381839752,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_367095",
+      "image_id": 367095,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.6431576997046641,
+      "top1_box": [
+        454.0635418891907,
+        285.9442625157535,
+        501.22523069381714,
+        333.03243528679013
+      ],
+      "top1_score": 0.09000254422426224,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_130826",
+      "image_id": 130826,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.3862842461163041,
+      "top5_iou": 0.41583817202830686,
+      "top1_box": [
+        201.22539520263672,
+        65.35828113555908,
+        488.24901580810547,
+        475.95847606658936
+      ],
+      "top1_score": 0.10300424695014954,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_12120",
+      "image_id": 12120,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        0.5441951751708984,
+        346.80594778060913,
+        30.611612796783447,
+        382.11476612091064
+      ],
+      "top1_score": 0.09366914629936218,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_287667",
+      "image_id": 287667,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.013992361277646411,
+      "top5_iou": 0.04939398493954053,
+      "top1_box": [
+        192.78343200683594,
+        86.03605270385742,
+        613.719482421875,
+        329.3328094482422
+      ],
+      "top1_score": 0.0852663666009903,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_470924",
+      "image_id": 470924,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.30220428662938953,
+      "top1_box": [
+        386.24019384384155,
+        379.27229046821594,
+        460.439875125885,
+        477.57707476615906
+      ],
+      "top1_score": 0.07541286945343018,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_62808",
+      "image_id": 62808,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.01816807459942533,
+      "top5_iou": 0.04740662085708699,
+      "top1_box": [
+        137.9410743713379,
+        272.2397999763489,
+        510.8096122741699,
+        427.77525568008423
+      ],
+      "top1_score": 0.12597329914569855,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_363840",
+      "image_id": 363840,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.12933892802013067,
+      "top1_box": [
+        150.20410299301147,
+        367.54334449768066,
+        218.57519388198853,
+        421.17390632629395
+      ],
+      "top1_score": 0.08335704356431961,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_18150",
+      "image_id": 18150,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.8701937995650278,
+      "top1_box": [
+        355.49370288848877,
+        308.8834083080292,
+        456.1003065109253,
+        380.45912861824036
+      ],
+      "top1_score": 0.0822589173913002,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_284623",
+      "image_id": 284623,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.8419709417521519,
+      "top5_iou": 0.873395251800137,
+      "top1_box": [
+        34.42489147186279,
+        172.73501873016357,
+        100.71813106536865,
+        321.88589572906494
+      ],
+      "top1_score": 0.08815360069274902,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_237517",
+      "image_id": 237517,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.27178483128573044,
+      "top5_iou": 0.893535515322301,
+      "top1_box": [
+        53.3888099193573,
+        477.35254287719727,
+        401.4043709039688,
+        637.7287101745605
+      ],
+      "top1_score": 0.0892004743218422,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_318455",
+      "image_id": 318455,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.21460180046604874,
+      "top1_box": [
+        38.1630802154541,
+        164.95498180389404,
+        180.0387477874756,
+        287.0323419570923
+      ],
+      "top1_score": 0.0734943076968193,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_113720",
+      "image_id": 113720,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.570907938443053,
+      "top1_box": [
+        209.2484188079834,
+        78.07458472251892,
+        281.24470710754395,
+        132.96705168485641
+      ],
+      "top1_score": 0.09932821244001389,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_226147",
+      "image_id": 226147,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        234.0885043144226,
+        320.8688020706177,
+        403.41853380203247,
+        412.68603801727295
+      ],
+      "top1_score": 0.08551403135061264,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_422998",
+      "image_id": 422998,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.9297914342707977,
+      "top5_iou": 0.9297914342707977,
+      "top1_box": [
+        424.87135887145996,
+        201.1346825659275,
+        511.64177894592285,
+        424.31206235289574
+      ],
+      "top1_score": 0.09337768703699112,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_110999",
+      "image_id": 110999,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.39866040612930925,
+      "top5_iou": 0.7659700228924069,
+      "top1_box": [
+        2.9175088107585907,
+        486.12372875213623,
+        213.2181439101696,
+        588.2199144363403
+      ],
+      "top1_score": 0.10296463221311569,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_293625",
+      "image_id": 293625,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.011718438287278853,
+      "top1_box": [
+        75.17406940460205,
+        198.05086612701416,
+        193.74135494232178,
+        374.11481380462646
+      ],
+      "top1_score": 0.11763699352741241,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_169076",
+      "image_id": 169076,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.04679796407526645,
+      "top1_box": [
+        63.194597482681274,
+        302.01290890574455,
+        257.26146841049194,
+        450.579157859087
+      ],
+      "top1_score": 0.08529268950223923,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_127182",
+      "image_id": 127182,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.26442598494457653,
+      "top1_box": [
+        206.9098264798522,
+        314.5833969116211,
+        281.58181039243937,
+        362.7004623413086
+      ],
+      "top1_score": 0.08104720711708069,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_320664",
+      "image_id": 320664,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.03094381814147466,
+      "top5_iou": 0.8360625925944211,
+      "top1_box": [
+        28.653583526611328,
+        35.719871520996094,
+        553.1342124938965,
+        475.45515060424805
+      ],
+      "top1_score": 0.09292545169591904,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_458663",
+      "image_id": 458663,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.13989948946972303,
+      "top5_iou": 0.13989948946972303,
+      "top1_box": [
+        12.592675685882568,
+        279.1910130530596,
+        59.12094831466675,
+        351.3542454689741
+      ],
+      "top1_score": 0.11253858357667923,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_40471",
+      "image_id": 40471,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        100.70904551818967,
+        305.76741456985474,
+        127.47552372142673,
+        340.9337115287781
+      ],
+      "top1_score": 0.060643333941698074,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_88040",
+      "image_id": 88040,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        27.691116511821747,
+        359.26074028015137,
+        252.65173345804214,
+        591.2511920928955
+      ],
+      "top1_score": 0.07927446812391281,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_344100",
+      "image_id": 344100,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.9097588999233666,
+      "top5_iou": 0.9097588999233666,
+      "top1_box": [
+        85.70000648498535,
+        129.69067223370075,
+        173.46491813659668,
+        246.15583430230618
+      ],
+      "top1_score": 0.10120517760515213,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_97337",
+      "image_id": 97337,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.1372789417869282,
+      "top1_box": [
+        262.4840810894966,
+        240.23632798343897,
+        281.560055911541,
+        259.87410452216864
+      ],
+      "top1_score": 0.0876111388206482,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_352900",
+      "image_id": 352900,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.07058238767202339,
+      "top5_iou": 0.8420975460586373,
+      "top1_box": [
+        42.50617980957031,
+        40.29530602693558,
+        578.1647491455078,
+        411.5139984488487
+      ],
+      "top1_score": 0.12571783363819122,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_277051",
+      "image_id": 277051,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.03833646832834122,
+      "top5_iou": 0.8645392085711368,
+      "top1_box": [
+        70.00306129455566,
+        196.329460978508,
+        372.2505855560303,
+        349.26063311100006
+      ],
+      "top1_score": 0.0985400602221489,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_7818",
+      "image_id": 7818,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.9207126146508773,
+      "top5_iou": 0.9207126146508773,
+      "top1_box": [
+        330.11857986450195,
+        155.63711012899876,
+        415.7403373718262,
+        350.7379534095526
+      ],
+      "top1_score": 0.09513047337532043,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_128476",
+      "image_id": 128476,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.7410382006782571,
+      "top1_box": [
+        3.2000732421875,
+        128.20667099952698,
+        636.5173721313477,
+        422.9236875772476
+      ],
+      "top1_score": 0.11003982275724411,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_371677",
+      "image_id": 371677,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.9083658887862455,
+      "top5_iou": 0.9083658887862455,
+      "top1_box": [
+        301.93203926086426,
+        229.14103746414185,
+        416.53048515319824,
+        369.6324419975281
+      ],
+      "top1_score": 0.11902527511119843,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_213255",
+      "image_id": 213255,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.07527599573598011,
+      "top5_iou": 0.9552662806189428,
+      "top1_box": [
+        153.32706928253174,
+        333.44571113586426,
+        468.79613399505615,
+        635.748929977417
+      ],
+      "top1_score": 0.09007763862609863,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_435003",
+      "image_id": 435003,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.007092539474320713,
+      "top5_iou": 0.02915481742442693,
+      "top1_box": [
+        432.1243143081665,
+        247.04101770929992,
+        466.91956996917725,
+        265.9907010216266
+      ],
+      "top1_score": 0.10226523131132126,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_146358",
+      "image_id": 146358,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.042704652906167255,
+      "top1_box": [
+        25.85598063468933,
+        257.21327781677246,
+        166.53357529640198,
+        415.5445957183838
+      ],
+      "top1_score": 0.10744945704936981,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_173371",
+      "image_id": 173371,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.07649137697758521,
+      "top1_box": [
+        73.58015155792236,
+        81.94555163383484,
+        396.2952661514282,
+        414.7516236305237
+      ],
+      "top1_score": 0.11824942380189896,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_359219",
+      "image_id": 359219,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.6123610754753661,
+      "top5_iou": 0.9670080546639244,
+      "top1_box": [
+        326.4200687408447,
+        12.885675430297852,
+        636.4414882659912,
+        373.394136428833
+      ],
+      "top1_score": 0.10155704617500305,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_377946",
+      "image_id": 377946,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.004149857317225294,
+      "top5_iou": 0.0054471472814348445,
+      "top1_box": [
+        79.58673477172852,
+        49.1172793507576,
+        587.0370292663574,
+        391.57845228910446
+      ],
+      "top1_score": 0.1362159103155136,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_54628",
+      "image_id": 54628,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.061541532448387844,
+      "top5_iou": 0.08451392052843382,
+      "top1_box": [
+        112.42210306227207,
+        27.515262365341187,
+        294.826140627265,
+        483.4853708744049
+      ],
+      "top1_score": 0.10962923616170883,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_440475",
+      "image_id": 440475,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.1618011976456202,
+      "top5_iou": 0.20684175725409257,
+      "top1_box": [
+        360.4704713821411,
+        348.4277463182807,
+        442.3495054244995,
+        391.8887914195657
+      ],
+      "top1_score": 0.10426818579435349,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_338219",
+      "image_id": 338219,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.00420793993408406,
+      "top5_iou": 0.005551543854107227,
+      "top1_box": [
+        27.91339874267578,
+        98.44720780849457,
+        528.4902954101562,
+        542.7476752996445
+      ],
+      "top1_score": 0.13187843561172485,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_81738",
+      "image_id": 81738,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.9506855668792459,
+      "top1_box": [
+        97.13720321655273,
+        121.85025215148926,
+        540.226993560791,
+        379.4633388519287
+      ],
+      "top1_score": 0.12220004200935364,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_572462",
+      "image_id": 572462,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.6740282544111961,
+      "top1_box": [
+        14.602269887924194,
+        22.48238432407379,
+        364.70148754119873,
+        289.6475683450699
+      ],
+      "top1_score": 0.08253936469554901,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_325838",
+      "image_id": 325838,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.10059416174574516,
+      "top5_iou": 0.13230027404635347,
+      "top1_box": [
+        40.52300453186035,
+        220.04322052001953,
+        235.3865146636963,
+        455.826473236084
+      ],
+      "top1_score": 0.10190132260322571,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_530146",
+      "image_id": 530146,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.02104892833869105,
+      "top1_box": [
+        304.20660972595215,
+        170.7295799255371,
+        587.94846534729,
+        501.61645889282227
+      ],
+      "top1_score": 0.11021886765956879,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_491867",
+      "image_id": 491867,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.001328580214894703,
+      "top5_iou": 0.001328580214894703,
+      "top1_box": [
+        53.76481533050537,
+        96.85598373413086,
+        408.18009853363037,
+        636.1410713195801
+      ],
+      "top1_score": 0.12136422097682953,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_363666",
+      "image_id": 363666,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.004640496975958503,
+      "top5_iou": 0.004640496975958503,
+      "top1_box": [
+        76.9090461730957,
+        146.09090930223465,
+        466.9803810119629,
+        382.3353871703148
+      ],
+      "top1_score": 0.06202905252575874,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_407614",
+      "image_id": 407614,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.01550915752573464,
+      "top1_box": [
+        131.04159116744995,
+        349.30130875110626,
+        200.6946301460266,
+        418.1349331140518
+      ],
+      "top1_score": 0.10956510156393051,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_263969",
+      "image_id": 263969,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.08076030736394613,
+      "top5_iou": 0.8800058612826513,
+      "top1_box": [
+        74.59879875183105,
+        450.1641236245632,
+        244.19907569885254,
+        607.2760416567326
+      ],
+      "top1_score": 0.1067223995923996,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_460494",
+      "image_id": 460494,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.02898395517537782,
+      "top5_iou": 0.034588262317269323,
+      "top1_box": [
+        55.97318649291992,
+        132.8652314543724,
+        547.7190971374512,
+        369.0689955353737
+      ],
+      "top1_score": 0.1247057169675827,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_293858",
+      "image_id": 293858,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.9102456689620944,
+      "top5_iou": 0.9419998987066105,
+      "top1_box": [
+        382.7110454440117,
+        19.032696902751923,
+        492.9892495274544,
+        270.1967315673828
+      ],
+      "top1_score": 0.0964406281709671,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_173008",
+      "image_id": 173008,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.08222290902404335,
+      "top1_box": [
+        249.61169719696045,
+        193.645498752594,
+        313.71819019317627,
+        305.287663936615
+      ],
+      "top1_score": 0.08240152895450592,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_143998",
+      "image_id": 143998,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.1327858011307212,
+      "top5_iou": 0.9573286196086305,
+      "top1_box": [
+        5.935068726539612,
+        3.226938843727112,
+        607.2401078939438,
+        603.8546537160873
+      ],
+      "top1_score": 0.10446395725011826,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_425226",
+      "image_id": 425226,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.4638685535114474,
+      "top5_iou": 0.8604727995846774,
+      "top1_box": [
+        228.96447837352753,
+        351.5941905975342,
+        288.14441978931427,
+        395.35923957824707
+      ],
+      "top1_score": 0.08471856266260147,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_22892",
+      "image_id": 22892,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.6486759867362506,
+      "top1_box": [
+        36.22645139694214,
+        73.52946090698242,
+        290.45021533966064,
+        292.50207448005676
+      ],
+      "top1_score": 0.08938609808683395,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_579970",
+      "image_id": 579970,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.12012110360305761,
+      "top5_iou": 0.1543707435929968,
+      "top1_box": [
+        285.50541028380394,
+        186.66085517406464,
+        338.0602039396763,
+        240.63303673267365
+      ],
+      "top1_score": 0.11923941224813461,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_434459",
+      "image_id": 434459,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.6260639872675097,
+      "top5_iou": 0.7504613570018068,
+      "top1_box": [
+        236.43675804138184,
+        209.30393602885306,
+        321.2941837310791,
+        230.19144872389734
+      ],
+      "top1_score": 0.07715059071779251,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_215114",
+      "image_id": 215114,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.4136870465565541,
+      "top5_iou": 0.8890432040262928,
+      "top1_box": [
+        292.9366887807846,
+        192.18107223510742,
+        335.1742159128189,
+        266.55439376831055
+      ],
+      "top1_score": 0.0745280459523201,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_312192",
+      "image_id": 312192,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.04953830457814822,
+      "top5_iou": 0.9618101173284329,
+      "top1_box": [
+        30.69723129272461,
+        136.18183135986328,
+        607.6138114929199,
+        436.60343170166016
+      ],
+      "top1_score": 0.11510612070560455,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_463618",
+      "image_id": 463618,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        50.14727592468262,
+        144.6303728222847,
+        261.1384677886963,
+        448.17675000429153
+      ],
+      "top1_score": 0.12458213418722153,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_319696",
+      "image_id": 319696,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.944081240349351,
+      "top1_box": [
+        14.341011643409729,
+        64.07907736301422,
+        301.7805367708206,
+        247.1091377735138
+      ],
+      "top1_score": 0.09944138675928116,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_323151",
+      "image_id": 323151,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0008022135771391663,
+      "top5_iou": 0.952637538162667,
+      "top1_box": [
+        274.7444236278534,
+        144.1469120979309,
+        381.0515892505646,
+        219.0116572380066
+      ],
+      "top1_score": 0.09939511865377426,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_119828",
+      "image_id": 119828,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.8515595131995815,
+      "top5_iou": 0.8515595131995815,
+      "top1_box": [
+        339.9920389056206,
+        114.16599713265896,
+        408.0289676785469,
+        165.18361307680607
+      ],
+      "top1_score": 0.12171092629432678,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_512476",
+      "image_id": 512476,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.09294561296624256,
+      "top1_box": [
+        314.84320640563965,
+        287.6731002777815,
+        427.89719581604004,
+        355.8412177115679
+      ],
+      "top1_score": 0.12959274649620056,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_371552",
+      "image_id": 371552,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.01050696889672298,
+      "top5_iou": 0.01050696889672298,
+      "top1_box": [
+        184.0818691253662,
+        53.151551336050034,
+        292.1049213409424,
+        372.9326896369457
+      ],
+      "top1_score": 0.08605825901031494,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_454404",
+      "image_id": 454404,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.11238532158405705,
+      "top5_iou": 0.15660752188533159,
+      "top1_box": [
+        177.90865898132324,
+        436.5579829663038,
+        300.6638431549072,
+        525.1105190068483
+      ],
+      "top1_score": 0.13025212287902832,
+      "gate_mean": 0.0
+    }
+  ],
+  "train_rows_trained": [
+    {
+      "benchmark_id": "sit_on_221708",
+      "image_id": 221708,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.21031188622526484,
+      "top5_iou": 0.40670998955896004,
+      "top1_box": [
+        305.9533131122589,
+        251.12327814102173,
+        359.42535281181335,
+        299.3712592124939
+      ],
+      "top1_score": 0.03457523509860039,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_548780",
+      "image_id": 548780,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.8233446439596509,
+      "top5_iou": 0.9554045552355659,
+      "top1_box": [
+        169.1396141052246,
+        65.82211753726006,
+        565.1885414123535,
+        374.54947605729103
+      ],
+      "top1_score": 0.04457118734717369,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_117425",
+      "image_id": 117425,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.9687388882397774,
+      "top1_box": [
+        382.6183319091797,
+        178.52542832493782,
+        432.92564392089844,
+        362.6033918559551
+      ],
+      "top1_score": 0.042818211019039154,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_419312",
+      "image_id": 419312,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.045457504970682204,
+      "top5_iou": 0.8167336492465311,
+      "top1_box": [
+        9.782832115888596,
+        158.91189873218536,
+        371.511060744524,
+        478.72261703014374
+      ],
+      "top1_score": 0.05233675241470337,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_177213",
+      "image_id": 177213,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.9476804934055734,
+      "top1_box": [
+        94.74552154541016,
+        84.37308290600777,
+        512.8190612792969,
+        317.22918555140495
+      ],
+      "top1_score": 0.04743185266852379,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_568710",
+      "image_id": 568710,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.9539071261563811,
+      "top5_iou": 0.9539071261563811,
+      "top1_box": [
+        410.20636558532715,
+        181.3709542900324,
+        638.1424808502197,
+        377.5052174180746
+      ],
+      "top1_score": 0.0396888330578804,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_218439",
+      "image_id": 218439,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.8903025195917593,
+      "top1_box": [
+        340.8791935443878,
+        408.72679829597473,
+        384.94991183280945,
+        435.5970847606659
+      ],
+      "top1_score": 0.03627602383494377,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_93353",
+      "image_id": 93353,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0472361796677058,
+      "top5_iou": 0.8576766676881623,
+      "top1_box": [
+        156.83012008666992,
+        81.00491523742676,
+        637.0479011535645,
+        446.0606861114502
+      ],
+      "top1_score": 0.07847050577402115,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_335529",
+      "image_id": 335529,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.9435054090846461,
+      "top5_iou": 0.9435054090846461,
+      "top1_box": [
+        36.46686553955078,
+        282.5827646255493,
+        428.1290054321289,
+        464.4531011581421
+      ],
+      "top1_score": 0.046602074056863785,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_349152",
+      "image_id": 349152,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        1.6528916358947754,
+        377.7146625518799,
+        226.97311162948608,
+        637.8863048553467
+      ],
+      "top1_score": 0.050621192902326584,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_252294",
+      "image_id": 252294,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.013938985277233664,
+      "top5_iou": 0.02425941602377614,
+      "top1_box": [
+        237.125133164227,
+        456.7433334887028,
+        280.361901037395,
+        492.34506115317345
+      ],
+      "top1_score": 0.053593382239341736,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_256868",
+      "image_id": 256868,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.02594754393735641,
+      "top5_iou": 0.07099207459664876,
+      "top1_box": [
+        138.7095069885254,
+        177.626138150692,
+        310.3034782409668,
+        386.21248108148575
+      ],
+      "top1_score": 0.0515083372592926,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_425361",
+      "image_id": 425361,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.06350684283484324,
+      "top5_iou": 0.07586490026012487,
+      "top1_box": [
+        326.9294738769531,
+        361.1540702134371,
+        533.7225341796875,
+        466.85284630954266
+      ],
+      "top1_score": 0.04584045335650444,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_214539",
+      "image_id": 214539,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.015146157839404897,
+      "top5_iou": 0.015146157839404897,
+      "top1_box": [
+        227.08271980285645,
+        91.84975743293762,
+        447.63636589050293,
+        357.7882047891617
+      ],
+      "top1_score": 0.05247895419597626,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_133969",
+      "image_id": 133969,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.04782842351585107,
+      "top5_iou": 0.04782842351585107,
+      "top1_box": [
+        59.04900550842285,
+        204.55938106775284,
+        261.87853813171387,
+        376.9214627146721
+      ],
+      "top1_score": 0.055497605353593826,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_547336",
+      "image_id": 547336,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.8900192979437768,
+      "top1_box": [
+        463.5554790496826,
+        155.99743366241455,
+        638.1926441192627,
+        350.30017375946045
+      ],
+      "top1_score": 0.03993581607937813,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_356531",
+      "image_id": 356531,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.8349228471019938,
+      "top5_iou": 0.8349228471019938,
+      "top1_box": [
+        441.60314559936523,
+        226.4663851261139,
+        502.0535469055176,
+        333.83434653282166
+      ],
+      "top1_score": 0.039516448974609375,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_351530",
+      "image_id": 351530,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.21071558685012373,
+      "top5_iou": 0.32464479416228825,
+      "top1_box": [
+        134.26095962524414,
+        107.60509487986565,
+        301.7306709289551,
+        280.8473255932331
+      ],
+      "top1_score": 0.04153330624103546,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_420840",
+      "image_id": 420840,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.027551293402405287,
+      "top1_box": [
+        539.8240160942078,
+        265.1078751087189,
+        609.4888043403625,
+        311.3139293193817
+      ],
+      "top1_score": 0.06111003831028938,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_31296",
+      "image_id": 31296,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.026222119333903584,
+      "top1_box": [
+        241.97793006896973,
+        222.95917072333395,
+        266.08412742614746,
+        243.57842705212533
+      ],
+      "top1_score": 0.035154346376657486,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_224807",
+      "image_id": 224807,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0064964373085865884,
+      "top5_iou": 0.0064964373085865884,
+      "top1_box": [
+        140.68565368652344,
+        166.99575453996658,
+        439.76715087890625,
+        319.86799067258835
+      ],
+      "top1_score": 0.04028859734535217,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_78404",
+      "image_id": 78404,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.004675241539058461,
+      "top5_iou": 0.912106044057192,
+      "top1_box": [
+        380.7285148650408,
+        275.4321061074734,
+        440.0155823677778,
+        323.6385144293308
+      ],
+      "top1_score": 0.04780761897563934,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_13729",
+      "image_id": 13729,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.03212770221652469,
+      "top1_box": [
+        223.8035249710083,
+        258.2460281252861,
+        270.59714794158936,
+        286.269066631794
+      ],
+      "top1_score": 0.03736580163240433,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_133645",
+      "image_id": 133645,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.8073494825475296,
+      "top1_box": [
+        208.09816360473633,
+        175.69692474603653,
+        351.4835548400879,
+        296.1340112090111
+      ],
+      "top1_score": 0.06059384346008301,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_48396",
+      "image_id": 48396,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0815533091723206,
+      "top1_box": [
+        377.21888065338135,
+        372.6180955134332,
+        489.8255681991577,
+        425.7246459759772
+      ],
+      "top1_score": 0.06545515358448029,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_31620",
+      "image_id": 31620,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        126.17531061172485,
+        274.13814306259155,
+        206.92569494247437,
+        341.2001442909241
+      ],
+      "top1_score": 0.05372503399848938,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_423506",
+      "image_id": 423506,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.7027946564856172,
+      "top5_iou": 0.7027946564856172,
+      "top1_box": [
+        274.15219880640507,
+        476.87169816344976,
+        342.8610619157553,
+        498.6687609925866
+      ],
+      "top1_score": 0.056267283856868744,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_379476",
+      "image_id": 379476,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.5269459005264439,
+      "top1_box": [
+        95.93130128458142,
+        276.9756317138672,
+        144.92298079654574,
+        403.5778045654297
+      ],
+      "top1_score": 0.034264516085386276,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_226171",
+      "image_id": 226171,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.8681791381271603,
+      "top5_iou": 0.9292372358013118,
+      "top1_box": [
+        200.0045132637024,
+        150.77942848205566,
+        257.6792788505554,
+        325.35106658935547
+      ],
+      "top1_score": 0.04355785250663757,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_483999",
+      "image_id": 483999,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0019424449487806818,
+      "top5_iou": 0.0019424449487806818,
+      "top1_box": [
+        217.41527557373047,
+        283.08700853586197,
+        292.17472076416016,
+        426.3808621764183
+      ],
+      "top1_score": 0.028925271704792976,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_276285",
+      "image_id": 276285,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.7202165855641091,
+      "top5_iou": 0.8648193112508562,
+      "top1_box": [
+        1.3102555498480797,
+        71.45999908447266,
+        93.7808627858758,
+        201.13941192626953
+      ],
+      "top1_score": 0.04109223932027817,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_194724",
+      "image_id": 194724,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.01667466780413461,
+      "top5_iou": 0.01667466780413461,
+      "top1_box": [
+        0.9767436981201172,
+        187.86205530166626,
+        184.60835456848145,
+        411.76841497421265
+      ],
+      "top1_score": 0.06563766300678253,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_331817",
+      "image_id": 331817,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.13802572772071348,
+      "top5_iou": 0.19204438725330475,
+      "top1_box": [
+        43.751230239868164,
+        231.03983402252197,
+        357.2708034515381,
+        430.95344066619873
+      ],
+      "top1_score": 0.04612431302666664,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_183716",
+      "image_id": 183716,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.32555349499468694,
+      "top5_iou": 0.32555349499468694,
+      "top1_box": [
+        9.384267508983612,
+        17.258256673812866,
+        347.89598912000656,
+        496.1008131504059
+      ],
+      "top1_score": 0.0527799166738987,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_441247",
+      "image_id": 441247,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.5353842511088868,
+      "top5_iou": 0.5353842511088868,
+      "top1_box": [
+        286.46446466445923,
+        196.02779147028923,
+        303.244092464447,
+        233.28269150853157
+      ],
+      "top1_score": 0.03307737037539482,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_337498",
+      "image_id": 337498,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.9323345094828408,
+      "top1_box": [
+        99.71672058105469,
+        84.6839189529419,
+        590.0511932373047,
+        409.60809230804443
+      ],
+      "top1_score": 0.04827822744846344,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_376264",
+      "image_id": 376264,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.282599371418122,
+      "top1_box": [
+        434.31551933288574,
+        12.321778655052185,
+        579.7940540313721,
+        208.385901004076
+      ],
+      "top1_score": 0.04223983734846115,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_367095",
+      "image_id": 367095,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.022589691173713258,
+      "top1_box": [
+        454.49143171310425,
+        286.53969772160053,
+        501.55356645584106,
+        333.03576461970806
+      ],
+      "top1_score": 0.03705409914255142,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_130826",
+      "image_id": 130826,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.38892361769335687,
+      "top5_iou": 0.4187844387396287,
+      "top1_box": [
+        202.23854064941406,
+        65.44547080993652,
+        489.2871856689453,
+        478.0106449127197
+      ],
+      "top1_score": 0.03657865524291992,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_12120",
+      "image_id": 12120,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        0.49152493476867676,
+        346.78370875120163,
+        30.551189184188843,
+        382.3346627354622
+      ],
+      "top1_score": 0.04310939460992813,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_287667",
+      "image_id": 287667,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.02357475604419345,
+      "top5_iou": 0.04955641547587944,
+      "top1_box": [
+        195.52279472351074,
+        86.3007116317749,
+        436.30188941955566,
+        326.4117479324341
+      ],
+      "top1_score": 0.04036076366901398,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_470924",
+      "image_id": 470924,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.2714978945955533,
+      "top1_box": [
+        386.7719554901123,
+        379.1996419429779,
+        459.5097827911377,
+        477.8819811344147
+      ],
+      "top1_score": 0.03198758885264397,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_62808",
+      "image_id": 62808,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.018267042149407303,
+      "top5_iou": 0.8755575919218473,
+      "top1_box": [
+        138.00771713256836,
+        272.3519993722439,
+        511.0076332092285,
+        428.4517060816288
+      ],
+      "top1_score": 0.05334160476922989,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_363840",
+      "image_id": 363840,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.13232656077214847,
+      "top1_box": [
+        150.52774906158447,
+        368.2831281423569,
+        218.35469722747803,
+        420.94830572605133
+      ],
+      "top1_score": 0.04065493866801262,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_18150",
+      "image_id": 18150,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.8768556284068956,
+      "top1_box": [
+        312.7371883392334,
+        224.79228615760803,
+        410.97161293029785,
+        296.0639798641205
+      ],
+      "top1_score": 0.04044162854552269,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_284623",
+      "image_id": 284623,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.8559989102065867,
+      "top5_iou": 0.8733203461664496,
+      "top1_box": [
+        34.65562582015991,
+        173.62775087356567,
+        100.43556451797485,
+        322.4177813529968
+      ],
+      "top1_score": 0.04585786163806915,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_237517",
+      "image_id": 237517,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.27415189652510075,
+      "top5_iou": 0.8993082974555252,
+      "top1_box": [
+        56.921283304691315,
+        477.0365524291992,
+        400.3677108883858,
+        638.143196105957
+      ],
+      "top1_score": 0.039930108934640884,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_318455",
+      "image_id": 318455,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.17035711941478388,
+      "top5_iou": 0.21381636218149877,
+      "top1_box": [
+        398.5006093978882,
+        175.81406235694885,
+        525.4169321060181,
+        275.2740705013275
+      ],
+      "top1_score": 0.03551596775650978,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_113720",
+      "image_id": 113720,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.5750680294439189,
+      "top1_box": [
+        209.4224500656128,
+        78.31632207334042,
+        281.10329151153564,
+        132.51307882368565
+      ],
+      "top1_score": 0.04387606680393219,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_226147",
+      "image_id": 226147,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        234.29003477096558,
+        322.1194362640381,
+        402.1975636482239,
+        411.2098026275635
+      ],
+      "top1_score": 0.043883323669433594,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_422998",
+      "image_id": 422998,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.9266228580830875,
+      "top5_iou": 0.9266228580830875,
+      "top1_box": [
+        425.1693534851074,
+        201.0016874074936,
+        511.88371658325195,
+        425.11228573322296
+      ],
+      "top1_score": 0.04282161593437195,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_110999",
+      "image_id": 110999,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.3912729142567599,
+      "top5_iou": 0.7635773947837938,
+      "top1_box": [
+        2.5812809765338898,
+        484.79769706726074,
+        212.86169490218163,
+        588.8315296173096
+      ],
+      "top1_score": 0.04881983622908592,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_293625",
+      "image_id": 293625,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.046740361322583274,
+      "top1_box": [
+        76.05490684509277,
+        198.68987560272217,
+        192.6998233795166,
+        374.39791202545166
+      ],
+      "top1_score": 0.04946020990610123,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_169076",
+      "image_id": 169076,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.04618031697245366,
+      "top1_box": [
+        64.92886394262314,
+        304.15518683195114,
+        251.28874522447586,
+        449.9307287335396
+      ],
+      "top1_score": 0.03962479904294014,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_127182",
+      "image_id": 127182,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.26681524442494925,
+      "top1_box": [
+        207.1004335731268,
+        315.430543422699,
+        281.154252782464,
+        362.95103311538696
+      ],
+      "top1_score": 0.04126686602830887,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_320664",
+      "image_id": 320664,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0291500310300319,
+      "top5_iou": 0.8426805616273869,
+      "top1_box": [
+        25.87158203125,
+        9.712700843811035,
+        555.919303894043,
+        481.09904766082764
+      ],
+      "top1_score": 0.04182182997465134,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_458663",
+      "image_id": 458663,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.1447788060918522,
+      "top5_iou": 0.1447788060918522,
+      "top1_box": [
+        13.113396167755127,
+        279.45545352995396,
+        58.37607145309448,
+        351.1364158242941
+      ],
+      "top1_score": 0.047256629914045334,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_40471",
+      "image_id": 40471,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        100.70499082654715,
+        306.1630630493164,
+        127.56751225143671,
+        341.36898040771484
+      ],
+      "top1_score": 0.027089396491646767,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_88040",
+      "image_id": 88040,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        27.549569755792618,
+        357.97844886779785,
+        253.0465958416462,
+        591.285924911499
+      ],
+      "top1_score": 0.03775230422616005,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_344100",
+      "image_id": 344100,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.6780624672881069,
+      "top5_iou": 0.9060913532016082,
+      "top1_box": [
+        83.01538944244385,
+        105.65589180588722,
+        180.98836421966553,
+        247.93971410393715
+      ],
+      "top1_score": 0.05047281086444855,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_97337",
+      "image_id": 97337,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.1354365161263067,
+      "top1_box": [
+        262.62698508799076,
+        240.57568260468543,
+        281.57814405858517,
+        259.68544534407556
+      ],
+      "top1_score": 0.04122329503297806,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_352900",
+      "image_id": 352900,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.06792040836061573,
+      "top5_iou": 0.8359855992969718,
+      "top1_box": [
+        45.298519134521484,
+        42.795617550611496,
+        575.9856605529785,
+        413.72785690426826
+      ],
+      "top1_score": 0.05964452028274536,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_277051",
+      "image_id": 277051,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.04007885794692798,
+      "top5_iou": 0.9044900972698333,
+      "top1_box": [
+        69.38267707824707,
+        196.49754059314728,
+        373.1851863861084,
+        349.705774307251
+      ],
+      "top1_score": 0.047280263155698776,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_7818",
+      "image_id": 7818,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.9195155769624981,
+      "top5_iou": 0.9195155769624981,
+      "top1_box": [
+        329.7934818267822,
+        155.89998267591,
+        415.69403648376465,
+        350.85674680769444
+      ],
+      "top1_score": 0.04557875543832779,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_128476",
+      "image_id": 128476,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.7540886518052976,
+      "top1_box": [
+        3.494396209716797,
+        127.04630064964294,
+        637.402286529541,
+        424.4076442718506
+      ],
+      "top1_score": 0.0467127300798893,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_371677",
+      "image_id": 371677,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.9223180030711722,
+      "top5_iou": 0.9223180030711722,
+      "top1_box": [
+        303.10598373413086,
+        229.9030351638794,
+        415.9379768371582,
+        370.32201290130615
+      ],
+      "top1_score": 0.05387938395142555,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_213255",
+      "image_id": 213255,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.07617602259572596,
+      "top5_iou": 0.9469356134882658,
+      "top1_box": [
+        156.98720455169678,
+        335.1910972595215,
+        469.6978998184204,
+        636.5576362609863
+      ],
+      "top1_score": 0.038186587393283844,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_435003",
+      "image_id": 435003,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.006904301860835426,
+      "top5_iou": 0.027152662365684803,
+      "top1_box": [
+        432.1045422554016,
+        247.0955906137824,
+        466.7357134819031,
+        265.6297467723489
+      ],
+      "top1_score": 0.04645175859332085,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_146358",
+      "image_id": 146358,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        25.906159579753876,
+        257.3243045806885,
+        165.3326397538185,
+        416.2438106536865
+      ],
+      "top1_score": 0.05492829158902168,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_173371",
+      "image_id": 173371,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.9281256786763553,
+      "top1_box": [
+        73.94350934028625,
+        81.66879272460938,
+        396.2549214363098,
+        417.5363938808441
+      ],
+      "top1_score": 0.058535147458314896,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_359219",
+      "image_id": 359219,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.976662848957234,
+      "top1_box": [
+        2.74261474609375,
+        79.77109909057617,
+        348.9703369140625,
+        465.2091407775879
+      ],
+      "top1_score": 0.05377823859453201,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_377946",
+      "image_id": 377946,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.004153302988753228,
+      "top5_iou": 0.005290476934762121,
+      "top1_box": [
+        82.56307601928711,
+        49.78444308042526,
+        586.9593238830566,
+        394.03333550691605
+      ],
+      "top1_score": 0.06121500954031944,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_54628",
+      "image_id": 54628,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.05726205253369901,
+      "top5_iou": 0.08417142396987615,
+      "top1_box": [
+        116.85960553586483,
+        27.757585048675537,
+        290.45900143682957,
+        484.0620756149292
+      ],
+      "top1_score": 0.056329984217882156,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_440475",
+      "image_id": 440475,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.1585221825053768,
+      "top5_iou": 0.1585221825053768,
+      "top1_box": [
+        360.66746711730957,
+        349.17267064005136,
+        442.5500011444092,
+        391.6389944180846
+      ],
+      "top1_score": 0.045368652790784836,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_338219",
+      "image_id": 338219,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0042199186246565405,
+      "top5_iou": 0.0042199186246565405,
+      "top1_box": [
+        30.777950286865234,
+        98.36624085903168,
+        527.5042533874512,
+        544.8399287462234
+      ],
+      "top1_score": 0.057978931814432144,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_81738",
+      "image_id": 81738,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.9672096679089538,
+      "top1_box": [
+        100.45469284057617,
+        121.82889461517334,
+        541.1394691467285,
+        381.61850452423096
+      ],
+      "top1_score": 0.0550600029528141,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_572462",
+      "image_id": 572462,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.6759115996439988,
+      "top1_box": [
+        14.68582284450531,
+        22.13081806898117,
+        365.29062616825104,
+        291.3563731312752
+      ],
+      "top1_score": 0.03916095569729805,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_325838",
+      "image_id": 325838,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.10211978606487503,
+      "top5_iou": 0.13234801872452673,
+      "top1_box": [
+        39.74682807922363,
+        219.63757038116455,
+        236.87472343444824,
+        456.883864402771
+      ],
+      "top1_score": 0.047570712864398956,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_530146",
+      "image_id": 530146,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.022449427337735407,
+      "top1_box": [
+        304.39751625061035,
+        170.5504608154297,
+        588.7860012054443,
+        503.4739685058594
+      ],
+      "top1_score": 0.05228784680366516,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_491867",
+      "image_id": 491867,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0014740989246570491,
+      "top5_iou": 0.0014740989246570491,
+      "top1_box": [
+        56.6502571105957,
+        98.37438583374023,
+        408.81617546081543,
+        637.8505897521973
+      ],
+      "top1_score": 0.05225086212158203,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_363666",
+      "image_id": 363666,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.004471650197127595,
+      "top5_iou": 0.004471650197127595,
+      "top1_box": [
+        77.15803146362305,
+        141.02883410453796,
+        469.17688369750977,
+        384.97579991817474
+      ],
+      "top1_score": 0.025683529675006866,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_407614",
+      "image_id": 407614,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        131.51673555374146,
+        349.21735149621964,
+        200.0295901298523,
+        418.59387320280075
+      ],
+      "top1_score": 0.05241287127137184,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_263969",
+      "image_id": 263969,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0770753424922349,
+      "top5_iou": 0.8623390847813601,
+      "top1_box": [
+        76.28084182739258,
+        451.52409851551056,
+        243.88422012329102,
+        607.4751335382462
+      ],
+      "top1_score": 0.04970426857471466,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_460494",
+      "image_id": 460494,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.028659686977129846,
+      "top5_iou": 0.037645447892555896,
+      "top1_box": [
+        58.32658767700195,
+        133.46108293533325,
+        545.3382682800293,
+        367.86257815361023
+      ],
+      "top1_score": 0.055568575859069824,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_293858",
+      "image_id": 293858,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.9501019854504383,
+      "top5_iou": 0.9501019854504383,
+      "top1_box": [
+        321.2508112192154,
+        79.95799498260021,
+        404.8764556646347,
+        207.6613006144762
+      ],
+      "top1_score": 0.041617512702941895,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_173008",
+      "image_id": 173008,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.07726452206899802,
+      "top1_box": [
+        248.3224105834961,
+        193.5576295852661,
+        313.82511138916016,
+        306.6153287887573
+      ],
+      "top1_score": 0.03513110429048538,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_143998",
+      "image_id": 143998,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.13272507113032286,
+      "top5_iou": 0.9570112305962748,
+      "top1_box": [
+        6.874542474746704,
+        3.782845973968506,
+        608.6695911884308,
+        608.2115364074707
+      ],
+      "top1_score": 0.053628675639629364,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_425226",
+      "image_id": 425226,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.47438771369661076,
+      "top5_iou": 0.8736619921041282,
+      "top1_box": [
+        229.66720461845398,
+        352.0024847984314,
+        288.4895718097687,
+        395.05722284317017
+      ],
+      "top1_score": 0.03240494430065155,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_22892",
+      "image_id": 22892,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.6541689359749912,
+      "top1_box": [
+        36.79919242858887,
+        72.73502415418625,
+        290.7787561416626,
+        293.41611820459366
+      ],
+      "top1_score": 0.045139189809560776,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_579970",
+      "image_id": 579970,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.11668484919215001,
+      "top5_iou": 0.15285492236560877,
+      "top1_box": [
+        285.7929356396198,
+        187.0666880607605,
+        337.8787152469158,
+        241.05937242507935
+      ],
+      "top1_score": 0.055878959596157074,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_434459",
+      "image_id": 434459,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.5921483242119907,
+      "top5_iou": 0.7713120422930442,
+      "top1_box": [
+        236.09564781188965,
+        208.47741751745343,
+        321.58841133117676,
+        230.54566461965442
+      ],
+      "top1_score": 0.03469252213835716,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_215114",
+      "image_id": 215114,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.46686048002620917,
+      "top5_iou": 0.8948684275041822,
+      "top1_box": [
+        266.0248890221119,
+        432.4168872833252,
+        334.2447600066662,
+        626.312894821167
+      ],
+      "top1_score": 0.0317281112074852,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_312192",
+      "image_id": 312192,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.04798400053591878,
+      "top5_iou": 0.971021286205534,
+      "top1_box": [
+        37.54617691040039,
+        134.97333526611328,
+        606.5450859069824,
+        434.2400550842285
+      ],
+      "top1_score": 0.043626487255096436,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_463618",
+      "image_id": 463618,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        50.07296562194824,
+        145.2534098625183,
+        261.3307857513428,
+        449.32596933841705
+      ],
+      "top1_score": 0.05912037566304207,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_319696",
+      "image_id": 319696,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.9471959960657341,
+      "top5_iou": 0.9471959960657341,
+      "top1_box": [
+        361.62813007831573,
+        88.78503401577473,
+        415.5208319425583,
+        222.72357313334942
+      ],
+      "top1_score": 0.044852446764707565,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_323151",
+      "image_id": 323151,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0003430037823809539,
+      "top5_iou": 0.9502190526758565,
+      "top1_box": [
+        275.1542866230011,
+        144.11484479904175,
+        380.83736300468445,
+        219.83065843582153
+      ],
+      "top1_score": 0.0471416674554348,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_119828",
+      "image_id": 119828,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.8900514653195494,
+      "top5_iou": 0.8900514653195494,
+      "top1_box": [
+        342.0812413096428,
+        114.40002545714378,
+        407.17310458421707,
+        164.94015231728554
+      ],
+      "top1_score": 0.05247101932764053,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_512476",
+      "image_id": 512476,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.091204104812123,
+      "top1_box": [
+        315.17805099487305,
+        288.1961096674204,
+        427.57890701293945,
+        355.28799234330654
+      ],
+      "top1_score": 0.06957589089870453,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_371552",
+      "image_id": 371552,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.011021185739725155,
+      "top1_box": [
+        46.79321765899658,
+        198.33652856945992,
+        148.22076320648193,
+        236.3575677573681
+      ],
+      "top1_score": 0.04025234282016754,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_454404",
+      "image_id": 454404,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.113456980614529,
+      "top5_iou": 0.11837616278996728,
+      "top1_box": [
+        177.73887634277344,
+        435.8733455836773,
+        299.95849609375,
+        525.4990816414356
+      ],
+      "top1_score": 0.06508655101060867,
+      "gate_mean": 0.10630001872777939
+    }
+  ],
+  "unseen_rows_baseline": [
+    {
+      "benchmark_id": "drink_from_35326",
+      "image_id": 35326,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.1048315310618492,
+      "top5_iou": 0.7108555069991377,
+      "top1_box": [
+        85.1015567779541,
+        181.1895203590393,
+        193.981294631958,
+        338.9112067222595
+      ],
+      "top1_score": 0.16017985343933105,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_120420",
+      "image_id": 120420,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        157.28684425354004,
+        185.15236973762512,
+        424.3410396575928,
+        264.6359431743622
+      ],
+      "top1_score": 0.12528091669082642,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_18575",
+      "image_id": 18575,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.009458651500582244,
+      "top1_box": [
+        321.4506721496582,
+        164.44862365722656,
+        629.0353202819824,
+        453.7570381164551
+      ],
+      "top1_score": 0.06366121768951416,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_13923",
+      "image_id": 13923,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.05100472367182925,
+      "top5_iou": 0.9232842581022356,
+      "top1_box": [
+        200.95780849456787,
+        239.09282551705837,
+        251.611008644104,
+        262.08770240843296
+      ],
+      "top1_score": 0.11701864004135132,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_66231",
+      "image_id": 66231,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        330.51080226898193,
+        133.47925266623497,
+        449.9484872817993,
+        422.82141199707985
+      ],
+      "top1_score": 0.08424904197454453,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_429690",
+      "image_id": 429690,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.017410240048420695,
+      "top5_iou": 0.12818079408162053,
+      "top1_box": [
+        254.42930221557617,
+        100.74228635430336,
+        408.63420486450195,
+        365.7640584409237
+      ],
+      "top1_score": 0.08469662815332413,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_142620",
+      "image_id": 142620,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.3872167189276198,
+      "top1_box": [
+        39.291133880615234,
+        364.5716613382101,
+        103.0943489074707,
+        424.00408543646336
+      ],
+      "top1_score": 0.07683729380369186,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_561889",
+      "image_id": 561889,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.17084068511803094,
+      "top5_iou": 0.19638580119997237,
+      "top1_box": [
+        55.1289176940918,
+        7.442336082458496,
+        566.3347434997559,
+        466.6111707687378
+      ],
+      "top1_score": 0.10152365267276764,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_95707",
+      "image_id": 95707,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.004902996626577859,
+      "top5_iou": 0.24517503905341773,
+      "top1_box": [
+        8.012638092041016,
+        12.503267526626587,
+        519.2737770080566,
+        355.9327304363251
+      ],
+      "top1_score": 0.10196422040462494,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_215072",
+      "image_id": 215072,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.14488044700787986,
+      "top1_box": [
+        125.68539142608643,
+        321.56534857302904,
+        169.21903133392334,
+        427.12033527344465
+      ],
+      "top1_score": 0.07027305662631989,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_405279",
+      "image_id": 405279,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.5714016090866232,
+      "top1_box": [
+        527.6790648698807,
+        343.4442485868931,
+        544.7357910871506,
+        352.72108420729637
+      ],
+      "top1_score": 0.08728130161762238,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_171190",
+      "image_id": 171190,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        397.0402264595032,
+        379.65999126434326,
+        435.4120135307312,
+        402.2166681289673
+      ],
+      "top1_score": 0.09070924669504166,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_361238",
+      "image_id": 361238,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.025052221574457474,
+      "top5_iou": 0.07152248027575403,
+      "top1_box": [
+        40.406150817871094,
+        235.00423192977905,
+        595.373649597168,
+        467.48201608657837
+      ],
+      "top1_score": 0.10900712758302689,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_191580",
+      "image_id": 191580,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.09173875312991163,
+      "top5_iou": 0.09173875312991163,
+      "top1_box": [
+        58.389425575733185,
+        148.89659881591797,
+        436.3363417983055,
+        501.0941696166992
+      ],
+      "top1_score": 0.09115707129240036,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_334483",
+      "image_id": 334483,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.02704404298663906,
+      "top5_iou": 0.02704404298663906,
+      "top1_box": [
+        321.6492247581482,
+        337.50255584716797,
+        470.20565271377563,
+        460.1748275756836
+      ],
+      "top1_score": 0.09460080415010452,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_260105",
+      "image_id": 260105,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.015049449192312287,
+      "top5_iou": 0.018591097087137548,
+      "top1_box": [
+        61.216773986816406,
+        54.37896251678467,
+        624.0332412719727,
+        429.28938388824463
+      ],
+      "top1_score": 0.10248766094446182,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_108253",
+      "image_id": 108253,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.07799323935847627,
+      "top5_iou": 0.9506021458026138,
+      "top1_box": [
+        327.368985414505,
+        231.4069128036499,
+        397.6267611980438,
+        348.3915185928345
+      ],
+      "top1_score": 0.0825151652097702,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_20553",
+      "image_id": 20553,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.23553512752570688,
+      "top5_iou": 0.23553512752570688,
+      "top1_box": [
+        85.50053089857101,
+        61.02822348475456,
+        303.1309023499489,
+        294.52162608504295
+      ],
+      "top1_score": 0.10744556784629822,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_123633",
+      "image_id": 123633,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.7948339254033953,
+      "top5_iou": 0.7948339254033953,
+      "top1_box": [
+        251.90629243850708,
+        396.60507559776306,
+        316.9942355155945,
+        450.0132143497467
+      ],
+      "top1_score": 0.0734528973698616,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_192904",
+      "image_id": 192904,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.06821053419161228,
+      "top5_iou": 0.7647337502041918,
+      "top1_box": [
+        295.4188013076782,
+        224.34455382823944,
+        443.7972021102905,
+        350.7352386713028
+      ],
+      "top1_score": 0.08778800070285797,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_513283",
+      "image_id": 513283,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.04143226150760594,
+      "top5_iou": 0.17999679464438112,
+      "top1_box": [
+        248.12634944915771,
+        160.57679653167725,
+        384.95150089263916,
+        406.39809131622314
+      ],
+      "top1_score": 0.11594559997320175,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_298396",
+      "image_id": 298396,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        352.1699047088623,
+        385.6490743160248,
+        472.40742683410645,
+        463.7574541568756
+      ],
+      "top1_score": 0.09117012470960617,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_287347",
+      "image_id": 287347,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.13392528008067955,
+      "top5_iou": 0.13392528008067955,
+      "top1_box": [
+        298.1297504901886,
+        468.74971628189087,
+        353.2704162597656,
+        534.5358061790466
+      ],
+      "top1_score": 0.08037420362234116,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_470773",
+      "image_id": 470773,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.040538281890480594,
+      "top5_iou": 0.0656134933152812,
+      "top1_box": [
+        243.7104034423828,
+        164.285888671875,
+        409.8533630371094,
+        320.895938873291
+      ],
+      "top1_score": 0.12042400240898132,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_338905",
+      "image_id": 338905,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.010567559911297755,
+      "top1_box": [
+        172.15905904769897,
+        311.87380492687225,
+        253.55271577835083,
+        352.7437287569046
+      ],
+      "top1_score": 0.05817028507590294,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_479248",
+      "image_id": 479248,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.8296383771741488,
+      "top5_iou": 0.8296383771741488,
+      "top1_box": [
+        46.83140158653259,
+        370.5791634321213,
+        86.11854195594788,
+        423.37009727954865
+      ],
+      "top1_score": 0.07896092534065247,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_27620",
+      "image_id": 27620,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        118.74950885772705,
+        121.76243126392365,
+        173.3689260482788,
+        160.5384796857834
+      ],
+      "top1_score": 0.08573412895202637,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_491008",
+      "image_id": 491008,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.6704043105387629,
+      "top1_box": [
+        290.4736614227295,
+        283.6586587652564,
+        399.39793586730957,
+        348.5010902658105
+      ],
+      "top1_score": 0.08224102854728699,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_378284",
+      "image_id": 378284,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.03291244399611565,
+      "top1_box": [
+        73.18534851074219,
+        111.27098277211189,
+        515.5959320068359,
+        340.62602648139
+      ],
+      "top1_score": 0.1098305881023407,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_136355",
+      "image_id": 136355,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.3565967730224966,
+      "top5_iou": 0.3565967730224966,
+      "top1_box": [
+        218.0872631072998,
+        60.378013983368874,
+        242.40551948547363,
+        114.52811704576015
+      ],
+      "top1_score": 0.08484804630279541,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_13546",
+      "image_id": 13546,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.02331755274578124,
+      "top5_iou": 0.02331755274578124,
+      "top1_box": [
+        463.6804676055908,
+        5.589120090007782,
+        579.1155529022217,
+        260.7270374894142
+      ],
+      "top1_score": 0.08163829892873764,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_177935",
+      "image_id": 177935,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.012380748437912655,
+      "top5_iou": 0.24403695102542405,
+      "top1_box": [
+        11.465392112731934,
+        169.4316864013672,
+        464.58113193511963,
+        635.9316253662109
+      ],
+      "top1_score": 0.0908561646938324,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_166918",
+      "image_id": 166918,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0026389351207758843,
+      "top1_box": [
+        197.13672280311584,
+        518.8663411140442,
+        279.9414002895355,
+        563.3225321769714
+      ],
+      "top1_score": 0.0733768567442894,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_64868",
+      "image_id": 64868,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.03644539052897454,
+      "top1_box": [
+        177.62183398008347,
+        168.17088145762682,
+        340.72840958833694,
+        258.85337870568037
+      ],
+      "top1_score": 0.09985561668872833,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_374052",
+      "image_id": 374052,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.023454729592402915,
+      "top5_iou": 0.9093676683663343,
+      "top1_box": [
+        478.3842992782593,
+        254.02897652238607,
+        533.2559442520142,
+        311.2334570065141
+      ],
+      "top1_score": 0.0786835178732872,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_282037",
+      "image_id": 282037,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        375.7394218444824,
+        189.60250839591026,
+        637.7768135070801,
+        446.37354305386543
+      ],
+      "top1_score": 0.09888514131307602,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_32334",
+      "image_id": 32334,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.5118156901176957,
+      "top5_iou": 0.8584070328386836,
+      "top1_box": [
+        162.6331925392151,
+        245.48222064971924,
+        235.2543044090271,
+        397.5598096847534
+      ],
+      "top1_score": 0.11832737922668457,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_183965",
+      "image_id": 183965,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.9658588476007085,
+      "top5_iou": 0.9658588476007085,
+      "top1_box": [
+        133.6601161956787,
+        88.60355615615845,
+        304.92459297180176,
+        237.78385877609253
+      ],
+      "top1_score": 0.11011654138565063,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_175535",
+      "image_id": 175535,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0001301238387321984,
+      "top5_iou": 0.0005220055719916095,
+      "top1_box": [
+        4.376576840877533,
+        35.829429626464844,
+        475.053558409214,
+        449.9299621582031
+      ],
+      "top1_score": 0.07811626046895981,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_290768",
+      "image_id": 290768,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.21946649085816822,
+      "top1_box": [
+        1.6086452007293701,
+        115.0537982583046,
+        115.76443612575531,
+        260.0256194472313
+      ],
+      "top1_score": 0.0674726590514183,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_25986",
+      "image_id": 25986,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.8357582146809411,
+      "top5_iou": 0.8357582146809411,
+      "top1_box": [
+        370.2418851852417,
+        199.46131467819214,
+        448.8631868362427,
+        304.1125988960266
+      ],
+      "top1_score": 0.12329275906085968,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_74733",
+      "image_id": 74733,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        96.48563557863235,
+        254.35088083148003,
+        351.29514116048813,
+        402.0601146519184
+      ],
+      "top1_score": 0.115224689245224,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_513041",
+      "image_id": 513041,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.9635647544666919,
+      "top1_box": [
+        173.1301784515381,
+        202.00545072555542,
+        402.25049018859863,
+        328.9625859260559
+      ],
+      "top1_score": 0.09086157381534576,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_287874",
+      "image_id": 287874,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.1351499971405769,
+      "top1_box": [
+        199.779052734375,
+        125.19703415036201,
+        406.81224822998047,
+        325.7750265300274
+      ],
+      "top1_score": 0.15692995488643646,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_289938",
+      "image_id": 289938,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.24980027026257737,
+      "top5_iou": 0.33437597185969037,
+      "top1_box": [
+        112.81328201293945,
+        174.37203258275986,
+        343.71782302856445,
+        409.2020614743233
+      ],
+      "top1_score": 0.10234726220369339,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_480122",
+      "image_id": 480122,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.16300637999295003,
+      "top1_box": [
+        258.0830144882202,
+        370.1830720901489,
+        374.40325260162354,
+        477.58586406707764
+      ],
+      "top1_score": 0.09543192386627197,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_99039",
+      "image_id": 99039,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.019990060342560755,
+      "top5_iou": 0.3229958091452825,
+      "top1_box": [
+        365.1254367828369,
+        356.67598843574524,
+        538.6102962493896,
+        459.16581988334656
+      ],
+      "top1_score": 0.07450376451015472,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "drink_from_482436",
+      "image_id": 482436,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.2217881733997139,
+      "top1_box": [
+        253.49056243896484,
+        343.74436911940575,
+        295.9346008300781,
+        370.6456325352192
+      ],
+      "top1_score": 0.06546717137098312,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "cut_with_160012",
+      "image_id": 160012,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.00575532048812564,
+      "top1_box": [
+        104.423828125,
+        197.593976020813,
+        620.3852081298828,
+        451.8516707420349
+      ],
+      "top1_score": 0.11457661539316177,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "sit_on_571313",
+      "image_id": 571313,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        192.87854075431824,
+        478.5918688774109,
+        302.724734544754,
+        537.1612286567688
+      ],
+      "top1_score": 0.09440100938081741,
+      "gate_mean": 0.0
+    }
+  ],
+  "unseen_rows_trained": [
+    {
+      "benchmark_id": "drink_from_35326",
+      "image_id": 35326,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.10753580521190231,
+      "top5_iou": 0.24432046850563807,
+      "top1_box": [
+        85.45009136199951,
+        183.0878233909607,
+        193.02225589752197,
+        338.71212244033813
+      ],
+      "top1_score": 0.06807012110948563,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_120420",
+      "image_id": 120420,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        157.98212051391602,
+        185.94255566596985,
+        423.92473220825195,
+        264.17171359062195
+      ],
+      "top1_score": 0.06324483454227448,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_18575",
+      "image_id": 18575,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.009718426706466367,
+      "top5_iou": 0.009718426706466367,
+      "top1_box": [
+        3.4859275817871094,
+        88.74130725860596,
+        331.99087142944336,
+        431.65278911590576
+      ],
+      "top1_score": 0.028458189219236374,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_13923",
+      "image_id": 13923,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.051704337248713025,
+      "top5_iou": 0.9259259015814499,
+      "top1_box": [
+        200.9827470779419,
+        238.9504921603948,
+        252.0061445236206,
+        262.02209959737957
+      ],
+      "top1_score": 0.05438007414340973,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_66231",
+      "image_id": 66231,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        330.42160987854004,
+        133.78721198439598,
+        450.708532333374,
+        423.51582208275795
+      ],
+      "top1_score": 0.034106139093637466,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_429690",
+      "image_id": 429690,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.12998078437039615,
+      "top1_box": [
+        175.91753959655762,
+        351.8547934871167,
+        361.98033332824707,
+        374.3541533369571
+      ],
+      "top1_score": 0.042124856263399124,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_142620",
+      "image_id": 142620,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.875266461032555,
+      "top1_box": [
+        39.923095703125,
+        364.81407791376114,
+        102.70228385925293,
+        424.2819930911064
+      ],
+      "top1_score": 0.030418463051319122,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_561889",
+      "image_id": 561889,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.134264735601983,
+      "top5_iou": 0.19383261366611576,
+      "top1_box": [
+        119.83631134033203,
+        17.8859281539917,
+        518.2623291015625,
+        451.7917013168335
+      ],
+      "top1_score": 0.05273441597819328,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_95707",
+      "image_id": 95707,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.004302842705495135,
+      "top5_iou": 0.24279506359882272,
+      "top1_box": [
+        11.741390228271484,
+        13.181705474853516,
+        516.7698860168457,
+        358.1131410598755
+      ],
+      "top1_score": 0.04746979847550392,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_215072",
+      "image_id": 215072,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.045408049188099674,
+      "top5_iou": 0.05997498841435351,
+      "top1_box": [
+        88.83163452148438,
+        324.38004010915756,
+        364.7475051879883,
+        448.55906146764755
+      ],
+      "top1_score": 0.03074987232685089,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_405279",
+      "image_id": 405279,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.5477141879631872,
+      "top1_box": [
+        527.6475661993027,
+        343.73845785856247,
+        544.9638229608536,
+        352.9812267422676
+      ],
+      "top1_score": 0.04311370849609375,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_171190",
+      "image_id": 171190,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        396.9609749317169,
+        379.49062943458557,
+        435.657662153244,
+        402.78308272361755
+      ],
+      "top1_score": 0.03853131830692291,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_361238",
+      "image_id": 361238,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.024191413159983,
+      "top5_iou": 0.732154961717762,
+      "top1_box": [
+        41.45172119140625,
+        234.39491987228394,
+        595.5988311767578,
+        468.2608151435852
+      ],
+      "top1_score": 0.04287416487932205,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_191580",
+      "image_id": 191580,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.08702385729297057,
+      "top5_iou": 0.8510165660215958,
+      "top1_box": [
+        55.88399648666382,
+        16.463565826416016,
+        452.43779969215393,
+        507.8643608093262
+      ],
+      "top1_score": 0.039910923689603806,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_334483",
+      "image_id": 334483,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.02795186174714874,
+      "top5_iou": 0.02795186174714874,
+      "top1_box": [
+        322.7382016181946,
+        339.46505069732666,
+        469.74100828170776,
+        459.4075536727905
+      ],
+      "top1_score": 0.0440247505903244,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_260105",
+      "image_id": 260105,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.01492956795069661,
+      "top5_iou": 0.01782093863062852,
+      "top1_box": [
+        66.37319564819336,
+        55.10178565979004,
+        623.0597114562988,
+        432.58721351623535
+      ],
+      "top1_score": 0.053637485951185226,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_108253",
+      "image_id": 108253,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.936035600161482,
+      "top5_iou": 0.9411549922041935,
+      "top1_box": [
+        236.48050546646118,
+        2.021656036376953,
+        366.0137343406677,
+        317.6095771789551
+      ],
+      "top1_score": 0.03842814266681671,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_20553",
+      "image_id": 20553,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.23837202248063413,
+      "top5_iou": 0.23837202248063413,
+      "top1_box": [
+        85.77117323875427,
+        61.46569177508354,
+        303.18087339401245,
+        295.6865094602108
+      ],
+      "top1_score": 0.04647029563784599,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_123633",
+      "image_id": 123633,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.7794898459066418,
+      "top1_box": [
+        448.1626069545746,
+        389.5239955186844,
+        485.4170286655426,
+        411.74948394298553
+      ],
+      "top1_score": 0.031054940074682236,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_192904",
+      "image_id": 192904,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.06819198521475467,
+      "top5_iou": 0.610152096340461,
+      "top1_box": [
+        295.9135389328003,
+        224.02673816680908,
+        443.50822925567627,
+        351.05398988723755
+      ],
+      "top1_score": 0.043304864317178726,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_513283",
+      "image_id": 513283,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.043006654334379155,
+      "top5_iou": 0.4705128503260456,
+      "top1_box": [
+        248.7110710144043,
+        160.95978677272797,
+        384.7625541687012,
+        407.6568132638931
+      ],
+      "top1_score": 0.05297886207699776,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_298396",
+      "image_id": 298396,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        352.5874900817871,
+        385.5333173274994,
+        471.95085525512695,
+        463.7469255924225
+      ],
+      "top1_score": 0.03973730653524399,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_287347",
+      "image_id": 287347,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.12562843626361417,
+      "top5_iou": 0.12562843626361417,
+      "top1_box": [
+        298.3868231847882,
+        469.70608472824097,
+        352.8212571069598,
+        534.3270421028137
+      ],
+      "top1_score": 0.03378613665699959,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_470773",
+      "image_id": 470773,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.040879082495551354,
+      "top5_iou": 0.047960044489226875,
+      "top1_box": [
+        244.2923927307129,
+        165.34175634384155,
+        409.23871994018555,
+        321.7728638648987
+      ],
+      "top1_score": 0.0499667264521122,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_338905",
+      "image_id": 338905,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.010332383311818448,
+      "top1_box": [
+        170.29230952262878,
+        311.87603652477264,
+        254.23906445503235,
+        352.74424374103546
+      ],
+      "top1_score": 0.025046829134225845,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_479248",
+      "image_id": 479248,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.8383906562161672,
+      "top5_iou": 0.8383906562161672,
+      "top1_box": [
+        46.9665002822876,
+        370.71084916591644,
+        85.81587314605713,
+        423.5393339395523
+      ],
+      "top1_score": 0.031300146132707596,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_27620",
+      "image_id": 27620,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        118.75616788864136,
+        122.59982585906982,
+        172.7531933784485,
+        160.64713954925537
+      ],
+      "top1_score": 0.03963764011859894,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_491008",
+      "image_id": 491008,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.6322585973061874,
+      "top1_box": [
+        290.6336975097656,
+        284.1855396181345,
+        399.0900421142578,
+        348.5586194843054
+      ],
+      "top1_score": 0.03808828070759773,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_378284",
+      "image_id": 378284,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.03264641264085683,
+      "top1_box": [
+        76.62572860717773,
+        110.61772724986076,
+        515.0613212585449,
+        342.6139420568943
+      ],
+      "top1_score": 0.05615489184856415,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_136355",
+      "image_id": 136355,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.33388798502833317,
+      "top1_box": [
+        242.37650871276855,
+        265.7263499200344,
+        289.768648147583,
+        313.50598362088203
+      ],
+      "top1_score": 0.03439868986606598,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_13546",
+      "image_id": 13546,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0072160563866740515,
+      "top5_iou": 0.7905671308081162,
+      "top1_box": [
+        10.26580810546875,
+        81.60524442791939,
+        105.90550422668457,
+        193.7429778277874
+      ],
+      "top1_score": 0.04006551206111908,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_177935",
+      "image_id": 177935,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.01237481484811482,
+      "top5_iou": 0.25006287759708773,
+      "top1_box": [
+        12.926344871520996,
+        169.12878036499023,
+        464.852499961853,
+        637.0809364318848
+      ],
+      "top1_score": 0.04119867458939552,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_166918",
+      "image_id": 166918,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0030856576828190182,
+      "top1_box": [
+        196.59554600715637,
+        518.6566281318665,
+        279.966105222702,
+        563.4517550468445
+      ],
+      "top1_score": 0.033878475427627563,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_64868",
+      "image_id": 64868,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.8786321502945695,
+      "top1_box": [
+        177.89376527071,
+        168.5827486217022,
+        341.55910462141037,
+        259.22055914998055
+      ],
+      "top1_score": 0.04219844192266464,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_374052",
+      "image_id": 374052,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.023140146158136747,
+      "top5_iou": 0.025171847432388036,
+      "top1_box": [
+        478.68351221084595,
+        254.40303574502468,
+        533.1142020225525,
+        311.18451119959354
+      ],
+      "top1_score": 0.03960639238357544,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_282037",
+      "image_id": 282037,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        376.00749015808105,
+        190.02531552314758,
+        638.280839920044,
+        447.39853286743164
+      ],
+      "top1_score": 0.04806985706090927,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_32334",
+      "image_id": 32334,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.5182889997710192,
+      "top5_iou": 0.8611194626745855,
+      "top1_box": [
+        163.0591058731079,
+        245.8862328529358,
+        234.82415676116943,
+        397.8558325767517
+      ],
+      "top1_score": 0.04718323051929474,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_183965",
+      "image_id": 183965,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.9662319960582489,
+      "top5_iou": 0.9662319960582489,
+      "top1_box": [
+        134.00273323059082,
+        90.37084579467773,
+        303.27479362487793,
+        237.61001586914062
+      ],
+      "top1_score": 0.05468686670064926,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_175535",
+      "image_id": 175535,
+      "affordance_id": "cut_with",
+      "top1_iou": 8.265432477849093e-06,
+      "top5_iou": 0.00015771525413848492,
+      "top1_box": [
+        6.428371906280518,
+        36.14816665649414,
+        474.44659996032715,
+        456.4605140686035
+      ],
+      "top1_score": 0.03803679719567299,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_290768",
+      "image_id": 290768,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.23227729646512874,
+      "top1_box": [
+        1.0753681361675262,
+        116.24102175235748,
+        115.49397423863411,
+        259.973264336586
+      ],
+      "top1_score": 0.03305549919605255,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_25986",
+      "image_id": 25986,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.8257830602999852,
+      "top5_iou": 0.8257830602999852,
+      "top1_box": [
+        370.9543704986572,
+        199.83719944953918,
+        449.01976585388184,
+        303.6552894115448
+      ],
+      "top1_score": 0.05316068232059479,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_74733",
+      "image_id": 74733,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        96.9216576218605,
+        254.12190359830856,
+        351.2732908129692,
+        402.93548280000687
+      ],
+      "top1_score": 0.05613033473491669,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_513041",
+      "image_id": 513041,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.9731127177107023,
+      "top1_box": [
+        174.1597843170166,
+        203.45937967300415,
+        401.4902400970459,
+        328.7233328819275
+      ],
+      "top1_score": 0.038001734763383865,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_287874",
+      "image_id": 287874,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.12983148599578587,
+      "top1_box": [
+        199.46709632873535,
+        125.09362515807152,
+        407.3282527923584,
+        327.59454622864723
+      ],
+      "top1_score": 0.07002761960029602,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_289938",
+      "image_id": 289938,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.2490527229147127,
+      "top5_iou": 0.3738118142996257,
+      "top1_box": [
+        113.75569343566895,
+        174.79067623615265,
+        344.4149684906006,
+        410.57601249217987
+      ],
+      "top1_score": 0.03986059129238129,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_480122",
+      "image_id": 480122,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.1683540051370709,
+      "top1_box": [
+        258.97571563720703,
+        371.8348550796509,
+        373.5080337524414,
+        477.10885524749756
+      ],
+      "top1_score": 0.04256081581115723,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_99039",
+      "image_id": 99039,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.019890467016270147,
+      "top5_iou": 0.3241720238833693,
+      "top1_box": [
+        365.22958755493164,
+        356.72595262527466,
+        538.2948112487793,
+        458.7654376029968
+      ],
+      "top1_score": 0.034400466829538345,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "drink_from_482436",
+      "image_id": 482436,
+      "affordance_id": "drink_from",
+      "top1_iou": 0.0,
+      "top5_iou": 0.23561885832393786,
+      "top1_box": [
+        25.785136222839355,
+        269.05298878997564,
+        92.286057472229,
+        364.76910243183374
+      ],
+      "top1_score": 0.02967670001089573,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "cut_with_160012",
+      "image_id": 160012,
+      "affordance_id": "cut_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.02304844388031764,
+      "top1_box": [
+        108.18103790283203,
+        199.0654640197754,
+        619.7104263305664,
+        447.0972521305084
+      ],
+      "top1_score": 0.055016640573740005,
+      "gate_mean": 0.10630001872777939
+    },
+    {
+      "benchmark_id": "sit_on_571313",
+      "image_id": 571313,
+      "affordance_id": "sit_on",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        193.72169852256775,
+        478.5558748245239,
+        302.8653681278229,
+        537.0682096481323
+      ],
+      "top1_score": 0.04143918678164482,
+      "gate_mean": 0.10630001872777939
+    }
+  ],
+  "split_validation": {
+    "train_unique_image_ids": 100,
+    "unseen_unique_image_ids": 50,
+    "train_duplicate_image_ids": {},
+    "unseen_duplicate_image_ids": {},
+    "train_unseen_overlap_count": 0,
+    "train_unseen_overlap_image_ids": []
+  },
+  "per_prompt_results": {
+    "train": {
+      "cut_with": {
+        "prompt": "something to cut with .",
+        "baseline": {
+          "n": 30,
+          "top1_hit@0.5": 0.06666666666666667,
+          "top5_hit@0.5": 0.36666666666666664,
+          "mean_top1_iou": 0.09099783895944641,
+          "mean_top5_iou": 0.36708820282196203
+        },
+        "trained": {
+          "n": 30,
+          "top1_hit@0.5": 0.03333333333333333,
+          "top5_hit@0.5": 0.4,
+          "mean_top1_iou": 0.07492392434307507,
+          "mean_top5_iou": 0.4034137039720372
+        },
+        "delta": {
+          "top1_hit@0.5": -0.03333333333333333,
+          "top5_hit@0.5": 0.03333333333333338,
+          "mean_top1_iou": -0.016073914616371338,
+          "mean_top5_iou": 0.03632550115007516
+        }
+      },
+      "drink_from": {
+        "prompt": "something to drink from .",
+        "baseline": {
+          "n": 31,
+          "top1_hit@0.5": 0.41935483870967744,
+          "top5_hit@0.5": 0.9032258064516129,
+          "mean_top1_iou": 0.37886620883664035,
+          "mean_top5_iou": 0.7665312905867414
+        },
+        "trained": {
+          "n": 31,
+          "top1_hit@0.5": 0.41935483870967744,
+          "top5_hit@0.5": 0.9354838709677419,
+          "mean_top1_iou": 0.38119728907973505,
+          "mean_top5_iou": 0.8037806427452545
+        },
+        "delta": {
+          "top1_hit@0.5": 0.0,
+          "top5_hit@0.5": 0.032258064516129004,
+          "mean_top1_iou": 0.0023310802430946964,
+          "mean_top5_iou": 0.037249352158513105
+        }
+      },
+      "sit_on": {
+        "prompt": "something to sit on .",
+        "baseline": {
+          "n": 39,
+          "top1_hit@0.5": 0.05128205128205128,
+          "top5_hit@0.5": 0.1794871794871795,
+          "mean_top1_iou": 0.09597945899084614,
+          "mean_top5_iou": 0.23059037102450602
+        },
+        "trained": {
+          "n": 39,
+          "top1_hit@0.5": 0.07692307692307693,
+          "top5_hit@0.5": 0.1794871794871795,
+          "mean_top1_iou": 0.11781665569677485,
+          "mean_top5_iou": 0.2301981665326358
+        },
+        "delta": {
+          "top1_hit@0.5": 0.025641025641025647,
+          "top5_hit@0.5": 0.0,
+          "mean_top1_iou": 0.021837196705928708,
+          "mean_top5_iou": -0.00039220449187021833
+        }
+      }
+    },
+    "unseen": {
+      "cut_with": {
+        "prompt": "something to cut with .",
+        "baseline": {
+          "n": 22,
+          "top1_hit@0.5": 0.045454545454545456,
+          "top5_hit@0.5": 0.09090909090909091,
+          "mean_top1_iou": 0.06058257037328536,
+          "mean_top5_iou": 0.14145787617750044
+        },
+        "trained": {
+          "n": 22,
+          "top1_hit@0.5": 0.0,
+          "top5_hit@0.5": 0.13636363636363635,
+          "mean_top1_iou": 0.022731297517222627,
+          "mean_top5_iou": 0.1872250016650787
+        },
+        "delta": {
+          "top1_hit@0.5": -0.045454545454545456,
+          "top5_hit@0.5": 0.04545454545454544,
+          "mean_top1_iou": -0.03785127285606274,
+          "mean_top5_iou": 0.04576712548757825
+        }
+      },
+      "drink_from": {
+        "prompt": "something to drink from .",
+        "baseline": {
+          "n": 15,
+          "top1_hit@0.5": 0.26666666666666666,
+          "top5_hit@0.5": 0.4666666666666667,
+          "mean_top1_iou": 0.2651556816797275,
+          "mean_top5_iou": 0.5327004429153558
+        },
+        "trained": {
+          "n": 15,
+          "top1_hit@0.5": 0.3333333333333333,
+          "top5_hit@0.5": 0.6,
+          "mean_top1_iou": 0.30205391799985803,
+          "mean_top5_iou": 0.6309088397776017
+        },
+        "delta": {
+          "top1_hit@0.5": 0.06666666666666665,
+          "top5_hit@0.5": 0.1333333333333333,
+          "mean_top1_iou": 0.03689823632013056,
+          "mean_top5_iou": 0.09820839686224592
+        }
+      },
+      "sit_on": {
+        "prompt": "something to sit on .",
+        "baseline": {
+          "n": 13,
+          "top1_hit@0.5": 0.0,
+          "top5_hit@0.5": 0.3076923076923077,
+          "mean_top1_iou": 0.03222560829044256,
+          "mean_top5_iou": 0.28392082748100544
+        },
+        "trained": {
+          "n": 13,
+          "top1_hit@0.5": 0.0,
+          "top5_hit@0.5": 0.3076923076923077,
+          "mean_top1_iou": 0.029894195960685585,
+          "mean_top5_iou": 0.26136272745941674
+        },
+        "delta": {
+          "top1_hit@0.5": 0.0,
+          "top5_hit@0.5": 0.0,
+          "mean_top1_iou": -0.0023314123297569767,
+          "mean_top5_iou": -0.0225581000215887
+        }
+      }
+    }
+  },
+  "success_condition": {
+    "unseen_top1_ge_baseline": true,
+    "unseen_top5_above_baseline": true,
+    "unseen_mean_top5_iou_not_collapsed": true,
+    "train_delta_memory_le_0p5": true,
+    "unseen_delta_memory_le_0p5": true,
+    "train_unseen_overlap_zero": true,
+    "prediction_change_rate_controlled_threshold": 0.5,
+    "train_prediction_change_rate_controlled": true,
+    "unseen_prediction_change_rate_controlled": true
+  },
+  "comparison_against_previous_runs": [
+    {
+      "label": "clamped_no_rank",
+      "best_step": null,
+      "lambda_rank": 0.0,
+      "selection_metric": "none",
+      "top1_hit@0.5": 0.08,
+      "top5_hit@0.5": 0.34,
+      "mean_top1_iou": 0.09161868870355352,
+      "mean_top5_iou": 0.3447857888203982,
+      "delta_top1": -0.020000000000000004,
+      "delta_top5": 0.08000000000000002,
+      "combined_top1_top5": 0.42000000000000004,
+      "prediction_change_unseen": 0.16
+    },
+    {
+      "label": "clamped_rank_0p5",
+      "best_step": 20,
+      "lambda_rank": 0.5,
+      "selection_metric": "none",
+      "top1_hit@0.5": 0.12,
+      "top5_hit@0.5": 0.28,
+      "mean_top1_iou": 0.12978811942271293,
+      "mean_top5_iou": 0.30520712915432224,
+      "delta_top1": 0.01999999999999999,
+      "delta_top5": 0.020000000000000018,
+      "combined_top1_top5": 0.4,
+      "prediction_change_unseen": 0.18
+    },
+    {
+      "label": "clamped_rank_0p2_combined",
+      "best_step": 80,
+      "lambda_rank": 0.2,
+      "selection_metric": "combined_top1",
+      "top1_hit@0.5": 0.1,
+      "top5_hit@0.5": 0.32,
+      "mean_top1_iou": 0.10839043725731362,
+      "mean_top5_iou": 0.3396059618053635,
+      "delta_top1": 0.0,
+      "delta_top5": 0.06,
+      "combined_top1_top5": 0.42000000000000004,
+      "prediction_change_unseen": 0.22
+    }
+  ]
+}

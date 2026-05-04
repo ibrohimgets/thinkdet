@@ -1,0 +1,65 @@
+{
+  "checkpoint": "thinkdet/checkpoints/stage1_tma/smoke_test/thinkdet_tma_stage1_epoch1.pth",
+  "conf_thresh": 0.3,
+  "conf_thresh_low": 0.1,
+  "baseline": {
+    "conf0.3": {
+      "mAP": 0.4316,
+      "mAP_50": 0.5694,
+      "mAP_75": 0.47,
+      "mAP_S": 0.2806,
+      "mAP_M": 0.4593,
+      "mAP_L": 0.5835,
+      "mAR_1": 0.3431,
+      "mAR_10": 0.5154,
+      "mAR_100": 0.5312
+    },
+    "conf0.1": {
+      "mAP": 0.4644,
+      "mAP_50": 0.6157,
+      "mAP_75": 0.5067,
+      "mAP_S": 0.3185,
+      "mAP_M": 0.4955,
+      "mAP_L": 0.6098,
+      "mAR_1": 0.3618,
+      "mAR_10": 0.5967,
+      "mAR_100": 0.6363
+    },
+    "num_predictions_hi": 51021,
+    "num_predictions_lo": 210727,
+    "mean_logit_magnitude": 33.7441
+  },
+  "tma": {
+    "conf0.3": {
+      "mAP": 0.0568,
+      "mAP_50": 0.0761,
+      "mAP_75": 0.0643,
+      "mAP_S": 0.0535,
+      "mAP_M": 0.0676,
+      "mAP_L": 0.0554,
+      "mAR_1": 0.0581,
+      "mAR_10": 0.0683,
+      "mAR_100": 0.0687
+    },
+    "conf0.1": {
+      "mAP": 0.3098,
+      "mAP_50": 0.4286,
+      "mAP_75": 0.3422,
+      "mAP_S": 0.2364,
+      "mAP_M": 0.3654,
+      "mAP_L": 0.3778,
+      "mAR_1": 0.3219,
+      "mAR_10": 0.5185,
+      "mAR_100": 0.5646
+    },
+    "num_predictions_hi": 3236,
+    "num_predictions_lo": 193832,
+    "mean_logit_magnitude": 32.8966
+  },
+  "delta": {
+    "mAP_conf0.3": -0.3748,
+    "mAP_conf0.1": -0.1546,
+    "num_predictions_hi": -47785,
+    "mean_logit_magnitude": -0.8475
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "status": "ok",
+  "source_summary": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/visual_comparison_summary.json",
+  "output_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_more5_20260218_232738",
+  "num_cases": 5,
+  "cases": [
+    {
+      "index": 1,
+      "rank_from_source": 1,
+      "prompt": "the right most glass glass top right corner lowest .",
+      "image_id": 538544,
+      "ref_id": 3791,
+      "baseline_iou": 0.0,
+      "tma_iou": 0.9632543325424194,
+      "iou_gap": 0.9632543325424194,
+      "grid_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_more5_20260218_232738/01_the_right_most_glass_glass_top_right_corne.png",
+      "source_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank1_img538544_the_right_most_glass_glass_top_right/comparison_grid.png"
+    },
+    {
+      "index": 2,
+      "rank_from_source": 2,
+      "prompt": "chair on left by standing person .",
+      "image_id": 485014,
+      "ref_id": 8445,
+      "baseline_iou": 0.0,
+      "tma_iou": 0.92561274766922,
+      "iou_gap": 0.92561274766922,
+      "grid_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_more5_20260218_232738/02_chair_on_left_by_standing_person.png",
+      "source_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank2_img485014_chair_on_left_by_standing_person/comparison_grid.png"
+    },
+    {
+      "index": 3,
+      "rank_from_source": 3,
+      "prompt": "guy on the left in back .",
+      "image_id": 538263,
+      "ref_id": 3822,
+      "baseline_iou": 0.0,
+      "tma_iou": 0.9129770994186401,
+      "iou_gap": 0.9129770994186401,
+      "grid_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_more5_20260218_232738/03_guy_on_the_left_in_back.png",
+      "source_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank3_img538263_guy_on_the_left_in_back/comparison_grid.png"
+    },
+    {
+      "index": 4,
+      "rank_from_source": 5,
+      "prompt": "the guy in orange behind the guy on phone .",
+      "image_id": 508429,
+      "ref_id": 6397,
+      "baseline_iou": 0.04628022015094757,
+      "tma_iou": 0.93699049949646,
+      "iou_gap": 0.8907102793455124,
+      "grid_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_more5_20260218_232738/04_the_guy_in_orange_behind_the_guy_on_phone.png",
+      "source_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank5_img508429_the_guy_in_orange_behind_the_guy_on_/comparison_grid.png"
+    },
+    {
+      "index": 5,
+      "rank_from_source": 9,
+      "prompt": "the rightmost sheep towards the bottom of the image its not the one being fed .",
+      "image_id": 521618,
+      "ref_id": 5231,
+      "baseline_iou": 0.12105224281549454,
+      "tma_iou": 0.9542661905288696,
+      "iou_gap": 0.8332139477133751,
+      "grid_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_more5_20260218_232738/05_the_rightmost_sheep_towards_the_bottom_of_.png",
+      "source_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank9_img521618_the_rightmost_sheep_towards_the_bott/comparison_grid.png"
+    }
+  ]
+}

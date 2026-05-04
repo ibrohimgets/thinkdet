@@ -1,0 +1,4308 @@
+{
+  "status": "partial",
+  "timestamp": "20260225_130245",
+  "benchmark_path": "/home/iibrohimm/project/next_step/thinkdet/data/benchmarks/affordance_coco_val_heldout_v1.json",
+  "split": "test",
+  "n_samples": 512,
+  "top_k": 5,
+  "device": "cuda:0",
+  "requested_models": [
+    "owlvit",
+    "glip_t"
+  ],
+  "results": {
+    "owlvit": {
+      "overall": {
+        "n_samples": 512,
+        "mean_best_iou_top1": 0.24827894165080944,
+        "mean_best_iou_topk": 0.4380575765159154,
+        "hit@0.5_top1": 0.251953125,
+        "hit@0.5_topk": 0.46484375,
+        "hit@0.75_top1": 0.14453125,
+        "hit@0.75_topk": 0.283203125,
+        "precision@0.5_top1": 0.251953125,
+        "precision@0.5_topk": 0.1804687500000004,
+        "recall@0.5_top1": 0.251953125,
+        "recall@0.5_topk": 0.46484375
+      },
+      "per_affordance": {
+        "carry_in": {
+          "n_samples": 64,
+          "mean_best_iou_top1": 0.32316521180429175,
+          "mean_best_iou_topk": 0.5654037672712304,
+          "hit@0.5_top1": 0.359375,
+          "hit@0.5_topk": 0.625,
+          "hit@0.75_top1": 0.234375,
+          "hit@0.75_topk": 0.4375,
+          "precision@0.5_top1": 0.359375,
+          "precision@0.5_topk": 0.23124999999999998,
+          "recall@0.5_top1": 0.359375,
+          "recall@0.5_topk": 0.625
+        },
+        "cut_with": {
+          "n_samples": 64,
+          "mean_best_iou_top1": 0.31577391150100254,
+          "mean_best_iou_topk": 0.5215908814643158,
+          "hit@0.5_top1": 0.28125,
+          "hit@0.5_topk": 0.5625,
+          "hit@0.75_top1": 0.140625,
+          "hit@0.75_topk": 0.265625,
+          "precision@0.5_top1": 0.28125,
+          "precision@0.5_topk": 0.17812499999999995,
+          "recall@0.5_top1": 0.28125,
+          "recall@0.5_topk": 0.5625
+        },
+        "drink_from": {
+          "n_samples": 64,
+          "mean_best_iou_top1": 0.4727884223400273,
+          "mean_best_iou_topk": 0.720455794874864,
+          "hit@0.5_top1": 0.546875,
+          "hit@0.5_topk": 0.84375,
+          "hit@0.75_top1": 0.3125,
+          "hit@0.75_topk": 0.578125,
+          "precision@0.5_top1": 0.546875,
+          "precision@0.5_topk": 0.4187499999999999,
+          "recall@0.5_top1": 0.546875,
+          "recall@0.5_topk": 0.84375
+        },
+        "eat_with": {
+          "n_samples": 64,
+          "mean_best_iou_top1": 0.07024240274652259,
+          "mean_best_iou_topk": 0.1960896722595982,
+          "hit@0.5_top1": 0.046875,
+          "hit@0.5_topk": 0.125,
+          "hit@0.75_top1": 0.0,
+          "hit@0.75_topk": 0.015625,
+          "precision@0.5_top1": 0.046875,
+          "precision@0.5_topk": 0.028124999999999997,
+          "recall@0.5_top1": 0.046875,
+          "recall@0.5_topk": 0.125
+        },
+        "read": {
+          "n_samples": 64,
+          "mean_best_iou_top1": 0.3143814347896864,
+          "mean_best_iou_topk": 0.5526510984659208,
+          "hit@0.5_top1": 0.328125,
+          "hit@0.5_topk": 0.640625,
+          "hit@0.75_top1": 0.1875,
+          "hit@0.75_topk": 0.359375,
+          "precision@0.5_top1": 0.328125,
+          "precision@0.5_topk": 0.2625,
+          "recall@0.5_top1": 0.328125,
+          "recall@0.5_topk": 0.640625
+        },
+        "ride": {
+          "n_samples": 64,
+          "mean_best_iou_top1": 0.3205926509813927,
+          "mean_best_iou_topk": 0.5371691611769365,
+          "hit@0.5_top1": 0.28125,
+          "hit@0.5_topk": 0.578125,
+          "hit@0.75_top1": 0.171875,
+          "hit@0.75_topk": 0.359375,
+          "precision@0.5_top1": 0.28125,
+          "precision@0.5_topk": 0.20624999999999996,
+          "recall@0.5_top1": 0.28125,
+          "recall@0.5_topk": 0.578125
+        },
+        "sit_on": {
+          "n_samples": 64,
+          "mean_best_iou_top1": 0.05027768806543951,
+          "mean_best_iou_topk": 0.1542706853629829,
+          "hit@0.5_top1": 0.03125,
+          "hit@0.5_topk": 0.09375,
+          "hit@0.75_top1": 0.015625,
+          "hit@0.75_topk": 0.0625,
+          "precision@0.5_top1": 0.03125,
+          "precision@0.5_topk": 0.024999999999999998,
+          "recall@0.5_top1": 0.03125,
+          "recall@0.5_topk": 0.09375
+        },
+        "talk_on": {
+          "n_samples": 64,
+          "mean_best_iou_top1": 0.11900981097811386,
+          "mean_best_iou_topk": 0.25682955125147444,
+          "hit@0.5_top1": 0.140625,
+          "hit@0.5_topk": 0.25,
+          "hit@0.75_top1": 0.09375,
+          "hit@0.75_topk": 0.1875,
+          "precision@0.5_top1": 0.140625,
+          "precision@0.5_topk": 0.09375000000000003,
+          "recall@0.5_top1": 0.140625,
+          "recall@0.5_topk": 0.25
+        }
+      },
+      "per_sample": [
+        {
+          "benchmark_id": "carry_in_17959",
+          "image_id": 17959,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.8692140913024897,
+          "top1_score": 0.0066213360987603664
+        },
+        {
+          "benchmark_id": "carry_in_31093",
+          "image_id": 31093,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.08286035805940628
+        },
+        {
+          "benchmark_id": "carry_in_33221",
+          "image_id": 33221,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.3257192075252533
+        },
+        {
+          "benchmark_id": "carry_in_42628",
+          "image_id": 42628,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.12164125591516495
+        },
+        {
+          "benchmark_id": "carry_in_55167",
+          "image_id": 55167,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.04760167747735977
+        },
+        {
+          "benchmark_id": "carry_in_57597",
+          "image_id": 57597,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.013001096434891224
+        },
+        {
+          "benchmark_id": "carry_in_82812",
+          "image_id": 82812,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.8669904075057524,
+          "top1_score": 0.3114506006240845
+        },
+        {
+          "benchmark_id": "carry_in_89648",
+          "image_id": 89648,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.3406219184398651
+        },
+        {
+          "benchmark_id": "carry_in_94614",
+          "image_id": 94614,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.320332150625206,
+          "top1_score": 0.015119682997465134
+        },
+        {
+          "benchmark_id": "carry_in_99114",
+          "image_id": 99114,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.22015051543712616
+        },
+        {
+          "benchmark_id": "carry_in_100723",
+          "image_id": 100723,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.19184596836566925
+        },
+        {
+          "benchmark_id": "carry_in_127092",
+          "image_id": 127092,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.2866737348025347,
+          "top1_score": 0.012139979749917984
+        },
+        {
+          "benchmark_id": "carry_in_142324",
+          "image_id": 142324,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.5590379961482578,
+          "top1_score": 0.16512952744960785
+        },
+        {
+          "benchmark_id": "carry_in_145597",
+          "image_id": 145597,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.12225276231765747
+        },
+        {
+          "benchmark_id": "carry_in_151000",
+          "image_id": 151000,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.053882479667663574
+        },
+        {
+          "benchmark_id": "carry_in_153529",
+          "image_id": 153529,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.4971527719570185,
+          "top1_score": 0.26704978942871094
+        },
+        {
+          "benchmark_id": "carry_in_163117",
+          "image_id": 163117,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.7759935425936605,
+          "top1_score": 0.3739694654941559
+        },
+        {
+          "benchmark_id": "carry_in_172617",
+          "image_id": 172617,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.9019942116695719,
+          "top1_score": 0.15416324138641357
+        },
+        {
+          "benchmark_id": "carry_in_185472",
+          "image_id": 185472,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.08598964661359787
+        },
+        {
+          "benchmark_id": "carry_in_190923",
+          "image_id": 190923,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.5773425792399318,
+          "top1_score": 0.3030698597431183
+        },
+        {
+          "benchmark_id": "carry_in_193717",
+          "image_id": 193717,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.1274492879042288,
+          "top1_score": 0.2170562595129013
+        },
+        {
+          "benchmark_id": "carry_in_193926",
+          "image_id": 193926,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.6339012775633597,
+          "top1_score": 0.3112438917160034
+        },
+        {
+          "benchmark_id": "carry_in_224675",
+          "image_id": 224675,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.13367879390716553
+        },
+        {
+          "benchmark_id": "carry_in_248111",
+          "image_id": 248111,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.9030023609783308,
+          "top1_score": 0.3403785228729248
+        },
+        {
+          "benchmark_id": "carry_in_256192",
+          "image_id": 256192,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.04755121096968651
+        },
+        {
+          "benchmark_id": "carry_in_261318",
+          "image_id": 261318,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.7899216232174515,
+          "top1_score": 0.10409726202487946
+        },
+        {
+          "benchmark_id": "carry_in_280710",
+          "image_id": 280710,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.914363024704855,
+          "top1_score": 0.24109427630901337
+        },
+        {
+          "benchmark_id": "carry_in_288584",
+          "image_id": 288584,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.3486167788505554
+        },
+        {
+          "benchmark_id": "carry_in_288685",
+          "image_id": 288685,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.07778403908014297
+        },
+        {
+          "benchmark_id": "carry_in_289741",
+          "image_id": 289741,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.052349694073200226
+        },
+        {
+          "benchmark_id": "carry_in_294783",
+          "image_id": 294783,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.6666258059446213,
+          "top1_score": 0.12814852595329285
+        },
+        {
+          "benchmark_id": "carry_in_296222",
+          "image_id": 296222,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.8786590496569008,
+          "top1_score": 0.198856383562088
+        },
+        {
+          "benchmark_id": "carry_in_303713",
+          "image_id": 303713,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.594065408798074,
+          "top1_score": 0.3400963842868805
+        },
+        {
+          "benchmark_id": "carry_in_319607",
+          "image_id": 319607,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.12425778061151505
+        },
+        {
+          "benchmark_id": "carry_in_329041",
+          "image_id": 329041,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.12436351853172221,
+          "top1_score": 0.4692126512527466
+        },
+        {
+          "benchmark_id": "carry_in_345466",
+          "image_id": 345466,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.6427820060301989,
+          "top1_score": 0.1771230697631836
+        },
+        {
+          "benchmark_id": "carry_in_349480",
+          "image_id": 349480,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.12637649476528168
+        },
+        {
+          "benchmark_id": "carry_in_356428",
+          "image_id": 356428,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.7335689493009003,
+          "top1_score": 0.3804990351200104
+        },
+        {
+          "benchmark_id": "carry_in_371042",
+          "image_id": 371042,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.6297334875218035,
+          "top1_score": 0.16926468908786774
+        },
+        {
+          "benchmark_id": "carry_in_373382",
+          "image_id": 373382,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.3372878378575815,
+          "top1_score": 0.05068698897957802
+        },
+        {
+          "benchmark_id": "carry_in_377239",
+          "image_id": 377239,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.17177897691726685
+        },
+        {
+          "benchmark_id": "carry_in_377723",
+          "image_id": 377723,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.09547667699399792,
+          "top1_score": 0.06788066774606705
+        },
+        {
+          "benchmark_id": "carry_in_383842",
+          "image_id": 383842,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.8847096262067756,
+          "top1_score": 0.13712425529956818
+        },
+        {
+          "benchmark_id": "carry_in_411530",
+          "image_id": 411530,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.10514386743307114
+        },
+        {
+          "benchmark_id": "carry_in_417632",
+          "image_id": 417632,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.27731186151504517
+        },
+        {
+          "benchmark_id": "carry_in_436883",
+          "image_id": 436883,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.0939868688583374
+        },
+        {
+          "benchmark_id": "carry_in_439593",
+          "image_id": 439593,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.8222033277665407,
+          "top1_score": 0.20808057487010956
+        },
+        {
+          "benchmark_id": "carry_in_441553",
+          "image_id": 441553,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.41710508815969205,
+          "top1_score": 0.15858194231987
+        },
+        {
+          "benchmark_id": "carry_in_453001",
+          "image_id": 453001,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.7564848807351381,
+          "top1_score": 0.1505126953125
+        },
+        {
+          "benchmark_id": "carry_in_465836",
+          "image_id": 465836,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.12456536293029785
+        },
+        {
+          "benchmark_id": "carry_in_474293",
+          "image_id": 474293,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.9374720594982706,
+          "top1_score": 0.10549405962228775
+        },
+        {
+          "benchmark_id": "carry_in_479155",
+          "image_id": 479155,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.28303152322769165
+        },
+        {
+          "benchmark_id": "carry_in_494913",
+          "image_id": 494913,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.4443952739238739
+        },
+        {
+          "benchmark_id": "carry_in_500257",
+          "image_id": 500257,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.055886940707747294,
+          "top1_score": 0.3400048613548279
+        },
+        {
+          "benchmark_id": "carry_in_505789",
+          "image_id": 505789,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.10705400258302689
+        },
+        {
+          "benchmark_id": "carry_in_511076",
+          "image_id": 511076,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.8266949625508477,
+          "top1_score": 0.20996974408626556
+        },
+        {
+          "benchmark_id": "carry_in_513567",
+          "image_id": 513567,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2622023820877075
+        },
+        {
+          "benchmark_id": "carry_in_524456",
+          "image_id": 524456,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.12561537325382233
+        },
+        {
+          "benchmark_id": "carry_in_524850",
+          "image_id": 524850,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.4222798858748947,
+          "top1_score": 0.11839762330055237
+        },
+        {
+          "benchmark_id": "carry_in_534827",
+          "image_id": 534827,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.025293365120887756
+        },
+        {
+          "benchmark_id": "carry_in_545219",
+          "image_id": 545219,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.7650834704276103,
+          "top1_score": 0.16571204364299774
+        },
+        {
+          "benchmark_id": "carry_in_549390",
+          "image_id": 549390,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.8061237302588055,
+          "top1_score": 0.08778757601976395
+        },
+        {
+          "benchmark_id": "carry_in_563604",
+          "image_id": 563604,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.0,
+          "top1_score": 0.04962143674492836
+        },
+        {
+          "benchmark_id": "carry_in_563653",
+          "image_id": 563653,
+          "affordance_id": "carry_in",
+          "prompt": "something to carry things in .",
+          "top1_iou": 0.2625977824399038,
+          "top1_score": 0.017940139397978783
+        },
+        {
+          "benchmark_id": "cut_with_17714",
+          "image_id": 17714,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.7083033092954351,
+          "top1_score": 0.19310370087623596
+        },
+        {
+          "benchmark_id": "cut_with_18575",
+          "image_id": 18575,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.7839233365382351,
+          "top1_score": 0.10995621234178543
+        },
+        {
+          "benchmark_id": "cut_with_40471",
+          "image_id": 40471,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.09182831645011902
+        },
+        {
+          "benchmark_id": "cut_with_47112",
+          "image_id": 47112,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.6475763409265098,
+          "top1_score": 0.2457612156867981
+        },
+        {
+          "benchmark_id": "cut_with_62808",
+          "image_id": 62808,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.6566176866007698,
+          "top1_score": 0.25690752267837524
+        },
+        {
+          "benchmark_id": "cut_with_66231",
+          "image_id": 66231,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.06361294537782669
+        },
+        {
+          "benchmark_id": "cut_with_88040",
+          "image_id": 88040,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.11878149956464767
+        },
+        {
+          "benchmark_id": "cut_with_92939",
+          "image_id": 92939,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.7065935411036647,
+          "top1_score": 0.28729248046875
+        },
+        {
+          "benchmark_id": "cut_with_95707",
+          "image_id": 95707,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.6298465354976701,
+          "top1_score": 0.15693166851997375
+        },
+        {
+          "benchmark_id": "cut_with_104669",
+          "image_id": 104669,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.6693000085938116,
+          "top1_score": 0.40128055214881897
+        },
+        {
+          "benchmark_id": "cut_with_110999",
+          "image_id": 110999,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.6180458661872424,
+          "top1_score": 0.06759035587310791
+        },
+        {
+          "benchmark_id": "cut_with_123633",
+          "image_id": 123633,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.14925077557563782
+        },
+        {
+          "benchmark_id": "cut_with_127182",
+          "image_id": 127182,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.08809436112642288
+        },
+        {
+          "benchmark_id": "cut_with_143998",
+          "image_id": 143998,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.8967550673584579,
+          "top1_score": 0.06522451341152191
+        },
+        {
+          "benchmark_id": "cut_with_160012",
+          "image_id": 160012,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.26311499068801014,
+          "top1_score": 0.24355842173099518
+        },
+        {
+          "benchmark_id": "cut_with_166918",
+          "image_id": 166918,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.34051765293943526,
+          "top1_score": 0.20909300446510315
+        },
+        {
+          "benchmark_id": "cut_with_171190",
+          "image_id": 171190,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.14895515143871307
+        },
+        {
+          "benchmark_id": "cut_with_173008",
+          "image_id": 173008,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.13081052899360657
+        },
+        {
+          "benchmark_id": "cut_with_173371",
+          "image_id": 173371,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.8163777813413142,
+          "top1_score": 0.23141224682331085
+        },
+        {
+          "benchmark_id": "cut_with_175535",
+          "image_id": 175535,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.33147003031672495,
+          "top1_score": 0.17488224804401398
+        },
+        {
+          "benchmark_id": "cut_with_177935",
+          "image_id": 177935,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.15479003943511094,
+          "top1_score": 0.1826704442501068
+        },
+        {
+          "benchmark_id": "cut_with_189475",
+          "image_id": 189475,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.413244473885187,
+          "top1_score": 0.2356482893228531
+        },
+        {
+          "benchmark_id": "cut_with_189752",
+          "image_id": 189752,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.8745787512685981,
+          "top1_score": 0.36987629532814026
+        },
+        {
+          "benchmark_id": "cut_with_191580",
+          "image_id": 191580,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.7862668010957207,
+          "top1_score": 0.3031478524208069
+        },
+        {
+          "benchmark_id": "cut_with_231527",
+          "image_id": 231527,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.22714506089687347
+        },
+        {
+          "benchmark_id": "cut_with_237517",
+          "image_id": 237517,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.8338264127914985,
+          "top1_score": 0.27638620138168335
+        },
+        {
+          "benchmark_id": "cut_with_250766",
+          "image_id": 250766,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.5948958767023869,
+          "top1_score": 0.05453907325863838
+        },
+        {
+          "benchmark_id": "cut_with_260105",
+          "image_id": 260105,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.03870159387588501
+        },
+        {
+          "benchmark_id": "cut_with_263969",
+          "image_id": 263969,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.484397088687209,
+          "top1_score": 0.09238812327384949
+        },
+        {
+          "benchmark_id": "cut_with_277051",
+          "image_id": 277051,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.2928495737712894,
+          "top1_score": 0.08072790503501892
+        },
+        {
+          "benchmark_id": "cut_with_286553",
+          "image_id": 286553,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.2382122354830716,
+          "top1_score": 0.24381966888904572
+        },
+        {
+          "benchmark_id": "cut_with_287347",
+          "image_id": 287347,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.22954127192497253
+        },
+        {
+          "benchmark_id": "cut_with_287667",
+          "image_id": 287667,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.800484496801728,
+          "top1_score": 0.21037113666534424
+        },
+        {
+          "benchmark_id": "cut_with_290768",
+          "image_id": 290768,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.6206413828072325,
+          "top1_score": 0.1876310110092163
+        },
+        {
+          "benchmark_id": "cut_with_298396",
+          "image_id": 298396,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2332923263311386
+        },
+        {
+          "benchmark_id": "cut_with_318455",
+          "image_id": 318455,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.27839992116889384,
+          "top1_score": 0.03839999437332153
+        },
+        {
+          "benchmark_id": "cut_with_320664",
+          "image_id": 320664,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.19816343486309052
+        },
+        {
+          "benchmark_id": "cut_with_331817",
+          "image_id": 331817,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.16637799537065226,
+          "top1_score": 0.21904806792736053
+        },
+        {
+          "benchmark_id": "cut_with_334483",
+          "image_id": 334483,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.31783294677734375
+        },
+        {
+          "benchmark_id": "cut_with_336356",
+          "image_id": 336356,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.7918108883744029,
+          "top1_score": 0.2953503727912903
+        },
+        {
+          "benchmark_id": "cut_with_338905",
+          "image_id": 338905,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.24423498260341117,
+          "top1_score": 0.0829273983836174
+        },
+        {
+          "benchmark_id": "cut_with_349152",
+          "image_id": 349152,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.09335485100746155
+        },
+        {
+          "benchmark_id": "cut_with_352900",
+          "image_id": 352900,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.2475899058926454,
+          "top1_score": 0.026994066312909126
+        },
+        {
+          "benchmark_id": "cut_with_359219",
+          "image_id": 359219,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.011303630628424356,
+          "top1_score": 0.10063296556472778
+        },
+        {
+          "benchmark_id": "cut_with_363666",
+          "image_id": 363666,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.12634186446666718
+        },
+        {
+          "benchmark_id": "cut_with_367095",
+          "image_id": 367095,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.17676136703179723,
+          "top1_score": 0.06783298403024673
+        },
+        {
+          "benchmark_id": "cut_with_374083",
+          "image_id": 374083,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.23758436739444733
+        },
+        {
+          "benchmark_id": "cut_with_376264",
+          "image_id": 376264,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.3374074101448059
+        },
+        {
+          "benchmark_id": "cut_with_377946",
+          "image_id": 377946,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.004089366028303348,
+          "top1_score": 0.011969192884862423
+        },
+        {
+          "benchmark_id": "cut_with_378284",
+          "image_id": 378284,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.10673186182975769
+        },
+        {
+          "benchmark_id": "cut_with_419312",
+          "image_id": 419312,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.4551764130592346
+        },
+        {
+          "benchmark_id": "cut_with_425361",
+          "image_id": 425361,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.19354994595050812
+        },
+        {
+          "benchmark_id": "cut_with_434459",
+          "image_id": 434459,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.3718386240068121,
+          "top1_score": 0.19456912577152252
+        },
+        {
+          "benchmark_id": "cut_with_458663",
+          "image_id": 458663,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.1854237408177228,
+          "top1_score": 0.1381528526544571
+        },
+        {
+          "benchmark_id": "cut_with_460494",
+          "image_id": 460494,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.8793284366111237,
+          "top1_score": 0.10841724276542664
+        },
+        {
+          "benchmark_id": "cut_with_470773",
+          "image_id": 470773,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.4744210808358406,
+          "top1_score": 0.11991902440786362
+        },
+        {
+          "benchmark_id": "cut_with_470924",
+          "image_id": 470924,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.4885810155244491,
+          "top1_score": 0.2266177535057068
+        },
+        {
+          "benchmark_id": "cut_with_480122",
+          "image_id": 480122,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.30888461616870455,
+          "top1_score": 0.23684105277061462
+        },
+        {
+          "benchmark_id": "cut_with_483999",
+          "image_id": 483999,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.39551431864813325,
+          "top1_score": 0.04799638316035271
+        },
+        {
+          "benchmark_id": "cut_with_491008",
+          "image_id": 491008,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.14993986311282684,
+          "top1_score": 0.044051170349121094
+        },
+        {
+          "benchmark_id": "cut_with_513283",
+          "image_id": 513283,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.045288777739979975,
+          "top1_score": 0.07057515531778336
+        },
+        {
+          "benchmark_id": "cut_with_530146",
+          "image_id": 530146,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.44596473818572946,
+          "top1_score": 0.1347496509552002
+        },
+        {
+          "benchmark_id": "cut_with_552775",
+          "image_id": 552775,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.15915127098560333
+        },
+        {
+          "benchmark_id": "cut_with_561889",
+          "image_id": 561889,
+          "affordance_id": "cut_with",
+          "prompt": "something to cut with .",
+          "top1_iou": 0.38114778719799614,
+          "top1_score": 0.09361280500888824
+        },
+        {
+          "benchmark_id": "drink_from_6471",
+          "image_id": 6471,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.26913654804229736
+        },
+        {
+          "benchmark_id": "drink_from_7818",
+          "image_id": 7818,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.20434788414287477,
+          "top1_score": 0.09193024784326553
+        },
+        {
+          "benchmark_id": "drink_from_18150",
+          "image_id": 18150,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8150312193355074,
+          "top1_score": 0.13223472237586975
+        },
+        {
+          "benchmark_id": "drink_from_25986",
+          "image_id": 25986,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.7332536919493338,
+          "top1_score": 0.16202057898044586
+        },
+        {
+          "benchmark_id": "drink_from_31296",
+          "image_id": 31296,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.20892338454723358
+        },
+        {
+          "benchmark_id": "drink_from_32334",
+          "image_id": 32334,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.06527006783342057,
+          "top1_score": 0.2411554902791977
+        },
+        {
+          "benchmark_id": "drink_from_34873",
+          "image_id": 34873,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.17741890251636505
+        },
+        {
+          "benchmark_id": "drink_from_35326",
+          "image_id": 35326,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.10708679274621068,
+          "top1_score": 0.08148570358753204
+        },
+        {
+          "benchmark_id": "drink_from_64868",
+          "image_id": 64868,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1749306470155716
+        },
+        {
+          "benchmark_id": "drink_from_81738",
+          "image_id": 81738,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8902809751143871,
+          "top1_score": 0.18115432560443878
+        },
+        {
+          "benchmark_id": "drink_from_99039",
+          "image_id": 99039,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.19502867758274078
+        },
+        {
+          "benchmark_id": "drink_from_108253",
+          "image_id": 108253,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.28305211811943065,
+          "top1_score": 0.2785201370716095
+        },
+        {
+          "benchmark_id": "drink_from_113720",
+          "image_id": 113720,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.19001684395646395,
+          "top1_score": 0.3339267373085022
+        },
+        {
+          "benchmark_id": "drink_from_117425",
+          "image_id": 117425,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.9074802585465408,
+          "top1_score": 0.10387887060642242
+        },
+        {
+          "benchmark_id": "drink_from_119828",
+          "image_id": 119828,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.47974415827948164,
+          "top1_score": 0.4567442238330841
+        },
+        {
+          "benchmark_id": "drink_from_128476",
+          "image_id": 128476,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8621574785762404,
+          "top1_score": 0.08388639241456985
+        },
+        {
+          "benchmark_id": "drink_from_136355",
+          "image_id": 136355,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.08594488352537155
+        },
+        {
+          "benchmark_id": "drink_from_142620",
+          "image_id": 142620,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8257215051674615,
+          "top1_score": 0.2554859519004822
+        },
+        {
+          "benchmark_id": "drink_from_177213",
+          "image_id": 177213,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.9435718096271435,
+          "top1_score": 0.17367160320281982
+        },
+        {
+          "benchmark_id": "drink_from_183965",
+          "image_id": 183965,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8916643022986103,
+          "top1_score": 0.09772155433893204
+        },
+        {
+          "benchmark_id": "drink_from_213255",
+          "image_id": 213255,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8575668275918118,
+          "top1_score": 0.21484994888305664
+        },
+        {
+          "benchmark_id": "drink_from_215072",
+          "image_id": 215072,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.4296302033243581,
+          "top1_score": 0.0700567439198494
+        },
+        {
+          "benchmark_id": "drink_from_215114",
+          "image_id": 215114,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.5896367129589118,
+          "top1_score": 0.29554563760757446
+        },
+        {
+          "benchmark_id": "drink_from_218439",
+          "image_id": 218439,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.09886158257722855
+        },
+        {
+          "benchmark_id": "drink_from_226171",
+          "image_id": 226171,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.9475229034469076,
+          "top1_score": 0.3426406979560852
+        },
+        {
+          "benchmark_id": "drink_from_226984",
+          "image_id": 226984,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.1689613447673075,
+          "top1_score": 0.19064155220985413
+        },
+        {
+          "benchmark_id": "drink_from_228214",
+          "image_id": 228214,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.7470604879018355,
+          "top1_score": 0.22928637266159058
+        },
+        {
+          "benchmark_id": "drink_from_262631",
+          "image_id": 262631,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0019341166349399648,
+          "top1_score": 0.05854829028248787
+        },
+        {
+          "benchmark_id": "drink_from_276285",
+          "image_id": 276285,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.6989908140086859,
+          "top1_score": 0.365498811006546
+        },
+        {
+          "benchmark_id": "drink_from_284623",
+          "image_id": 284623,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8651085979400411,
+          "top1_score": 0.1432979702949524
+        },
+        {
+          "benchmark_id": "drink_from_289938",
+          "image_id": 289938,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.26562439195554083,
+          "top1_score": 0.053332578390836716
+        },
+        {
+          "benchmark_id": "drink_from_293625",
+          "image_id": 293625,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.5376541849794696,
+          "top1_score": 0.24023741483688354
+        },
+        {
+          "benchmark_id": "drink_from_293858",
+          "image_id": 293858,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8678574066272465,
+          "top1_score": 0.41689860820770264
+        },
+        {
+          "benchmark_id": "drink_from_312192",
+          "image_id": 312192,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8755725043646013,
+          "top1_score": 0.2316896915435791
+        },
+        {
+          "benchmark_id": "drink_from_319696",
+          "image_id": 319696,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.9334616716811673,
+          "top1_score": 0.2265457659959793
+        },
+        {
+          "benchmark_id": "drink_from_323151",
+          "image_id": 323151,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8958206334956506,
+          "top1_score": 0.3278486728668213
+        },
+        {
+          "benchmark_id": "drink_from_329542",
+          "image_id": 329542,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.03138233348727226
+        },
+        {
+          "benchmark_id": "drink_from_337498",
+          "image_id": 337498,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.9067011627239718,
+          "top1_score": 0.18200722336769104
+        },
+        {
+          "benchmark_id": "drink_from_344100",
+          "image_id": 344100,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.9589469814204323,
+          "top1_score": 0.3049687147140503
+        },
+        {
+          "benchmark_id": "drink_from_350148",
+          "image_id": 350148,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.7202147091208428,
+          "top1_score": 0.29102152585983276
+        },
+        {
+          "benchmark_id": "drink_from_356531",
+          "image_id": 356531,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8768783903608013,
+          "top1_score": 0.3102877736091614
+        },
+        {
+          "benchmark_id": "drink_from_361238",
+          "image_id": 361238,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.12948922239340102,
+          "top1_score": 0.2235490381717682
+        },
+        {
+          "benchmark_id": "drink_from_371677",
+          "image_id": 371677,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.3196428120136261
+        },
+        {
+          "benchmark_id": "drink_from_379476",
+          "image_id": 379476,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.5143578808832319,
+          "top1_score": 0.17159192264080048
+        },
+        {
+          "benchmark_id": "drink_from_397354",
+          "image_id": 397354,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.6816798030053149,
+          "top1_score": 0.23212122917175293
+        },
+        {
+          "benchmark_id": "drink_from_413395",
+          "image_id": 413395,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.7303628150743238,
+          "top1_score": 0.16663022339344025
+        },
+        {
+          "benchmark_id": "drink_from_419653",
+          "image_id": 419653,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.17972970937688587,
+          "top1_score": 0.3178577125072479
+        },
+        {
+          "benchmark_id": "drink_from_422998",
+          "image_id": 422998,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8791351132090861,
+          "top1_score": 0.23257169127464294
+        },
+        {
+          "benchmark_id": "drink_from_423506",
+          "image_id": 423506,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.7087815679467734,
+          "top1_score": 0.24790765345096588
+        },
+        {
+          "benchmark_id": "drink_from_425226",
+          "image_id": 425226,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.11357364058494568
+        },
+        {
+          "benchmark_id": "drink_from_425925",
+          "image_id": 425925,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.5640143229400978,
+          "top1_score": 0.12083413451910019
+        },
+        {
+          "benchmark_id": "drink_from_441247",
+          "image_id": 441247,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.05137299373745918
+        },
+        {
+          "benchmark_id": "drink_from_479248",
+          "image_id": 479248,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.21982353925704956
+        },
+        {
+          "benchmark_id": "drink_from_482436",
+          "image_id": 482436,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.04482591897249222
+        },
+        {
+          "benchmark_id": "drink_from_488075",
+          "image_id": 488075,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.5503800162584266,
+          "top1_score": 0.15123268961906433
+        },
+        {
+          "benchmark_id": "drink_from_513041",
+          "image_id": 513041,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.4770627367176754,
+          "top1_score": 0.32286158204078674
+        },
+        {
+          "benchmark_id": "drink_from_527750",
+          "image_id": 527750,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2872854173183441
+        },
+        {
+          "benchmark_id": "drink_from_527784",
+          "image_id": 527784,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.16383229196071625
+        },
+        {
+          "benchmark_id": "drink_from_547336",
+          "image_id": 547336,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.6244874478476687,
+          "top1_score": 0.13509243726730347
+        },
+        {
+          "benchmark_id": "drink_from_548339",
+          "image_id": 548339,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.0,
+          "top1_score": 0.08839341998100281
+        },
+        {
+          "benchmark_id": "drink_from_564091",
+          "image_id": 564091,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.7050696284416136,
+          "top1_score": 0.14128179848194122
+        },
+        {
+          "benchmark_id": "drink_from_571857",
+          "image_id": 571857,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8413709110839314,
+          "top1_score": 0.07906659692525864
+        },
+        {
+          "benchmark_id": "drink_from_572462",
+          "image_id": 572462,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.5219290000314353,
+          "top1_score": 0.029937710613012314
+        },
+        {
+          "benchmark_id": "drink_from_575970",
+          "image_id": 575970,
+          "affordance_id": "drink_from",
+          "prompt": "something to drink from .",
+          "top1_iou": 0.8067857035542558,
+          "top1_score": 0.1171153113245964
+        },
+        {
+          "benchmark_id": "eat_with_8277",
+          "image_id": 8277,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.10296476721572854,
+          "top1_score": 0.08207439631223679
+        },
+        {
+          "benchmark_id": "eat_with_9590",
+          "image_id": 9590,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.08650070428848267
+        },
+        {
+          "benchmark_id": "eat_with_15254",
+          "image_id": 15254,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.08318676799535751
+        },
+        {
+          "benchmark_id": "eat_with_33638",
+          "image_id": 33638,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0022743321033191492,
+          "top1_score": 0.10830006003379822
+        },
+        {
+          "benchmark_id": "eat_with_54605",
+          "image_id": 54605,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.18548645079135895
+        },
+        {
+          "benchmark_id": "eat_with_66817",
+          "image_id": 66817,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.07951718275240494,
+          "top1_score": 0.21991752088069916
+        },
+        {
+          "benchmark_id": "eat_with_66841",
+          "image_id": 66841,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.037952177226543427
+        },
+        {
+          "benchmark_id": "eat_with_78266",
+          "image_id": 78266,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.014461444690823555
+        },
+        {
+          "benchmark_id": "eat_with_80932",
+          "image_id": 80932,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.15297041743170892,
+          "top1_score": 0.3140682280063629
+        },
+        {
+          "benchmark_id": "eat_with_84241",
+          "image_id": 84241,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.27192220091819763
+        },
+        {
+          "benchmark_id": "eat_with_85157",
+          "image_id": 85157,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1713840216398239
+        },
+        {
+          "benchmark_id": "eat_with_91406",
+          "image_id": 91406,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1015852615237236
+        },
+        {
+          "benchmark_id": "eat_with_119233",
+          "image_id": 119233,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.03883732110261917
+        },
+        {
+          "benchmark_id": "eat_with_141328",
+          "image_id": 141328,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.004994593560695648
+        },
+        {
+          "benchmark_id": "eat_with_153527",
+          "image_id": 153527,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.007046989165246487
+        },
+        {
+          "benchmark_id": "eat_with_162092",
+          "image_id": 162092,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2104567587375641
+        },
+        {
+          "benchmark_id": "eat_with_166426",
+          "image_id": 166426,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.3538839817047119
+        },
+        {
+          "benchmark_id": "eat_with_174123",
+          "image_id": 174123,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.06054032989125481,
+          "top1_score": 0.20429496467113495
+        },
+        {
+          "benchmark_id": "eat_with_175364",
+          "image_id": 175364,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.7071026614929863,
+          "top1_score": 0.0508234016597271
+        },
+        {
+          "benchmark_id": "eat_with_182417",
+          "image_id": 182417,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.09969983994960785
+        },
+        {
+          "benchmark_id": "eat_with_182611",
+          "image_id": 182611,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.31378716230392456
+        },
+        {
+          "benchmark_id": "eat_with_221872",
+          "image_id": 221872,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.04127245023846626
+        },
+        {
+          "benchmark_id": "eat_with_231097",
+          "image_id": 231097,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.009223958104039089,
+          "top1_score": 0.07135456055402756
+        },
+        {
+          "benchmark_id": "eat_with_236721",
+          "image_id": 236721,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.013806418997368852,
+          "top1_score": 0.24472679197788239
+        },
+        {
+          "benchmark_id": "eat_with_242060",
+          "image_id": 242060,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.09801573306322098
+        },
+        {
+          "benchmark_id": "eat_with_248314",
+          "image_id": 248314,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0010283209210907886,
+          "top1_score": 0.3322201371192932
+        },
+        {
+          "benchmark_id": "eat_with_249129",
+          "image_id": 249129,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.20876619219779968
+        },
+        {
+          "benchmark_id": "eat_with_256916",
+          "image_id": 256916,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.26593029499053955
+        },
+        {
+          "benchmark_id": "eat_with_265518",
+          "image_id": 265518,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.24450960755348206
+        },
+        {
+          "benchmark_id": "eat_with_289415",
+          "image_id": 289415,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.24003750085830688
+        },
+        {
+          "benchmark_id": "eat_with_292060",
+          "image_id": 292060,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.10621719807386398
+        },
+        {
+          "benchmark_id": "eat_with_297084",
+          "image_id": 297084,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.39582064747810364
+        },
+        {
+          "benchmark_id": "eat_with_305609",
+          "image_id": 305609,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2562442719936371
+        },
+        {
+          "benchmark_id": "eat_with_313034",
+          "image_id": 313034,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.13114797121888463,
+          "top1_score": 0.10642261803150177
+        },
+        {
+          "benchmark_id": "eat_with_335427",
+          "image_id": 335427,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.08025258779525757
+        },
+        {
+          "benchmark_id": "eat_with_345361",
+          "image_id": 345361,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.37582284212112427
+        },
+        {
+          "benchmark_id": "eat_with_376322",
+          "image_id": 376322,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.011316664604840107,
+          "top1_score": 0.4091218113899231
+        },
+        {
+          "benchmark_id": "eat_with_397133",
+          "image_id": 397133,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.21707719564437866
+        },
+        {
+          "benchmark_id": "eat_with_416885",
+          "image_id": 416885,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.07369238924294803,
+          "top1_score": 0.30179914832115173
+        },
+        {
+          "benchmark_id": "eat_with_435081",
+          "image_id": 435081,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1744665950536728
+        },
+        {
+          "benchmark_id": "eat_with_438226",
+          "image_id": 438226,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1031765565276146
+        },
+        {
+          "benchmark_id": "eat_with_450202",
+          "image_id": 450202,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.2665077884637934,
+          "top1_score": 0.1689990907907486
+        },
+        {
+          "benchmark_id": "eat_with_452084",
+          "image_id": 452084,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.5023340032289452,
+          "top1_score": 0.11838897317647934
+        },
+        {
+          "benchmark_id": "eat_with_463527",
+          "image_id": 463527,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.21150176227092743
+        },
+        {
+          "benchmark_id": "eat_with_466986",
+          "image_id": 466986,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.16525070369243622
+        },
+        {
+          "benchmark_id": "eat_with_468925",
+          "image_id": 468925,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0013418803776715606,
+          "top1_score": 0.10599420964717865
+        },
+        {
+          "benchmark_id": "eat_with_473869",
+          "image_id": 473869,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.3041548430919647
+        },
+        {
+          "benchmark_id": "eat_with_482275",
+          "image_id": 482275,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.034381985664367676
+        },
+        {
+          "benchmark_id": "eat_with_484978",
+          "image_id": 484978,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.40692498982338315,
+          "top1_score": 0.1278470754623413
+        },
+        {
+          "benchmark_id": "eat_with_485844",
+          "image_id": 485844,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.1065155262723258,
+          "top1_score": 0.09777514636516571
+        },
+        {
+          "benchmark_id": "eat_with_485972",
+          "image_id": 485972,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.07252215594053268
+        },
+        {
+          "benchmark_id": "eat_with_494869",
+          "image_id": 494869,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.42869556645969664,
+          "top1_score": 0.30599212646484375
+        },
+        {
+          "benchmark_id": "eat_with_496954",
+          "image_id": 496954,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.13019842828670078,
+          "top1_score": 0.06230626255273819
+        },
+        {
+          "benchmark_id": "eat_with_520264",
+          "image_id": 520264,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1813596487045288
+        },
+        {
+          "benchmark_id": "eat_with_520871",
+          "image_id": 520871,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.09179095086928882,
+          "top1_score": 0.07341358810663223
+        },
+        {
+          "benchmark_id": "eat_with_528399",
+          "image_id": 528399,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.15987107157707214
+        },
+        {
+          "benchmark_id": "eat_with_530975",
+          "image_id": 530975,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.02849888155625486,
+          "top1_score": 0.11681422591209412
+        },
+        {
+          "benchmark_id": "eat_with_541634",
+          "image_id": 541634,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.18173748254776
+        },
+        {
+          "benchmark_id": "eat_with_544565",
+          "image_id": 544565,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.09749116748571396
+        },
+        {
+          "benchmark_id": "eat_with_550322",
+          "image_id": 550322,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.0,
+          "top1_score": 0.04528390243649483
+        },
+        {
+          "benchmark_id": "eat_with_562059",
+          "image_id": 562059,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.11473981519262824,
+          "top1_score": 0.06977355480194092
+        },
+        {
+          "benchmark_id": "eat_with_568195",
+          "image_id": 568195,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.5795447569038091,
+          "top1_score": 0.126491516828537
+        },
+        {
+          "benchmark_id": "eat_with_578871",
+          "image_id": 578871,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.14746981658466116,
+          "top1_score": 0.2944413721561432
+        },
+        {
+          "benchmark_id": "eat_with_580294",
+          "image_id": 580294,
+          "affordance_id": "eat_with",
+          "prompt": "something to eat with .",
+          "top1_iou": 0.3453659577817125,
+          "top1_score": 0.38346028327941895
+        },
+        {
+          "benchmark_id": "read_632",
+          "image_id": 632,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.15034934059270158,
+          "top1_score": 0.13618780672550201
+        },
+        {
+          "benchmark_id": "read_17182",
+          "image_id": 17182,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.4507523660013693,
+          "top1_score": 0.0649542510509491
+        },
+        {
+          "benchmark_id": "read_24610",
+          "image_id": 24610,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.18501073122024536
+        },
+        {
+          "benchmark_id": "read_36936",
+          "image_id": 36936,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.26615262031555176
+        },
+        {
+          "benchmark_id": "read_39477",
+          "image_id": 39477,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.6008088289559781,
+          "top1_score": 0.11092498898506165
+        },
+        {
+          "benchmark_id": "read_55150",
+          "image_id": 55150,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.08674567937850952
+        },
+        {
+          "benchmark_id": "read_55528",
+          "image_id": 55528,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.05630630991058326,
+          "top1_score": 0.07843924313783646
+        },
+        {
+          "benchmark_id": "read_84674",
+          "image_id": 84674,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.19848817586898804
+        },
+        {
+          "benchmark_id": "read_93437",
+          "image_id": 93437,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.20260466635227203
+        },
+        {
+          "benchmark_id": "read_97994",
+          "image_id": 97994,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.49165657089429154,
+          "top1_score": 0.16646739840507507
+        },
+        {
+          "benchmark_id": "read_124659",
+          "image_id": 124659,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.07422343965824718,
+          "top1_score": 0.10213465988636017
+        },
+        {
+          "benchmark_id": "read_136915",
+          "image_id": 136915,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.024301912635564804
+        },
+        {
+          "benchmark_id": "read_139077",
+          "image_id": 139077,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.06424884498119354
+        },
+        {
+          "benchmark_id": "read_139684",
+          "image_id": 139684,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.62792478263184,
+          "top1_score": 0.32700154185295105
+        },
+        {
+          "benchmark_id": "read_154705",
+          "image_id": 154705,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1371619701385498
+        },
+        {
+          "benchmark_id": "read_166166",
+          "image_id": 166166,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.8852573461204819,
+          "top1_score": 0.44805359840393066
+        },
+        {
+          "benchmark_id": "read_166521",
+          "image_id": 166521,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.10193910525931515,
+          "top1_score": 0.1337539404630661
+        },
+        {
+          "benchmark_id": "read_179898",
+          "image_id": 179898,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.6291268848846617,
+          "top1_score": 0.23737074434757233
+        },
+        {
+          "benchmark_id": "read_181753",
+          "image_id": 181753,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.09401226646887823,
+          "top1_score": 0.06509570777416229
+        },
+        {
+          "benchmark_id": "read_182162",
+          "image_id": 182162,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.06519529968500137
+        },
+        {
+          "benchmark_id": "read_189820",
+          "image_id": 189820,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.7849282979551961,
+          "top1_score": 0.13857364654541016
+        },
+        {
+          "benchmark_id": "read_205514",
+          "image_id": 205514,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.17588676280746987,
+          "top1_score": 0.03294112905859947
+        },
+        {
+          "benchmark_id": "read_206579",
+          "image_id": 206579,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.11795558034124783,
+          "top1_score": 0.06655953079462051
+        },
+        {
+          "benchmark_id": "read_207844",
+          "image_id": 207844,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.05721655406161387,
+          "top1_score": 0.026204494759440422
+        },
+        {
+          "benchmark_id": "read_213086",
+          "image_id": 213086,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.9654471105691639,
+          "top1_score": 0.07670214772224426
+        },
+        {
+          "benchmark_id": "read_240940",
+          "image_id": 240940,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.10766540253236359,
+          "top1_score": 0.12885303795337677
+        },
+        {
+          "benchmark_id": "read_242934",
+          "image_id": 242934,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.03083806484937668
+        },
+        {
+          "benchmark_id": "read_251140",
+          "image_id": 251140,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.9542535240228012,
+          "top1_score": 0.1384315937757492
+        },
+        {
+          "benchmark_id": "read_262227",
+          "image_id": 262227,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.8475680483878029,
+          "top1_score": 0.17708492279052734
+        },
+        {
+          "benchmark_id": "read_264535",
+          "image_id": 264535,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.5045956011082264,
+          "top1_score": 0.029684314504265785
+        },
+        {
+          "benchmark_id": "read_283785",
+          "image_id": 283785,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.08858405602782032,
+          "top1_score": 0.22226077318191528
+        },
+        {
+          "benchmark_id": "read_296231",
+          "image_id": 296231,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.06953364610671997
+        },
+        {
+          "benchmark_id": "read_302030",
+          "image_id": 302030,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.005907126953389054,
+          "top1_score": 0.18588994443416595
+        },
+        {
+          "benchmark_id": "read_316666",
+          "image_id": 316666,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.055879414081573486
+        },
+        {
+          "benchmark_id": "read_325483",
+          "image_id": 325483,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.0833306610584259
+        },
+        {
+          "benchmark_id": "read_326970",
+          "image_id": 326970,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.7483083512069715,
+          "top1_score": 0.16286540031433105
+        },
+        {
+          "benchmark_id": "read_334399",
+          "image_id": 334399,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.11457344144582748
+        },
+        {
+          "benchmark_id": "read_340175",
+          "image_id": 340175,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.00503787068021458,
+          "top1_score": 0.09360360354185104
+        },
+        {
+          "benchmark_id": "read_342367",
+          "image_id": 342367,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.014962917193770409
+        },
+        {
+          "benchmark_id": "read_344621",
+          "image_id": 344621,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.875166106182132,
+          "top1_score": 0.3147203326225281
+        },
+        {
+          "benchmark_id": "read_371699",
+          "image_id": 371699,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.2634870409965515
+        },
+        {
+          "benchmark_id": "read_375278",
+          "image_id": 375278,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.8913994563606232,
+          "top1_score": 0.34435778856277466
+        },
+        {
+          "benchmark_id": "read_385719",
+          "image_id": 385719,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.8589870789471075,
+          "top1_score": 0.2512013018131256
+        },
+        {
+          "benchmark_id": "read_387098",
+          "image_id": 387098,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.3077549338340759
+        },
+        {
+          "benchmark_id": "read_396526",
+          "image_id": 396526,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.8486492078804192,
+          "top1_score": 0.132955864071846
+        },
+        {
+          "benchmark_id": "read_400161",
+          "image_id": 400161,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.25593516347751405,
+          "top1_score": 0.05326573923230171
+        },
+        {
+          "benchmark_id": "read_405970",
+          "image_id": 405970,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.6141787360050515,
+          "top1_score": 0.18631476163864136
+        },
+        {
+          "benchmark_id": "read_416451",
+          "image_id": 416451,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.7450052844879522,
+          "top1_score": 0.2574302852153778
+        },
+        {
+          "benchmark_id": "read_416534",
+          "image_id": 416534,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.4462140978770756,
+          "top1_score": 0.12002317607402802
+        },
+        {
+          "benchmark_id": "read_436738",
+          "image_id": 436738,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.007049041334539652
+        },
+        {
+          "benchmark_id": "read_446005",
+          "image_id": 446005,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.34870697808554013,
+          "top1_score": 0.20031459629535675
+        },
+        {
+          "benchmark_id": "read_455937",
+          "image_id": 455937,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.15316201746463776
+        },
+        {
+          "benchmark_id": "read_457078",
+          "image_id": 457078,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1537586748600006
+        },
+        {
+          "benchmark_id": "read_466125",
+          "image_id": 466125,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.9303443332996997,
+          "top1_score": 0.1524246335029602
+        },
+        {
+          "benchmark_id": "read_467176",
+          "image_id": 467176,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.3615556823592784,
+          "top1_score": 0.06032095104455948
+        },
+        {
+          "benchmark_id": "read_476810",
+          "image_id": 476810,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.0839124470949173
+        },
+        {
+          "benchmark_id": "read_484351",
+          "image_id": 484351,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.052952125668525696
+        },
+        {
+          "benchmark_id": "read_509824",
+          "image_id": 509824,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.8918745112222395,
+          "top1_score": 0.16892966628074646
+        },
+        {
+          "benchmark_id": "read_520077",
+          "image_id": 520077,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.7494572043622386,
+          "top1_score": 0.07860130816698074
+        },
+        {
+          "benchmark_id": "read_535253",
+          "image_id": 535253,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.21676357090473175
+        },
+        {
+          "benchmark_id": "read_549220",
+          "image_id": 549220,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.5167499796419746,
+          "top1_score": 0.08548368513584137
+        },
+        {
+          "benchmark_id": "read_555005",
+          "image_id": 555005,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.4358755937891415,
+          "top1_score": 0.01848885975778103
+        },
+        {
+          "benchmark_id": "read_556000",
+          "image_id": 556000,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.0,
+          "top1_score": 0.06909070909023285
+        },
+        {
+          "benchmark_id": "read_565877",
+          "image_id": 565877,
+          "affordance_id": "read",
+          "prompt": "something to read .",
+          "top1_iou": 0.8246008845293186,
+          "top1_score": 0.09458702802658081
+        },
+        {
+          "benchmark_id": "ride_7281",
+          "image_id": 7281,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.3636606559789143,
+          "top1_score": 0.0497039295732975
+        },
+        {
+          "benchmark_id": "ride_11149",
+          "image_id": 11149,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.8291127761691167,
+          "top1_score": 0.136521577835083
+        },
+        {
+          "benchmark_id": "ride_11511",
+          "image_id": 11511,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.008464391343295574
+        },
+        {
+          "benchmark_id": "ride_40083",
+          "image_id": 40083,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.3664371398140949,
+          "top1_score": 0.19547879695892334
+        },
+        {
+          "benchmark_id": "ride_48555",
+          "image_id": 48555,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.648469463255981,
+          "top1_score": 0.046031806617975235
+        },
+        {
+          "benchmark_id": "ride_50145",
+          "image_id": 50145,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.4916724877421633,
+          "top1_score": 0.044258978217840195
+        },
+        {
+          "benchmark_id": "ride_59635",
+          "image_id": 59635,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.03659800440073013
+        },
+        {
+          "benchmark_id": "ride_61108",
+          "image_id": 61108,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.12881231988115466,
+          "top1_score": 0.19408372044563293
+        },
+        {
+          "benchmark_id": "ride_65350",
+          "image_id": 65350,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.15850262343883514
+        },
+        {
+          "benchmark_id": "ride_67616",
+          "image_id": 67616,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.08124919980764389
+        },
+        {
+          "benchmark_id": "ride_69213",
+          "image_id": 69213,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.11757294833660126
+        },
+        {
+          "benchmark_id": "ride_78748",
+          "image_id": 78748,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.8571141025862751,
+          "top1_score": 0.11457791179418564
+        },
+        {
+          "benchmark_id": "ride_80659",
+          "image_id": 80659,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.05510105876655338,
+          "top1_score": 0.0196017287671566
+        },
+        {
+          "benchmark_id": "ride_81394",
+          "image_id": 81394,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.5014096577540631,
+          "top1_score": 0.1049666702747345
+        },
+        {
+          "benchmark_id": "ride_97924",
+          "image_id": 97924,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.5008549821901298,
+          "top1_score": 0.07560312002897263
+        },
+        {
+          "benchmark_id": "ride_102411",
+          "image_id": 102411,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.9220647983368869,
+          "top1_score": 0.12422046810388565
+        },
+        {
+          "benchmark_id": "ride_121242",
+          "image_id": 121242,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.05534748685635265,
+          "top1_score": 0.20207028090953827
+        },
+        {
+          "benchmark_id": "ride_132375",
+          "image_id": 132375,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.005064452020877644,
+          "top1_score": 0.016990717500448227
+        },
+        {
+          "benchmark_id": "ride_135410",
+          "image_id": 135410,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.3197707733424171,
+          "top1_score": 0.21283647418022156
+        },
+        {
+          "benchmark_id": "ride_144333",
+          "image_id": 144333,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.2825194922383343,
+          "top1_score": 0.12069623172283173
+        },
+        {
+          "benchmark_id": "ride_145620",
+          "image_id": 145620,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.21398577933654458,
+          "top1_score": 0.29817259311676025
+        },
+        {
+          "benchmark_id": "ride_157756",
+          "image_id": 157756,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.41377741386334266,
+          "top1_score": 0.18047666549682617
+        },
+        {
+          "benchmark_id": "ride_174482",
+          "image_id": 174482,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.1359043646182279,
+          "top1_score": 0.03673865646123886
+        },
+        {
+          "benchmark_id": "ride_177861",
+          "image_id": 177861,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.2084614866375096,
+          "top1_score": 0.06131374463438988
+        },
+        {
+          "benchmark_id": "ride_178982",
+          "image_id": 178982,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.7798327249766343,
+          "top1_score": 0.14987048506736755
+        },
+        {
+          "benchmark_id": "ride_199236",
+          "image_id": 199236,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.5558852691250005,
+          "top1_score": 0.06410813331604004
+        },
+        {
+          "benchmark_id": "ride_210273",
+          "image_id": 210273,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.06682360917329788
+        },
+        {
+          "benchmark_id": "ride_224724",
+          "image_id": 224724,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.4967526227178053,
+          "top1_score": 0.02167760767042637
+        },
+        {
+          "benchmark_id": "ride_227898",
+          "image_id": 227898,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.14133121073246002
+        },
+        {
+          "benchmark_id": "ride_230450",
+          "image_id": 230450,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.11413784325122833
+        },
+        {
+          "benchmark_id": "ride_233727",
+          "image_id": 233727,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.005084491953488988,
+          "top1_score": 0.008699106052517891
+        },
+        {
+          "benchmark_id": "ride_241677",
+          "image_id": 241677,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.00794510543346405
+        },
+        {
+          "benchmark_id": "ride_255536",
+          "image_id": 255536,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.6621672962373105,
+          "top1_score": 0.1628343164920807
+        },
+        {
+          "benchmark_id": "ride_260106",
+          "image_id": 260106,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.22451104807914876,
+          "top1_score": 0.11232597380876541
+        },
+        {
+          "benchmark_id": "ride_261888",
+          "image_id": 261888,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.45532510957415745,
+          "top1_score": 0.04900844767689705
+        },
+        {
+          "benchmark_id": "ride_274460",
+          "image_id": 274460,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.05169353634119034
+        },
+        {
+          "benchmark_id": "ride_277005",
+          "image_id": 277005,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.9222262867953597,
+          "top1_score": 0.21988552808761597
+        },
+        {
+          "benchmark_id": "ride_295809",
+          "image_id": 295809,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.040586378425359726
+        },
+        {
+          "benchmark_id": "ride_301135",
+          "image_id": 301135,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.479907964165487,
+          "top1_score": 0.05714280158281326
+        },
+        {
+          "benchmark_id": "ride_323828",
+          "image_id": 323828,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.04329059196932571,
+          "top1_score": 0.010241846553981304
+        },
+        {
+          "benchmark_id": "ride_344888",
+          "image_id": 344888,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.11517851799726486
+        },
+        {
+          "benchmark_id": "ride_356387",
+          "image_id": 356387,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.8354611047116279,
+          "top1_score": 0.06538978219032288
+        },
+        {
+          "benchmark_id": "ride_357737",
+          "image_id": 357737,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.8532297466320077,
+          "top1_score": 0.06626260280609131
+        },
+        {
+          "benchmark_id": "ride_360661",
+          "image_id": 360661,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.15554823044365945,
+          "top1_score": 0.05834425240755081
+        },
+        {
+          "benchmark_id": "ride_367680",
+          "image_id": 367680,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.1897863664239127,
+          "top1_score": 0.18173785507678986
+        },
+        {
+          "benchmark_id": "ride_380706",
+          "image_id": 380706,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.45656400170072176,
+          "top1_score": 0.13569079339504242
+        },
+        {
+          "benchmark_id": "ride_382111",
+          "image_id": 382111,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.2532057591407311,
+          "top1_score": 0.16766484081745148
+        },
+        {
+          "benchmark_id": "ride_384527",
+          "image_id": 384527,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.6136621820926307,
+          "top1_score": 0.16260354220867157
+        },
+        {
+          "benchmark_id": "ride_388903",
+          "image_id": 388903,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.015418065711855888
+        },
+        {
+          "benchmark_id": "ride_395180",
+          "image_id": 395180,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.03395631164312363
+        },
+        {
+          "benchmark_id": "ride_399205",
+          "image_id": 399205,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.42525666824544595,
+          "top1_score": 0.08315838128328323
+        },
+        {
+          "benchmark_id": "ride_413689",
+          "image_id": 413689,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.11852747946977615
+        },
+        {
+          "benchmark_id": "ride_414510",
+          "image_id": 414510,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.7776550783742406,
+          "top1_score": 0.12409603595733643
+        },
+        {
+          "benchmark_id": "ride_429109",
+          "image_id": 429109,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.05363321304321289
+        },
+        {
+          "benchmark_id": "ride_433204",
+          "image_id": 433204,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.9456490791614205,
+          "top1_score": 0.10189281404018402
+        },
+        {
+          "benchmark_id": "ride_456015",
+          "image_id": 456015,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.31367948665888323,
+          "top1_score": 0.02279598079621792
+        },
+        {
+          "benchmark_id": "ride_462904",
+          "image_id": 462904,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.005146976538979685,
+          "top1_score": 0.050285160541534424
+        },
+        {
+          "benchmark_id": "ride_480021",
+          "image_id": 480021,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.8770987624910547,
+          "top1_score": 0.03483846038579941
+        },
+        {
+          "benchmark_id": "ride_492077",
+          "image_id": 492077,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.782140970343715,
+          "top1_score": 0.19335193932056427
+        },
+        {
+          "benchmark_id": "ride_507037",
+          "image_id": 507037,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.6784676339092963,
+          "top1_score": 0.08979535847902298
+        },
+        {
+          "benchmark_id": "ride_507975",
+          "image_id": 507975,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.43085351895814217,
+          "top1_score": 0.09464133530855179
+        },
+        {
+          "benchmark_id": "ride_531134",
+          "image_id": 531134,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.0760052427649498
+        },
+        {
+          "benchmark_id": "ride_568290",
+          "image_id": 568290,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.04243769869208336
+        },
+        {
+          "benchmark_id": "ride_577932",
+          "image_id": 577932,
+          "affordance_id": "ride",
+          "prompt": "something to ride .",
+          "top1_iou": 0.0,
+          "top1_score": 0.05130074918270111
+        },
+        {
+          "benchmark_id": "sit_on_12120",
+          "image_id": 12120,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.035397619009017944
+        },
+        {
+          "benchmark_id": "sit_on_13546",
+          "image_id": 13546,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0008338436437290843,
+          "top1_score": 0.03914177417755127
+        },
+        {
+          "benchmark_id": "sit_on_13729",
+          "image_id": 13729,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.07053070515394211
+        },
+        {
+          "benchmark_id": "sit_on_13923",
+          "image_id": 13923,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.056679494297826545,
+          "top1_score": 0.09899711608886719
+        },
+        {
+          "benchmark_id": "sit_on_20553",
+          "image_id": 20553,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.07708486914634705
+        },
+        {
+          "benchmark_id": "sit_on_22892",
+          "image_id": 22892,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.09721624438718951,
+          "top1_score": 0.03147745132446289
+        },
+        {
+          "benchmark_id": "sit_on_27620",
+          "image_id": 27620,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.0970325842499733
+        },
+        {
+          "benchmark_id": "sit_on_31620",
+          "image_id": 31620,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.03489531949162483
+        },
+        {
+          "benchmark_id": "sit_on_48396",
+          "image_id": 48396,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.018595333005448106,
+          "top1_score": 0.023541202768683434
+        },
+        {
+          "benchmark_id": "sit_on_50380",
+          "image_id": 50380,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.014996620670794826,
+          "top1_score": 0.017337417230010033
+        },
+        {
+          "benchmark_id": "sit_on_54628",
+          "image_id": 54628,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.09542470568730574,
+          "top1_score": 0.033748477697372437
+        },
+        {
+          "benchmark_id": "sit_on_74733",
+          "image_id": 74733,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0423687966592404,
+          "top1_score": 0.03284861147403717
+        },
+        {
+          "benchmark_id": "sit_on_78404",
+          "image_id": 78404,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.03997507583514941,
+          "top1_score": 0.015796907246112823
+        },
+        {
+          "benchmark_id": "sit_on_93353",
+          "image_id": 93353,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.044844679886470916,
+          "top1_score": 0.010316169820725918
+        },
+        {
+          "benchmark_id": "sit_on_97337",
+          "image_id": 97337,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.041116542007418586,
+          "top1_score": 0.23811130225658417
+        },
+        {
+          "benchmark_id": "sit_on_99810",
+          "image_id": 99810,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.04143840986043434,
+          "top1_score": 0.010423782281577587
+        },
+        {
+          "benchmark_id": "sit_on_112378",
+          "image_id": 112378,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0690726291681641,
+          "top1_score": 0.012145248241722584
+        },
+        {
+          "benchmark_id": "sit_on_120420",
+          "image_id": 120420,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.014618072658777237
+        },
+        {
+          "benchmark_id": "sit_on_127394",
+          "image_id": 127394,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.08091644197702408
+        },
+        {
+          "benchmark_id": "sit_on_130826",
+          "image_id": 130826,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.0695592612028122
+        },
+        {
+          "benchmark_id": "sit_on_133645",
+          "image_id": 133645,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.013133756816387177
+        },
+        {
+          "benchmark_id": "sit_on_133969",
+          "image_id": 133969,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.011991250328719616
+        },
+        {
+          "benchmark_id": "sit_on_146358",
+          "image_id": 146358,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0069816740136143885,
+          "top1_score": 0.060908593237400055
+        },
+        {
+          "benchmark_id": "sit_on_169076",
+          "image_id": 169076,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.08556414395570755
+        },
+        {
+          "benchmark_id": "sit_on_183716",
+          "image_id": 183716,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.04543744130283145,
+          "top1_score": 0.05923393741250038
+        },
+        {
+          "benchmark_id": "sit_on_192904",
+          "image_id": 192904,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.03805449836624255,
+          "top1_score": 0.04223727807402611
+        },
+        {
+          "benchmark_id": "sit_on_194724",
+          "image_id": 194724,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.04894344900504896,
+          "top1_score": 0.03920423984527588
+        },
+        {
+          "benchmark_id": "sit_on_214539",
+          "image_id": 214539,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.0037813757080584764
+        },
+        {
+          "benchmark_id": "sit_on_221708",
+          "image_id": 221708,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.09299796853005701,
+          "top1_score": 0.10562299937009811
+        },
+        {
+          "benchmark_id": "sit_on_224807",
+          "image_id": 224807,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.025788990780711174
+        },
+        {
+          "benchmark_id": "sit_on_226147",
+          "image_id": 226147,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.0691261887550354
+        },
+        {
+          "benchmark_id": "sit_on_252294",
+          "image_id": 252294,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.026830057053527968,
+          "top1_score": 0.027149584144353867
+        },
+        {
+          "benchmark_id": "sit_on_256868",
+          "image_id": 256868,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.000872580836950467,
+          "top1_score": 0.026778768748044968
+        },
+        {
+          "benchmark_id": "sit_on_268378",
+          "image_id": 268378,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.04759372025728226
+        },
+        {
+          "benchmark_id": "sit_on_282037",
+          "image_id": 282037,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.014620800502598286
+        },
+        {
+          "benchmark_id": "sit_on_287874",
+          "image_id": 287874,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.009544195607304573
+        },
+        {
+          "benchmark_id": "sit_on_325838",
+          "image_id": 325838,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.11980872782252469,
+          "top1_score": 0.0733950063586235
+        },
+        {
+          "benchmark_id": "sit_on_335529",
+          "image_id": 335529,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.017894025892019272
+        },
+        {
+          "benchmark_id": "sit_on_338219",
+          "image_id": 338219,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.05106145516037941
+        },
+        {
+          "benchmark_id": "sit_on_345027",
+          "image_id": 345027,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.021239948582001542,
+          "top1_score": 0.03191569820046425
+        },
+        {
+          "benchmark_id": "sit_on_351530",
+          "image_id": 351530,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.014894751831889153
+        },
+        {
+          "benchmark_id": "sit_on_356432",
+          "image_id": 356432,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.011195425900679349,
+          "top1_score": 0.0698685348033905
+        },
+        {
+          "benchmark_id": "sit_on_363840",
+          "image_id": 363840,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1065361499786377
+        },
+        {
+          "benchmark_id": "sit_on_371552",
+          "image_id": 371552,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.006226276513189077
+        },
+        {
+          "benchmark_id": "sit_on_374052",
+          "image_id": 374052,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.22818961381266323,
+          "top1_score": 0.005620819982141256
+        },
+        {
+          "benchmark_id": "sit_on_394677",
+          "image_id": 394677,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.009971944615244865
+        },
+        {
+          "benchmark_id": "sit_on_405279",
+          "image_id": 405279,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.0377732515335083
+        },
+        {
+          "benchmark_id": "sit_on_407614",
+          "image_id": 407614,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.13995379209518433
+        },
+        {
+          "benchmark_id": "sit_on_407868",
+          "image_id": 407868,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.10122363269329071
+        },
+        {
+          "benchmark_id": "sit_on_410650",
+          "image_id": 410650,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.6981410583523643,
+          "top1_score": 0.004095434211194515
+        },
+        {
+          "benchmark_id": "sit_on_420840",
+          "image_id": 420840,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.014842954464256763
+        },
+        {
+          "benchmark_id": "sit_on_429690",
+          "image_id": 429690,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.010279318317770958
+        },
+        {
+          "benchmark_id": "sit_on_435003",
+          "image_id": 435003,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.09252156780705276,
+          "top1_score": 0.07766155153512955
+        },
+        {
+          "benchmark_id": "sit_on_440475",
+          "image_id": 440475,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.1977803369916592,
+          "top1_score": 0.04788205027580261
+        },
+        {
+          "benchmark_id": "sit_on_454404",
+          "image_id": 454404,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.10847066422178336,
+          "top1_score": 0.023290075361728668
+        },
+        {
+          "benchmark_id": "sit_on_463618",
+          "image_id": 463618,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.04141294211149216
+        },
+        {
+          "benchmark_id": "sit_on_465549",
+          "image_id": 465549,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.09756298363208771
+        },
+        {
+          "benchmark_id": "sit_on_486040",
+          "image_id": 486040,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.028020186349749565
+        },
+        {
+          "benchmark_id": "sit_on_491867",
+          "image_id": 491867,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.01922312192618847
+        },
+        {
+          "benchmark_id": "sit_on_512476",
+          "image_id": 512476,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.03191851079463959
+        },
+        {
+          "benchmark_id": "sit_on_548780",
+          "image_id": 548780,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.9177446484799558,
+          "top1_score": 0.016123587265610695
+        },
+        {
+          "benchmark_id": "sit_on_568710",
+          "image_id": 568710,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.04565180465579033
+        },
+        {
+          "benchmark_id": "sit_on_571313",
+          "image_id": 571313,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.07443083077669144
+        },
+        {
+          "benchmark_id": "sit_on_579970",
+          "image_id": 579970,
+          "affordance_id": "sit_on",
+          "prompt": "something to sit on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.034013357013463974
+        },
+        {
+          "benchmark_id": "talk_on_6763",
+          "image_id": 6763,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.022013645619153976
+        },
+        {
+          "benchmark_id": "talk_on_6771",
+          "image_id": 6771,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.010382194072008133
+        },
+        {
+          "benchmark_id": "talk_on_15335",
+          "image_id": 15335,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.018432334065437317
+        },
+        {
+          "benchmark_id": "talk_on_35279",
+          "image_id": 35279,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.02075144956405191,
+          "top1_score": 0.09021342545747757
+        },
+        {
+          "benchmark_id": "talk_on_46031",
+          "image_id": 46031,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.04017444008688853,
+          "top1_score": 0.16586630046367645
+        },
+        {
+          "benchmark_id": "talk_on_50811",
+          "image_id": 50811,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.022789720445871353
+        },
+        {
+          "benchmark_id": "talk_on_56344",
+          "image_id": 56344,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.017351249232888222
+        },
+        {
+          "benchmark_id": "talk_on_59598",
+          "image_id": 59598,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.04905255854752357,
+          "top1_score": 0.11833135038614273
+        },
+        {
+          "benchmark_id": "talk_on_60507",
+          "image_id": 60507,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.03819127753376961
+        },
+        {
+          "benchmark_id": "talk_on_66771",
+          "image_id": 66771,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.11108042745276556,
+          "top1_score": 0.14970073103904724
+        },
+        {
+          "benchmark_id": "talk_on_74256",
+          "image_id": 74256,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.02224762924015522
+        },
+        {
+          "benchmark_id": "talk_on_76416",
+          "image_id": 76416,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.7601078280172144,
+          "top1_score": 0.018803367391228676
+        },
+        {
+          "benchmark_id": "talk_on_82688",
+          "image_id": 82688,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.032996900379657745
+        },
+        {
+          "benchmark_id": "talk_on_99428",
+          "image_id": 99428,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.7921141807278348,
+          "top1_score": 0.04392736032605171
+        },
+        {
+          "benchmark_id": "talk_on_120853",
+          "image_id": 120853,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.6043573024292127,
+          "top1_score": 0.018757067620754242
+        },
+        {
+          "benchmark_id": "talk_on_121417",
+          "image_id": 121417,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.009563917962994661,
+          "top1_score": 0.0396379679441452
+        },
+        {
+          "benchmark_id": "talk_on_122962",
+          "image_id": 122962,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.0415622852742672
+        },
+        {
+          "benchmark_id": "talk_on_125129",
+          "image_id": 125129,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.03424288332462311
+        },
+        {
+          "benchmark_id": "talk_on_146489",
+          "image_id": 146489,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.049306489527225494
+        },
+        {
+          "benchmark_id": "talk_on_156076",
+          "image_id": 156076,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.10193519294261932
+        },
+        {
+          "benchmark_id": "talk_on_157767",
+          "image_id": 157767,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.015387642197310925
+        },
+        {
+          "benchmark_id": "talk_on_160556",
+          "image_id": 160556,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.02050304412841797
+        },
+        {
+          "benchmark_id": "talk_on_166478",
+          "image_id": 166478,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.14756576909060817,
+          "top1_score": 0.09945394098758698
+        },
+        {
+          "benchmark_id": "talk_on_168883",
+          "image_id": 168883,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.12401004880666733
+        },
+        {
+          "benchmark_id": "talk_on_172595",
+          "image_id": 172595,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.11652188003063202
+        },
+        {
+          "benchmark_id": "talk_on_174371",
+          "image_id": 174371,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.6105505735693166,
+          "top1_score": 0.020048771053552628
+        },
+        {
+          "benchmark_id": "talk_on_176799",
+          "image_id": 176799,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.07917323708534241
+        },
+        {
+          "benchmark_id": "talk_on_203629",
+          "image_id": 203629,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.0472395084798336
+        },
+        {
+          "benchmark_id": "talk_on_245576",
+          "image_id": 245576,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.12894907593727112
+        },
+        {
+          "benchmark_id": "talk_on_250127",
+          "image_id": 250127,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.10672701895236969
+        },
+        {
+          "benchmark_id": "talk_on_273420",
+          "image_id": 273420,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.039650313556194305
+        },
+        {
+          "benchmark_id": "talk_on_284764",
+          "image_id": 284764,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.006929417606443167
+        },
+        {
+          "benchmark_id": "talk_on_295713",
+          "image_id": 295713,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.7531463495033694,
+          "top1_score": 0.0127386674284935
+        },
+        {
+          "benchmark_id": "talk_on_300039",
+          "image_id": 300039,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.15302508699226386,
+          "top1_score": 0.04252757132053375
+        },
+        {
+          "benchmark_id": "talk_on_333402",
+          "image_id": 333402,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.028781427070498466
+        },
+        {
+          "benchmark_id": "talk_on_334309",
+          "image_id": 334309,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.8093000450436261,
+          "top1_score": 0.08392874151468277
+        },
+        {
+          "benchmark_id": "talk_on_336628",
+          "image_id": 336628,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.1460334062576294
+        },
+        {
+          "benchmark_id": "talk_on_338304",
+          "image_id": 338304,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.16174505743358283,
+          "top1_score": 0.017852041870355606
+        },
+        {
+          "benchmark_id": "talk_on_343149",
+          "image_id": 343149,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.09366939961910248
+        },
+        {
+          "benchmark_id": "talk_on_361103",
+          "image_id": 361103,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.08353965729475021
+        },
+        {
+          "benchmark_id": "talk_on_367569",
+          "image_id": 367569,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.07475234568119049
+        },
+        {
+          "benchmark_id": "talk_on_391722",
+          "image_id": 391722,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.0737527534365654
+        },
+        {
+          "benchmark_id": "talk_on_396729",
+          "image_id": 396729,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.09761135334849232,
+          "top1_score": 0.06515011936426163
+        },
+        {
+          "benchmark_id": "talk_on_398377",
+          "image_id": 398377,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.0674118623137474
+        },
+        {
+          "benchmark_id": "talk_on_411754",
+          "image_id": 411754,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.14218184006470097,
+          "top1_score": 0.010972470045089722
+        },
+        {
+          "benchmark_id": "talk_on_411817",
+          "image_id": 411817,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.10786227881908417
+        },
+        {
+          "benchmark_id": "talk_on_421455",
+          "image_id": 421455,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.6946653056780663,
+          "top1_score": 0.01770533062517643
+        },
+        {
+          "benchmark_id": "talk_on_442456",
+          "image_id": 442456,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.016967397183179855
+        },
+        {
+          "benchmark_id": "talk_on_450303",
+          "image_id": 450303,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.09759658575057983
+        },
+        {
+          "benchmark_id": "talk_on_472678",
+          "image_id": 472678,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.03929242738082771,
+          "top1_score": 0.10393708199262619
+        },
+        {
+          "benchmark_id": "talk_on_492110",
+          "image_id": 492110,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.03399262577295303
+        },
+        {
+          "benchmark_id": "talk_on_496571",
+          "image_id": 496571,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.04617689177393913
+        },
+        {
+          "benchmark_id": "talk_on_498747",
+          "image_id": 498747,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.07729487866163254
+        },
+        {
+          "benchmark_id": "talk_on_507575",
+          "image_id": 507575,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.01373034026071733,
+          "top1_score": 0.17708151042461395
+        },
+        {
+          "benchmark_id": "talk_on_516916",
+          "image_id": 516916,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.21385525166988373
+        },
+        {
+          "benchmark_id": "talk_on_527427",
+          "image_id": 527427,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.21107609570026398
+        },
+        {
+          "benchmark_id": "talk_on_537270",
+          "image_id": 537270,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0003985369481753146,
+          "top1_score": 0.16641362011432648
+        },
+        {
+          "benchmark_id": "talk_on_537991",
+          "image_id": 537991,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.17582711577415466
+        },
+        {
+          "benchmark_id": "talk_on_545100",
+          "image_id": 545100,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.783219119577726,
+          "top1_score": 0.011320268735289574
+        },
+        {
+          "benchmark_id": "talk_on_549674",
+          "image_id": 549674,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.060321908444166183
+        },
+        {
+          "benchmark_id": "talk_on_553664",
+          "image_id": 553664,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.03556056693196297
+        },
+        {
+          "benchmark_id": "talk_on_553731",
+          "image_id": 553731,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.008357089683686003,
+          "top1_score": 0.023686004802584648
+        },
+        {
+          "benchmark_id": "talk_on_563882",
+          "image_id": 563882,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.8146369032356423,
+          "top1_score": 0.026692839339375496
+        },
+        {
+          "benchmark_id": "talk_on_579655",
+          "image_id": 579655,
+          "affordance_id": "talk_on",
+          "prompt": "something to talk on .",
+          "top1_iou": 0.0,
+          "top1_score": 0.008350556716322899
+        }
+      ],
+      "calibration": {
+        "n": 512,
+        "iou_threshold_correct": 0.5,
+        "accuracy": 0.251953125,
+        "mean_score": 0.13110556428136988,
+        "ece@10": 0.12280413545386182,
+        "brier": 0.1925082449943825,
+        "nll": 0.609338731505904,
+        "auroc_score_to_correctness": 0.667476268544943,
+        "ece_bins": [
+          {
+            "bin": 0,
+            "count": 245,
+            "mean_conf": 0.04905258869011031,
+            "accuracy": 0.1346938775510204,
+            "abs_gap": 0.0856412888609101
+          },
+          {
+            "bin": 1,
+            "count": 147,
+            "mean_conf": 0.14409711308219805,
+            "accuracy": 0.3469387755102041,
+            "abs_gap": 0.20284166242800603
+          },
+          {
+            "bin": 2,
+            "count": 74,
+            "mean_conf": 0.24000937008374446,
+            "accuracy": 0.33783783783783783,
+            "abs_gap": 0.09782846775409337
+          },
+          {
+            "bin": 3,
+            "count": 38,
+            "mean_conf": 0.3332713826706535,
+            "accuracy": 0.4473684210526316,
+            "abs_gap": 0.1140970383819781
+          },
+          {
+            "bin": 4,
+            "count": 8,
+            "mean_conf": 0.4376103915274143,
+            "accuracy": 0.375,
+            "abs_gap": 0.06261039152741432
+          },
+          {
+            "bin": 5,
+            "count": 0
+          },
+          {
+            "bin": 6,
+            "count": 0
+          },
+          {
+            "bin": 7,
+            "count": 0
+          },
+          {
+            "bin": 8,
+            "count": 0
+          },
+          {
+            "bin": 9,
+            "count": 0
+          }
+        ]
+      }
+    }
+  },
+  "errors": {
+    "glip_t": "RuntimeError('GLIP-T runner is not available in this workspace. No local GLIP-T code+weights were found (offline environment).')"
+  },
+  "config": {
+    "owlvit_model": "google/owlvit-base-patch32",
+    "hf_local_only": true
+  }
+}

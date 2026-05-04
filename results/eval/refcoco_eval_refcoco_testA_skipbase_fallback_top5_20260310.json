@@ -1,0 +1,56 @@
+{
+  "status": "ok",
+  "timestamp": "20260310_034039",
+  "dataset": {
+    "name": "refcoco",
+    "split_by": "unc",
+    "split": "testA"
+  },
+  "config": {
+    "conf_thresh": 0.3,
+    "iou_thresh": 0.5,
+    "thinkdet_checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+    "skip_baseline": true,
+    "shard_world_size": 4,
+    "shard_dir": "/tmp/refcoco_testA_skipbase_shards4_CTxX8I",
+    "fallback": {
+      "enabled": true,
+      "min_top1": 0.2,
+      "min_margin": 0.02,
+      "min_gate": null,
+      "llm_feedback_top_k": 5,
+      "llm_feedback_weight": 0.2,
+      "llm_feedback_max_new_tokens": 6,
+      "llm_feedback_temperature": 0.0,
+      "llm_feedback_improve_margin": 0.01,
+      "prompt_refine": true,
+      "prompt_refine_max_variants": 2,
+      "prompt_refine_max_new_tokens": 96,
+      "prompt_refine_temperature": 0.0,
+      "prompt_refine_improve_margin": 0.01
+    }
+  },
+  "summary": {
+    "thinkdet": {
+      "samples": 5657,
+      "top1_acc": 0.5550645218313593,
+      "top1_fp_rate": 0.4449354781686406,
+      "det_fp_rate": 0.30434782608695654,
+      "no_det_rate": 0.9068410818455012,
+      "img_has_fp_rate": 0.028106770372989216
+    },
+    "thinkdet_fallback": {
+      "samples": 5657,
+      "top1_acc": 0.5865299628778504,
+      "top1_fp_rate": 0.4134700371221495,
+      "det_fp_rate": 0.30566037735849055,
+      "no_det_rate": 0.9066643097047905,
+      "img_has_fp_rate": 0.02828354251369984
+    }
+  },
+  "fallback_stage_counts": {
+    "primary": 2139,
+    "llm_feedback": 3425,
+    "prompt_refine": 93
+  }
+}

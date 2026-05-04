@@ -1,0 +1,74 @@
+{
+  "status": "ok",
+  "timestamp": "20260226_031014",
+  "dataset": {
+    "name": "coco",
+    "split": "val2017",
+    "note": "custom carry_in cases"
+  },
+  "selection_criteria": {
+    "prompt_type": "affordance",
+    "prompt": "something to carry things in .",
+    "affordance": "carry_in",
+    "custom_manual_selection": true
+  },
+  "selected_cases": [
+    {
+      "image_id": 373382,
+      "prompt": "something to carry things in .",
+      "expression": "something to carry things in ",
+      "gt_box": [
+        0.6929062500000001,
+        0.5235624999999999,
+        0.08297916666666666,
+        0.02109375
+      ],
+      "affordance": "carry_in",
+      "target_categories": [
+        "backpack",
+        "handbag",
+        "suitcase"
+      ],
+      "benchmark_id": "carry_in_373382",
+      "rank": 1
+    },
+    {
+      "image_id": 439593,
+      "prompt": "something to carry things in .",
+      "expression": "something to carry things in ",
+      "gt_box": [
+        0.062492187500000004,
+        0.6446458333333334,
+        0.033703125,
+        0.09704166666666666
+      ],
+      "affordance": "carry_in",
+      "target_categories": [
+        "backpack",
+        "handbag",
+        "suitcase"
+      ],
+      "benchmark_id": "carry_in_439593",
+      "rank": 2
+    },
+    {
+      "image_id": 99114,
+      "prompt": "something to carry things in .",
+      "expression": "something to carry things in ",
+      "gt_box": [
+        0.74474,
+        0.6965373134328359,
+        0.0376,
+        0.0778507462686567
+      ],
+      "affordance": "carry_in",
+      "target_categories": [
+        "backpack",
+        "handbag",
+        "suitcase"
+      ],
+      "benchmark_id": "carry_in_99114",
+      "rank": 3
+    }
+  ]
+}

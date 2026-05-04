@@ -1,0 +1,39 @@
+{
+  "rank": 9,
+  "idx": 1100,
+  "image_id": 521618,
+  "ref_id": 5231,
+  "prompt": "the rightmost sheep towards the bottom of the image its not the one being fed .",
+  "expression": "the rightmost sheep towards the bottom of the image its not the one being fed",
+  "baseline": {
+    "top_iou": 0.12105224281549454,
+    "top_score": 0.14069297909736633,
+    "top_box": [
+      0.5784643292427063,
+      0.6119915843009949,
+      0.2603049576282501,
+      0.5083324313163757
+    ]
+  },
+  "tma": {
+    "top_iou": 0.9542661905288696,
+    "top_score": 0.09048440307378769,
+    "top_box": [
+      0.7897307872772217,
+      0.7941200733184814,
+      0.41674861311912537,
+      0.40306392312049866
+    ]
+  },
+  "gt_box": [
+    0.7964453101158142,
+    0.7918267250061035,
+    0.4071093797683716,
+    0.4089929759502411
+  ],
+  "iou_gap": 0.8332139477133751,
+  "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank9_img521618_the_rightmost_sheep_towards_the_bott",
+  "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank9_img521618_the_rightmost_sheep_towards_the_bott/comparison_grid.png",
+  "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank9_img521618_the_rightmost_sheep_towards_the_bott/baseline.png",
+  "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank9_img521618_the_rightmost_sheep_towards_the_bott/stage1_tma.png"
+}

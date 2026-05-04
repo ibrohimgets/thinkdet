@@ -1,0 +1,39 @@
+{
+  "rank": 3,
+  "idx": 810,
+  "image_id": 538263,
+  "ref_id": 3822,
+  "prompt": "guy on the left in back .",
+  "expression": "guy on the left in back",
+  "baseline": {
+    "top_iou": 0.0,
+    "top_score": 0.08510203659534454,
+    "top_box": [
+      0.424923300743103,
+      0.5678865909576416,
+      0.3888165354728699,
+      0.5535910725593567
+    ]
+  },
+  "tma": {
+    "top_iou": 0.9129770994186401,
+    "top_score": 0.08746378123760223,
+    "top_box": [
+      0.7091870307922363,
+      0.1329943686723709,
+      0.2064594179391861,
+      0.2626032531261444
+    ]
+  },
+  "gt_box": [
+    0.7174882888793945,
+    0.13478906452655792,
+    0.22128504514694214,
+    0.2645781338214874
+  ],
+  "iou_gap": 0.9129770994186401,
+  "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank3_img538263_guy_on_the_left_in_back",
+  "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank3_img538263_guy_on_the_left_in_back/comparison_grid.png",
+  "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank3_img538263_guy_on_the_left_in_back/baseline.png",
+  "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank3_img538263_guy_on_the_left_in_back/stage1_tma.png"
+}

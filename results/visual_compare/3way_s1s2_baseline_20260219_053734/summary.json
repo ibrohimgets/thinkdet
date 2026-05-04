@@ -1,0 +1,182 @@
+{
+  "timestamp": "20260219_053734",
+  "stage1_ckpt": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage1_tma/layer9_tma_m8_full_2ep_7gpu_20260218_152649/thinkdet_tma_stage1_epoch2.pth",
+  "stage2_ckpt": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage2_tma/layer9_tma_m8_8gpu_20260219_010134/thinkdet_tma_stage2_epoch2.pth",
+  "cases": [
+    {
+      "case": 1,
+      "image_id": 309391,
+      "image_file": "000000309391.jpg",
+      "prompt": "the second person from the right .",
+      "prompt_type": "Ordinal+spatial (people)",
+      "baseline_top1": {
+        "box": [
+          601.9121432304382,
+          268.2483673095703,
+          628.6489224433899,
+          356.7926330566406
+        ],
+        "score": 0.3680781126022339
+      },
+      "stage1_top1": {
+        "box": [
+          601.7332768440247,
+          267.82221508026123,
+          629.0788722038269,
+          356.99480152130127
+        ],
+        "score": 0.3075631856918335
+      },
+      "stage2_top1": {
+        "box": [
+          601.8385314941406,
+          268.06990814208984,
+          628.8788604736328,
+          356.8488235473633
+        ],
+        "score": 0.2573789358139038
+      },
+      "output_file": "case1_309391_ordinal_spatial.jpg"
+    },
+    {
+      "case": 2,
+      "image_id": 139099,
+      "image_file": "000000139099.jpg",
+      "prompt": "the man wearing a white shirt .",
+      "prompt_type": "Attribute binding (person+clothing)",
+      "baseline_top1": {
+        "box": [
+          1.5071773529052734,
+          147.12622529268265,
+          209.73427772521973,
+          396.1744642853737
+        ],
+        "score": 0.7159773707389832
+      },
+      "stage1_top1": {
+        "box": [
+          1.6785812377929688,
+          148.55874475836754,
+          209.98414993286133,
+          395.7629570066929
+        ],
+        "score": 0.35027584433555603
+      },
+      "stage2_top1": {
+        "box": [
+          1.4225959777832031,
+          188.8532199561596,
+          171.59013748168945,
+          365.53879299759865
+        ],
+        "score": 0.247091606259346
+      },
+      "output_file": "case2_139099_attribute_binding.jpg"
+    },
+    {
+      "case": 3,
+      "image_id": 372819,
+      "image_file": "000000372819.jpg",
+      "prompt": "the smaller dog on the left .",
+      "prompt_type": "Size+spatial (dogs)",
+      "baseline_top1": {
+        "box": [
+          425.91816425323486,
+          192.18674831092358,
+          467.8731107711792,
+          277.6377453356981
+        ],
+        "score": 0.38650113344192505
+      },
+      "stage1_top1": {
+        "box": [
+          425.93414068222046,
+          192.10787889361382,
+          467.99118280410767,
+          277.786695510149
+        ],
+        "score": 0.40719062089920044
+      },
+      "stage2_top1": {
+        "box": [
+          214.61020231246948,
+          226.01040686666965,
+          274.72359895706177,
+          318.2456401437521
+        ],
+        "score": 0.34638625383377075
+      },
+      "output_file": "case3_372819_size_spatial.jpg"
+    },
+    {
+      "case": 4,
+      "image_id": 546219,
+      "image_file": "000000546219.jpg",
+      "prompt": "something to drink from .",
+      "prompt_type": "Open-vocab function (cup)",
+      "baseline_top1": {
+        "box": [
+          168.2589340209961,
+          299.8112745285034,
+          382.7231216430664,
+          399.9362806081772
+        ],
+        "score": 0.24487018585205078
+      },
+      "stage1_top1": {
+        "box": [
+          169.4728946685791,
+          299.8554641455412,
+          382.919225692749,
+          398.1850801259279
+        ],
+        "score": 0.23375149071216583
+      },
+      "stage2_top1": {
+        "box": [
+          169.6793556213379,
+          299.21976993978024,
+          382.5984001159668,
+          398.5320561081171
+        ],
+        "score": 0.19537082314491272
+      },
+      "output_file": "case4_546219_open-vocab_function.jpg"
+    },
+    {
+      "case": 5,
+      "image_id": 244833,
+      "image_file": "000000244833.jpg",
+      "prompt": "the empty chair closest to the camera .",
+      "prompt_type": "Spatial+attribute (chair)",
+      "baseline_top1": {
+        "box": [
+          0.7376670837402344,
+          237.47062647342682,
+          96.95804595947266,
+          425.80526864528656
+        ],
+        "score": 0.31128400564193726
+      },
+      "stage1_top1": {
+        "box": [
+          0.6864309310913086,
+          237.687257707119,
+          97.08978176116943,
+          425.32072311639786
+        ],
+        "score": 0.29332080483436584
+      },
+      "stage2_top1": {
+        "box": [
+          0.6263113021850586,
+          237.37577736377716,
+          97.35461711883545,
+          424.3218163251877
+        ],
+        "score": 0.23932184278964996
+      },
+      "output_file": "case5_244833_spatial_attribute.jpg"
+    }
+  ]
+}

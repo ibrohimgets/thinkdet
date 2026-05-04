@@ -1,0 +1,50 @@
+{
+  "status": "ok",
+  "baseline_path": "/home/iibrohimm/project/next_step/thinkdet/results/eval/stage1_layer9_baseline_clean.json",
+  "trained_path": "/home/iibrohimm/project/next_step/thinkdet/results/eval/stage1_layer9_e12_fix_trained_only_coco_val_8gpu.json",
+  "baseline_mode": "baseline",
+  "trained_mode": null,
+  "baseline_metrics": {
+    "mAP": 0.4323427078869302,
+    "mAP_50": 0.5699466872796357,
+    "mAP_75": 0.47123077470294733,
+    "mAP_S": 0.28099100220985335,
+    "mAP_M": 0.45940656802564017,
+    "mAP_L": 0.5847421251009058,
+    "mAR_1": 0.3430879343463157,
+    "mAR_10": 0.5152506021652833,
+    "mAR_100": 0.53098476165174,
+    "num_predictions": 51017,
+    "num_images": 4952,
+    "eval_time_min": 2.967500893274943
+  },
+  "trained_metrics": {
+    "mAP": 0.39658066112919144,
+    "mAP_50": 0.5083563668574045,
+    "mAP_75": 0.43403161011107844,
+    "mAP_S": 0.23958235547576234,
+    "mAP_M": 0.4301369612487573,
+    "mAP_L": 0.5559597841226149,
+    "mAR_1": 0.315228971801591,
+    "mAR_10": 0.4572403308782444,
+    "mAR_100": 0.46661428594208515,
+    "num_predictions": 31970,
+    "num_images": 4952,
+    "eval_time_min": 4.163602018356324
+  },
+  "delta_trained_minus_baseline": {
+    "mAP": -0.03576204675773875,
+    "mAP_50": -0.061590320422231226,
+    "mAP_75": -0.037199164591868894,
+    "mAP_S": -0.041408646734091004,
+    "mAP_M": -0.029269606776882895,
+    "mAP_L": -0.02878234097829091,
+    "mAR_1": -0.027858962544724697,
+    "mAR_10": -0.058010271287038895,
+    "mAR_100": -0.06437047570965487,
+    "num_predictions": -19047,
+    "num_images": 0,
+    "eval_time_min": 1.1961011250813804
+  },
+  "timestamp": "2026-02-17 11:09:57"
+}

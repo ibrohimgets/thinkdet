@@ -1,0 +1,33 @@
+{
+  "timestamp": "20260225_220811",
+  "source_summary": "thinkdet/results/eval/affordance_heldout_single_case_unified_epoch5_nonbaseball_source.json",
+  "stage2_ckpt": "thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+  "case": {
+    "image_id": 156076,
+    "image_file": "000000156076.jpg",
+    "prompt": "something to talk on .",
+    "prompt_type": "Hard-mined baseline-failure (non-baseball)",
+    "source_iou_gap": 0.7008136906459352,
+    "source_baseline_iou": 0.0,
+    "source_tma_iou": 0.7008136906459352,
+    "baseline_top1": {
+      "box": [
+        138.42615127563477,
+        255.49615824222565,
+        486.7511177062988,
+        451.4951742887497
+      ],
+      "score": 0.23997192084789276
+    },
+    "stage2_top1": {
+      "box": [
+        207.46670722961426,
+        145.87393529340625,
+        237.6719570159912,
+        164.2698231227696
+      ],
+      "score": 0.1844019889831543
+    },
+    "output_file": "case1_156076_baseline_vs_unified_epoch5.jpg"
+  }
+}

@@ -1,0 +1,102 @@
+W0212 13:47:27.537000 134754343170688 torch/distributed/run.py:757] 
+W0212 13:47:27.537000 134754343170688 torch/distributed/run.py:757] *****************************************
+W0212 13:47:27.537000 134754343170688 torch/distributed/run.py:757] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0212 13:47:27.537000 134754343170688 torch/distributed/run.py:757] *****************************************
+==============================================================================
+  ThinkDet v2 — Rigorous Reasoning Layer Probe (RefCOCOg Val)
+==============================================================================
+  Distributed mode: world_size=8 rank=0
+  RefCOCOg val: 2573 refs across 1300 images
+  Sentences kept: 4889  (avg 1.90 per ref)
+  Refs with >=2 sentences: 2309
+  Images with >=2 refs: 816 (used for inter-ref separation)
+  Loading InternVL from /home/iibrohimm/project/next_step/InternVL3_5-1B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+  Loading InternVL from /home/iibrohimm/project/next_step/InternVL3_5-1B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+  Loading InternVL from /home/iibrohimm/project/next_step/InternVL3_5-1B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+  Loading InternVL from /home/iibrohimm/project/next_step/InternVL3_5-1B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+  Loading InternVL from /home/iibrohimm/project/next_step/InternVL3_5-1B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+  Loading InternVL from /home/iibrohimm/project/next_step/InternVL3_5-1B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+FlashAttention2 is not installed.
+FlashAttention2 is not installed.
+FlashAttention2 is not installed.
+FlashAttention2 is not installed.
+FlashAttention2 is not installed.
+FlashAttention2 is not installed.
+  Loading InternVL from /home/iibrohimm/project/next_step/InternVL3_5-1B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+  Loading InternVL from /home/iibrohimm/project/next_step/InternVL3_5-1B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+FlashAttention2 is not installed.
+FlashAttention2 is not installed.
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+  LLM layers: 28  |  hidden: 1024  |  visual tokens: 256  |  dtype: float32
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+  LLM layers: 28  |  hidden: 1024  |  visual tokens: 256  |  dtype: float32
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+  LLM layers: 28  |  hidden: 1024  |  visual tokens: 256  |  dtype: float32
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+  LLM layers: 28  |  hidden: 1024  |  visual tokens: 256  |  dtype: float32
+
+  Processing 1300 images across 8 ranks (~4889 query forwards total, local ~603) across 28 layers ...
+
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+  LLM layers: 28  |  hidden: 1024  |  visual tokens: 256  |  dtype: float32
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+  LLM layers: 28  |  hidden: 1024  |  visual tokens: 256  |  dtype: float32
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+  LLM layers: 28  |  hidden: 1024  |  visual tokens: 256  |  dtype: float32
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+  LLM layers: 28  |  hidden: 1024  |  visual tokens: 256  |  dtype: float32
+  [ 100/163] 381/603 query forwards (4.29 q/s  ETA 0.9 min)
+
+  Done: 4889 query forwards, 2573 refs, 1300 images in 2.5 min (skipped 0 missing/corrupt images)
+
+==============================================================================
+  RIGOROUS LAYER PROBE RESULTS (4889 queries, 1300 images)
+==============================================================================
+  Layer  Margin    Stability  TokDiv    CrossSpr  Uncert   Composite
+  -----  --------  ---------  --------  --------  -------  ---------
+      0   -0.0001     0.9995    0.5021    0.0597   0.6901     0.9722  <-- BEST
+      1   -0.0003     0.9993    0.4332    0.0455   0.7615     0.8833
+      2   -0.0002     0.9995    0.3213    0.0276   0.7293     0.8111
+      3   -0.0017     0.9947    0.2626    0.0280   0.8029     0.7167
+      4   -0.0022     0.9933    0.2701    0.0297   0.8040     0.7185
+      5   -0.0033     0.9896    0.2627    0.0375   0.7970     0.7019
+      6   -0.0034     0.9895    0.2617    0.0387   0.7981     0.6796
+      7   -0.0059     0.9816    0.2797    0.0421   0.7997     0.7370
+      8   -0.0072     0.9783    0.2502    0.0411   0.8185     0.6333
+      9   -0.0108     0.9682    0.2422    0.0458   0.8163     0.6148
+     10   -0.0128     0.9621    0.2467    0.0474   0.8158     0.5259
+     11   -0.0111     0.9675    0.2697    0.0401   0.8126     0.6185
+     12   -0.0122     0.9643    0.2374    0.0388   0.8056     0.5093
+     13   -0.0124     0.9639    0.2324    0.0376   0.8088     0.4593
+     14   -0.0118     0.9660    0.2018    0.0330   0.8056     0.4907
+     15   -0.0159     0.9540    0.1711    0.0383   0.7954     0.3981
+     16   -0.0158     0.9544    0.1795    0.0404   0.7932     0.4685
+     17   -0.0169     0.9511    0.1457    0.0401   0.7852     0.3778
+     18   -0.0172     0.9501    0.1180    0.0398   0.7825     0.3148
+     19   -0.0164     0.9526    0.1248    0.0394   0.7965     0.3759
+     20   -0.0172     0.9504    0.1247    0.0464   0.8034     0.3500
+     21   -0.0173     0.9501    0.0888    0.0511   0.8045     0.3204
+     22   -0.0176     0.9493    0.0812    0.0580   0.8126     0.2778
+     23   -0.0200     0.9423    0.0812    0.0661   0.8110     0.2611
+     24   -0.0207     0.9405    0.0655    0.0687   0.8136     0.2315
+     25   -0.0244     0.9293    0.0529    0.0840   0.8163     0.1944
+     26   -0.0288     0.9147    0.0456    0.1028   0.8158     0.1741
+     27   -0.0380     0.8843    0.0570    0.1443   0.8088     0.1833
+
+  Best disambiguation margin: layer 0 (-0.000148)
+  Best paraphrase stability:  layer 0 (0.999537)
+  Best composite (overall):   layer 0 (0.972222)
+  Top-2 margin CI overlap: NO (L0 [-0.000165, -0.00013] vs L1 [-0.000273, -0.000229])
+  Composite weights: 40% margin + 20% stability + 20% token_div + 15% cross_spread + 5% certainty
+
+  Results: /home/iibrohimm/project/next_step/thinkdet/results/layer_probe/layer_probe_results.json
+  Plot: /home/iibrohimm/project/next_step/thinkdet/results/layer_probe/layer_probe_summary.png
+==============================================================================

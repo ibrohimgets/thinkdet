@@ -1,0 +1,233 @@
+{
+  "status": "ok",
+  "benchmark": "/home/iibrohimm/project/next_step/thinkdet/data/benchmarks/affordance_coco_val_heldout_v2.json",
+  "layer_setup": [
+    14
+  ],
+  "layer_fusion": "mean",
+  "train_n": 2,
+  "unseen_n": 2,
+  "steps": 1,
+  "lr": 0.0001,
+  "alpha_init": 0.05,
+  "gate_after_delta": true,
+  "lambda_delta": 0.01,
+  "checkpoint": "results/overfit_sanity_stable_smoke/tiny_overfit_layer14.pth",
+  "train_affordance_counts": {
+    "control_with": 1,
+    "tell_time": 1
+  },
+  "unseen_affordance_counts": {
+    "eat": 1,
+    "play_with": 1
+  },
+  "loss_first": 1.536024570465088,
+  "loss_last": 1.536024570465088,
+  "loss_mean_last10": 1.536024570465088,
+  "baseline_train": {
+    "n": 2,
+    "top1_hit@0.5": 0.0,
+    "top5_hit@0.5": 0.0,
+    "mean_top1_iou": 0.0,
+    "mean_top5_iou": 9.368093645496493e-05
+  },
+  "trained_train": {
+    "n": 2,
+    "top1_hit@0.5": 0.0,
+    "top5_hit@0.5": 0.0,
+    "mean_top1_iou": 0.0,
+    "mean_top5_iou": 9.367847527853388e-05
+  },
+  "baseline_unseen": {
+    "n": 2,
+    "top1_hit@0.5": 0.5,
+    "top5_hit@0.5": 0.5,
+    "mean_top1_iou": 0.3343099773332527,
+    "mean_top5_iou": 0.6590245864717494
+  },
+  "trained_unseen": {
+    "n": 2,
+    "top1_hit@0.5": 0.5,
+    "top5_hit@0.5": 0.5,
+    "mean_top1_iou": 0.3343136147375676,
+    "mean_top5_iou": 0.6589878421262167
+  },
+  "prediction_change_train": {
+    "top1_box_changed_rate": 0.0,
+    "top1_hit_changed_count": 0,
+    "mean_abs_top1_score_delta": 9.323284029960632e-05
+  },
+  "prediction_change_unseen": {
+    "top1_box_changed_rate": 0.0,
+    "top1_hit_changed_count": 0,
+    "mean_abs_top1_score_delta": 0.0002330690622329712
+  },
+  "delta_norm_train": {
+    "1": {
+      "delta_norm": 0.02493997197598219,
+      "delta_over_memory": 0.0017069710542141681,
+      "gate": 0.049958378076553345,
+      "memory_norm": 14.625013828277588
+    },
+    "3": {
+      "delta_norm": 0.026722312904894352,
+      "delta_over_memory": 0.0018296675232572885,
+      "gate": 0.049958378076553345,
+      "memory_norm": 14.625013828277588
+    },
+    "5": {
+      "delta_norm": 0.026074575260281563,
+      "delta_over_memory": 0.0017850664716497564,
+      "gate": 0.049958378076553345,
+      "memory_norm": 14.625013828277588
+    }
+  },
+  "delta_norm_unseen": {
+    "1": {
+      "delta_norm": 0.023098726756870747,
+      "delta_over_memory": 0.0016884973016957948,
+      "gate": 0.049958378076553345,
+      "memory_norm": 13.614286422729492
+    },
+    "3": {
+      "delta_norm": 0.023087981157004833,
+      "delta_over_memory": 0.0016806895205498979,
+      "gate": 0.049958378076553345,
+      "memory_norm": 13.614286422729492
+    },
+    "5": {
+      "delta_norm": 0.02376577351242304,
+      "delta_over_memory": 0.001734724364996428,
+      "gate": 0.049958378076553345,
+      "memory_norm": 13.614286422729492
+    }
+  },
+  "train_rows_baseline": [
+    {
+      "benchmark_id": "tell_time_216296",
+      "image_id": 216296,
+      "affordance_id": "tell_time",
+      "top1_iou": 0.0,
+      "top5_iou": 0.00018736187290992987,
+      "top1_box": [
+        196.298828125,
+        111.87453213334084,
+        388.67610931396484,
+        395.57665833830833
+      ],
+      "top1_score": 0.10945213586091995,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "control_with_50811",
+      "image_id": 50811,
+      "affordance_id": "control_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        0.36677122116088867,
+        460.9932554513216,
+        29.84950304031372,
+        500.45768313109875
+      ],
+      "top1_score": 0.08891824632883072,
+      "gate_mean": 0.0
+    }
+  ],
+  "train_rows_trained": [
+    {
+      "benchmark_id": "tell_time_216296",
+      "image_id": 216296,
+      "affordance_id": "tell_time",
+      "top1_iou": 0.0,
+      "top5_iou": 0.00018735695055706775,
+      "top1_box": [
+        196.29528045654297,
+        111.8663623034954,
+        388.67977142333984,
+        395.5818249285221
+      ],
+      "top1_score": 0.10932856798171997,
+      "gate_mean": 0.049958378076553345
+    },
+    {
+      "benchmark_id": "control_with_50811",
+      "image_id": 50811,
+      "affordance_id": "control_with",
+      "top1_iou": 0.0,
+      "top5_iou": 0.0,
+      "top1_box": [
+        0.3658318519592285,
+        460.9934537857771,
+        29.850196838378906,
+        500.4597205668688
+      ],
+      "top1_score": 0.08885534852743149,
+      "gate_mean": 0.049958378076553345
+    }
+  ],
+  "unseen_rows_baseline": [
+    {
+      "benchmark_id": "play_with_236426",
+      "image_id": 236426,
+      "affordance_id": "play_with",
+      "top1_iou": 0.012519327531378297,
+      "top5_iou": 0.3475250613634835,
+      "top1_box": [
+        256.45759105682373,
+        62.08360916376114,
+        409.5434617996216,
+        282.0076519846916
+      ],
+      "top1_score": 0.13686686754226685,
+      "gate_mean": 0.0
+    },
+    {
+      "benchmark_id": "eat_417608",
+      "image_id": 417608,
+      "affordance_id": "eat",
+      "top1_iou": 0.6561006271351271,
+      "top5_iou": 0.9705241115800154,
+      "top1_box": [
+        27.95642852783203,
+        54.83795124292374,
+        614.1935348510742,
+        409.0524796843529
+      ],
+      "top1_score": 0.20593468844890594,
+      "gate_mean": 0.0
+    }
+  ],
+  "unseen_rows_trained": [
+    {
+      "benchmark_id": "play_with_236426",
+      "image_id": 236426,
+      "affordance_id": "play_with",
+      "top1_iou": 0.012519092261159196,
+      "top5_iou": 0.3474334282650861,
+      "top1_box": [
+        256.4561462402344,
+        62.085284024477005,
+        409.54498291015625,
+        282.00919899344444
+      ],
+      "top1_score": 0.13666212558746338,
+      "gate_mean": 0.049958378076553345
+    },
+    {
+      "benchmark_id": "eat_417608",
+      "image_id": 417608,
+      "affordance_id": "eat",
+      "top1_iou": 0.656108137213976,
+      "top5_iou": 0.9705422559873473,
+      "top1_box": [
+        27.95623779296875,
+        54.83999526500702,
+        614.1921234130859,
+        409.0538889169693
+      ],
+      "top1_score": 0.20567329227924347,
+      "gate_mean": 0.049958378076553345
+    }
+  ]
+}

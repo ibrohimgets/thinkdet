@@ -1,0 +1,65 @@
+{
+  "checkpoint": "thinkdet/checkpoints/stage1_tma/layer9_tma_m8_full_2ep_7gpu_20260218_152649/thinkdet_tma_stage1_epoch2.pth",
+  "conf_thresh": 0.3,
+  "conf_thresh_low": 0.1,
+  "baseline": {
+    "conf0.3": {
+      "mAP": 0.4316,
+      "mAP_50": 0.5694,
+      "mAP_75": 0.47,
+      "mAP_S": 0.2806,
+      "mAP_M": 0.4593,
+      "mAP_L": 0.5835,
+      "mAR_1": 0.3431,
+      "mAR_10": 0.5154,
+      "mAR_100": 0.5312
+    },
+    "conf0.1": {
+      "mAP": 0.4644,
+      "mAP_50": 0.6157,
+      "mAP_75": 0.5067,
+      "mAP_S": 0.3185,
+      "mAP_M": 0.4955,
+      "mAP_L": 0.6098,
+      "mAR_1": 0.3618,
+      "mAR_10": 0.5967,
+      "mAR_100": 0.6363
+    },
+    "num_predictions_hi": 51021,
+    "num_predictions_lo": 210727,
+    "mean_logit_magnitude": 33.7441
+  },
+  "tma": {
+    "conf0.3": {
+      "mAP": 0.3996,
+      "mAP_50": 0.5245,
+      "mAP_75": 0.4389,
+      "mAP_S": 0.2573,
+      "mAP_M": 0.4305,
+      "mAP_L": 0.5447,
+      "mAR_1": 0.3319,
+      "mAR_10": 0.489,
+      "mAR_100": 0.5017
+    },
+    "conf0.1": {
+      "mAP": 0.4472,
+      "mAP_50": 0.5934,
+      "mAP_75": 0.491,
+      "mAP_S": 0.302,
+      "mAP_M": 0.4839,
+      "mAP_L": 0.5881,
+      "mAR_1": 0.3614,
+      "mAR_10": 0.6054,
+      "mAR_100": 0.6493
+    },
+    "num_predictions_hi": 45009,
+    "num_predictions_lo": 260592,
+    "mean_logit_magnitude": 33.4843
+  },
+  "delta": {
+    "mAP_conf0.3": -0.032,
+    "mAP_conf0.1": -0.0172,
+    "num_predictions_hi": -6012,
+    "mean_logit_magnitude": -0.2598
+  }
+}

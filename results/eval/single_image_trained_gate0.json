@@ -1,0 +1,14 @@
+{
+  "mode": "trained_gate0",
+  "det03": 23,
+  "top1": 0.8369432091712952,
+  "mean_max_score": 0.052632931619882584,
+  "logits_mean": -33.513893127441406,
+  "logits_std": 21.033348083496094,
+  "finite_logits": true,
+  "gate_effective": [
+    0.0,
+    0.0,
+    0.0
+  ]
+}

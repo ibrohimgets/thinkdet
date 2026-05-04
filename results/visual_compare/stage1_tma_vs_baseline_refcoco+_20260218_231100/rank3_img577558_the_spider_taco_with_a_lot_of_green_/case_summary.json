@@ -1,0 +1,39 @@
+{
+  "rank": 3,
+  "idx": 73,
+  "image_id": 577558,
+  "ref_id": 395,
+  "prompt": "the spider taco with a lot of green stuffs .",
+  "expression": "the spider taco with a lot of green stuffs",
+  "baseline": {
+    "top_iou": 0.00032680865842849016,
+    "top_score": 0.22601071000099182,
+    "top_box": [
+      0.2396884560585022,
+      0.3838435113430023,
+      0.33739393949508667,
+      0.6721318364143372
+    ]
+  },
+  "tma": {
+    "top_iou": 0.6793407201766968,
+    "top_score": 0.1533443182706833,
+    "top_box": [
+      0.6951509118080139,
+      0.6057265996932983,
+      0.4814271330833435,
+      0.4578837454319
+    ]
+  },
+  "gt_box": [
+    0.6733124852180481,
+    0.6820208430290222,
+    0.5309062600135803,
+    0.6044999957084656
+  ],
+  "iou_gap": 0.6790139115182683,
+  "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank3_img577558_the_spider_taco_with_a_lot_of_green_",
+  "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank3_img577558_the_spider_taco_with_a_lot_of_green_/comparison_grid.png",
+  "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank3_img577558_the_spider_taco_with_a_lot_of_green_/baseline.png",
+  "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank3_img577558_the_spider_taco_with_a_lot_of_green_/stage1_tma.png"
+}

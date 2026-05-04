@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "timestamp": "20260225_031605",
+  "dataset": {
+    "name": "refcoco",
+    "split_by": "unc",
+    "split": "val",
+    "total_samples": 10834,
+    "evaluated_samples": 10834
+  },
+  "config": {
+    "conf_thresh": 0.05,
+    "iou_thresh": 0.5,
+    "thinkdet_checkpoint": "thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth"
+  },
+  "summary": {
+    "baseline": {
+      "samples": 10834,
+      "top1_acc": 0.5064611408528706,
+      "top1_fp_rate": 0.4935388591471294,
+      "det_fp_rate": 0.7612051350390903,
+      "no_det_rate": 0.0010153221340225217,
+      "img_has_fp_rate": 0.9116669743400406
+    },
+    "thinkdet": {
+      "samples": 10834,
+      "top1_acc": 0.5043381945726417,
+      "top1_fp_rate": 0.4956618054273583,
+      "det_fp_rate": 0.723968328755789,
+      "no_det_rate": 0.009322503230570427,
+      "img_has_fp_rate": 0.8920066457448772
+    }
+  }
+}

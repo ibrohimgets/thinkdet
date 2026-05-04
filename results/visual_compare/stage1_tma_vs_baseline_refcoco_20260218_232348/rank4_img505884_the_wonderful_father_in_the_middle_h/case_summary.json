@@ -1,0 +1,39 @@
+{
+  "rank": 4,
+  "idx": 1388,
+  "image_id": 505884,
+  "ref_id": 6636,
+  "prompt": "the wonderful father in the middle he is glorious .",
+  "expression": "the wonderful father in the middle he is glorious",
+  "baseline": {
+    "top_iou": 0.04522344842553139,
+    "top_score": 0.18933896720409393,
+    "top_box": [
+      0.5368074178695679,
+      0.5817643404006958,
+      0.20060032606124878,
+      0.7039260864257812
+    ]
+  },
+  "tma": {
+    "top_iou": 0.9387806057929993,
+    "top_score": 0.13024602830410004,
+    "top_box": [
+      0.7184277176856995,
+      0.5244412422180176,
+      0.19766326248645782,
+      0.7958195209503174
+    ]
+  },
+  "gt_box": [
+    0.7137734293937683,
+    0.5181747674942017,
+    0.19020313024520874,
+    0.8026019334793091
+  ],
+  "iou_gap": 0.8935571573674679,
+  "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank4_img505884_the_wonderful_father_in_the_middle_h",
+  "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank4_img505884_the_wonderful_father_in_the_middle_h/comparison_grid.png",
+  "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank4_img505884_the_wonderful_father_in_the_middle_h/baseline.png",
+  "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank4_img505884_the_wonderful_father_in_the_middle_h/stage1_tma.png"
+}

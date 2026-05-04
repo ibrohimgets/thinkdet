@@ -1,0 +1,2 @@
+object_id,object_name,thinkdet_hit@0.5_top1,fallback_hit@0.5_top1,thinkdet_mean_best_iou_top1,fallback_mean_best_iou_top1,n_samples
+person,person,1.000000,1.000000,0.967460,0.634429,1

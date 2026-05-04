@@ -1,0 +1,455 @@
+{
+  "result_json": "results/overfit_sanity/official_layer14_707train_test707_rank02_protect03_regselect/tiny_overfit_layer14.json",
+  "previous_final_json": "results/overfit_sanity/official_layer14_707train_test707_rank02_combined/tiny_overfit_layer14.json",
+  "split_validation": {
+    "train_samples": 707,
+    "unseen_samples": 707,
+    "train_unique_image_ids": 707,
+    "unseen_unique_image_ids": 707,
+    "train_unseen_image_overlap": 0,
+    "same_train_images_as_previous_final": true,
+    "same_unseen_images_as_previous_final": true
+  },
+  "current_unseen": {
+    "dino_top1": 0.3012729844413013,
+    "dino_top5": 0.5445544554455446,
+    "think_top1": 0.32673267326732675,
+    "think_top5": 0.5785007072135785,
+    "mean_top1": 0.3221808413406047,
+    "mean_top5": 0.5417606905421748,
+    "top1_gain_pp": 2.545968882602545,
+    "top5_gain_pp": 3.3946251768033897,
+    "prediction_change": 0.3493635077793494
+  },
+  "previous_final_unseen": {
+    "dino_top1": 0.3012729844413013,
+    "dino_top5": 0.5445544554455446,
+    "think_top1": 0.31683168316831684,
+    "think_top5": 0.5586987270155587,
+    "mean_top1": 0.3058390501670602,
+    "mean_top5": 0.5220622583605673,
+    "top1_gain_pp": 1.555869872701554,
+    "top5_gain_pp": 1.4144271570014078,
+    "prediction_change": 0.5657708628005658
+  },
+  "regression_counts": {
+    "top1_regressions": 13,
+    "top5_regressions": 16,
+    "regression_count": 29,
+    "n": 707,
+    "penalty": 0.04101838755304102
+  },
+  "previous_regression_counts": {
+    "top1_regressions": 51,
+    "top5_regressions": 49,
+    "regression_count": 100,
+    "n": 707,
+    "penalty": 0.14144271570014144
+  },
+  "wins": {
+    "total": 71,
+    "by_kind": {
+      "top1_win": 31,
+      "top5_win": 40
+    }
+  },
+  "failures": {
+    "total": 29,
+    "by_kind": {
+      "top1_failure": 13,
+      "top5_failure": 16
+    }
+  },
+  "rank_movement": {
+    "improved": 71,
+    "worse": 29,
+    "same": 607,
+    "transition_matrix": {
+      "top5_only": {
+        "top5_only": 125,
+        "missing_top5": 16,
+        "top1": 31
+      },
+      "top1": {
+        "top1": 200,
+        "top5_only": 13
+      },
+      "missing_top5": {
+        "missing_top5": 282,
+        "top5_only": 40
+      }
+    }
+  },
+  "top_affordance_gains": [
+    {
+      "name": "play_with",
+      "n": 81,
+      "dino_top1": 0.12345679012345678,
+      "dino_top5": 0.41975308641975306,
+      "think_top1": 0.18518518518518517,
+      "think_top5": 0.6172839506172839,
+      "delta_top1_pp": 6.172839506172839,
+      "delta_top5_pp": 19.753086419753085
+    },
+    {
+      "name": "tell_time",
+      "n": 30,
+      "dino_top1": 0.3333333333333333,
+      "dino_top5": 0.6333333333333333,
+      "think_top1": 0.4666666666666667,
+      "think_top5": 0.7333333333333333,
+      "delta_top1_pp": 13.333333333333336,
+      "delta_top5_pp": 9.999999999999998
+    },
+    {
+      "name": "carry_in",
+      "n": 51,
+      "dino_top1": 0.3137254901960784,
+      "dino_top5": 0.6274509803921569,
+      "think_top1": 0.37254901960784315,
+      "think_top5": 0.7058823529411765,
+      "delta_top1_pp": 5.882352941176472,
+      "delta_top5_pp": 7.843137254901967
+    },
+    {
+      "name": "talk_on",
+      "n": 30,
+      "dino_top1": 0.5666666666666667,
+      "dino_top5": 0.6666666666666666,
+      "think_top1": 0.6333333333333333,
+      "think_top5": 0.7333333333333333,
+      "delta_top1_pp": 6.666666666666665,
+      "delta_top5_pp": 6.666666666666665
+    },
+    {
+      "name": "drink_from",
+      "n": 34,
+      "dino_top1": 0.47058823529411764,
+      "dino_top5": 0.8529411764705882,
+      "think_top1": 0.5588235294117647,
+      "think_top5": 0.8823529411764706,
+      "delta_top1_pp": 8.823529411764708,
+      "delta_top5_pp": 2.941176470588236
+    },
+    {
+      "name": "read",
+      "n": 19,
+      "dino_top1": 0.2631578947368421,
+      "dino_top5": 0.5263157894736842,
+      "think_top1": 0.3157894736842105,
+      "think_top5": 0.5789473684210527,
+      "delta_top1_pp": 5.263157894736842,
+      "delta_top5_pp": 5.263157894736848
+    },
+    {
+      "name": "eat",
+      "n": 50,
+      "dino_top1": 0.32,
+      "dino_top5": 0.5,
+      "think_top1": 0.36,
+      "think_top5": 0.54,
+      "delta_top1_pp": 3.9999999999999982,
+      "delta_top5_pp": 4.0000000000000036
+    },
+    {
+      "name": "cut_with",
+      "n": 14,
+      "dino_top1": 0.2857142857142857,
+      "dino_top5": 0.35714285714285715,
+      "think_top1": 0.2857142857142857,
+      "think_top5": 0.42857142857142855,
+      "delta_top1_pp": 0.0,
+      "delta_top5_pp": 7.14285714285714
+    }
+  ],
+  "top_affordance_losses": [
+    {
+      "name": "cook_with",
+      "n": 16,
+      "dino_top1": 0.375,
+      "dino_top5": 0.5625,
+      "think_top1": 0.3125,
+      "think_top5": 0.5,
+      "delta_top1_pp": -6.25,
+      "delta_top5_pp": -6.25
+    },
+    {
+      "name": "sit_on",
+      "n": 50,
+      "dino_top1": 0.24,
+      "dino_top5": 0.56,
+      "think_top1": 0.24,
+      "think_top5": 0.5,
+      "delta_top1_pp": 0.0,
+      "delta_top5_pp": -6.000000000000005
+    },
+    {
+      "name": "watch",
+      "n": 18,
+      "dino_top1": 0.6111111111111112,
+      "dino_top5": 0.8333333333333334,
+      "think_top1": 0.5555555555555556,
+      "think_top5": 0.8333333333333334,
+      "delta_top1_pp": -5.555555555555558,
+      "delta_top5_pp": 0.0
+    },
+    {
+      "name": "shelter_under",
+      "n": 45,
+      "dino_top1": 0.13333333333333333,
+      "dino_top5": 0.37777777777777777,
+      "think_top1": 0.15555555555555556,
+      "think_top5": 0.3111111111111111,
+      "delta_top1_pp": 2.2222222222222228,
+      "delta_top5_pp": -6.666666666666665
+    },
+    {
+      "name": "sleep_on",
+      "n": 23,
+      "dino_top1": 0.30434782608695654,
+      "dino_top5": 0.5217391304347826,
+      "think_top1": 0.30434782608695654,
+      "think_top5": 0.4782608695652174,
+      "delta_top1_pp": 0.0,
+      "delta_top5_pp": -4.347826086956519
+    },
+    {
+      "name": "ride",
+      "n": 60,
+      "dino_top1": 0.35,
+      "dino_top5": 0.6166666666666667,
+      "think_top1": 0.3333333333333333,
+      "think_top5": 0.6166666666666667,
+      "delta_top1_pp": -1.6666666666666663,
+      "delta_top5_pp": 0.0
+    },
+    {
+      "name": "control_with",
+      "n": 18,
+      "dino_top1": 0.4444444444444444,
+      "dino_top5": 0.7777777777777778,
+      "think_top1": 0.5,
+      "think_top5": 0.7222222222222222,
+      "delta_top1_pp": 5.555555555555558,
+      "delta_top5_pp": -5.555555555555558
+    },
+    {
+      "name": "eat_from",
+      "n": 36,
+      "dino_top1": 0.3055555555555556,
+      "dino_top5": 0.5,
+      "think_top1": 0.3055555555555556,
+      "think_top5": 0.5,
+      "delta_top1_pp": 0.0,
+      "delta_top5_pp": 0.0
+    }
+  ],
+  "best_win_examples": [
+    {
+      "kind": "top1_win",
+      "benchmark_id": "carry_in_pv2_377723",
+      "image_id": 377723,
+      "affordance_id": "carry_in",
+      "prompt": "a thing to carry items in .",
+      "target_categories": "backpack, handbag, suitcase",
+      "baseline_top1_iou": 0.0006697972389359943,
+      "trained_top1_iou": 0.9489931876736761,
+      "baseline_top5_iou": 0.8998248689016419,
+      "trained_top5_iou": 0.9489931876736761,
+      "baseline_top1_score": 0.12310611456632614,
+      "trained_top1_score": 0.05970057100057602,
+      "baseline_rank_bucket": "top5_only",
+      "trained_rank_bucket": "top1",
+      "tiny_any": true,
+      "positive_min_area": 232.203,
+      "num_distractors": 15
+    },
+    {
+      "kind": "top1_win",
+      "benchmark_id": "read_pv3_25603",
+      "image_id": 25603,
+      "affordance_id": "read",
+      "prompt": "reading material .",
+      "target_categories": "book",
+      "baseline_top1_iou": 0.018967765574747292,
+      "trained_top1_iou": 0.9661966724027264,
+      "baseline_top5_iou": 0.9694419433892727,
+      "trained_top5_iou": 0.9661966724027264,
+      "baseline_top1_score": 0.25172126293182373,
+      "trained_top1_score": 0.12014207243919373,
+      "baseline_rank_bucket": "top5_only",
+      "trained_rank_bucket": "top1",
+      "tiny_any": false,
+      "positive_min_area": 19746.1668,
+      "num_distractors": 22
+    },
+    {
+      "kind": "top1_win",
+      "benchmark_id": "read_pv4_71226",
+      "image_id": 71226,
+      "affordance_id": "read",
+      "prompt": "something used for reading .",
+      "target_categories": "book",
+      "baseline_top1_iou": 0.0,
+      "trained_top1_iou": 0.9431247279544073,
+      "baseline_top5_iou": 0.9204753800021646,
+      "trained_top5_iou": 0.969196551915538,
+      "baseline_top1_score": 0.0872775986790657,
+      "trained_top1_score": 0.0493243969976902,
+      "baseline_rank_bucket": "top5_only",
+      "trained_rank_bucket": "top1",
+      "tiny_any": false,
+      "positive_min_area": 5794.8264,
+      "num_distractors": 4
+    },
+    {
+      "kind": "top1_win",
+      "benchmark_id": "shelter_under_pv3_313588",
+      "image_id": 313588,
+      "affordance_id": "shelter_under",
+      "prompt": "a thing for protection overhead .",
+      "target_categories": "umbrella",
+      "baseline_top1_iou": 0.0,
+      "trained_top1_iou": 0.8881316712597587,
+      "baseline_top5_iou": 0.8900268163971706,
+      "trained_top5_iou": 0.8881316712597587,
+      "baseline_top1_score": 0.12528063356876373,
+      "trained_top1_score": 0.05501808971166611,
+      "baseline_rank_bucket": "top5_only",
+      "trained_rank_bucket": "top1",
+      "tiny_any": false,
+      "positive_min_area": 13282.382,
+      "num_distractors": 4
+    },
+    {
+      "kind": "top1_win",
+      "benchmark_id": "tell_time_pv2_79588",
+      "image_id": 79588,
+      "affordance_id": "tell_time",
+      "prompt": "a thing used to know the time .",
+      "target_categories": "clock",
+      "baseline_top1_iou": 0.006048110786405901,
+      "trained_top1_iou": 0.8902695295458962,
+      "baseline_top5_iou": 0.8156810413070504,
+      "trained_top5_iou": 0.8902695295458962,
+      "baseline_top1_score": 0.11954246461391449,
+      "trained_top1_score": 0.055162910372018814,
+      "baseline_rank_bucket": "top5_only",
+      "trained_rank_bucket": "top1",
+      "tiny_any": false,
+      "positive_min_area": 1551.1885,
+      "num_distractors": 5
+    }
+  ],
+  "worst_failure_examples": [
+    {
+      "kind": "top1_failure",
+      "benchmark_id": "travel_in_pv0_187144",
+      "image_id": 187144,
+      "affordance_id": "travel_in",
+      "prompt": "something to travel in .",
+      "target_categories": "car, bus, truck, train, airplane, boat",
+      "baseline_top1_iou": 0.9741320196375128,
+      "trained_top1_iou": 0.02837459902117243,
+      "baseline_top5_iou": 0.9741320196375128,
+      "trained_top5_iou": 0.9834945229633549,
+      "baseline_top1_score": 0.10289951413869858,
+      "trained_top1_score": 0.047041378915309906,
+      "baseline_rank_bucket": "top1",
+      "trained_rank_bucket": "top5_only",
+      "tiny_any": false,
+      "positive_min_area": 3212.4672,
+      "num_distractors": 14
+    },
+    {
+      "kind": "top1_failure",
+      "benchmark_id": "sit_on_pv0_548780",
+      "image_id": 548780,
+      "affordance_id": "sit_on",
+      "prompt": "something to sit on .",
+      "target_categories": "chair, bench, couch, bed",
+      "baseline_top1_iou": 0.9528237112656044,
+      "trained_top1_iou": 0.01565316166807707,
+      "baseline_top5_iou": 0.9528237112656044,
+      "trained_top5_iou": 0.9654981232426733,
+      "baseline_top1_score": 0.09430129826068878,
+      "trained_top1_score": 0.048971399664878845,
+      "baseline_rank_bucket": "top1",
+      "trained_rank_bucket": "top5_only",
+      "tiny_any": false,
+      "positive_min_area": 102459.84869999999,
+      "num_distractors": 15
+    },
+    {
+      "kind": "top1_failure",
+      "benchmark_id": "travel_in_pv2_568439",
+      "image_id": 568439,
+      "affordance_id": "travel_in",
+      "prompt": "something people can ride inside .",
+      "target_categories": "car, bus, truck, train, airplane, boat",
+      "baseline_top1_iou": 0.9576499230674831,
+      "trained_top1_iou": 0.07545513377383187,
+      "baseline_top5_iou": 0.9576499230674831,
+      "trained_top5_iou": 0.9567817056147969,
+      "baseline_top1_score": 0.1374138742685318,
+      "trained_top1_score": 0.06039650738239288,
+      "baseline_rank_bucket": "top1",
+      "trained_rank_bucket": "top5_only",
+      "tiny_any": false,
+      "positive_min_area": 2846.0808,
+      "num_distractors": 21
+    },
+    {
+      "kind": "top1_failure",
+      "benchmark_id": "type_on_pv1_479126",
+      "image_id": 479126,
+      "affordance_id": "type_on",
+      "prompt": "something used for typing .",
+      "target_categories": "keyboard, laptop",
+      "baseline_top1_iou": 0.8938571857616213,
+      "trained_top1_iou": 0.012948729947056198,
+      "baseline_top5_iou": 0.8938571857616213,
+      "trained_top5_iou": 0.9167250637943682,
+      "baseline_top1_score": 0.10424095392227173,
+      "trained_top1_score": 0.05265999957919121,
+      "baseline_rank_bucket": "top1",
+      "trained_rank_bucket": "top5_only",
+      "tiny_any": false,
+      "positive_min_area": 19122.568,
+      "num_distractors": 7
+    },
+    {
+      "kind": "top1_failure",
+      "benchmark_id": "cut_with_pv0_123633",
+      "image_id": 123633,
+      "affordance_id": "cut_with",
+      "prompt": "something to cut with .",
+      "target_categories": "knife, scissors",
+      "baseline_top1_iou": 0.7948339254033953,
+      "trained_top1_iou": 0.0,
+      "baseline_top5_iou": 0.7948339254033953,
+      "trained_top5_iou": 0.7747264151492503,
+      "baseline_top1_score": 0.0734528973698616,
+      "trained_top1_score": 0.03946802020072937,
+      "baseline_rank_bucket": "top1",
+      "trained_rank_bucket": "top5_only",
+      "tiny_any": false,
+      "positive_min_area": 4351.3056,
+      "num_distractors": 13
+    }
+  ],
+  "qualitative_wins": [
+    "results/overfit_sanity/official_layer14_707train_test707_rank02_protect03_regselect/qualitative/qual_01_top1_win_377723.jpg",
+    "results/overfit_sanity/official_layer14_707train_test707_rank02_protect03_regselect/qualitative/qual_02_top1_win_25603.jpg",
+    "results/overfit_sanity/official_layer14_707train_test707_rank02_protect03_regselect/qualitative/qual_03_top1_win_71226.jpg",
+    "results/overfit_sanity/official_layer14_707train_test707_rank02_protect03_regselect/qualitative/qual_04_top1_win_313588.jpg",
+    "results/overfit_sanity/official_layer14_707train_test707_rank02_protect03_regselect/qualitative/qual_05_top1_win_79588.jpg"
+  ],
+  "qualitative_failures": [
+    "results/overfit_sanity/official_layer14_707train_test707_rank02_protect03_regselect/qualitative_failures/failure_01_top1_failure_187144.jpg",
+    "results/overfit_sanity/official_layer14_707train_test707_rank02_protect03_regselect/qualitative_failures/failure_02_top1_failure_548780.jpg",
+    "results/overfit_sanity/official_layer14_707train_test707_rank02_protect03_regselect/qualitative_failures/failure_03_top1_failure_568439.jpg",
+    "results/overfit_sanity/official_layer14_707train_test707_rank02_protect03_regselect/qualitative_failures/failure_04_top1_failure_479126.jpg",
+    "results/overfit_sanity/official_layer14_707train_test707_rank02_protect03_regselect/qualitative_failures/failure_05_top1_failure_123633.jpg"
+  ]
+}

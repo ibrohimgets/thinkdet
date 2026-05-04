@@ -1,0 +1,39 @@
+{
+  "rank": 2,
+  "idx": 167,
+  "image_id": 572949,
+  "ref_id": 786,
+  "prompt": "couch the man in green is on .",
+  "expression": "couch the man in green is on",
+  "baseline": {
+    "top_iou": 0.0,
+    "top_score": 0.3058054447174072,
+    "top_box": [
+      0.7168563008308411,
+      0.6170555353164673,
+      0.562061607837677,
+      0.5490211248397827
+    ]
+  },
+  "tma": {
+    "top_iou": 0.7229337096214294,
+    "top_score": 0.19256141781806946,
+    "top_box": [
+      0.21217620372772217,
+      0.6243731379508972,
+      0.4190710783004761,
+      0.5577786564826965
+    ]
+  },
+  "gt_box": [
+    0.20977124571800232,
+    0.7126797437667847,
+    0.41954249143600464,
+    0.5746405124664307
+  ],
+  "iou_gap": 0.7229337096214294,
+  "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank2_img572949_couch_the_man_in_green_is_on",
+  "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank2_img572949_couch_the_man_in_green_is_on/comparison_grid.png",
+  "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank2_img572949_couch_the_man_in_green_is_on/baseline.png",
+  "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank2_img572949_couch_the_man_in_green_is_on/stage1_tma.png"
+}

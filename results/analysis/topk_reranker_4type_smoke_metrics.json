@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "cache": "/home/iibrohimm/project/next_step/thinkdet/results/analysis/topk_reranker_4type_smoke.json",
+  "train_rows": 3,
+  "train_usable_rows": 3,
+  "eval_rows": 1,
+  "best_epoch": 1,
+  "input_dim": 10,
+  "final_eval": {
+    "total": 1,
+    "base_acc": 0.0,
+    "reranker_acc": 0.0,
+    "by_reasoning_type": {
+      "interaction": {
+        "total": 1,
+        "base_acc": 0.0,
+        "reranker_acc": 0.0
+      }
+    }
+  }
+}

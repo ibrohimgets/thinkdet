@@ -1,0 +1,24 @@
+{
+  "device": "cuda:0",
+  "subset": 400,
+  "baseline_then_trained": [
+    {
+      "phase": "baseline_first",
+      "ok": 400,
+      "err": 0,
+      "err_types": {},
+      "avg_det03_per_ok": 11.005,
+      "avg_det03_per_all": 11.005
+    },
+    {
+      "phase": "trained_second",
+      "ok": 0,
+      "err": 400,
+      "err_types": {
+        "OutOfMemoryError": 400
+      },
+      "avg_det03_per_ok": 0.0,
+      "avg_det03_per_all": 0.0
+    }
+  ]
+}

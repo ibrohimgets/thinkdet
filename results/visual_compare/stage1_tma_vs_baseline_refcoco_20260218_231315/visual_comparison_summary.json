@@ -1,0 +1,138 @@
+{
+  "status": "ok",
+  "timestamp": "20260218_231315",
+  "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage1_tma/layer9_tma_m8_full_2ep_7gpu_20260218_152649/thinkdet_tma_stage1_epoch2.pth",
+  "dataset": {
+    "name": "refcoco",
+    "split_by": "unc",
+    "split": "val",
+    "evaluated_samples": 700
+  },
+  "selection_criteria": {
+    "compositional_prompt": true,
+    "min_gap": 0.3,
+    "max_base_iou": 0.35,
+    "min_tma_iou": 0.55
+  },
+  "num_candidates": 3,
+  "num_selected": 3,
+  "selected_cases": [
+    {
+      "rank": 1,
+      "idx": 567,
+      "image_id": 550311,
+      "ref_id": 2793,
+      "prompt": "a black behind next to the white elderly guy .",
+      "expression": "a black behind next to the white elderly guy",
+      "baseline": {
+        "top_iou": 0.14378537237644196,
+        "top_score": 0.29721638560295105,
+        "top_box": [
+          0.6322587728500366,
+          0.5210974216461182,
+          0.6548777222633362,
+          0.9477128982543945
+        ]
+      },
+      "tma": {
+        "top_iou": 0.9773706793785095,
+        "top_score": 0.15579864382743835,
+        "top_box": [
+          0.2535240650177002,
+          0.508492648601532,
+          0.36113065481185913,
+          0.9684391021728516
+        ]
+      },
+      "gt_box": [
+        0.2525078058242798,
+        0.5087500214576721,
+        0.3642031252384186,
+        0.9825000166893005
+      ],
+      "iou_gap": 0.8335853070020676,
+      "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank1_img550311_a_black_behind_next_to_the_white_eld",
+      "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank1_img550311_a_black_behind_next_to_the_white_eld/comparison_grid.png",
+      "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank1_img550311_a_black_behind_next_to_the_white_eld/baseline.png",
+      "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank1_img550311_a_black_behind_next_to_the_white_eld/stage1_tma.png"
+    },
+    {
+      "rank": 2,
+      "idx": 603,
+      "image_id": 549347,
+      "ref_id": 2887,
+      "prompt": "chair of guy looking at you in front .",
+      "expression": "chair of guy looking at you in front",
+      "baseline": {
+        "top_iou": 0.0,
+        "top_score": 0.06395368278026581,
+        "top_box": [
+          0.7584697008132935,
+          0.8588414788246155,
+          0.34483885765075684,
+          0.27407586574554443
+        ]
+      },
+      "tma": {
+        "top_iou": 0.8253316283226013,
+        "top_score": 0.0607159323990345,
+        "top_box": [
+          0.37261101603507996,
+          0.8897127509117126,
+          0.31642431020736694,
+          0.21214884519577026
+        ]
+      },
+      "gt_box": [
+        0.3661249876022339,
+        0.9050729274749756,
+        0.31337499618530273,
+        0.18985415995121002
+      ],
+      "iou_gap": 0.8253316283226013,
+      "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank2_img549347_chair_of_guy_looking_at_you_in_front",
+      "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank2_img549347_chair_of_guy_looking_at_you_in_front/comparison_grid.png",
+      "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank2_img549347_chair_of_guy_looking_at_you_in_front/baseline.png",
+      "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank2_img549347_chair_of_guy_looking_at_you_in_front/stage1_tma.png"
+    },
+    {
+      "rank": 3,
+      "idx": 152,
+      "image_id": 572949,
+      "ref_id": 785,
+      "prompt": "second guy from right white shirt .",
+      "expression": "second guy from right white shirt",
+      "baseline": {
+        "top_iou": 0.0,
+        "top_score": 0.11271195858716965,
+        "top_box": [
+          0.20729470252990723,
+          0.5521746873855591,
+          0.40776288509368896,
+          0.4261077642440796
+        ]
+      },
+      "tma": {
+        "top_iou": 0.8112266659736633,
+        "top_score": 0.09608598053455353,
+        "top_box": [
+          0.7498312592506409,
+          0.452389121055603,
+          0.17102515697479248,
+          0.2826882004737854
+        ]
+      },
+      "gt_box": [
+        0.7623856067657471,
+        0.4628431499004364,
+        0.19143791496753693,
+        0.30179738998413086
+      ],
+      "iou_gap": 0.8112266659736633,
+      "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank3_img572949_second_guy_from_right_white_shirt",
+      "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank3_img572949_second_guy_from_right_white_shirt/comparison_grid.png",
+      "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank3_img572949_second_guy_from_right_white_shirt/baseline.png",
+      "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank3_img572949_second_guy_from_right_white_shirt/stage1_tma.png"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "timestamp": "20260219_075232",
+  "stage1_ckpt": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage1_tma/layer9_tma_m8_full_2ep_7gpu_20260218_152649/thinkdet_tma_stage1_epoch2.pth",
+  "stage2_ckpt": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage2_tma/layer9_tma_m8_8gpu_20260219_010134/thinkdet_tma_stage2_epoch2.pth",
+  "source_summary": "/home/iibrohimm/project/next_step/thinkdet/results/eval/affordance_baseline_failures_20260219_074604.json",
+  "source_meta": {
+    "dataset": {
+      "name": "coco",
+      "split": "val2017",
+      "evaluated_samples": 140
+    },
+    "selection_criteria": {
+      "prompt_type": "affordance",
+      "min_gap": 0.35,
+      "max_base_iou": 0.2,
+      "min_ours_iou": 0.55,
+      "excluded_prev_visual_image_ids": true
+    }
+  },
+  "cases": [
+    {
+      "case": 1,
+      "image_id": 18380,
+      "image_file": "000000018380.jpg",
+      "prompt": "something to cut with .",
+      "prompt_type": "Hard-mined baseline-failure",
+      "baseline_top1": {
+        "box": [
+          137.31277465820312,
+          118.64609974622726,
+          531.9232940673828,
+          423.01106840372086
+        ],
+        "score": 0.2333238422870636
+      },
+      "stage1_top1": {
+        "box": [
+          444.1552734375,
+          355.2224915921688,
+          501.2010955810547,
+          404.48287788033485
+        ],
+        "score": 0.19936302304267883
+      },
+      "stage2_top1": {
+        "box": [
+          444.6427512168884,
+          355.58945068717003,
+          500.9830117225647,
+          404.3117894232273
+        ],
+        "score": 0.16611453890800476
+      },
+      "output_file": "case1_18380_hard-mined_baseline-failure.jpg",
+      "source_rank": 1,
+      "source_iou_gap": 0.8814449083342382,
+      "source_baseline_iou": 0.020616734117572883,
+      "source_tma_iou": 0.9020616424518111
+    },
+    {
+      "case": 2,
+      "image_id": 12670,
+      "image_file": "000000012670.jpg",
+      "prompt": "something to carry things in .",
+      "prompt_type": "Hard-mined baseline-failure",
+      "baseline_top1": {
+        "box": [
+          459.79620695114136,
+          229.25572863221169,
+          495.86922883987427,
+          275.73338040709496
+        ],
+        "score": 0.26361289620399475
+      },
+      "stage1_top1": {
+        "box": [
+          128.65267038345337,
+          187.55390363931656,
+          195.40265798568726,
+          309.19588416814804
+        ],
+        "score": 0.24708345532417297
+      },
+      "stage2_top1": {
+        "box": [
+          129.38137292861938,
+          187.8714364171028,
+          195.42178869247437,
+          309.4029042124748
+        ],
+        "score": 0.21100299060344696
+      },
+      "output_file": "case2_12670_hard-mined_baseline-failure.jpg",
+      "source_rank": 2,
+      "source_iou_gap": 0.7418454081312883,
+      "source_baseline_iou": 0.09378996126429807,
+      "source_tma_iou": 0.8356353693955864
+    },
+    {
+      "case": 3,
+      "image_id": 4134,
+      "image_file": "000000004134.jpg",
+      "prompt": "something to drink from .",
+      "prompt_type": "Hard-mined baseline-failure",
+      "baseline_top1": {
+        "box": [
+          236.12350463867188,
+          43.54035630822182,
+          584.7602081298828,
+          421.76144644618034
+        ],
+        "score": 0.22623160481452942
+      },
+      "stage1_top1": {
+        "box": [
+          18.82931888103485,
+          244.16950037702918,
+          38.18820774555206,
+          278.6018372513354
+        ],
+        "score": 0.2112703174352646
+      },
+      "stage2_top1": {
+        "box": [
+          18.980652689933777,
+          244.53297620639205,
+          38.10532867908478,
+          278.634097520262
+        ],
+        "score": 0.1690550446510315
+      },
+      "output_file": "case3_4134_hard-mined_baseline-failure.jpg",
+      "source_rank": 3,
+      "source_iou_gap": 0.6912603178375208,
+      "source_baseline_iou": 0.0009221635255045269,
+      "source_tma_iou": 0.6921824813630254
+    }
+  ]
+}

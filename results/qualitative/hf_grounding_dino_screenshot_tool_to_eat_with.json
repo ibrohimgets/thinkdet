@@ -1,0 +1,31 @@
+{
+  "image": "/home/iibrohimm/project/next_step/thinkdet/data/Screenshot 2026-03-12 112130.png",
+  "prompt": "tool to eat and drink from",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "device": "cuda",
+  "box_threshold": 0.4,
+  "text_threshold": 0.3,
+  "detections": [
+    {
+      "label": "tool",
+      "score": 0.4240952730178833,
+      "box": [
+        1046.75,
+        330.38,
+        1196.66,
+        607.6
+      ]
+    },
+    {
+      "label": "drink",
+      "score": 0.40901902318000793,
+      "box": [
+        962.55,
+        72.04,
+        1124.92,
+        293.86
+      ]
+    }
+  ],
+  "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/qualitative/hf_grounding_dino_screenshot_tool_to_eat_with.jpg"
+}

@@ -1,0 +1,42 @@
+{
+  "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage2_tma/layer9_tma_m8_residual_pilot_20260223_050834/thinkdet_tma_stage2_epoch1.pth",
+  "conf_thresh": 0.2,
+  "conf_thresh_low": 0.2,
+  "baseline": {
+    "conf0.2": {
+      "mAP": 0.4549,
+      "mAP_50": 0.6021,
+      "mAP_75": 0.4961,
+      "mAP_S": 0.3063,
+      "mAP_M": 0.4842,
+      "mAP_L": 0.6017,
+      "mAR_1": 0.3553,
+      "mAR_10": 0.5651,
+      "mAR_100": 0.5907
+    },
+    "num_predictions_hi": 95503,
+    "num_predictions_lo": 95503,
+    "mean_logit_magnitude": 33.7441
+  },
+  "tma": {
+    "conf0.2": {
+      "mAP": 0.4518,
+      "mAP_50": 0.5981,
+      "mAP_75": 0.4955,
+      "mAP_S": 0.3073,
+      "mAP_M": 0.4841,
+      "mAP_L": 0.5934,
+      "mAR_1": 0.354,
+      "mAR_10": 0.5735,
+      "mAR_100": 0.6
+    },
+    "num_predictions_hi": 101920,
+    "num_predictions_lo": 101920,
+    "mean_logit_magnitude": 33.6877
+  },
+  "delta": {
+    "mAP_conf0.2": -0.0031,
+    "num_predictions_hi": 6417,
+    "mean_logit_magnitude": -0.0564
+  }
+}

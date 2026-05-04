@@ -1,0 +1,1108 @@
+{
+  "image_path": "/home/iibrohimm/project/next_step/thinkdet/data/Screenshot 2026-03-05 063237.png",
+  "results": [
+    {
+      "prompt": "I need something to cut with .",
+      "tokens": {
+        "ids": [
+          101,
+          1045,
+          2342,
+          2242,
+          2000,
+          3013,
+          2007,
+          1012,
+          102
+        ],
+        "tokens": [
+          "[CLS]",
+          "i",
+          "need",
+          "something",
+          "to",
+          "cut",
+          "with",
+          ".",
+          "[SEP]"
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "valid_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "top1": {
+        "rank_by_max_all": 1,
+        "query_idx": 1,
+        "max_all_score": 0.21957720816135406,
+        "max_valid_score": 0.21957720816135406,
+        "box_abs_xyxy": [
+          21.35612079501152,
+          21.94808918237686,
+          156.8946911394596,
+          215.86294662952423
+        ],
+        "region": "top_hammer_panel",
+        "top_token_any": {
+          "pos": 1,
+          "token": "i",
+          "score": 0.21957720816135406
+        },
+        "top_token_valid": {
+          "token": "i",
+          "score": 0.21957720816135406
+        }
+      },
+      "top5": [
+        {
+          "rank_by_max_all": 1,
+          "query_idx": 1,
+          "max_all_score": 0.21957720816135406,
+          "max_valid_score": 0.21957720816135406,
+          "box_abs_xyxy": [
+            21.35612079501152,
+            21.94808918237686,
+            156.8946911394596,
+            215.86294662952423
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "i",
+            "score": 0.21957720816135406
+          },
+          "top_token_valid": {
+            "token": "i",
+            "score": 0.21957720816135406
+          }
+        },
+        {
+          "rank_by_max_all": 2,
+          "query_idx": 11,
+          "max_all_score": 0.21354441344738007,
+          "max_valid_score": 0.21354441344738007,
+          "box_abs_xyxy": [
+            7.898601621389389,
+            16.180035084486008,
+            206.27187874913216,
+            215.8152236044407
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "i",
+            "score": 0.21354441344738007
+          },
+          "top_token_valid": {
+            "token": "i",
+            "score": 0.21354441344738007
+          }
+        },
+        {
+          "rank_by_max_all": 3,
+          "query_idx": 0,
+          "max_all_score": 0.1972191333770752,
+          "max_valid_score": 0.1972191333770752,
+          "box_abs_xyxy": [
+            20.40587842464447,
+            280.0253551751375,
+            193.69605958461761,
+            401.9728285521269
+          ],
+          "region": "middle_knife_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "i",
+            "score": 0.1972191333770752
+          },
+          "top_token_valid": {
+            "token": "i",
+            "score": 0.1972191333770752
+          }
+        },
+        {
+          "rank_by_max_all": 4,
+          "query_idx": 5,
+          "max_all_score": 0.19689390063285828,
+          "max_valid_score": 0.19689390063285828,
+          "box_abs_xyxy": [
+            6.065231800079346,
+            447.71716073155403,
+            206.41450345516205,
+            650.6647579371929
+          ],
+          "region": "bottom_keyboard_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "i",
+            "score": 0.19689390063285828
+          },
+          "top_token_valid": {
+            "token": "i",
+            "score": 0.19689390063285828
+          }
+        },
+        {
+          "rank_by_max_all": 5,
+          "query_idx": 4,
+          "max_all_score": 0.19485649466514587,
+          "max_valid_score": 0.19485649466514587,
+          "box_abs_xyxy": [
+            15.295215338468552,
+            19.38545921444893,
+            202.83487549424171,
+            215.14858254790306
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "i",
+            "score": 0.19485649466514587
+          },
+          "top_token_valid": {
+            "token": "i",
+            "score": 0.19485649466514587
+          }
+        }
+      ],
+      "best_by_region": {
+        "top_hammer_panel": {
+          "rank_by_max_all": 1,
+          "query_idx": 1,
+          "max_all_score": 0.21957720816135406,
+          "max_valid_score": 0.21957720816135406,
+          "box_abs_xyxy": [
+            21.35612079501152,
+            21.94808918237686,
+            156.8946911394596,
+            215.86294662952423
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "i",
+            "score": 0.21957720816135406
+          },
+          "top_token_valid": {
+            "token": "i",
+            "score": 0.21957720816135406
+          }
+        },
+        "middle_knife_panel": {
+          "rank_by_max_all": 3,
+          "query_idx": 0,
+          "max_all_score": 0.1972191333770752,
+          "max_valid_score": 0.1972191333770752,
+          "box_abs_xyxy": [
+            20.40587842464447,
+            280.0253551751375,
+            193.69605958461761,
+            401.9728285521269
+          ],
+          "region": "middle_knife_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "i",
+            "score": 0.1972191333770752
+          },
+          "top_token_valid": {
+            "token": "i",
+            "score": 0.1972191333770752
+          }
+        },
+        "bottom_keyboard_panel": {
+          "rank_by_max_all": 4,
+          "query_idx": 5,
+          "max_all_score": 0.19689390063285828,
+          "max_valid_score": 0.19689390063285828,
+          "box_abs_xyxy": [
+            6.065231800079346,
+            447.71716073155403,
+            206.41450345516205,
+            650.6647579371929
+          ],
+          "region": "bottom_keyboard_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "i",
+            "score": 0.19689390063285828
+          },
+          "top_token_valid": {
+            "token": "i",
+            "score": 0.19689390063285828
+          }
+        }
+      },
+      "top1_token_scores_top10_any": [
+        {
+          "pos": 1,
+          "token": "i",
+          "score": 0.21957720816135406
+        },
+        {
+          "pos": 3,
+          "token": "something",
+          "score": 0.10475867986679077
+        },
+        {
+          "pos": 4,
+          "token": "to",
+          "score": 0.03826791048049927
+        },
+        {
+          "pos": 5,
+          "token": "cut",
+          "score": 0.03498445078730583
+        },
+        {
+          "pos": 6,
+          "token": "with",
+          "score": 0.03421415388584137
+        },
+        {
+          "pos": 2,
+          "token": "need",
+          "score": 0.024312514811754227
+        },
+        {
+          "pos": 7,
+          "token": ".",
+          "score": 0.017229514196515083
+        },
+        {
+          "pos": 8,
+          "token": "[SEP]",
+          "score": 0.005719631444662809
+        },
+        {
+          "pos": 0,
+          "token": "[CLS]",
+          "score": 0.00571369007229805
+        }
+      ]
+    },
+    {
+      "prompt": "knife .",
+      "tokens": {
+        "ids": [
+          101,
+          5442,
+          1012,
+          102
+        ],
+        "tokens": [
+          "[CLS]",
+          "knife",
+          ".",
+          "[SEP]"
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "valid_positions": [
+          1,
+          2
+        ]
+      },
+      "top1": {
+        "rank_by_max_all": 1,
+        "query_idx": 0,
+        "max_all_score": 0.3812936246395111,
+        "max_valid_score": 0.3812936246395111,
+        "box_abs_xyxy": [
+          21.784718066453934,
+          23.765637695789337,
+          152.5891492664814,
+          216.12365448474884
+        ],
+        "region": "top_hammer_panel",
+        "top_token_any": {
+          "pos": 1,
+          "token": "knife",
+          "score": 0.3812936246395111
+        },
+        "top_token_valid": {
+          "token": "knife",
+          "score": 0.3812936246395111
+        }
+      },
+      "top5": [
+        {
+          "rank_by_max_all": 1,
+          "query_idx": 0,
+          "max_all_score": 0.3812936246395111,
+          "max_valid_score": 0.3812936246395111,
+          "box_abs_xyxy": [
+            21.784718066453934,
+            23.765637695789337,
+            152.5891492664814,
+            216.12365448474884
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "knife",
+            "score": 0.3812936246395111
+          },
+          "top_token_valid": {
+            "token": "knife",
+            "score": 0.3812936246395111
+          }
+        },
+        {
+          "rank_by_max_all": 2,
+          "query_idx": 1,
+          "max_all_score": 0.31784409284591675,
+          "max_valid_score": 0.31784409284591675,
+          "box_abs_xyxy": [
+            20.08610001206398,
+            281.85175247490406,
+            192.04383024573326,
+            399.2518072575331
+          ],
+          "region": "middle_knife_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "knife",
+            "score": 0.31784409284591675
+          },
+          "top_token_valid": {
+            "token": "knife",
+            "score": 0.31784409284591675
+          }
+        },
+        {
+          "rank_by_max_all": 3,
+          "query_idx": 7,
+          "max_all_score": 0.21282745897769928,
+          "max_valid_score": 0.21282745897769928,
+          "box_abs_xyxy": [
+            54.960997357964516,
+            24.18230053782463,
+            152.40852127969265,
+            216.3321369588375
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "knife",
+            "score": 0.21282745897769928
+          },
+          "top_token_valid": {
+            "token": "knife",
+            "score": 0.21282745897769928
+          }
+        },
+        {
+          "rank_by_max_all": 4,
+          "query_idx": 4,
+          "max_all_score": 0.13604038953781128,
+          "max_valid_score": 0.13604038953781128,
+          "box_abs_xyxy": [
+            116.25797041505575,
+            57.2209973372519,
+            149.6484351530671,
+            90.83199402317405
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "knife",
+            "score": 0.13604038953781128
+          },
+          "top_token_valid": {
+            "token": "knife",
+            "score": 0.13604038953781128
+          }
+        },
+        {
+          "rank_by_max_all": 5,
+          "query_idx": 3,
+          "max_all_score": 0.12158292531967163,
+          "max_valid_score": 0.12158292531967163,
+          "box_abs_xyxy": [
+            50.59426767192781,
+            69.96040282398462,
+            59.034321719780564,
+            105.23704954236746
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "knife",
+            "score": 0.12158292531967163
+          },
+          "top_token_valid": {
+            "token": "knife",
+            "score": 0.12158292531967163
+          }
+        }
+      ],
+      "best_by_region": {
+        "top_hammer_panel": {
+          "rank_by_max_all": 1,
+          "query_idx": 0,
+          "max_all_score": 0.3812936246395111,
+          "max_valid_score": 0.3812936246395111,
+          "box_abs_xyxy": [
+            21.784718066453934,
+            23.765637695789337,
+            152.5891492664814,
+            216.12365448474884
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "knife",
+            "score": 0.3812936246395111
+          },
+          "top_token_valid": {
+            "token": "knife",
+            "score": 0.3812936246395111
+          }
+        },
+        "middle_knife_panel": {
+          "rank_by_max_all": 2,
+          "query_idx": 1,
+          "max_all_score": 0.31784409284591675,
+          "max_valid_score": 0.31784409284591675,
+          "box_abs_xyxy": [
+            20.08610001206398,
+            281.85175247490406,
+            192.04383024573326,
+            399.2518072575331
+          ],
+          "region": "middle_knife_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "knife",
+            "score": 0.31784409284591675
+          },
+          "top_token_valid": {
+            "token": "knife",
+            "score": 0.31784409284591675
+          }
+        },
+        "bottom_keyboard_panel": {
+          "rank_by_max_all": 11,
+          "query_idx": 13,
+          "max_all_score": 0.08336112648248672,
+          "max_valid_score": 0.08336112648248672,
+          "box_abs_xyxy": [
+            4.086577326059341,
+            448.424664080143,
+            207.77149757742882,
+            652.0922679305077
+          ],
+          "region": "bottom_keyboard_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "knife",
+            "score": 0.08336112648248672
+          },
+          "top_token_valid": {
+            "token": "knife",
+            "score": 0.08336112648248672
+          }
+        }
+      },
+      "top1_token_scores_top10_any": [
+        {
+          "pos": 1,
+          "token": "knife",
+          "score": 0.3812936246395111
+        },
+        {
+          "pos": 2,
+          "token": ".",
+          "score": 0.013894954696297646
+        },
+        {
+          "pos": 3,
+          "token": "[SEP]",
+          "score": 0.008424166589975357
+        },
+        {
+          "pos": 0,
+          "token": "[CLS]",
+          "score": 0.008395198732614517
+        }
+      ]
+    },
+    {
+      "prompt": "something to hit with .",
+      "tokens": {
+        "ids": [
+          101,
+          2242,
+          2000,
+          2718,
+          2007,
+          1012,
+          102
+        ],
+        "tokens": [
+          "[CLS]",
+          "something",
+          "to",
+          "hit",
+          "with",
+          ".",
+          "[SEP]"
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "valid_positions": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "top1": {
+        "rank_by_max_all": 1,
+        "query_idx": 1,
+        "max_all_score": 0.3075285851955414,
+        "max_valid_score": 0.3075285851955414,
+        "box_abs_xyxy": [
+          21.118335396051407,
+          22.506449550390244,
+          154.58446142077446,
+          215.41527405381203
+        ],
+        "region": "top_hammer_panel",
+        "top_token_any": {
+          "pos": 1,
+          "token": "something",
+          "score": 0.3075285851955414
+        },
+        "top_token_valid": {
+          "token": "something",
+          "score": 0.3075285851955414
+        }
+      },
+      "top5": [
+        {
+          "rank_by_max_all": 1,
+          "query_idx": 1,
+          "max_all_score": 0.3075285851955414,
+          "max_valid_score": 0.3075285851955414,
+          "box_abs_xyxy": [
+            21.118335396051407,
+            22.506449550390244,
+            154.58446142077446,
+            215.41527405381203
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.3075285851955414
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.3075285851955414
+          }
+        },
+        {
+          "rank_by_max_all": 2,
+          "query_idx": 0,
+          "max_all_score": 0.29845649003982544,
+          "max_valid_score": 0.29845649003982544,
+          "box_abs_xyxy": [
+            19.957240372896194,
+            279.84023232758045,
+            193.02641329169273,
+            400.5205750912428
+          ],
+          "region": "middle_knife_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.29845649003982544
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.29845649003982544
+          }
+        },
+        {
+          "rank_by_max_all": 3,
+          "query_idx": 2,
+          "max_all_score": 0.17427761852741241,
+          "max_valid_score": 0.17427761852741241,
+          "box_abs_xyxy": [
+            17.337431848049164,
+            19.71409222483635,
+            172.8756319284439,
+            217.12889805436134
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.17427761852741241
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.17427761852741241
+          }
+        },
+        {
+          "rank_by_max_all": 4,
+          "query_idx": 13,
+          "max_all_score": 0.17388026416301727,
+          "max_valid_score": 0.17388026416301727,
+          "box_abs_xyxy": [
+            17.825139045715332,
+            268.3454736918211,
+            197.41329419612885,
+            415.0574451237917
+          ],
+          "region": "middle_knife_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.17388026416301727
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.17388026416301727
+          }
+        },
+        {
+          "rank_by_max_all": 5,
+          "query_idx": 6,
+          "max_all_score": 0.1723855584859848,
+          "max_valid_score": 0.1723855584859848,
+          "box_abs_xyxy": [
+            9.45062705874443,
+            17.90316081047058,
+            204.3319412767887,
+            215.3103262782097
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.1723855584859848
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.1723855584859848
+          }
+        }
+      ],
+      "best_by_region": {
+        "top_hammer_panel": {
+          "rank_by_max_all": 1,
+          "query_idx": 1,
+          "max_all_score": 0.3075285851955414,
+          "max_valid_score": 0.3075285851955414,
+          "box_abs_xyxy": [
+            21.118335396051407,
+            22.506449550390244,
+            154.58446142077446,
+            215.41527405381203
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.3075285851955414
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.3075285851955414
+          }
+        },
+        "middle_knife_panel": {
+          "rank_by_max_all": 2,
+          "query_idx": 0,
+          "max_all_score": 0.29845649003982544,
+          "max_valid_score": 0.29845649003982544,
+          "box_abs_xyxy": [
+            19.957240372896194,
+            279.84023232758045,
+            193.02641329169273,
+            400.5205750912428
+          ],
+          "region": "middle_knife_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.29845649003982544
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.29845649003982544
+          }
+        },
+        "bottom_keyboard_panel": {
+          "rank_by_max_all": 6,
+          "query_idx": 3,
+          "max_all_score": 0.13371792435646057,
+          "max_valid_score": 0.13371792435646057,
+          "box_abs_xyxy": [
+            5.209395527839661,
+            447.3845223784447,
+            206.19838750362396,
+            650.494691669941
+          ],
+          "region": "bottom_keyboard_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.13371792435646057
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.13371792435646057
+          }
+        }
+      },
+      "top1_token_scores_top10_any": [
+        {
+          "pos": 1,
+          "token": "something",
+          "score": 0.3075285851955414
+        },
+        {
+          "pos": 3,
+          "token": "hit",
+          "score": 0.025323329493403435
+        },
+        {
+          "pos": 2,
+          "token": "to",
+          "score": 0.021665113046765327
+        },
+        {
+          "pos": 4,
+          "token": "with",
+          "score": 0.01888406276702881
+        },
+        {
+          "pos": 5,
+          "token": ".",
+          "score": 0.012560890056192875
+        },
+        {
+          "pos": 6,
+          "token": "[SEP]",
+          "score": 0.007398208137601614
+        },
+        {
+          "pos": 0,
+          "token": "[CLS]",
+          "score": 0.007390008773654699
+        }
+      ]
+    },
+    {
+      "prompt": "something to type with .",
+      "tokens": {
+        "ids": [
+          101,
+          2242,
+          2000,
+          2828,
+          2007,
+          1012,
+          102
+        ],
+        "tokens": [
+          "[CLS]",
+          "something",
+          "to",
+          "type",
+          "with",
+          ".",
+          "[SEP]"
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "valid_positions": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "top1": {
+        "rank_by_max_all": 1,
+        "query_idx": 0,
+        "max_all_score": 0.3381788730621338,
+        "max_valid_score": 0.3381788730621338,
+        "box_abs_xyxy": [
+          20.0452638566494,
+          280.01917661726475,
+          192.99234333634377,
+          399.91720090806484
+        ],
+        "region": "middle_knife_panel",
+        "top_token_any": {
+          "pos": 1,
+          "token": "something",
+          "score": 0.3381788730621338
+        },
+        "top_token_valid": {
+          "token": "something",
+          "score": 0.3381788730621338
+        }
+      },
+      "top5": [
+        {
+          "rank_by_max_all": 1,
+          "query_idx": 0,
+          "max_all_score": 0.3381788730621338,
+          "max_valid_score": 0.3381788730621338,
+          "box_abs_xyxy": [
+            20.0452638566494,
+            280.01917661726475,
+            192.99234333634377,
+            399.91720090806484
+          ],
+          "region": "middle_knife_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.3381788730621338
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.3381788730621338
+          }
+        },
+        {
+          "rank_by_max_all": 2,
+          "query_idx": 1,
+          "max_all_score": 0.29642555117607117,
+          "max_valid_score": 0.29642555117607117,
+          "box_abs_xyxy": [
+            21.20425859093666,
+            22.590210914611816,
+            154.29857060313225,
+            215.53213065862656
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.29642555117607117
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.29642555117607117
+          }
+        },
+        {
+          "rank_by_max_all": 3,
+          "query_idx": 11,
+          "max_all_score": 0.16851919889450073,
+          "max_valid_score": 0.16851919889450073,
+          "box_abs_xyxy": [
+            18.117664009332657,
+            269.1432531774044,
+            197.50226721167564,
+            415.16442480683327
+          ],
+          "region": "middle_knife_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.16851919889450073
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.16851919889450073
+          }
+        },
+        {
+          "rank_by_max_all": 4,
+          "query_idx": 7,
+          "max_all_score": 0.15961654484272003,
+          "max_valid_score": 0.15961654484272003,
+          "box_abs_xyxy": [
+            8.426308631896973,
+            17.108748346567154,
+            204.921914935112,
+            215.52268740534782
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.15961654484272003
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.15961654484272003
+          }
+        },
+        {
+          "rank_by_max_all": 5,
+          "query_idx": 5,
+          "max_all_score": 0.1560971587896347,
+          "max_valid_score": 0.1560971587896347,
+          "box_abs_xyxy": [
+            17.268757432699203,
+            19.789073020219803,
+            173.4204053580761,
+            217.44649931788445
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.1560971587896347
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.1560971587896347
+          }
+        }
+      ],
+      "best_by_region": {
+        "top_hammer_panel": {
+          "rank_by_max_all": 2,
+          "query_idx": 1,
+          "max_all_score": 0.29642555117607117,
+          "max_valid_score": 0.29642555117607117,
+          "box_abs_xyxy": [
+            21.20425859093666,
+            22.590210914611816,
+            154.29857060313225,
+            215.53213065862656
+          ],
+          "region": "top_hammer_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.29642555117607117
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.29642555117607117
+          }
+        },
+        "middle_knife_panel": {
+          "rank_by_max_all": 1,
+          "query_idx": 0,
+          "max_all_score": 0.3381788730621338,
+          "max_valid_score": 0.3381788730621338,
+          "box_abs_xyxy": [
+            20.0452638566494,
+            280.01917661726475,
+            192.99234333634377,
+            399.91720090806484
+          ],
+          "region": "middle_knife_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.3381788730621338
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.3381788730621338
+          }
+        },
+        "bottom_keyboard_panel": {
+          "rank_by_max_all": 6,
+          "query_idx": 3,
+          "max_all_score": 0.1559867262840271,
+          "max_valid_score": 0.1559867262840271,
+          "box_abs_xyxy": [
+            5.070097327232361,
+            447.51271283626556,
+            206.4257469177246,
+            650.7744029760361
+          ],
+          "region": "bottom_keyboard_panel",
+          "top_token_any": {
+            "pos": 1,
+            "token": "something",
+            "score": 0.1559867262840271
+          },
+          "top_token_valid": {
+            "token": "something",
+            "score": 0.1559867262840271
+          }
+        }
+      },
+      "top1_token_scores_top10_any": [
+        {
+          "pos": 1,
+          "token": "something",
+          "score": 0.3381788730621338
+        },
+        {
+          "pos": 3,
+          "token": "type",
+          "score": 0.033264003694057465
+        },
+        {
+          "pos": 2,
+          "token": "to",
+          "score": 0.02471681497991085
+        },
+        {
+          "pos": 4,
+          "token": "with",
+          "score": 0.019286377355456352
+        },
+        {
+          "pos": 5,
+          "token": ".",
+          "score": 0.014921116642653942
+        },
+        {
+          "pos": 6,
+          "token": "[SEP]",
+          "score": 0.006877296604216099
+        },
+        {
+          "pos": 0,
+          "token": "[CLS]",
+          "score": 0.006868378259241581
+        }
+      ]
+    }
+  ]
+}

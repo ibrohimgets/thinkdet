@@ -1,0 +1,51 @@
+{
+  "status": "ok",
+  "timestamp": "20260220_heldout_single_case",
+  "dataset": {
+    "name": "affordance_coco_val_heldout_v1",
+    "split": "test"
+  },
+  "selection_criteria": {
+    "source": "heldout_benchmark_eval",
+    "single_positive_only": true,
+    "min_stage2_minus_baseline_iou": 0.35,
+    "max_baseline_iou": 0.4,
+    "pick": "max_gap"
+  },
+  "num_candidates": 12,
+  "num_selected": 1,
+  "selected_cases": [
+    {
+      "rank": 1,
+      "idx": 0,
+      "image_id": 59598,
+      "prompt": "something to talk on .",
+      "expression": "something to talk on ",
+      "benchmark_id": "talk_on_59598",
+      "affordance_id": "talk_on",
+      "baseline": {
+        "top_iou": 0.0,
+        "top_score": 0.2733311057090759
+      },
+      "stage1": {
+        "top_iou": 0.0,
+        "top_score": 0.21234233677387238
+      },
+      "stage2": {
+        "top_iou": 0.9386995819001932,
+        "top_score": 0.18252113461494446
+      },
+      "tma": {
+        "top_iou": 0.9386995819001932,
+        "top_score": 0.18252113461494446
+      },
+      "iou_gap": 0.9386995819001932,
+      "gt_box": [
+        0.17692187499999998,
+        0.6054166666666666,
+        0.1514375,
+        0.0805
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "rank": 7,
+  "idx": 1557,
+  "image_id": 498639,
+  "ref_id": 7265,
+  "prompt": "girl on left in the back .",
+  "expression": "girl on left in the back",
+  "baseline": {
+    "top_iou": 0.0,
+    "top_score": 0.08111922442913055,
+    "top_box": [
+      0.4099193215370178,
+      0.6270468831062317,
+      0.20443695783615112,
+      0.7347040176391602
+    ]
+  },
+  "tma": {
+    "top_iou": 0.8457832336425781,
+    "top_score": 0.06745901703834534,
+    "top_box": [
+      0.0970422700047493,
+      0.6297891139984131,
+      0.1871362179517746,
+      0.7193129062652588
+    ]
+  },
+  "gt_box": [
+    0.09091406315565109,
+    0.5998732447624207,
+    0.18079687654972076,
+    0.64933180809021
+  ],
+  "iou_gap": 0.8457832336425781,
+  "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank7_img498639_girl_on_left_in_the_back",
+  "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank7_img498639_girl_on_left_in_the_back/comparison_grid.png",
+  "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank7_img498639_girl_on_left_in_the_back/baseline.png",
+  "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank7_img498639_girl_on_left_in_the_back/stage1_tma.png"
+}

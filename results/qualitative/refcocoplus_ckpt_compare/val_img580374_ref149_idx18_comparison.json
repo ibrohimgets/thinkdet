@@ -1,0 +1,60 @@
+{
+  "dataset_name": "refcoco+",
+  "split_by": "unc",
+  "split": "val",
+  "target": "a_beats_b",
+  "max_scan": 160,
+  "sample_idx": 18,
+  "image_id": 580374,
+  "ref_id": 149,
+  "expression": "person by glass",
+  "query_text": "person by glass .",
+  "checkpoint_a": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/refcocoplus_full/learned_8_9_10_full_layers_8_9_10_learned_residual_e10_20260314_062540/thinkdet_refcocoplus_final.pth",
+  "checkpoint_b": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/refcocoplus_full/control_layer8_full_layers_8_mean_residual_e10_20260314_062541/thinkdet_refcocoplus_final.pth",
+  "label_a": "learned_8_9_10",
+  "label_b": "control_8",
+  "prediction_a": {
+    "score": 0.13574308156967163,
+    "iou": 0.9702017307281494,
+    "correct": true,
+    "box_cxcywh": [
+      0.25166982412338257,
+      0.4714941084384918,
+      0.4999580383300781,
+      0.7926624417304993
+    ],
+    "box_xyxy": [
+      1.0821151733398438,
+      32.094552993774414,
+      321.05525970458984,
+      370.5614156126976
+    ]
+  },
+  "prediction_b": {
+    "score": 0.1519903987646103,
+    "iou": 0.04673358052968979,
+    "correct": false,
+    "box_cxcywh": [
+      0.20851589739322662,
+      0.684889018535614,
+      0.07601884007453918,
+      0.2471456527709961
+    ],
+    "box_xyxy": [
+      109.1241455078125,
+      239.68201404809952,
+      157.77620315551758,
+      345.21320778131485
+    ]
+  },
+  "delta_iou": 0.9234681501984596,
+  "layer_fusion_weights_a": {
+    "8": 0.3341166079044342,
+    "9": 0.3326773941516876,
+    "10": 0.33320602774620056
+  },
+  "layer_fusion_weights_b": null,
+  "panel_a": "/home/iibrohimm/project/next_step/thinkdet/results/qualitative/refcocoplus_ckpt_compare/val_img580374_ref149_idx18_learned_8_9_10.jpg",
+  "panel_b": "/home/iibrohimm/project/next_step/thinkdet/results/qualitative/refcocoplus_ckpt_compare/val_img580374_ref149_idx18_control_8.jpg",
+  "comparison": "/home/iibrohimm/project/next_step/thinkdet/results/qualitative/refcocoplus_ckpt_compare/val_img580374_ref149_idx18_comparison.jpg"
+}

@@ -1,0 +1,22 @@
+{
+  "num_select": 300,
+  "protocol": "official (no conf_thresh)",
+  "world_size": 6,
+  "max_images": 1000,
+  "tma": {
+    "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/unified/pilot_layers15_20_learned_kd0_dbg8192_e1_g6_20260313_222630/thinkdet_unified_epoch1.pth",
+    "metrics": {
+      "AP": 0.5016,
+      "AP_50": 0.6523,
+      "AP_75": 0.5452,
+      "AP_S": 0.3551,
+      "AP_M": 0.5384,
+      "AP_L": 0.6384,
+      "AR_1": 0.3961,
+      "AR_10": 0.685,
+      "AR_100": 0.7503
+    },
+    "num_predictions": 300600,
+    "shortlist_top_cats": 0
+  }
+}

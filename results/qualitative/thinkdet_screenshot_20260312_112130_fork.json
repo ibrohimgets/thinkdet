@@ -1,0 +1,177 @@
+{
+  "image": "/home/iibrohimm/project/next_step/thinkdet/data/Screenshot 2026-03-12 112130.png",
+  "prompt": "fork",
+  "device": "cuda:0",
+  "top_k": 5,
+  "hf": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "threshold": 0.0,
+    "text_threshold": 0.0,
+    "detections": [
+      {
+        "label": "fork. [SEP]",
+        "score": 0.7607455253601074,
+        "box": [
+          972.0830688476562,
+          300.61688232421875,
+          1108.755859375,
+          605.7012329101562
+        ]
+      },
+      {
+        "label": "fork. [SEP]",
+        "score": 0.2599236071109772,
+        "box": [
+          250.74407958984375,
+          200.8591766357422,
+          383.67413330078125,
+          271.98712158203125
+        ]
+      },
+      {
+        "label": "fork. [SEP]",
+        "score": 0.21707603335380554,
+        "box": [
+          1050.7127685546875,
+          333.230224609375,
+          1194.6649169921875,
+          603.617431640625
+        ]
+      },
+      {
+        "label": "fork. [SEP]",
+        "score": 0.16312755644321442,
+        "box": [
+          1057.0504150390625,
+          21.376432418823242,
+          1232.205078125,
+          148.59523010253906
+        ]
+      },
+      {
+        "label": "fork. [SEP]",
+        "score": 0.0562167763710022,
+        "box": [
+          310.8969421386719,
+          228.3684539794922,
+          383.98974609375,
+          271.7085266113281
+        ]
+      }
+    ],
+    "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/qualitative/thinkdet_screenshot_20260312_112130_fork_hf.jpg"
+  },
+  "thinkdet": {
+    "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+    "query_used": "fork .",
+    "stats": {
+      "top1": 0.5855988264083862,
+      "top2": 0.22883014380931854,
+      "top3_mean": 0.34442109366257984,
+      "margin": 0.3567686825990677,
+      "gate_mean": 0.0015233154020582635,
+      "reliability": 0.7984252770741781
+    },
+    "detections": [
+      {
+        "label": "",
+        "score": 0.5855988264083862,
+        "box": [
+          972.3730815723538,
+          300.7969037294388,
+          1109.0336745902896,
+          606.1027811765671
+        ]
+      },
+      {
+        "label": "",
+        "score": 0.22883014380931854,
+        "box": [
+          1050.9843807667494,
+          333.7654229402542,
+          1195.1046809703112,
+          603.7535408735275
+        ]
+      },
+      {
+        "label": "",
+        "score": 0.2188343107700348,
+        "box": [
+          250.90518754720688,
+          201.23713770508766,
+          383.896913588047,
+          271.92462691664696
+        ]
+      },
+      {
+        "label": "",
+        "score": 0.14733639359474182,
+        "box": [
+          1057.2974181175232,
+          21.462097883224487,
+          1232.8364717960358,
+          148.3917200565338
+        ]
+      },
+      {
+        "label": "",
+        "score": 0.06096884608268738,
+        "box": [
+          310.76294124126434,
+          228.06900969147682,
+          383.9656409025192,
+          271.5635615289211
+        ]
+      }
+    ],
+    "checkpoint_meta": {
+      "checkpoint_extract_layers": [
+        9
+      ],
+      "checkpoint_layer_fusion": "mean",
+      "extract_layers": [
+        9
+      ],
+      "layer_fusion": "mean",
+      "injection_layers": [
+        1,
+        3,
+        5
+      ],
+      "tma_m": 8,
+      "tma_n_heads": 8,
+      "fusion_mode": "residual"
+    },
+    "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/qualitative/thinkdet_screenshot_20260312_112130_fork_thinkdet.jpg"
+  },
+  "overlap": {
+    "rankwise_iou": [
+      {
+        "rank": 1,
+        "iou": 0.993961871051768
+      },
+      {
+        "rank": 2,
+        "iou": 0.0
+      },
+      {
+        "rank": 3,
+        "iou": 0.0
+      },
+      {
+        "rank": 4,
+        "iou": 0.9927494422898261
+      },
+      {
+        "rank": 5,
+        "iou": 0.9876874486742905
+      }
+    ],
+    "best_cross_match": {
+      "hf_rank": 1,
+      "thinkdet_rank": 1,
+      "iou": 0.993961871051768
+    }
+  },
+  "comparison_image": "/home/iibrohimm/project/next_step/thinkdet/results/qualitative/thinkdet_screenshot_20260312_112130_fork_comparison.jpg"
+}

@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "timestamp": "20260220_151903",
+  "dataset": {
+    "name": "refcoco+",
+    "split_by": "unc",
+    "split": "val",
+    "total_samples": 10758,
+    "evaluated_samples": 10758
+  },
+  "config": {
+    "conf_thresh": 0.05,
+    "iou_thresh": 0.5,
+    "thinkdet_checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/refcoco_stage2_tma_8gpu_20260220_094146/thinkdet_refcoco_stage2_tma_epoch2.pth"
+  },
+  "summary": {
+    "baseline": {
+      "samples": 10758,
+      "top1_acc": 0.5132924335378323,
+      "top1_fp_rate": 0.4867075664621677,
+      "det_fp_rate": 0.7691895907531627,
+      "no_det_rate": 0.0014872652909462725,
+      "img_has_fp_rate": 0.9167131437070087
+    },
+    "thinkdet": {
+      "samples": 10758,
+      "top1_acc": 0.44934002602714257,
+      "top1_fp_rate": 0.5506599739728574,
+      "det_fp_rate": 0.7732070593890263,
+      "no_det_rate": 0.00018590816136828406,
+      "img_has_fp_rate": 0.9648633575013943
+    }
+  }
+}

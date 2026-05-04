@@ -1,0 +1,138 @@
+{
+  "status": "ok",
+  "timestamp": "20260218_231100",
+  "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage1_tma/layer9_tma_m8_full_2ep_7gpu_20260218_152649/thinkdet_tma_stage1_epoch2.pth",
+  "dataset": {
+    "name": "refcoco+",
+    "split_by": "unc",
+    "split": "val",
+    "evaluated_samples": 500
+  },
+  "selection_criteria": {
+    "compositional_prompt": true,
+    "min_gap": 0.3,
+    "max_base_iou": 0.35,
+    "min_tma_iou": 0.55
+  },
+  "num_candidates": 4,
+  "num_selected": 3,
+  "selected_cases": [
+    {
+      "rank": 1,
+      "idx": 193,
+      "image_id": 570440,
+      "ref_id": 1036,
+      "prompt": "player with head down in the back .",
+      "expression": "player with head down in the back",
+      "baseline": {
+        "top_iou": 0.02438163198530674,
+        "top_score": 0.08964782953262329,
+        "top_box": [
+          0.5186920166015625,
+          0.6101134419441223,
+          0.3269703686237335,
+          0.620631754398346
+        ]
+      },
+      "tma": {
+        "top_iou": 0.9426507949829102,
+        "top_score": 0.06630735099315643,
+        "top_box": [
+          0.7612780332565308,
+          0.3709127902984619,
+          0.22602303326129913,
+          0.33829861879348755
+        ]
+      },
+      "gt_box": [
+        0.7657394409179688,
+        0.3741796910762787,
+        0.221760556101799,
+        0.333859384059906
+      ],
+      "iou_gap": 0.9182691629976034,
+      "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank1_img570440_player_with_head_down_in_the_back",
+      "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank1_img570440_player_with_head_down_in_the_back/comparison_grid.png",
+      "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank1_img570440_player_with_head_down_in_the_back/baseline.png",
+      "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank1_img570440_player_with_head_down_in_the_back/stage1_tma.png"
+    },
+    {
+      "rank": 2,
+      "idx": 167,
+      "image_id": 572949,
+      "ref_id": 786,
+      "prompt": "couch the man in green is on .",
+      "expression": "couch the man in green is on",
+      "baseline": {
+        "top_iou": 0.0,
+        "top_score": 0.3058054447174072,
+        "top_box": [
+          0.7168563008308411,
+          0.6170555353164673,
+          0.562061607837677,
+          0.5490211248397827
+        ]
+      },
+      "tma": {
+        "top_iou": 0.7229337096214294,
+        "top_score": 0.19256141781806946,
+        "top_box": [
+          0.21217620372772217,
+          0.6243731379508972,
+          0.4190710783004761,
+          0.5577786564826965
+        ]
+      },
+      "gt_box": [
+        0.20977124571800232,
+        0.7126797437667847,
+        0.41954249143600464,
+        0.5746405124664307
+      ],
+      "iou_gap": 0.7229337096214294,
+      "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank2_img572949_couch_the_man_in_green_is_on",
+      "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank2_img572949_couch_the_man_in_green_is_on/comparison_grid.png",
+      "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank2_img572949_couch_the_man_in_green_is_on/baseline.png",
+      "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank2_img572949_couch_the_man_in_green_is_on/stage1_tma.png"
+    },
+    {
+      "rank": 3,
+      "idx": 73,
+      "image_id": 577558,
+      "ref_id": 395,
+      "prompt": "the spider taco with a lot of green stuffs .",
+      "expression": "the spider taco with a lot of green stuffs",
+      "baseline": {
+        "top_iou": 0.00032680865842849016,
+        "top_score": 0.22601071000099182,
+        "top_box": [
+          0.2396884560585022,
+          0.3838435113430023,
+          0.33739393949508667,
+          0.6721318364143372
+        ]
+      },
+      "tma": {
+        "top_iou": 0.6793407201766968,
+        "top_score": 0.1533443182706833,
+        "top_box": [
+          0.6951509118080139,
+          0.6057265996932983,
+          0.4814271330833435,
+          0.4578837454319
+        ]
+      },
+      "gt_box": [
+        0.6733124852180481,
+        0.6820208430290222,
+        0.5309062600135803,
+        0.6044999957084656
+      ],
+      "iou_gap": 0.6790139115182683,
+      "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank3_img577558_the_spider_taco_with_a_lot_of_green_",
+      "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank3_img577558_the_spider_taco_with_a_lot_of_green_/comparison_grid.png",
+      "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank3_img577558_the_spider_taco_with_a_lot_of_green_/baseline.png",
+      "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco+_20260218_231100/rank3_img577558_the_spider_taco_with_a_lot_of_green_/stage1_tma.png"
+    }
+  ]
+}

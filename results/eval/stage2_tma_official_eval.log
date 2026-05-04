@@ -1,0 +1,320 @@
+W0219 04:51:18.281577 1974832 torch/distributed/run.py:774] 
+W0219 04:51:18.281577 1974832 torch/distributed/run.py:774] *****************************************
+W0219 04:51:18.281577 1974832 torch/distributed/run.py:774] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0219 04:51:18.281577 1974832 torch/distributed/run.py:774] *****************************************
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/ms_deform_attn.py:31: UserWarning: Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).
+  warnings.warn("Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).")
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/ms_deform_attn.py:31: UserWarning: Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).
+  warnings.warn("Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).")
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/ms_deform_attn.py:31: UserWarning: Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).
+  warnings.warn("Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).")
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/ms_deform_attn.py:31: UserWarning: Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).
+  warnings.warn("Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).")
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/ms_deform_attn.py:31: UserWarning: Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).
+  warnings.warn("Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).")
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/ms_deform_attn.py:31: UserWarning: Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).
+  warnings.warn("Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).")
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/ms_deform_attn.py:31: UserWarning: Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).
+  warnings.warn("Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).")
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/ms_deform_attn.py:31: UserWarning: Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).
+  warnings.warn("Failed to load custom C++ ops. Falling back to PyTorch implementation (works on GPU, but may be slower).")
+loading annotations into memory...
+loading annotations into memory...
+loading annotations into memory...
+loading annotations into memory...
+loading annotations into memory...
+loading annotations into memory...
+============================================================
+  Official-Protocol COCO Evaluation
+============================================================
+  Mode:       both
+  GPUs:       8
+  num_select: 300 (top-K, NO conf threshold)
+  checkpoint: thinkdet/checkpoints/stage2_tma/layer9_tma_m8_8gpu_20260219_010134/thinkdet_tma_stage2_epoch2.pth
+
+loading annotations into memory...
+loading annotations into memory...
+Done (t=1.46s)
+creating index...
+Done (t=1.21s)
+creating index...
+Done (t=1.23s)
+creating index...
+index created!
+Done (t=1.52s)
+creating index...
+Done (t=1.50s)
+creating index...
+index created!
+Done (t=1.26s)
+creating index...
+[COCOGrounding] 4952 images, 80 categories from /home/iibrohimm/project/next_step/dataSets/coco/annotations/instances_val2017.json
+index created!
+Done (t=1.27s)
+creating index...
+index created!
+index created!
+[COCOGrounding] 4952 images, 80 categories from /home/iibrohimm/project/next_step/dataSets/coco/annotations/instances_val2017.json
+index created!
+[COCOGrounding] 4952 images, 80 categories from /home/iibrohimm/project/next_step/dataSets/coco/annotations/instances_val2017.json
+index created!
+[COCOGrounding] 4952 images, 80 categories from /home/iibrohimm/project/next_step/dataSets/coco/annotations/instances_val2017.json
+[COCOGrounding] 4952 images, 80 categories from /home/iibrohimm/project/next_step/dataSets/coco/annotations/instances_val2017.json
+[COCOGrounding] 4952 images, 80 categories from /home/iibrohimm/project/next_step/dataSets/coco/annotations/instances_val2017.json
+[COCOGrounding] 4952 images, 80 categories from /home/iibrohimm/project/next_step/dataSets/coco/annotations/instances_val2017.json
+  Dataset: 4952 images, 80 categories
+Done (t=1.66s)
+creating index...
+index created!
+[COCOGrounding] 4952 images, 80 categories from /home/iibrohimm/project/next_step/dataSets/coco/annotations/instances_val2017.json
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+
+[BASELINE] Running official-protocol evaluation...
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/transformer.py:862: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/transformer.py:862: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/transformer.py:862: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/transformer.py:862: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/transformer.py:862: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/transformer.py:862: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/transformer.py:862: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/iibrohimm/project/next_step/GroundingDINO/GroundingDINO/groundingdino/models/GroundingDINO/transformer.py:862: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+  [100/619] preds=30000, time=33s, ETA=172s
+  [200/619] preds=60000, time=63s, ETA=132s
+  [300/619] preds=90000, time=92s, ETA=98s
+  [400/619] preds=120000, time=122s, ETA=67s
+  [500/619] preds=150000, time=152s, ETA=36s
+  [600/619] preds=180000, time=181s, ETA=6s
+  Done (rank 0): 619 images, 185700 local preds, 187s
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+
+[BASELINE] Total predictions: 1485600
+[BASELINE] COCO eval:
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+Loading and preparing results...
+DONE (t=11.04s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=77.71s).
+Accumulating evaluation results...
+DONE (t=30.60s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.485
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.645
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.530
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.340
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.518
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.634
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.386
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.668
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.737
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.591
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.775
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.888
+
+  >>> BASELINE AP = 0.4853 <<<
+  >>> BASELINE AP50 = 0.6446 <<<
+
+/home/iibrohimm/project/next_step/.venv/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+
+[TMA] Running official-protocol evaluation...
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+FlashAttention2 is not installed.
+FlashAttention2 is not installed.
+FlashAttention2 is not installed.
+FlashAttention2 is not installed.
+FlashAttention2 is not installed.
+FlashAttention2 is not installed.
+FlashAttention2 is not installed.
+FlashAttention2 is not installed.
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+[ThinkDet v2] InternVL loaded | layer=9/28 | vis_tokens=256 | dim=1024
+[ThinkDet v2] InternVL loaded | layer=9/28 | vis_tokens=256 | dim=1024
+[ThinkDet v2] InternVL loaded | layer=9/28 | vis_tokens=256 | dim=1024
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+[ThinkDet v2] InternVL loaded | layer=9/28 | vis_tokens=256 | dim=1024
+[ThinkDet v2] InternVL loaded | layer=9/28 | vis_tokens=256 | dim=1024
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+[ThinkDet v2] InternVL loaded | layer=9/28 | vis_tokens=256 | dim=1024
+[ThinkDet v2] InternVL loaded | layer=9/28 | vis_tokens=256 | dim=1024
+The tokenizer you are loading from '/home/iibrohimm/project/next_step/InternVL3_5-1B' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+[ThinkDet v2] InternVL loaded | layer=9/28 | vis_tokens=256 | dim=1024
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 1
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 1
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 1
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 1
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 1
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 1
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 1[ThinkDet TMA] Injected TextAugmenter at decoder layer 1
+
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 3
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 3
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 3
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 3
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 3
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 3
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 3
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 3
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 5
+[ThinkDet TMA] injection_layers=[1, 3, 5] M=8 n_heads=8
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 5
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 5
+[ThinkDet TMA] injection_layers=[1, 3, 5] M=8 n_heads=8
+[ThinkDet TMA] injection_layers=[1, 3, 5] M=8 n_heads=8
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 5
+[ThinkDet TMA] injection_layers=[1, 3, 5] M=8 n_heads=8
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 5
+[ThinkDet TMA] injection_layers=[1, 3, 5] M=8 n_heads=8
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 5
+[ThinkDet TMA] injection_layers=[1, 3, 5] M=8 n_heads=8
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 5
+[ThinkDet TMA] injection_layers=[1, 3, 5] M=8 n_heads=8
+[ThinkDet TMA] Injected TextAugmenter at decoder layer 5
+[ThinkDet TMA] injection_layers=[1, 3, 5] M=8 n_heads=8
+[ThinkDet TMA] 1,583,619/1,235,321,093 params trainable (0.13%)
+[ThinkDet TMA] 1,583,619/1,235,321,093 params trainable (0.13%)
+[ThinkDet TMA] 1,583,619/1,235,321,093 params trainable (0.13%)
+[ThinkDet TMA] 1,583,619/1,235,321,093 params trainable (0.13%)
+[ThinkDet TMA] 1,583,619/1,235,321,093 params trainable (0.13%)
+[ThinkDet TMA] 1,583,619/1,235,321,093 params trainable (0.13%)
+[ThinkDet TMA] 1,583,619/1,235,321,093 params trainable (0.13%)
+[ThinkDet TMA] 1,583,619/1,235,321,093 params trainable (0.13%)
+  Missing keys: 1589  Unexpected: 0
+  [100/619] preds=30000, time=43s, ETA=222s
+  [200/619] preds=60000, time=83s, ETA=175s
+  [300/619] preds=90000, time=124s, ETA=132s
+  [400/619] preds=120000, time=164s, ETA=90s
+  [500/619] preds=150000, time=205s, ETA=49s
+  [600/619] preds=180000, time=245s, ETA=8s
+  Done (rank 0): 619 images, 185700 local preds, 253s
+
+[TMA] Total predictions: 1485600
+[TMA] COCO eval:
+Loading and preparing results...
+DONE (t=10.18s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=78.90s).
+Accumulating evaluation results...
+DONE (t=22.87s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.451
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.599
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.496
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.322
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.489
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.587
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.381
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.666
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.744
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.595
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.782
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.894
+
+  >>> TMA AP = 0.4514 <<<
+  >>> TMA AP50 = 0.5994 <<<
+
+============================================================
+  COMPARISON (Official Protocol)
+============================================================
+  Metric            Baseline        TMA      Delta
+  --------------------------------------------------
+  AP                  0.4853     0.4514   -0.0339
+  AP_50               0.6446     0.5994   -0.0452
+  AP_75               0.5295     0.4959   -0.0336
+  AP_S                0.3396     0.3225   -0.0171
+  AP_M                0.5178     0.4891   -0.0287
+  AP_L                0.6345     0.5868   -0.0477
+  AR_100              0.7374     0.7444 +   0.0070
+  num_preds          1485600    1485600         +0
+============================================================
+
+Saved: thinkdet/results/eval/stage2_tma_vs_baseline_official_coco_val_8gpu.json

@@ -1,0 +1,177 @@
+{
+  "image": "/home/iibrohimm/project/next_step/thinkdet/data/Screenshot 2026-03-12 112130.png",
+  "prompt": "tool to eat with",
+  "device": "cuda:0",
+  "top_k": 5,
+  "hf": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "threshold": 0.0,
+    "text_threshold": 0.0,
+    "detections": [
+      {
+        "label": "tool to eat with. [SEP]",
+        "score": 0.4730105698108673,
+        "box": [
+          1047.7860107421875,
+          330.50970458984375,
+          1195.822265625,
+          605.8274536132812
+        ]
+      },
+      {
+        "label": "tool to eat with. [SEP]",
+        "score": 0.42872515320777893,
+        "box": [
+          968.6803588867188,
+          298.3666076660156,
+          1109.626953125,
+          607.5512084960938
+        ]
+      },
+      {
+        "label": "tool to eat with. [SEP]",
+        "score": 0.27821946144104004,
+        "box": [
+          1054.4097900390625,
+          17.91204261779785,
+          1235.447265625,
+          151.39968872070312
+        ]
+      },
+      {
+        "label": "tool to eat with. [SEP]",
+        "score": 0.23223750293254852,
+        "box": [
+          249.4835968017578,
+          197.5098114013672,
+          383.5628356933594,
+          274.82635498046875
+        ]
+      },
+      {
+        "label": "tool to eat with. [SEP]",
+        "score": 0.22397080063819885,
+        "box": [
+          968.3557739257812,
+          297.150634765625,
+          1195.965576171875,
+          609.6513061523438
+        ]
+      }
+    ],
+    "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/qualitative/apples_to_apples_screenshot_tool_to_eat_with_hf.jpg"
+  },
+  "thinkdet": {
+    "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+    "query_used": "tool to eat with .",
+    "stats": {
+      "top1": 0.09274056553840637,
+      "top2": 0.08048207312822342,
+      "top3_mean": 0.07841649527351062,
+      "margin": 0.012258492410182953,
+      "gate_mean": 0.0015233154020582635,
+      "reliability": 0.1067114612708489
+    },
+    "detections": [
+      {
+        "label": "",
+        "score": 0.09274056553840637,
+        "box": [
+          1048.077928237617,
+          330.7962211370468,
+          1196.233566351235,
+          605.2342334985733
+        ]
+      },
+      {
+        "label": "",
+        "score": 0.08048207312822342,
+        "box": [
+          969.3327621370554,
+          298.6231005191803,
+          1109.7413762658834,
+          606.729737997055
+        ]
+      },
+      {
+        "label": "",
+        "score": 0.062026847153902054,
+        "box": [
+          1055.3291784524918,
+          18.16634225845337,
+          1235.7204777002335,
+          150.7605710029602
+        ]
+      },
+      {
+        "label": "",
+        "score": 0.05688876658678055,
+        "box": [
+          968.6840756982565,
+          297.4148098230362,
+          1197.411175623536,
+          608.4117711782455
+        ]
+      },
+      {
+        "label": "",
+        "score": 0.047982487827539444,
+        "box": [
+          249.41302187740803,
+          197.93733528256416,
+          383.628105327487,
+          274.28485986590385
+        ]
+      }
+    ],
+    "checkpoint_meta": {
+      "checkpoint_extract_layers": [
+        9
+      ],
+      "checkpoint_layer_fusion": "mean",
+      "extract_layers": [
+        9
+      ],
+      "layer_fusion": "mean",
+      "injection_layers": [
+        1,
+        3,
+        5
+      ],
+      "tma_m": 8,
+      "tma_n_heads": 8,
+      "fusion_mode": "residual"
+    },
+    "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/qualitative/apples_to_apples_screenshot_tool_to_eat_with_thinkdet.jpg"
+  },
+  "overlap": {
+    "rankwise_iou": [
+      {
+        "rank": 1,
+        "iou": 0.9920914205765563
+      },
+      {
+        "rank": 2,
+        "iou": 0.991099151594285
+      },
+      {
+        "rank": 3,
+        "iou": 0.9867834289787333
+      },
+      {
+        "rank": 4,
+        "iou": 0.0
+      },
+      {
+        "rank": 5,
+        "iou": 0.0
+      }
+    ],
+    "best_cross_match": {
+      "hf_rank": 1,
+      "thinkdet_rank": 1,
+      "iou": 0.9920914205765563
+    }
+  },
+  "comparison_image": "/home/iibrohimm/project/next_step/thinkdet/results/qualitative/apples_to_apples_screenshot_tool_to_eat_with_comparison.jpg"
+}

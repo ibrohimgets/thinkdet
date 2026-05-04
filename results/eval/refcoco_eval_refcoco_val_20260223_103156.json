@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "timestamp": "20260223_104442",
+  "dataset": {
+    "name": "refcoco",
+    "split_by": "unc",
+    "split": "val",
+    "total_samples": 10834,
+    "evaluated_samples": 10834
+  },
+  "config": {
+    "conf_thresh": 0.2,
+    "iou_thresh": 0.5,
+    "thinkdet_checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage2_tma/layer9_tma_m8_residual_pilot_20260223_050834/thinkdet_tma_stage2_epoch1.pth"
+  },
+  "summary": {
+    "baseline": {
+      "samples": 1355,
+      "top1_acc": 0.5232472324723247,
+      "top1_fp_rate": 0.47675276752767526,
+      "det_fp_rate": 0.5220848056537103,
+      "no_det_rate": 0.44501845018450187,
+      "img_has_fp_rate": 0.3084870848708487
+    },
+    "thinkdet": {
+      "samples": 1355,
+      "top1_acc": 0.5195571955719557,
+      "top1_fp_rate": 0.48044280442804427,
+      "det_fp_rate": 0.5641410352588146,
+      "no_det_rate": 0.4774907749077491,
+      "img_has_fp_rate": 0.3380073800738007
+    }
+  }
+}

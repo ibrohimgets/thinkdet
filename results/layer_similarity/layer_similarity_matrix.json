@@ -1,0 +1,4810 @@
+{
+  "config": {
+    "source": "affordance",
+    "max_samples": 256,
+    "seed": 42,
+    "device": "cuda:0",
+    "internvl_path": "/home/iibrohimm/project/next_step/InternVL3_5-1B"
+  },
+  "summary": {
+    "num_samples": 256,
+    "num_layers": 28,
+    "grouping_method": "largest_adjacent_similarity_gaps_with_contiguous_groups",
+    "split_info": {
+      "splits": [
+        15,
+        21
+      ],
+      "score": 0.27712,
+      "gap_score": 0.289786,
+      "within_group_similarity": 0.728442,
+      "boundary_similarity": 0.855107,
+      "group_sizes": [
+        15,
+        6,
+        7
+      ]
+    },
+    "groups": {
+      "early": {
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "start": 0,
+        "end": 14,
+        "count": 15
+      },
+      "mid": {
+        "layers": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "start": 15,
+        "end": 20,
+        "count": 6
+      },
+      "late": {
+        "layers": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "start": 21,
+        "end": 27,
+        "count": 7
+      }
+    }
+  },
+  "adjacent_gaps_ranked": [
+    {
+      "between_layers": [
+        26,
+        27
+      ],
+      "distance": 0.277673,
+      "similarity": 0.722327
+    },
+    {
+      "between_layers": [
+        25,
+        26
+      ],
+      "distance": 0.197418,
+      "similarity": 0.802582
+    },
+    {
+      "between_layers": [
+        14,
+        15
+      ],
+      "distance": 0.149987,
+      "similarity": 0.850013
+    },
+    {
+      "between_layers": [
+        20,
+        21
+      ],
+      "distance": 0.139799,
+      "similarity": 0.860201
+    },
+    {
+      "between_layers": [
+        16,
+        17
+      ],
+      "distance": 0.132568,
+      "similarity": 0.867432
+    },
+    {
+      "between_layers": [
+        18,
+        19
+      ],
+      "distance": 0.129053,
+      "similarity": 0.870947
+    },
+    {
+      "between_layers": [
+        15,
+        16
+      ],
+      "distance": 0.116219,
+      "similarity": 0.883781
+    },
+    {
+      "between_layers": [
+        19,
+        20
+      ],
+      "distance": 0.116049,
+      "similarity": 0.883951
+    },
+    {
+      "between_layers": [
+        21,
+        22
+      ],
+      "distance": 0.114993,
+      "similarity": 0.885007
+    },
+    {
+      "between_layers": [
+        23,
+        24
+      ],
+      "distance": 0.112582,
+      "similarity": 0.887418
+    },
+    {
+      "between_layers": [
+        12,
+        13
+      ],
+      "distance": 0.110433,
+      "similarity": 0.889567
+    },
+    {
+      "between_layers": [
+        10,
+        11
+      ],
+      "distance": 0.10945,
+      "similarity": 0.89055
+    },
+    {
+      "between_layers": [
+        13,
+        14
+      ],
+      "distance": 0.107181,
+      "similarity": 0.892819
+    },
+    {
+      "between_layers": [
+        24,
+        25
+      ],
+      "distance": 0.105576,
+      "similarity": 0.894424
+    },
+    {
+      "between_layers": [
+        17,
+        18
+      ],
+      "distance": 0.10359,
+      "similarity": 0.89641
+    },
+    {
+      "between_layers": [
+        11,
+        12
+      ],
+      "distance": 0.099751,
+      "similarity": 0.900249
+    },
+    {
+      "between_layers": [
+        22,
+        23
+      ],
+      "distance": 0.098949,
+      "similarity": 0.901051
+    },
+    {
+      "between_layers": [
+        9,
+        10
+      ],
+      "distance": 0.098569,
+      "similarity": 0.901431
+    },
+    {
+      "between_layers": [
+        8,
+        9
+      ],
+      "distance": 0.085472,
+      "similarity": 0.914528
+    },
+    {
+      "between_layers": [
+        7,
+        8
+      ],
+      "distance": 0.06779,
+      "similarity": 0.93221
+    },
+    {
+      "between_layers": [
+        0,
+        1
+      ],
+      "distance": 0.058674,
+      "similarity": 0.941326
+    },
+    {
+      "between_layers": [
+        4,
+        5
+      ],
+      "distance": 0.054616,
+      "similarity": 0.945384
+    },
+    {
+      "between_layers": [
+        6,
+        7
+      ],
+      "distance": 0.052592,
+      "similarity": 0.947408
+    },
+    {
+      "between_layers": [
+        2,
+        3
+      ],
+      "distance": 0.046866,
+      "similarity": 0.953134
+    },
+    {
+      "between_layers": [
+        5,
+        6
+      ],
+      "distance": 0.041021,
+      "similarity": 0.958979
+    },
+    {
+      "between_layers": [
+        1,
+        2
+      ],
+      "distance": 0.033602,
+      "similarity": 0.966398
+    },
+    {
+      "between_layers": [
+        3,
+        4
+      ],
+      "distance": 0.031523,
+      "similarity": 0.968477
+    }
+  ],
+  "layer_stats": [
+    {
+      "layer": 0,
+      "mean_adjacent_similarity": 0.941326,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.074074,
+      "feature_norm_mean": 13.44945
+    },
+    {
+      "layer": 1,
+      "mean_adjacent_similarity": 0.953862,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 1.0,
+      "feature_norm_mean": 15.910005
+    },
+    {
+      "layer": 2,
+      "mean_adjacent_similarity": 0.959766,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.148148,
+      "feature_norm_mean": 20.786285
+    },
+    {
+      "layer": 3,
+      "mean_adjacent_similarity": 0.960805,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.0,
+      "feature_norm_mean": 24.270827
+    },
+    {
+      "layer": 4,
+      "mean_adjacent_similarity": 0.95693,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.518519,
+      "feature_norm_mean": 24.332432
+    },
+    {
+      "layer": 5,
+      "mean_adjacent_similarity": 0.952182,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.962963,
+      "feature_norm_mean": 26.265857
+    },
+    {
+      "layer": 6,
+      "mean_adjacent_similarity": 0.953194,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.333333,
+      "feature_norm_mean": 27.16901
+    },
+    {
+      "layer": 7,
+      "mean_adjacent_similarity": 0.939809,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.777778,
+      "feature_norm_mean": 25.624875
+    },
+    {
+      "layer": 8,
+      "mean_adjacent_similarity": 0.923369,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.666667,
+      "feature_norm_mean": 28.417547
+    },
+    {
+      "layer": 9,
+      "mean_adjacent_similarity": 0.907979,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.592593,
+      "feature_norm_mean": 29.900423
+    },
+    {
+      "layer": 10,
+      "mean_adjacent_similarity": 0.89599,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.555556,
+      "feature_norm_mean": 32.397831
+    },
+    {
+      "layer": 11,
+      "mean_adjacent_similarity": 0.8954,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.444444,
+      "feature_norm_mean": 36.731435
+    },
+    {
+      "layer": 12,
+      "mean_adjacent_similarity": 0.894908,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.740741,
+      "feature_norm_mean": 41.719616
+    },
+    {
+      "layer": 13,
+      "mean_adjacent_similarity": 0.891193,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.851852,
+      "feature_norm_mean": 42.900649
+    },
+    {
+      "layer": 14,
+      "mean_adjacent_similarity": 0.871416,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.62963,
+      "feature_norm_mean": 49.48172
+    },
+    {
+      "layer": 15,
+      "mean_adjacent_similarity": 0.866897,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.703704,
+      "feature_norm_mean": 59.393516
+    },
+    {
+      "layer": 16,
+      "mean_adjacent_similarity": 0.875606,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.037037,
+      "feature_norm_mean": 74.162338
+    },
+    {
+      "layer": 17,
+      "mean_adjacent_similarity": 0.881921,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.222222,
+      "feature_norm_mean": 91.217764
+    },
+    {
+      "layer": 18,
+      "mean_adjacent_similarity": 0.883679,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.407407,
+      "feature_norm_mean": 116.024359
+    },
+    {
+      "layer": 19,
+      "mean_adjacent_similarity": 0.877449,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.481481,
+      "feature_norm_mean": 132.80726
+    },
+    {
+      "layer": 20,
+      "mean_adjacent_similarity": 0.872076,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.111111,
+      "feature_norm_mean": 158.792551
+    },
+    {
+      "layer": 21,
+      "mean_adjacent_similarity": 0.872604,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.37037,
+      "feature_norm_mean": 217.679125
+    },
+    {
+      "layer": 22,
+      "mean_adjacent_similarity": 0.893029,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.259259,
+      "feature_norm_mean": 256.528113
+    },
+    {
+      "layer": 23,
+      "mean_adjacent_similarity": 0.894234,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.185185,
+      "feature_norm_mean": 301.94565
+    },
+    {
+      "layer": 24,
+      "mean_adjacent_similarity": 0.890921,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.296296,
+      "feature_norm_mean": 381.726692
+    },
+    {
+      "layer": 25,
+      "mean_adjacent_similarity": 0.848503,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.925926,
+      "feature_norm_mean": 483.365841
+    },
+    {
+      "layer": 26,
+      "mean_adjacent_similarity": 0.762455,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.814815,
+      "feature_norm_mean": 549.942116
+    },
+    {
+      "layer": 27,
+      "mean_adjacent_similarity": 0.722327,
+      "self_similarity": 1.0,
+      "self_similarity_rank01": 0.888889,
+      "feature_norm_mean": 601.623283
+    }
+  ],
+  "similarity_matrix": [
+    [
+      1.0,
+      0.941326,
+      0.86409,
+      0.794718,
+      0.747173,
+      0.692794,
+      0.675558,
+      0.627707,
+      0.610051,
+      0.597172,
+      0.548651,
+      0.547775,
+      0.470387,
+      0.405244,
+      0.418359,
+      0.276926,
+      0.208013,
+      0.14572,
+      0.122031,
+      0.153781,
+      0.151263,
+      0.118252,
+      0.153898,
+      0.153955,
+      0.13046,
+      0.117702,
+      0.122044,
+      0.045753
+    ],
+    [
+      0.941326,
+      1.0,
+      0.966398,
+      0.907604,
+      0.867346,
+      0.811127,
+      0.800061,
+      0.753859,
+      0.730691,
+      0.710917,
+      0.65752,
+      0.663702,
+      0.573783,
+      0.502353,
+      0.519253,
+      0.34279,
+      0.26087,
+      0.190279,
+      0.157911,
+      0.189099,
+      0.182157,
+      0.130496,
+      0.168964,
+      0.166406,
+      0.135622,
+      0.126311,
+      0.133531,
+      0.042268
+    ],
+    [
+      0.86409,
+      0.966398,
+      1.0,
+      0.953134,
+      0.922875,
+      0.865115,
+      0.858642,
+      0.8124,
+      0.786881,
+      0.763183,
+      0.704941,
+      0.719864,
+      0.624144,
+      0.549657,
+      0.571064,
+      0.373652,
+      0.281759,
+      0.200609,
+      0.164479,
+      0.198193,
+      0.190315,
+      0.13701,
+      0.186972,
+      0.185866,
+      0.157226,
+      0.148021,
+      0.15536,
+      0.040199
+    ],
+    [
+      0.794718,
+      0.907604,
+      0.953134,
+      1.0,
+      0.968477,
+      0.913576,
+      0.899613,
+      0.849629,
+      0.821309,
+      0.785018,
+      0.72295,
+      0.726174,
+      0.632945,
+      0.562387,
+      0.580866,
+      0.386887,
+      0.304279,
+      0.213609,
+      0.175133,
+      0.209395,
+      0.205462,
+      0.153088,
+      0.203999,
+      0.200126,
+      0.171745,
+      0.160126,
+      0.165661,
+      0.042373
+    ],
+    [
+      0.747173,
+      0.867346,
+      0.922875,
+      0.968477,
+      1.0,
+      0.945384,
+      0.923576,
+      0.874757,
+      0.844501,
+      0.806384,
+      0.750192,
+      0.74954,
+      0.650115,
+      0.583884,
+      0.597154,
+      0.410725,
+      0.327872,
+      0.243108,
+      0.19625,
+      0.228342,
+      0.214655,
+      0.16439,
+      0.214278,
+      0.208135,
+      0.175996,
+      0.162824,
+      0.161896,
+      0.043723
+    ],
+    [
+      0.692794,
+      0.811127,
+      0.865115,
+      0.913576,
+      0.945384,
+      1.0,
+      0.958979,
+      0.913881,
+      0.869247,
+      0.824938,
+      0.768957,
+      0.756315,
+      0.663681,
+      0.601506,
+      0.607179,
+      0.429183,
+      0.352832,
+      0.27237,
+      0.220243,
+      0.251208,
+      0.238657,
+      0.189814,
+      0.235028,
+      0.219337,
+      0.184322,
+      0.166177,
+      0.165987,
+      0.053937
+    ],
+    [
+      0.675558,
+      0.800061,
+      0.858642,
+      0.899613,
+      0.923576,
+      0.958979,
+      1.0,
+      0.947408,
+      0.908318,
+      0.856949,
+      0.795059,
+      0.790693,
+      0.698447,
+      0.635192,
+      0.640354,
+      0.455727,
+      0.376823,
+      0.288095,
+      0.239783,
+      0.264581,
+      0.246791,
+      0.194975,
+      0.240383,
+      0.225961,
+      0.192128,
+      0.175129,
+      0.178178,
+      0.065503
+    ],
+    [
+      0.627707,
+      0.753859,
+      0.8124,
+      0.849629,
+      0.874757,
+      0.913881,
+      0.947408,
+      1.0,
+      0.93221,
+      0.877102,
+      0.822973,
+      0.806899,
+      0.718388,
+      0.658085,
+      0.657912,
+      0.483189,
+      0.399615,
+      0.310871,
+      0.261106,
+      0.286285,
+      0.264817,
+      0.205684,
+      0.246729,
+      0.232485,
+      0.197189,
+      0.176635,
+      0.171736,
+      0.069164
+    ],
+    [
+      0.610051,
+      0.730691,
+      0.786881,
+      0.821309,
+      0.844501,
+      0.869247,
+      0.908318,
+      0.93221,
+      1.0,
+      0.914528,
+      0.844903,
+      0.82522,
+      0.742485,
+      0.671526,
+      0.676363,
+      0.49588,
+      0.416947,
+      0.32891,
+      0.268211,
+      0.300025,
+      0.274186,
+      0.218882,
+      0.258293,
+      0.245528,
+      0.203203,
+      0.188203,
+      0.172082,
+      0.061636
+    ],
+    [
+      0.597172,
+      0.710917,
+      0.763183,
+      0.785018,
+      0.806384,
+      0.824938,
+      0.856949,
+      0.877102,
+      0.914528,
+      1.0,
+      0.901431,
+      0.863369,
+      0.763091,
+      0.693285,
+      0.692112,
+      0.509862,
+      0.433942,
+      0.364107,
+      0.301733,
+      0.331223,
+      0.306172,
+      0.238544,
+      0.268804,
+      0.254881,
+      0.216003,
+      0.196472,
+      0.172768,
+      0.083781
+    ],
+    [
+      0.548651,
+      0.65752,
+      0.704941,
+      0.72295,
+      0.750192,
+      0.768957,
+      0.795059,
+      0.822973,
+      0.844903,
+      0.901431,
+      1.0,
+      0.89055,
+      0.808083,
+      0.758746,
+      0.74947,
+      0.60796,
+      0.520067,
+      0.458019,
+      0.395601,
+      0.398184,
+      0.369209,
+      0.289455,
+      0.295608,
+      0.282635,
+      0.237524,
+      0.217915,
+      0.159778,
+      0.085297
+    ],
+    [
+      0.547775,
+      0.663702,
+      0.719864,
+      0.726174,
+      0.74954,
+      0.756315,
+      0.790693,
+      0.806899,
+      0.82522,
+      0.863369,
+      0.89055,
+      1.0,
+      0.900249,
+      0.815019,
+      0.819512,
+      0.652746,
+      0.570935,
+      0.498474,
+      0.438337,
+      0.435434,
+      0.401173,
+      0.322468,
+      0.335419,
+      0.313018,
+      0.269019,
+      0.246766,
+      0.184942,
+      0.089584
+    ],
+    [
+      0.470387,
+      0.573783,
+      0.624144,
+      0.632945,
+      0.650115,
+      0.663681,
+      0.698447,
+      0.718388,
+      0.742485,
+      0.763091,
+      0.808083,
+      0.900249,
+      1.0,
+      0.889567,
+      0.869646,
+      0.753778,
+      0.671604,
+      0.60359,
+      0.548766,
+      0.518015,
+      0.46906,
+      0.398207,
+      0.380116,
+      0.341675,
+      0.284529,
+      0.258403,
+      0.14482,
+      0.056834
+    ],
+    [
+      0.405244,
+      0.502353,
+      0.549657,
+      0.562387,
+      0.583884,
+      0.601506,
+      0.635192,
+      0.658085,
+      0.671526,
+      0.693285,
+      0.758746,
+      0.815019,
+      0.889567,
+      1.0,
+      0.892819,
+      0.814242,
+      0.738795,
+      0.664082,
+      0.622905,
+      0.575896,
+      0.533291,
+      0.44738,
+      0.418196,
+      0.385386,
+      0.314504,
+      0.272664,
+      0.118887,
+      0.043951
+    ],
+    [
+      0.418359,
+      0.519253,
+      0.571064,
+      0.580866,
+      0.597154,
+      0.607179,
+      0.640354,
+      0.657912,
+      0.676363,
+      0.692112,
+      0.74947,
+      0.819512,
+      0.869646,
+      0.892819,
+      1.0,
+      0.850013,
+      0.761981,
+      0.678254,
+      0.634333,
+      0.613236,
+      0.556618,
+      0.482799,
+      0.450186,
+      0.413888,
+      0.347068,
+      0.310217,
+      0.156186,
+      0.072689
+    ],
+    [
+      0.276926,
+      0.34279,
+      0.373652,
+      0.386887,
+      0.410725,
+      0.429183,
+      0.455727,
+      0.483189,
+      0.49588,
+      0.509862,
+      0.60796,
+      0.652746,
+      0.753778,
+      0.814242,
+      0.850013,
+      1.0,
+      0.883781,
+      0.789628,
+      0.753033,
+      0.683212,
+      0.62899,
+      0.540617,
+      0.482958,
+      0.441307,
+      0.363934,
+      0.317451,
+      0.127757,
+      0.074351
+    ],
+    [
+      0.208013,
+      0.26087,
+      0.281759,
+      0.304279,
+      0.327872,
+      0.352832,
+      0.376823,
+      0.399615,
+      0.416947,
+      0.433942,
+      0.520067,
+      0.570935,
+      0.671604,
+      0.738795,
+      0.761981,
+      0.883781,
+      1.0,
+      0.867432,
+      0.819407,
+      0.760662,
+      0.693001,
+      0.616132,
+      0.535648,
+      0.476697,
+      0.387084,
+      0.326377,
+      0.117293,
+      0.069363
+    ],
+    [
+      0.14572,
+      0.190279,
+      0.200609,
+      0.213609,
+      0.243108,
+      0.27237,
+      0.288095,
+      0.310871,
+      0.32891,
+      0.364107,
+      0.458019,
+      0.498474,
+      0.60359,
+      0.664082,
+      0.678254,
+      0.789628,
+      0.867432,
+      1.0,
+      0.89641,
+      0.805917,
+      0.729548,
+      0.628817,
+      0.540532,
+      0.492237,
+      0.403596,
+      0.338569,
+      0.124657,
+      0.101496
+    ],
+    [
+      0.122031,
+      0.157911,
+      0.164479,
+      0.175133,
+      0.19625,
+      0.220243,
+      0.239783,
+      0.261106,
+      0.268211,
+      0.301733,
+      0.395601,
+      0.438337,
+      0.548766,
+      0.622905,
+      0.634333,
+      0.753033,
+      0.819407,
+      0.89641,
+      1.0,
+      0.870947,
+      0.780703,
+      0.671823,
+      0.572936,
+      0.525028,
+      0.428582,
+      0.354296,
+      0.126084,
+      0.103723
+    ],
+    [
+      0.153781,
+      0.189099,
+      0.198193,
+      0.209395,
+      0.228342,
+      0.251208,
+      0.264581,
+      0.286285,
+      0.300025,
+      0.331223,
+      0.398184,
+      0.435434,
+      0.518015,
+      0.575896,
+      0.613236,
+      0.683212,
+      0.760662,
+      0.805917,
+      0.870947,
+      1.0,
+      0.883951,
+      0.779295,
+      0.680368,
+      0.61968,
+      0.51323,
+      0.425511,
+      0.198771,
+      0.124031
+    ],
+    [
+      0.151263,
+      0.182157,
+      0.190315,
+      0.205462,
+      0.214655,
+      0.238657,
+      0.246791,
+      0.264817,
+      0.274186,
+      0.306172,
+      0.369209,
+      0.401173,
+      0.46906,
+      0.533291,
+      0.556618,
+      0.62899,
+      0.693001,
+      0.729548,
+      0.780703,
+      0.883951,
+      1.0,
+      0.860201,
+      0.760847,
+      0.702669,
+      0.597109,
+      0.516513,
+      0.30257,
+      0.186516
+    ],
+    [
+      0.118252,
+      0.130496,
+      0.13701,
+      0.153088,
+      0.16439,
+      0.189814,
+      0.194975,
+      0.205684,
+      0.218882,
+      0.238544,
+      0.289455,
+      0.322468,
+      0.398207,
+      0.44738,
+      0.482799,
+      0.540617,
+      0.616132,
+      0.628817,
+      0.671823,
+      0.779295,
+      0.860201,
+      1.0,
+      0.885007,
+      0.787213,
+      0.68887,
+      0.598735,
+      0.369958,
+      0.221909
+    ],
+    [
+      0.153898,
+      0.168964,
+      0.186972,
+      0.203999,
+      0.214278,
+      0.235028,
+      0.240383,
+      0.246729,
+      0.258293,
+      0.268804,
+      0.295608,
+      0.335419,
+      0.380116,
+      0.418196,
+      0.450186,
+      0.482958,
+      0.535648,
+      0.540532,
+      0.572936,
+      0.680368,
+      0.760847,
+      0.885007,
+      1.0,
+      0.901051,
+      0.802509,
+      0.717178,
+      0.50407,
+      0.297454
+    ],
+    [
+      0.153955,
+      0.166406,
+      0.185866,
+      0.200126,
+      0.208135,
+      0.219337,
+      0.225961,
+      0.232485,
+      0.245528,
+      0.254881,
+      0.282635,
+      0.313018,
+      0.341675,
+      0.385386,
+      0.413888,
+      0.441307,
+      0.476697,
+      0.492237,
+      0.525028,
+      0.61968,
+      0.702669,
+      0.787213,
+      0.901051,
+      1.0,
+      0.887418,
+      0.787675,
+      0.568888,
+      0.337149
+    ],
+    [
+      0.13046,
+      0.135622,
+      0.157226,
+      0.171745,
+      0.175996,
+      0.184322,
+      0.192128,
+      0.197189,
+      0.203203,
+      0.216003,
+      0.237524,
+      0.269019,
+      0.284529,
+      0.314504,
+      0.347068,
+      0.363934,
+      0.387084,
+      0.403596,
+      0.428582,
+      0.51323,
+      0.597109,
+      0.68887,
+      0.802509,
+      0.887418,
+      1.0,
+      0.894424,
+      0.691041,
+      0.424965
+    ],
+    [
+      0.117702,
+      0.126311,
+      0.148021,
+      0.160126,
+      0.162824,
+      0.166177,
+      0.175129,
+      0.176635,
+      0.188203,
+      0.196472,
+      0.217915,
+      0.246766,
+      0.258403,
+      0.272664,
+      0.310217,
+      0.317451,
+      0.326377,
+      0.338569,
+      0.354296,
+      0.425511,
+      0.516513,
+      0.598735,
+      0.717178,
+      0.787675,
+      0.894424,
+      1.0,
+      0.802582,
+      0.532405
+    ],
+    [
+      0.122044,
+      0.133531,
+      0.15536,
+      0.165661,
+      0.161896,
+      0.165987,
+      0.178178,
+      0.171736,
+      0.172082,
+      0.172768,
+      0.159778,
+      0.184942,
+      0.14482,
+      0.118887,
+      0.156186,
+      0.127757,
+      0.117293,
+      0.124657,
+      0.126084,
+      0.198771,
+      0.30257,
+      0.369958,
+      0.50407,
+      0.568888,
+      0.691041,
+      0.802582,
+      1.0,
+      0.722327
+    ],
+    [
+      0.045753,
+      0.042268,
+      0.040199,
+      0.042373,
+      0.043723,
+      0.053937,
+      0.065503,
+      0.069164,
+      0.061636,
+      0.083781,
+      0.085297,
+      0.089584,
+      0.056834,
+      0.043951,
+      0.072689,
+      0.074351,
+      0.069363,
+      0.101496,
+      0.103723,
+      0.124031,
+      0.186516,
+      0.221909,
+      0.297454,
+      0.337149,
+      0.424965,
+      0.532405,
+      0.722327,
+      1.0
+    ]
+  ],
+  "sample_manifest": [
+    {
+      "sample_id": "drink_from_473406",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 473406,
+        "split": "dev",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_56344",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 56344,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_379476",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 379476,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_289415",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 289415,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_205514",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 205514,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_532690",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 532690,
+        "split": "dev",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_413395",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 413395,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_494869",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 494869,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_189752",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 189752,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_106235",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 106235,
+        "split": "dev",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_544565",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 544565,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_378139",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 378139,
+        "split": "dev",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_268378",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 268378,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_120420",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 120420,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_439593",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 439593,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_157418",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 157418,
+        "split": "dev",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_448410",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 448410,
+        "split": "dev",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_27620",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 27620,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_405279",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 405279,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_236721",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 236721,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_347335",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 347335,
+        "split": "dev",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_568710",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 568710,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_89648",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 89648,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_74256",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 74256,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_488075",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 488075,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_371699",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 371699,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_338905",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 338905,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_297084",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 297084,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_580410",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 580410,
+        "split": "dev",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_520832",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 520832,
+        "split": "dev",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_486040",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 486040,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_286182",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 286182,
+        "split": "dev",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_183965",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 183965,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_363666",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 363666,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_97337",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 97337,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_153669",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 153669,
+        "split": "dev",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_531134",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 531134,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_29596",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 29596,
+        "split": "dev",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_385719",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 385719,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_363840",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 363840,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_66817",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 66817,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_174371",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 174371,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_85157",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 85157,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_350148",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 350148,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_283785",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 283785,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_568195",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 568195,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_132375",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 132375,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_54628",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 54628,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_318455",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 318455,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_209142",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 209142,
+        "split": "dev",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_349480",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 349480,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_341921",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 341921,
+        "split": "dev",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_555005",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 555005,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_229358",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 229358,
+        "split": "dev",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_156076",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 156076,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_565853",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 565853,
+        "split": "dev",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_450202",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 450202,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_352900",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 352900,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_249129",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 249129,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_172617",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 172617,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_160556",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 160556,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_500257",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 500257,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_357737",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 357737,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_550322",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 550322,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_214539",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 214539,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_503855",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 503855,
+        "split": "dev",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_194724",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 194724,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_121417",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 121417,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_191580",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 191580,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_177935",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 177935,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_82688",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 82688,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_59635",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 59635,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_94614",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 94614,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_348481",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 348481,
+        "split": "dev",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_472678",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 472678,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_35326",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 35326,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_135410",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 135410,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_565877",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 565877,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_242060",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 242060,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_257566",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 257566,
+        "split": "dev",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_287874",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 287874,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_33221",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 33221,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_60899",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 60899,
+        "split": "dev",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_399205",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 399205,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_312192",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 312192,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_207844",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 207844,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_533206",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 533206,
+        "split": "dev",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_280710",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 280710,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_334483",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 334483,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_59598",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 59598,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_17714",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 17714,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_274460",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 274460,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_97994",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 97994,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_419653",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 419653,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_375278",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 375278,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_57597",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 57597,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_66771",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 66771,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_262227",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 262227,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_301135",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 301135,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_496954",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 496954,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_26465",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 26465,
+        "split": "dev",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_465549",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 465549,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_215072",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 215072,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_416451",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 416451,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_293625",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 293625,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_320664",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 320664,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_549390",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 549390,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_524850",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 524850,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_62808",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 62808,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_125129",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 125129,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_509824",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 509824,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_61108",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 61108,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_99039",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 99039,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_168883",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 168883,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_110999",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 110999,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_505789",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 505789,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_108253",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 108253,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_571857",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 571857,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_513567",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 513567,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_64868",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 64868,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_84241",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 84241,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_199236",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 199236,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_427655",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 427655,
+        "split": "dev",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_199771",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 199771,
+        "split": "dev",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_460494",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 460494,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_492878",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 492878,
+        "split": "dev",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_226171",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 226171,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_130826",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 130826,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_142620",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 142620,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_549674",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 549674,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_534827",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 534827,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_50811",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 50811,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_58350",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 58350,
+        "split": "dev",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_329542",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 329542,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_456015",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 456015,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_290768",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 290768,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_545219",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 545219,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_39477",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 39477,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_335529",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 335529,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_181796",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 181796,
+        "split": "dev",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_119233",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 119233,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_405970",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 405970,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_421455",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 421455,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_13729",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 13729,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_65350",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 65350,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_367680",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 367680,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_554002",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 554002,
+        "split": "dev",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_491008",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 491008,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_224807",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 224807,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_414510",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 414510,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_454404",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 454404,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_425361",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 425361,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_436738",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 436738,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_6763",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 6763,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_215114",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 215114,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_323151",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 323151,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_154705",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 154705,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_209530",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 209530,
+        "split": "dev",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_535253",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 535253,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_470924",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 470924,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_136355",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 136355,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_119828",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 119828,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_410650",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 410650,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_434459",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 434459,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_463618",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 463618,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_551660",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 551660,
+        "split": "dev",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_482319",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 482319,
+        "split": "dev",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_302030",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 302030,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_7818",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 7818,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_349152",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 349152,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_541634",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 541634,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_298396",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 298396,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_231822",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 231822,
+        "split": "dev",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_20553",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 20553,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_13923",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 13923,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_31093",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 31093,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_400161",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 400161,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_206579",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 206579,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_295809",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 295809,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_125572",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 125572,
+        "split": "dev",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_347254",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 347254,
+        "split": "dev",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_145620",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 145620,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_370478",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 370478,
+        "split": "dev",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_383842",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 383842,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_2431",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 2431,
+        "split": "dev",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_527427",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 527427,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_78748",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 78748,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_580294",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 580294,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_377239",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 377239,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_250901",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 250901,
+        "split": "dev",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_548339",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 548339,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_124659",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 124659,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_549220",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 549220,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_25986",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 25986,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_568290",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 568290,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_316666",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 316666,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_371677",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 371677,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_226984",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 226984,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_439525",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 439525,
+        "split": "dev",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_391722",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 391722,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_277005",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 277005,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_113720",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 113720,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_213086",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 213086,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_336628",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 336628,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_104669",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 104669,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_289741",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 289741,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_261888",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 261888,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_476787",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 476787,
+        "split": "dev",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_417632",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 417632,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_248111",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 248111,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_241677",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 241677,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_552775",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 552775,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_530975",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 530975,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_144003",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 144003,
+        "split": "dev",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_182162",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 182162,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_276434",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 276434,
+        "split": "dev",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_66841",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 66841,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_8277",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 8277,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_441553",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 441553,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_551822",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 551822,
+        "split": "dev",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_55150",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 55150,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_322959",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 322959,
+        "split": "dev",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_441247",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 441247,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_36844",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 36844,
+        "split": "dev",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_398377",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 398377,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_529762",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 529762,
+        "split": "dev",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_356432",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 356432,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_407614",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 407614,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_178982",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 178982,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_160012",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 160012,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_467511",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 467511,
+        "split": "dev",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_411754",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 411754,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_458663",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 458663,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "talk_on_343149",
+      "query_text": "something to talk on .",
+      "metadata": {
+        "image_id": 343149,
+        "split": "test",
+        "affordance_id": "talk_on",
+        "target_categories": [
+          "cell phone"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_337498",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 337498,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_416104",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 416104,
+        "split": "dev",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_507667",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 507667,
+        "split": "dev",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "read_344621",
+      "query_text": "something to read .",
+      "metadata": {
+        "image_id": 344621,
+        "split": "test",
+        "affordance_id": "read",
+        "target_categories": [
+          "book"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_227898",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 227898,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_6471",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 6471,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "ride_507975",
+      "query_text": "something to ride .",
+      "metadata": {
+        "image_id": 507975,
+        "split": "test",
+        "affordance_id": "ride",
+        "target_categories": [
+          "bicycle",
+          "motorcycle",
+          "horse"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_29640",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 29640,
+        "split": "dev",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_42628",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 42628,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_142324",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 142324,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_171382",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 171382,
+        "split": "dev",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_376264",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 376264,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_397133",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 397133,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "drink_from_31296",
+      "query_text": "something to drink from .",
+      "metadata": {
+        "image_id": 31296,
+        "split": "test",
+        "affordance_id": "drink_from",
+        "target_categories": [
+          "cup",
+          "bottle",
+          "wine glass"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_130386",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 130386,
+        "split": "dev",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "cut_with_173008",
+      "query_text": "something to cut with .",
+      "metadata": {
+        "image_id": 173008,
+        "split": "test",
+        "affordance_id": "cut_with",
+        "target_categories": [
+          "knife",
+          "scissors"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_292060",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 292060,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "eat_with_562059",
+      "query_text": "something to eat with .",
+      "metadata": {
+        "image_id": 562059,
+        "split": "test",
+        "affordance_id": "eat_with",
+        "target_categories": [
+          "fork",
+          "spoon",
+          "knife"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_252294",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 252294,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_169076",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 169076,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "sit_on_325838",
+      "query_text": "something to sit on .",
+      "metadata": {
+        "image_id": 325838,
+        "split": "test",
+        "affordance_id": "sit_on",
+        "target_categories": [
+          "chair",
+          "bench",
+          "couch",
+          "bed"
+        ]
+      }
+    },
+    {
+      "sample_id": "carry_in_474293",
+      "query_text": "something to carry things in .",
+      "metadata": {
+        "image_id": 474293,
+        "split": "test",
+        "affordance_id": "carry_in",
+        "target_categories": [
+          "backpack",
+          "handbag",
+          "suitcase"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,5105 @@
+{
+  "status": "ok",
+  "benchmark_path": "/home/iibrohimm/project/next_step/thinkdet/data/benchmarks/flickr30k_entities_val_grounding_full_v1.json",
+  "benchmark_name": "flickr30k_entities_val_grounding_full_v1",
+  "benchmark_version": 1,
+  "split": "all",
+  "n_samples": 143,
+  "top_k": 5,
+  "device": "cuda:0",
+  "thinkdet_checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+  "checkpoint_meta": {
+    "checkpoint_extract_layers": [
+      9
+    ],
+    "checkpoint_layer_fusion": "mean",
+    "extract_layers": [
+      9
+    ],
+    "layer_fusion": "mean",
+    "injection_layers": [
+      1,
+      3,
+      5
+    ],
+    "tma_m": 8,
+    "tma_n_heads": 8,
+    "fusion_mode": "residual"
+  },
+  "fallback_config": {
+    "enabled": true,
+    "feedback_enabled": false,
+    "min_top1": 0.15,
+    "min_margin": 0.01,
+    "min_gate": null,
+    "llm_feedback_top_k": 20,
+    "llm_feedback_weight": 0.2,
+    "llm_feedback_max_new_tokens": 6,
+    "llm_feedback_temperature": 0.0,
+    "llm_feedback_improve_margin": 0.01,
+    "prompt_refine": true,
+    "prompt_refine_max_variants": 2,
+    "prompt_refine_max_new_tokens": 96,
+    "prompt_refine_temperature": 0.0,
+    "prompt_refine_improve_margin": 0.05,
+    "prompt_refine_require_semantic_preservation": true,
+    "prompt_refine_min_shared_terms": 2
+  },
+  "group_name_map": {},
+  "results": {
+    "baseline": {
+      "overall": {
+        "n_samples": 143,
+        "mean_best_iou_top1": 0.7138258853357091,
+        "mean_best_iou_topk": 0.834241878352069,
+        "hit@0.5_top1": 0.7622377622377622,
+        "hit@0.5_topk": 0.916083916083916,
+        "hit@0.75_top1": 0.6573426573426573,
+        "hit@0.75_topk": 0.8181818181818182,
+        "mean_top1_score": 0.5277193732611782,
+        "top_k": 5
+      },
+      "per_group": {}
+    },
+    "thinkdet": {
+      "overall": {
+        "n_samples": 143,
+        "mean_best_iou_top1": 0.7237381041556494,
+        "mean_best_iou_topk": 0.8462748655832445,
+        "hit@0.5_top1": 0.7762237762237763,
+        "hit@0.5_topk": 0.9300699300699301,
+        "hit@0.75_top1": 0.6993006993006993,
+        "hit@0.75_topk": 0.8461538461538461,
+        "mean_top1_score": 0.3936584627294874,
+        "top_k": 5
+      },
+      "per_group": {}
+    },
+    "thinkdet_fallback": {
+      "overall": {
+        "n_samples": 143,
+        "mean_best_iou_top1": 0.7237381041556494,
+        "mean_best_iou_topk": 0.8462748655832445,
+        "hit@0.5_top1": 0.7762237762237763,
+        "hit@0.5_topk": 0.9300699300699301,
+        "hit@0.75_top1": 0.6993006993006993,
+        "hit@0.75_topk": 0.8461538461538461,
+        "mean_top1_score": 0.3936584627294874,
+        "top_k": 5
+      },
+      "per_group": {}
+    }
+  },
+  "fallback_stage_counts": {
+    "primary": 143,
+    "llm_feedback": 0,
+    "prompt_refine": 0
+  },
+  "per_sample": [
+    {
+      "benchmark_id": "flickr_val_005484",
+      "image_id": "3535056297",
+      "prompt": "three young men",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.958053852532067,
+        "topk_best_iou": 0.9645172455159369,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4838361442089081
+      },
+      "thinkdet": {
+        "top1_iou": 0.9527470126389733,
+        "topk_best_iou": 0.9531098178514106,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3449974060058594
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9527470126389733,
+        "topk_best_iou": 0.9531098178514106,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3449974060058594
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009500",
+      "image_id": "5108562132",
+      "prompt": "piano",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.5815280617331445,
+        "topk_best_iou": 0.887575279406843,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.28729739785194397
+      },
+      "thinkdet": {
+        "top1_iou": 0.577109698447963,
+        "topk_best_iou": 0.9020437357985018,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2584749162197113
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.577109698447963,
+        "topk_best_iou": 0.9020437357985018,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2584749162197113
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_008447",
+      "image_id": "4823178827",
+      "prompt": "pedestrians",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8531031314935622,
+        "topk_best_iou": 0.8531031314935622,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5084329843521118
+      },
+      "thinkdet": {
+        "top1_iou": 0.8547416440752571,
+        "topk_best_iou": 0.8547416440752571,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.39596179127693176
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8547416440752571,
+        "topk_best_iou": 0.8547416440752571,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.39596179127693176
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_005924",
+      "image_id": "3687938978",
+      "prompt": "american flag apparel",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.6208440448537322,
+        "topk_best_iou": 0.9269734091968095,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4072216749191284
+      },
+      "thinkdet": {
+        "top1_iou": 0.6226212228403698,
+        "topk_best_iou": 0.9202331107647681,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2960909605026245
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.6226212228403698,
+        "topk_best_iou": 0.9202331107647681,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2960909605026245
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010944",
+      "image_id": "6962373672",
+      "prompt": "a man",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9350183336398511,
+        "topk_best_iou": 0.9350183336398511,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7249912023544312
+      },
+      "thinkdet": {
+        "top1_iou": 0.9405167407144276,
+        "topk_best_iou": 0.9405167407144276,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.43862277269363403
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9405167407144276,
+        "topk_best_iou": 0.9405167407144276,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.43862277269363403
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_007705",
+      "image_id": "4652954218",
+      "prompt": "profile picture of a pale woman",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9743645248757933,
+        "topk_best_iou": 0.9858617138958429,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2801170349121094
+      },
+      "thinkdet": {
+        "top1_iou": 0.9710519546734008,
+        "topk_best_iou": 0.977869364785156,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.1826951503753662
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9710519546734008,
+        "topk_best_iou": 0.977869364785156,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.1826951503753662
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006010",
+      "image_id": "370614244",
+      "prompt": "a mustache",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.6465587889330484,
+        "topk_best_iou": 0.6465587889330484,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.688677966594696
+      },
+      "thinkdet": {
+        "top1_iou": 0.6346866313556756,
+        "topk_best_iou": 0.6346866313556756,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.5179725289344788
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.6346866313556756,
+        "topk_best_iou": 0.6346866313556756,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.5179725289344788
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_004054",
+      "image_id": "3030823649",
+      "prompt": "shepherd dog",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9394165719391331,
+        "topk_best_iou": 0.9394165719391331,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.9586650729179382
+      },
+      "thinkdet": {
+        "top1_iou": 0.9351884245167016,
+        "topk_best_iou": 0.9351884245167016,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7943466901779175
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9351884245167016,
+        "topk_best_iou": 0.9351884245167016,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7943466901779175
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_007802",
+      "image_id": "4670354134",
+      "prompt": "yellow shirt",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9696785018372864,
+        "topk_best_iou": 0.9696785018372864,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7359463572502136
+      },
+      "thinkdet": {
+        "top1_iou": 0.9677865115542311,
+        "topk_best_iou": 0.9677865115542311,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5441473722457886
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9677865115542311,
+        "topk_best_iou": 0.9677865115542311,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5441473722457886
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009084",
+      "image_id": "4946977529",
+      "prompt": "their balcony",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.5227139255148204,
+        "topk_best_iou": 0.5227139255148204,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.40846335887908936
+      },
+      "thinkdet": {
+        "top1_iou": 0.5290792623318209,
+        "topk_best_iou": 0.5290792623318209,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.3312649726867676
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.5290792623318209,
+        "topk_best_iou": 0.5290792623318209,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.3312649726867676
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010086",
+      "image_id": "5989225588",
+      "prompt": "three female swimmers",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9523800038179294,
+        "topk_best_iou": 0.9523800038179294,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5067158937454224
+      },
+      "thinkdet": {
+        "top1_iou": 0.9387582887253446,
+        "topk_best_iou": 0.9687523871457794,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.37157589197158813
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9387582887253446,
+        "topk_best_iou": 0.9687523871457794,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.37157589197158813
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010283",
+      "image_id": "6200828978",
+      "prompt": "his face",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8661215379259801,
+        "topk_best_iou": 0.8661215379259801,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7343289256095886
+      },
+      "thinkdet": {
+        "top1_iou": 0.8515699417182079,
+        "topk_best_iou": 0.8515699417182079,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5681880712509155
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8515699417182079,
+        "topk_best_iou": 0.8515699417182079,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5681880712509155
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_007957",
+      "image_id": "4696332335",
+      "prompt": "a blue coat",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9350690426529729,
+        "topk_best_iou": 0.9350690426529729,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.40991029143333435
+      },
+      "thinkdet": {
+        "top1_iou": 0.9447749911971577,
+        "topk_best_iou": 0.9447749911971577,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.30519232153892517
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9447749911971577,
+        "topk_best_iou": 0.9447749911971577,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.30519232153892517
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_001114",
+      "image_id": "197976461",
+      "prompt": "a house",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9845838559710027,
+        "topk_best_iou": 0.9845838559710027,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.666772723197937
+      },
+      "thinkdet": {
+        "top1_iou": 0.9800085240640506,
+        "topk_best_iou": 0.9800085240640506,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5124095678329468
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9800085240640506,
+        "topk_best_iou": 0.9800085240640506,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5124095678329468
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_007488",
+      "image_id": "4591476340",
+      "prompt": "a marathon runner",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.07488727611257205,
+        "topk_best_iou": 0.9034068631884946,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3756861686706543
+      },
+      "thinkdet": {
+        "top1_iou": 0.06993279882906872,
+        "topk_best_iou": 0.8917536191536323,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.29759281873703003
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.06993279882906872,
+        "topk_best_iou": 0.8917536191536323,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.29759281873703003
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_008425",
+      "image_id": "481827288",
+      "prompt": "two brown dogs",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.69317068046101,
+        "topk_best_iou": 0.9648104067484738,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3867633044719696
+      },
+      "thinkdet": {
+        "top1_iou": 0.9627432448479863,
+        "topk_best_iou": 0.9627432448479863,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2784501314163208
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9627432448479863,
+        "topk_best_iou": 0.9627432448479863,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2784501314163208
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_004481",
+      "image_id": "3178394617",
+      "prompt": "s sleigh",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.5739044747307991,
+        "topk_best_iou": 0.7162573033083772,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.47131940722465515
+      },
+      "thinkdet": {
+        "top1_iou": 0.561524700020749,
+        "topk_best_iou": 0.6972342794606708,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.35552674531936646
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.561524700020749,
+        "topk_best_iou": 0.6972342794606708,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.35552674531936646
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_001084",
+      "image_id": "1932532591",
+      "prompt": "jeans",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.39950028644221913,
+        "topk_best_iou": 0.8961585241225709,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5346896052360535
+      },
+      "thinkdet": {
+        "top1_iou": 0.8085651410839662,
+        "topk_best_iou": 0.8085651410839662,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3869844675064087
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8085651410839662,
+        "topk_best_iou": 0.8085651410839662,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3869844675064087
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010504",
+      "image_id": "6386779555",
+      "prompt": "pavement and trees",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9726614890871833,
+        "topk_best_iou": 0.9726614890871833,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.17264249920845032
+      },
+      "thinkdet": {
+        "top1_iou": 0.968584972059051,
+        "topk_best_iou": 0.968584972059051,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.14312714338302612
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.968584972059051,
+        "topk_best_iou": 0.968584972059051,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.14312714338302612
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009468",
+      "image_id": "5087543347",
+      "prompt": "the dinner table",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8978422617040781,
+        "topk_best_iou": 0.8978422617040781,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6345140337944031
+      },
+      "thinkdet": {
+        "top1_iou": 0.8931474431592725,
+        "topk_best_iou": 0.8931474431592725,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4743722677230835
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8931474431592725,
+        "topk_best_iou": 0.8931474431592725,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4743722677230835
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_004642",
+      "image_id": "3220151692",
+      "prompt": "black",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.0620850731846299,
+        "topk_best_iou": 0.15541848641392586,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.3182067275047302
+      },
+      "thinkdet": {
+        "top1_iou": 0.06237856183496571,
+        "topk_best_iou": 0.15692881170502934,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.23568205535411835
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.06237856183496571,
+        "topk_best_iou": 0.15692881170502934,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.23568205535411835
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003490",
+      "image_id": "2870015912",
+      "prompt": "a young girl",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9701115831032682,
+        "topk_best_iou": 0.9701115831032682,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.922307014465332
+      },
+      "thinkdet": {
+        "top1_iou": 0.9686634964009952,
+        "topk_best_iou": 0.9686634964009952,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7600555419921875
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9686634964009952,
+        "topk_best_iou": 0.9686634964009952,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7600555419921875
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003557",
+      "image_id": "2891451496",
+      "prompt": "the bass guitar",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.92136279337178,
+        "topk_best_iou": 0.92136279337178,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.8783090114593506
+      },
+      "thinkdet": {
+        "top1_iou": 0.9243822613530379,
+        "topk_best_iou": 0.9243822613530379,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6019508838653564
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9243822613530379,
+        "topk_best_iou": 0.9243822613530379,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6019508838653564
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003187",
+      "image_id": "2724074148",
+      "prompt": "a tennis court",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9834737456762138,
+        "topk_best_iou": 0.9834737456762138,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.47735849022865295
+      },
+      "thinkdet": {
+        "top1_iou": 0.9721543719748492,
+        "topk_best_iou": 0.9721543719748492,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.39510780572891235
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9721543719748492,
+        "topk_best_iou": 0.9721543719748492,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.39510780572891235
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_007845",
+      "image_id": "4677472934",
+      "prompt": "a sidewalk",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.7105608422609633,
+        "topk_best_iou": 0.7105608422609633,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.5214418172836304
+      },
+      "thinkdet": {
+        "top1_iou": 0.70533058856388,
+        "topk_best_iou": 0.9388891715572992,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.40891385078430176
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.70533058856388,
+        "topk_best_iou": 0.9388891715572992,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.40891385078430176
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_004180",
+      "image_id": "3052038928",
+      "prompt": "a small group of people",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.25662155461286623,
+        "topk_best_iou": 0.9514252056743772,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3025568127632141
+      },
+      "thinkdet": {
+        "top1_iou": 0.2576979735287352,
+        "topk_best_iou": 0.9463281694944217,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2105892300605774
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.2576979735287352,
+        "topk_best_iou": 0.9463281694944217,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2105892300605774
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006617",
+      "image_id": "4129180972",
+      "prompt": "a green jetty",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9624400232894482,
+        "topk_best_iou": 0.9624400232894482,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7744284272193909
+      },
+      "thinkdet": {
+        "top1_iou": 0.9536573631268216,
+        "topk_best_iou": 0.9545388377503073,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.550769031047821
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9536573631268216,
+        "topk_best_iou": 0.9545388377503073,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.550769031047821
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003956",
+      "image_id": "30061114",
+      "prompt": "a lounge chair",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.3667581028418493,
+        "topk_best_iou": 0.9487216782982547,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.30814772844314575
+      },
+      "thinkdet": {
+        "top1_iou": 0.36373791802257815,
+        "topk_best_iou": 0.7887778421636525,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2575427293777466
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.36373791802257815,
+        "topk_best_iou": 0.7887778421636525,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2575427293777466
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003549",
+      "image_id": "2887750774",
+      "prompt": "a tan dog",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8407283049262313,
+        "topk_best_iou": 0.8407283049262313,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.9642321467399597
+      },
+      "thinkdet": {
+        "top1_iou": 0.8333501305356452,
+        "topk_best_iou": 0.8333501305356452,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.8277783393859863
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8333501305356452,
+        "topk_best_iou": 0.8333501305356452,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.8277783393859863
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_007809",
+      "image_id": "4670355422",
+      "prompt": "a firehouse",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9842149836517304,
+        "topk_best_iou": 0.986203953072208,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.8253017663955688
+      },
+      "thinkdet": {
+        "top1_iou": 0.9798207330850176,
+        "topk_best_iou": 0.9837515984416537,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6048460006713867
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9798207330850176,
+        "topk_best_iou": 0.9837515984416537,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6048460006713867
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_004020",
+      "image_id": "3019473225",
+      "prompt": "a black and white dog",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9766215989735696,
+        "topk_best_iou": 0.9766215989735696,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5372886061668396
+      },
+      "thinkdet": {
+        "top1_iou": 0.9747438360455343,
+        "topk_best_iou": 0.9790556517306663,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.34870433807373047
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9747438360455343,
+        "topk_best_iou": 0.9790556517306663,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.34870433807373047
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006050",
+      "image_id": "3726120436",
+      "prompt": "a turquoise truck",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9433046633153529,
+        "topk_best_iou": 0.9433046633153529,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.8373411893844604
+      },
+      "thinkdet": {
+        "top1_iou": 0.9407808812368111,
+        "topk_best_iou": 0.9407808812368111,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5164284110069275
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9407808812368111,
+        "topk_best_iou": 0.9407808812368111,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5164284110069275
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003017",
+      "image_id": "2666205903",
+      "prompt": "a person's shoulders",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.2180591764584023,
+        "topk_best_iou": 0.2180591764584023,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.37585383653640747
+      },
+      "thinkdet": {
+        "top1_iou": 0.22006859414022342,
+        "topk_best_iou": 0.22006859414022342,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.25133228302001953
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.22006859414022342,
+        "topk_best_iou": 0.22006859414022342,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.25133228302001953
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_001655",
+      "image_id": "2199200615",
+      "prompt": "a dog",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9006667093863535,
+        "topk_best_iou": 0.9006667093863535,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.8464843034744263
+      },
+      "thinkdet": {
+        "top1_iou": 0.8841860302231522,
+        "topk_best_iou": 0.8841860302231522,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.44660818576812744
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8841860302231522,
+        "topk_best_iou": 0.8841860302231522,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.44660818576812744
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_002611",
+      "image_id": "2530468893",
+      "prompt": "orange work hat",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9343052024926232,
+        "topk_best_iou": 0.9343052024926232,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5246713161468506
+      },
+      "thinkdet": {
+        "top1_iou": 0.9305253398252051,
+        "topk_best_iou": 0.9305253398252051,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.39357197284698486
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9305253398252051,
+        "topk_best_iou": 0.9305253398252051,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.39357197284698486
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003828",
+      "image_id": "2961004039",
+      "prompt": "equipment",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.03912218070454803,
+        "topk_best_iou": 0.03912218070454803,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.45022884011268616
+      },
+      "thinkdet": {
+        "top1_iou": 0.03864181014396441,
+        "topk_best_iou": 0.6519226406465853,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.36661919951438904
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.03864181014396441,
+        "topk_best_iou": 0.6519226406465853,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.36661919951438904
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_008118",
+      "image_id": "47304629",
+      "prompt": "a musician",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.7948466050679592,
+        "topk_best_iou": 0.8101912603814657,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.44844692945480347
+      },
+      "thinkdet": {
+        "top1_iou": 0.7808236741972396,
+        "topk_best_iou": 0.8348182505997596,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.32671165466308594
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.7808236741972396,
+        "topk_best_iou": 0.8348182505997596,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.32671165466308594
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_000692",
+      "image_id": "1486273777",
+      "prompt": "a house",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9317030256686579,
+        "topk_best_iou": 0.9317030256686579,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.35922902822494507
+      },
+      "thinkdet": {
+        "top1_iou": 0.9453028343991869,
+        "topk_best_iou": 0.9453028343991869,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.33356165885925293
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9453028343991869,
+        "topk_best_iou": 0.9453028343991869,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.33356165885925293
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_002124",
+      "image_id": "2354405491",
+      "prompt": "her dress",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.874354193850591,
+        "topk_best_iou": 0.874354193850591,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6824095249176025
+      },
+      "thinkdet": {
+        "top1_iou": 0.872845157009072,
+        "topk_best_iou": 0.872845157009072,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5179038047790527
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.872845157009072,
+        "topk_best_iou": 0.872845157009072,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5179038047790527
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_000010",
+      "image_id": "100652400",
+      "prompt": "an intersection",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9631550178279343,
+        "topk_best_iou": 0.9631550178279343,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.40954554080963135
+      },
+      "thinkdet": {
+        "top1_iou": 0.946920910453339,
+        "topk_best_iou": 0.946920910453339,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3392779231071472
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.946920910453339,
+        "topk_best_iou": 0.946920910453339,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3392779231071472
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003531",
+      "image_id": "2878015018",
+      "prompt": "a field",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9248996246526847,
+        "topk_best_iou": 0.9248996246526847,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5325738191604614
+      },
+      "thinkdet": {
+        "top1_iou": 0.9148458729340017,
+        "topk_best_iou": 0.9148458729340017,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.45136839151382446
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9148458729340017,
+        "topk_best_iou": 0.9148458729340017,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.45136839151382446
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009813",
+      "image_id": "5405213054",
+      "prompt": "one",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9474489026981412,
+        "topk_best_iou": 0.9474489026981412,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.36411038041114807
+      },
+      "thinkdet": {
+        "top1_iou": 0.9403467345444878,
+        "topk_best_iou": 0.9403467345444878,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2769869565963745
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9403467345444878,
+        "topk_best_iou": 0.9403467345444878,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2769869565963745
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006282",
+      "image_id": "390921095",
+      "prompt": "a horse",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9115718110380774,
+        "topk_best_iou": 0.9115718110380774,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6578969955444336
+      },
+      "thinkdet": {
+        "top1_iou": 0.9036488189984974,
+        "topk_best_iou": 0.9036488189984974,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.45367708802223206
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9036488189984974,
+        "topk_best_iou": 0.9036488189984974,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.45367708802223206
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010704",
+      "image_id": "6775385802",
+      "prompt": "an older man",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.29382361138047947,
+        "topk_best_iou": 0.9311658318213007,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5242781639099121
+      },
+      "thinkdet": {
+        "top1_iou": 0.2913475492404134,
+        "topk_best_iou": 0.9331431894325157,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3555435240268707
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.2913475492404134,
+        "topk_best_iou": 0.9331431894325157,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3555435240268707
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_005803",
+      "image_id": "3664781437",
+      "prompt": "bubbles",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.5062807554314134,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.2853204905986786
+      },
+      "thinkdet": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.49361859543441733,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.2413533478975296
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.49361859543441733,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.2413533478975296
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006258",
+      "image_id": "388913235",
+      "prompt": "his desk",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9443126037431842,
+        "topk_best_iou": 0.9443126037431842,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.8236818313598633
+      },
+      "thinkdet": {
+        "top1_iou": 0.9378709096330624,
+        "topk_best_iou": 0.9378709096330624,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5847452878952026
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9378709096330624,
+        "topk_best_iou": 0.9378709096330624,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5847452878952026
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_001609",
+      "image_id": "218428071",
+      "prompt": "people",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.09207473218774923,
+        "topk_best_iou": 0.9369493211226771,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5726359486579895
+      },
+      "thinkdet": {
+        "top1_iou": 0.09391352459933801,
+        "topk_best_iou": 0.9375004663629841,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.42979198694229126
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.09391352459933801,
+        "topk_best_iou": 0.9375004663629841,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.42979198694229126
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_004066",
+      "image_id": "3030962048",
+      "prompt": "a safron shawl",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9540206013954685,
+        "topk_best_iou": 0.9540206013954685,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5666681528091431
+      },
+      "thinkdet": {
+        "top1_iou": 0.9359461097920846,
+        "topk_best_iou": 0.9359461097920846,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.42271965742111206
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9359461097920846,
+        "topk_best_iou": 0.9359461097920846,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.42271965742111206
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_005706",
+      "image_id": "3634281981",
+      "prompt": "purple shorts",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8235278938332944,
+        "topk_best_iou": 0.8235278938332944,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5967768430709839
+      },
+      "thinkdet": {
+        "top1_iou": 0.8143911857263227,
+        "topk_best_iou": 0.8143911857263227,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.45612818002700806
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8143911857263227,
+        "topk_best_iou": 0.8143911857263227,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.45612818002700806
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_000810",
+      "image_id": "158898445",
+      "prompt": "a book",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.43676683330947486,
+        "topk_best_iou": 0.9224595573039266,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.34271740913391113
+      },
+      "thinkdet": {
+        "top1_iou": 0.4336318450457495,
+        "topk_best_iou": 0.9356671929857711,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.30726170539855957
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.4336318450457495,
+        "topk_best_iou": 0.9356671929857711,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.30726170539855957
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_008014",
+      "image_id": "4711632344",
+      "prompt": "stoop",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.0,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.6764003038406372
+      },
+      "thinkdet": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.13238120034978434,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.45563289523124695
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.13238120034978434,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.45563289523124695
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_000599",
+      "image_id": "1436661786",
+      "prompt": "pedestrians",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.07369995995907339,
+        "topk_best_iou": 0.5469589314229257,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.32110223174095154
+      },
+      "thinkdet": {
+        "top1_iou": 0.013932456070938603,
+        "topk_best_iou": 0.5438690682012017,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.24983473122119904
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.013932456070938603,
+        "topk_best_iou": 0.5438690682012017,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.24983473122119904
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_011507",
+      "image_id": "876964091",
+      "prompt": "a lady",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8893992358158171,
+        "topk_best_iou": 0.8893992358158171,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3222658634185791
+      },
+      "thinkdet": {
+        "top1_iou": 0.8801361229289826,
+        "topk_best_iou": 0.8801361229289826,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.25153785943984985
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8801361229289826,
+        "topk_best_iou": 0.8801361229289826,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.25153785943984985
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006380",
+      "image_id": "3960660630",
+      "prompt": "a blue shirt",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8575310997154971,
+        "topk_best_iou": 0.8575310997154971,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6264182925224304
+      },
+      "thinkdet": {
+        "top1_iou": 0.849443831842901,
+        "topk_best_iou": 0.849443831842901,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4537157416343689
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.849443831842901,
+        "topk_best_iou": 0.849443831842901,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4537157416343689
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_002200",
+      "image_id": "2391035976",
+      "prompt": "clay pots",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.00019478507142804075,
+        "topk_best_iou": 0.03295466987927381,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.5795173048973083
+      },
+      "thinkdet": {
+        "top1_iou": 1.1395983237119908e-05,
+        "topk_best_iou": 0.031493937980559904,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.4460649788379669
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 1.1395983237119908e-05,
+        "topk_best_iou": 0.031493937980559904,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.4460649788379669
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_007639",
+      "image_id": "46360594",
+      "prompt": "a blue furby",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.006775319215163698,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.49997061491012573
+      },
+      "thinkdet": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.0,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.3554288148880005
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.0,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.3554288148880005
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_005474",
+      "image_id": "3532539748",
+      "prompt": "another smaller child",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.9452886590596331,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.58477383852005
+      },
+      "thinkdet": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.9369150179634222,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.42000678181648254
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.9369150179634222,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.42000678181648254
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010013",
+      "image_id": "5843164517",
+      "prompt": "stage",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9465281318522963,
+        "topk_best_iou": 0.9465281318522963,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4582250118255615
+      },
+      "thinkdet": {
+        "top1_iou": 0.9586502575517183,
+        "topk_best_iou": 0.9586502575517183,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3884212076663971
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9586502575517183,
+        "topk_best_iou": 0.9586502575517183,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3884212076663971
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009099",
+      "image_id": "4947153201",
+      "prompt": "the engine",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.47871222676219016,
+        "topk_best_iou": 0.7088742961426232,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.47160688042640686
+      },
+      "thinkdet": {
+        "top1_iou": 0.4872245207170584,
+        "topk_best_iou": 0.7325858619888375,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.3795689344406128
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.4872245207170584,
+        "topk_best_iou": 0.7325858619888375,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.3795689344406128
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009325",
+      "image_id": "4978966549",
+      "prompt": "wine",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.758101223035122,
+        "topk_best_iou": 0.758101223035122,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5743182301521301
+      },
+      "thinkdet": {
+        "top1_iou": 0.7652011361861925,
+        "topk_best_iou": 0.7652011361861925,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4351388216018677
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.7652011361861925,
+        "topk_best_iou": 0.7652011361861925,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4351388216018677
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_011065",
+      "image_id": "7282145490",
+      "prompt": "a happy lady",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9878841833381349,
+        "topk_best_iou": 0.9878841833381349,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7663222551345825
+      },
+      "thinkdet": {
+        "top1_iou": 0.9843708450881433,
+        "topk_best_iou": 0.9843708450881433,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5162792801856995
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9843708450881433,
+        "topk_best_iou": 0.9843708450881433,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5162792801856995
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_001340",
+      "image_id": "2079152458",
+      "prompt": "a tennis ball",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.5991909183511858,
+        "topk_best_iou": 0.5991909183511858,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.5519827604293823
+      },
+      "thinkdet": {
+        "top1_iou": 0.5767439087368559,
+        "topk_best_iou": 0.6745549886416666,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.43740114569664
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.5767439087368559,
+        "topk_best_iou": 0.6745549886416666,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.43740114569664
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006153",
+      "image_id": "3827183336",
+      "prompt": "a colorful outfit",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.05941115521722672,
+        "topk_best_iou": 0.8282799608371993,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.46065792441368103
+      },
+      "thinkdet": {
+        "top1_iou": 0.0594984323256182,
+        "topk_best_iou": 0.8302465784374352,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3426849842071533
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.0594984323256182,
+        "topk_best_iou": 0.8302465784374352,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3426849842071533
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006448",
+      "image_id": "400598822",
+      "prompt": "meat",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.7067889606562187,
+        "topk_best_iou": 0.7067889606562187,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.33519789576530457
+      },
+      "thinkdet": {
+        "top1_iou": 0.03996049155294287,
+        "topk_best_iou": 0.705143290053154,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.2827689051628113
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.03996049155294287,
+        "topk_best_iou": 0.705143290053154,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.2827689051628113
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_008452",
+      "image_id": "4823571483",
+      "prompt": "a group of people",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9372399811814072,
+        "topk_best_iou": 0.9884942280203559,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.1953365057706833
+      },
+      "thinkdet": {
+        "top1_iou": 0.9283869067521744,
+        "topk_best_iou": 0.9757971619398217,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.16777077317237854
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9283869067521744,
+        "topk_best_iou": 0.9757971619398217,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.16777077317237854
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009949",
+      "image_id": "5754249309",
+      "prompt": "teammates",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.9775220929768129,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5339934229850769
+      },
+      "thinkdet": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.9742228209127489,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.42031070590019226
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.9742228209127489,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.42031070590019226
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003046",
+      "image_id": "2678685955",
+      "prompt": "a green shirt",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.7466178192464868,
+        "topk_best_iou": 0.8103846776027075,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3651849627494812
+      },
+      "thinkdet": {
+        "top1_iou": 0.7579559695896474,
+        "topk_best_iou": 0.8050953593359852,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.30990278720855713
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.7579559695896474,
+        "topk_best_iou": 0.8050953593359852,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.30990278720855713
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009564",
+      "image_id": "5163986158",
+      "prompt": "a circle of women",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.48171381692177184,
+        "topk_best_iou": 0.56160155011076,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.21358831226825714
+      },
+      "thinkdet": {
+        "top1_iou": 0.4760480324726953,
+        "topk_best_iou": 0.6803759560576639,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.18751949071884155
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.4760480324726953,
+        "topk_best_iou": 0.6803759560576639,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.18751949071884155
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_002226",
+      "image_id": "2393924525",
+      "prompt": "a tennis ball",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8485360042038979,
+        "topk_best_iou": 0.8485360042038979,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6802331805229187
+      },
+      "thinkdet": {
+        "top1_iou": 0.8477534545122408,
+        "topk_best_iou": 0.8477534545122408,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5048835873603821
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8477534545122408,
+        "topk_best_iou": 0.8477534545122408,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5048835873603821
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006835",
+      "image_id": "426994291",
+      "prompt": "three young ladies",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8896460580180879,
+        "topk_best_iou": 0.9827807391177523,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5838146805763245
+      },
+      "thinkdet": {
+        "top1_iou": 0.8917075017008236,
+        "topk_best_iou": 0.9757351947739163,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.44641298055648804
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8917075017008236,
+        "topk_best_iou": 0.9757351947739163,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.44641298055648804
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_001329",
+      "image_id": "2078016024",
+      "prompt": "the sidewalk",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9925267610305131,
+        "topk_best_iou": 0.9925267610305131,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5982321500778198
+      },
+      "thinkdet": {
+        "top1_iou": 0.9821340039757874,
+        "topk_best_iou": 0.9821340039757874,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4830544590950012
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9821340039757874,
+        "topk_best_iou": 0.9821340039757874,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4830544590950012
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003214",
+      "image_id": "2744705147",
+      "prompt": "her waist",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.01478431383400692,
+        "topk_best_iou": 0.10944769541547694,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.31239718198776245
+      },
+      "thinkdet": {
+        "top1_iou": 0.0027966710370893916,
+        "topk_best_iou": 0.11063561681881834,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.2277887910604477
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.0027966710370893916,
+        "topk_best_iou": 0.11063561681881834,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.2277887910604477
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_001400",
+      "image_id": "2097650932",
+      "prompt": "an amusement park ride",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.5144327331377369,
+        "topk_best_iou": 0.9233809224159465,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.35868483781814575
+      },
+      "thinkdet": {
+        "top1_iou": 0.2682130787544989,
+        "topk_best_iou": 0.9351206606736817,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2600122094154358
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.2682130787544989,
+        "topk_best_iou": 0.9351206606736817,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2600122094154358
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_000977",
+      "image_id": "179620911",
+      "prompt": "a gray dock",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9236884311090773,
+        "topk_best_iou": 0.9236884311090773,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.42416930198669434
+      },
+      "thinkdet": {
+        "top1_iou": 0.9221560566328562,
+        "topk_best_iou": 0.9221560566328562,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3749157786369324
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9221560566328562,
+        "topk_best_iou": 0.9221560566328562,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3749157786369324
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_008032",
+      "image_id": "4715216920",
+      "prompt": "a building",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9339764746999636,
+        "topk_best_iou": 0.9339764746999636,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3406327962875366
+      },
+      "thinkdet": {
+        "top1_iou": 0.9612474555386887,
+        "topk_best_iou": 0.9612474555386887,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3012126088142395
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9612474555386887,
+        "topk_best_iou": 0.9612474555386887,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3012126088142395
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_007099",
+      "image_id": "4450821292",
+      "prompt": "a girl",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.7103855221889093,
+        "topk_best_iou": 0.7103855221889093,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.3488468527793884
+      },
+      "thinkdet": {
+        "top1_iou": 0.7331757862907059,
+        "topk_best_iou": 0.7331757862907059,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.2731759548187256
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.7331757862907059,
+        "topk_best_iou": 0.7331757862907059,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.2731759548187256
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_005210",
+      "image_id": "3427118504",
+      "prompt": "the man",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9651557940870774,
+        "topk_best_iou": 0.9651557940870774,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.679915726184845
+      },
+      "thinkdet": {
+        "top1_iou": 0.9609203163020338,
+        "topk_best_iou": 0.9609203163020338,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4474637508392334
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9609203163020338,
+        "topk_best_iou": 0.9609203163020338,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4474637508392334
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_004438",
+      "image_id": "3162289423",
+      "prompt": "a girl",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9326597932636019,
+        "topk_best_iou": 0.9326597932636019,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5922743082046509
+      },
+      "thinkdet": {
+        "top1_iou": 0.9266154060690442,
+        "topk_best_iou": 0.9266154060690442,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3752920627593994
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9266154060690442,
+        "topk_best_iou": 0.9266154060690442,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3752920627593994
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_005140",
+      "image_id": "3417672954",
+      "prompt": "a green shirt",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8100989902745868,
+        "topk_best_iou": 0.8100989902745868,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6645146608352661
+      },
+      "thinkdet": {
+        "top1_iou": 0.8014984474181672,
+        "topk_best_iou": 0.8014984474181672,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.47322791814804077
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8014984474181672,
+        "topk_best_iou": 0.8014984474181672,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.47322791814804077
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_011337",
+      "image_id": "7847188944",
+      "prompt": "the finish line",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.10004020164772941,
+        "topk_best_iou": 0.21909909820474602,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.43120312690734863
+      },
+      "thinkdet": {
+        "top1_iou": 0.10040199737467607,
+        "topk_best_iou": 0.21991994946387763,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.35473787784576416
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.10040199737467607,
+        "topk_best_iou": 0.21991994946387763,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.35473787784576416
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_001927",
+      "image_id": "2283350490",
+      "prompt": "the guitar",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8688815469443202,
+        "topk_best_iou": 0.8688815469443202,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.8866020441055298
+      },
+      "thinkdet": {
+        "top1_iou": 0.8626159093528402,
+        "topk_best_iou": 0.8626159093528402,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6612056493759155
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8626159093528402,
+        "topk_best_iou": 0.8626159093528402,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6612056493759155
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_001975",
+      "image_id": "2295177295",
+      "prompt": "a circular flat decorative stone",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9795698437794115,
+        "topk_best_iou": 0.9795698437794115,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7771571278572083
+      },
+      "thinkdet": {
+        "top1_iou": 0.9786469245076858,
+        "topk_best_iou": 0.9786469245076858,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5555908679962158
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9786469245076858,
+        "topk_best_iou": 0.9786469245076858,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5555908679962158
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_002882",
+      "image_id": "2609900643",
+      "prompt": "green",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.02630963127102423,
+        "topk_best_iou": 0.8048722895353583,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4130111634731293
+      },
+      "thinkdet": {
+        "top1_iou": 0.026705191369326513,
+        "topk_best_iou": 0.7923862872610731,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3457106351852417
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.026705191369326513,
+        "topk_best_iou": 0.7923862872610731,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3457106351852417
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_002090",
+      "image_id": "2340111592",
+      "prompt": "a group of young people",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9500622192306232,
+        "topk_best_iou": 0.9500622192306232,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5461078882217407
+      },
+      "thinkdet": {
+        "top1_iou": 0.9466509100019254,
+        "topk_best_iou": 0.9466509100019254,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.36733752489089966
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9466509100019254,
+        "topk_best_iou": 0.9466509100019254,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.36733752489089966
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_001304",
+      "image_id": "2063399864",
+      "prompt": "the edge of a beach",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9032035931180746,
+        "topk_best_iou": 0.9833764883141767,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.14150093495845795
+      },
+      "thinkdet": {
+        "top1_iou": 0.8893419140740682,
+        "topk_best_iou": 0.9679564697091184,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.12539507448673248
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8893419140740682,
+        "topk_best_iou": 0.9679564697091184,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.12539507448673248
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006575",
+      "image_id": "409315256",
+      "prompt": "a pony",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9388548842821435,
+        "topk_best_iou": 0.9388548842821435,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7675977945327759
+      },
+      "thinkdet": {
+        "top1_iou": 0.9300233448556908,
+        "topk_best_iou": 0.9300233448556908,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5409510135650635
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9300233448556908,
+        "topk_best_iou": 0.9300233448556908,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5409510135650635
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_002997",
+      "image_id": "2665264979",
+      "prompt": "deep grass",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9520843469257722,
+        "topk_best_iou": 0.9520843469257722,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6005691289901733
+      },
+      "thinkdet": {
+        "top1_iou": 0.9400193580057484,
+        "topk_best_iou": 0.9400193580057484,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.48074185848236084
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9400193580057484,
+        "topk_best_iou": 0.9400193580057484,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.48074185848236084
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009780",
+      "image_id": "5381102989",
+      "prompt": "white walls",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9861114132266585,
+        "topk_best_iou": 0.9861114132266585,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.40428322553634644
+      },
+      "thinkdet": {
+        "top1_iou": 0.9854784762477965,
+        "topk_best_iou": 0.9854784762477965,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3633809983730316
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9854784762477965,
+        "topk_best_iou": 0.9854784762477965,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3633809983730316
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003217",
+      "image_id": "2747640247",
+      "prompt": "a girl",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9398149437900785,
+        "topk_best_iou": 0.9398149437900785,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7495118975639343
+      },
+      "thinkdet": {
+        "top1_iou": 0.9434041816007992,
+        "topk_best_iou": 0.9434041816007992,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.41444316506385803
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9434041816007992,
+        "topk_best_iou": 0.9434041816007992,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.41444316506385803
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_011525",
+      "image_id": "906991263",
+      "prompt": "a tourist",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9656493490164458,
+        "topk_best_iou": 0.9656493490164458,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7261300086975098
+      },
+      "thinkdet": {
+        "top1_iou": 0.9571189972204541,
+        "topk_best_iou": 0.9571189972204541,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4472738206386566
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9571189972204541,
+        "topk_best_iou": 0.9571189972204541,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4472738206386566
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003650",
+      "image_id": "2909081008",
+      "prompt": "a girl",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9470859781576041,
+        "topk_best_iou": 0.9470859781576041,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4649895429611206
+      },
+      "thinkdet": {
+        "top1_iou": 0.9372318514957753,
+        "topk_best_iou": 0.9372318514957753,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3461872935295105
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9372318514957753,
+        "topk_best_iou": 0.9372318514957753,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3461872935295105
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_008825",
+      "image_id": "4905237732",
+      "prompt": "a bench one",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9399689713156456,
+        "topk_best_iou": 0.9399689713156456,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5715267658233643
+      },
+      "thinkdet": {
+        "top1_iou": 0.9326061312215124,
+        "topk_best_iou": 0.9326061312215124,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3840576112270355
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9326061312215124,
+        "topk_best_iou": 0.9326061312215124,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3840576112270355
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_005293",
+      "image_id": "3469625964",
+      "prompt": "little girl",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9766674333773708,
+        "topk_best_iou": 0.9766674333773708,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7281219959259033
+      },
+      "thinkdet": {
+        "top1_iou": 0.96609152013729,
+        "topk_best_iou": 0.96609152013729,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.47047919034957886
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.96609152013729,
+        "topk_best_iou": 0.96609152013729,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.47047919034957886
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006690",
+      "image_id": "4185776966",
+      "prompt": "groups of people",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.21918607637453677,
+        "topk_best_iou": 0.21918607637453677,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.16088522970676422
+      },
+      "thinkdet": {
+        "top1_iou": 0.22323907375857976,
+        "topk_best_iou": 0.8234268625973789,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.13616588711738586
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.22323907375857976,
+        "topk_best_iou": 0.8234268625973789,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.13616588711738586
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_011622",
+      "image_id": "98773047",
+      "prompt": "people",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8753935875444405,
+        "topk_best_iou": 0.8753935875444405,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.355714350938797
+      },
+      "thinkdet": {
+        "top1_iou": 0.8796246202359477,
+        "topk_best_iou": 0.8796246202359477,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2967114746570587
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8796246202359477,
+        "topk_best_iou": 0.8796246202359477,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2967114746570587
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010558",
+      "image_id": "6493393907",
+      "prompt": "a surfer",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.6054714827124692,
+        "topk_best_iou": 0.6447012562960843,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.4762144684791565
+      },
+      "thinkdet": {
+        "top1_iou": 0.6703686028327103,
+        "topk_best_iou": 0.6976369924047596,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.3432239294052124
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.6703686028327103,
+        "topk_best_iou": 0.6976369924047596,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.3432239294052124
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006673",
+      "image_id": "4161099680",
+      "prompt": "pedestrian traffic",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.16420438595806439,
+        "topk_best_iou": 0.34679006952022645,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.3278566300868988
+      },
+      "thinkdet": {
+        "top1_iou": 0.16615814887032412,
+        "topk_best_iou": 0.34850162300464493,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.23798584938049316
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.16615814887032412,
+        "topk_best_iou": 0.34850162300464493,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.23798584938049316
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_005021",
+      "image_id": "3357194782",
+      "prompt": "three passengers",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9392555928258027,
+        "topk_best_iou": 0.9392555928258027,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.586711049079895
+      },
+      "thinkdet": {
+        "top1_iou": 0.9277265301230045,
+        "topk_best_iou": 0.9277265301230045,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.43686261773109436
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9277265301230045,
+        "topk_best_iou": 0.9277265301230045,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.43686261773109436
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_007381",
+      "image_id": "4552785903",
+      "prompt": "the sky",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.20442492868197384,
+        "topk_best_iou": 0.9163460911756608,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2982702851295471
+      },
+      "thinkdet": {
+        "top1_iou": 0.9171321929974702,
+        "topk_best_iou": 0.9171321929974702,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2593063414096832
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9171321929974702,
+        "topk_best_iou": 0.9171321929974702,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2593063414096832
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006418",
+      "image_id": "3983980965",
+      "prompt": "dancers",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.007234324416253094,
+        "topk_best_iou": 0.8739182310756518,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4282238185405731
+      },
+      "thinkdet": {
+        "top1_iou": 0.7760290950983443,
+        "topk_best_iou": 0.8724233548404681,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.33579570055007935
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.7760290950983443,
+        "topk_best_iou": 0.8724233548404681,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.33579570055007935
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010305",
+      "image_id": "6233621366",
+      "prompt": "a wave",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9647333722306564,
+        "topk_best_iou": 0.9647333722306564,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4499581456184387
+      },
+      "thinkdet": {
+        "top1_iou": 0.9523578183237614,
+        "topk_best_iou": 0.9592859959407599,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3936306834220886
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9523578183237614,
+        "topk_best_iou": 0.9592859959407599,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3936306834220886
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009210",
+      "image_id": "4966118646",
+      "prompt": "the glass",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.3938548201870245,
+        "topk_best_iou": 0.961420074285997,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.37439048290252686
+      },
+      "thinkdet": {
+        "top1_iou": 0.39820837761112227,
+        "topk_best_iou": 0.9559009075978033,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2925419211387634
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.39820837761112227,
+        "topk_best_iou": 0.9559009075978033,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2925419211387634
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_002569",
+      "image_id": "2511782353",
+      "prompt": "an infant",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9437832141084811,
+        "topk_best_iou": 0.9437832141084811,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3971690535545349
+      },
+      "thinkdet": {
+        "top1_iou": 0.9303532452654532,
+        "topk_best_iou": 0.9303532452654532,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.30930858850479126
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9303532452654532,
+        "topk_best_iou": 0.9303532452654532,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.30930858850479126
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_000212",
+      "image_id": "127332812",
+      "prompt": "an item",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.3485594733820274,
+        "topk_best_iou": 0.8134851263249434,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2915548086166382
+      },
+      "thinkdet": {
+        "top1_iou": 0.35389221964090656,
+        "topk_best_iou": 0.834856057378465,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.23088711500167847
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.35389221964090656,
+        "topk_best_iou": 0.834856057378465,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.23088711500167847
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_008257",
+      "image_id": "476765164",
+      "prompt": "asian people",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9374262684233737,
+        "topk_best_iou": 0.9374262684233737,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.49088937044143677
+      },
+      "thinkdet": {
+        "top1_iou": 0.9260104269183499,
+        "topk_best_iou": 0.9260104269183499,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.36758849024772644
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9260104269183499,
+        "topk_best_iou": 0.9260104269183499,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.36758849024772644
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009746",
+      "image_id": "5353965495",
+      "prompt": "a person",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9836295078648372,
+        "topk_best_iou": 0.9836295078648372,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.74325031042099
+      },
+      "thinkdet": {
+        "top1_iou": 0.9783613780619741,
+        "topk_best_iou": 0.9783613780619741,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.459817111492157
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9783613780619741,
+        "topk_best_iou": 0.9783613780619741,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.459817111492157
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_007453",
+      "image_id": "4588947862",
+      "prompt": "a wall",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9890338161135417,
+        "topk_best_iou": 0.9890338161135417,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4317382574081421
+      },
+      "thinkdet": {
+        "top1_iou": 0.9824083353235686,
+        "topk_best_iou": 0.9824083353235686,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.39776790142059326
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9824083353235686,
+        "topk_best_iou": 0.9824083353235686,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.39776790142059326
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009345",
+      "image_id": "4982004148",
+      "prompt": "a man",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9224141005185189,
+        "topk_best_iou": 0.9224141005185189,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5397167801856995
+      },
+      "thinkdet": {
+        "top1_iou": 0.920234463912095,
+        "topk_best_iou": 0.920234463912095,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.376667320728302
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.920234463912095,
+        "topk_best_iou": 0.920234463912095,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.376667320728302
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010653",
+      "image_id": "6681701101",
+      "prompt": "someone's hair",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8295863992785216,
+        "topk_best_iou": 0.8295863992785216,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.23784679174423218
+      },
+      "thinkdet": {
+        "top1_iou": 0.8412349782745321,
+        "topk_best_iou": 0.8412349782745321,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.18656973540782928
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8412349782745321,
+        "topk_best_iou": 0.8412349782745321,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.18656973540782928
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_011348",
+      "image_id": "7863806816",
+      "prompt": "another man",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9791310318976123,
+        "topk_best_iou": 0.9791310318976123,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.39339593052864075
+      },
+      "thinkdet": {
+        "top1_iou": 0.9748082603546138,
+        "topk_best_iou": 0.9748082603546138,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2988753020763397
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9748082603546138,
+        "topk_best_iou": 0.9748082603546138,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2988753020763397
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003205",
+      "image_id": "2726301121",
+      "prompt": "her arm",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.942330579269341,
+        "topk_best_iou": 0.942330579269341,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5445283651351929
+      },
+      "thinkdet": {
+        "top1_iou": 0.9497001643243581,
+        "topk_best_iou": 0.9497001643243581,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4089716076850891
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9497001643243581,
+        "topk_best_iou": 0.9497001643243581,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4089716076850891
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_011133",
+      "image_id": "7453903222",
+      "prompt": "a red brick wall",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.27546790167789575,
+        "topk_best_iou": 0.6890154420412851,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.6247020959854126
+      },
+      "thinkdet": {
+        "top1_iou": 0.2732420190917312,
+        "topk_best_iou": 0.7580786431352634,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4899413585662842
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.2732420190917312,
+        "topk_best_iou": 0.7580786431352634,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4899413585662842
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010070",
+      "image_id": "592492743",
+      "prompt": "the two",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9866081988465325,
+        "topk_best_iou": 0.9866081988465325,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5625196695327759
+      },
+      "thinkdet": {
+        "top1_iou": 0.9757761833033206,
+        "topk_best_iou": 0.9780982584113694,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3602977395057678
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9757761833033206,
+        "topk_best_iou": 0.9780982584113694,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3602977395057678
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010820",
+      "image_id": "68647249",
+      "prompt": "coat",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9342689815748619,
+        "topk_best_iou": 0.9342689815748619,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.27404430508613586
+      },
+      "thinkdet": {
+        "top1_iou": 0.9245033687969996,
+        "topk_best_iou": 0.9245033687969996,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.1999424546957016
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9245033687969996,
+        "topk_best_iou": 0.9245033687969996,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.1999424546957016
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010666",
+      "image_id": "6734323683",
+      "prompt": "a magician",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9441741789846321,
+        "topk_best_iou": 0.9441741789846321,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4911274313926697
+      },
+      "thinkdet": {
+        "top1_iou": 0.9488489459126502,
+        "topk_best_iou": 0.9488489459126502,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3760249614715576
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9488489459126502,
+        "topk_best_iou": 0.9488489459126502,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3760249614715576
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_004789",
+      "image_id": "3260191163",
+      "prompt": "two brown dogs",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.94372055282383,
+        "topk_best_iou": 0.9626350964921246,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.42065146565437317
+      },
+      "thinkdet": {
+        "top1_iou": 0.9412423422258371,
+        "topk_best_iou": 0.9581634000575605,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3082762658596039
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9412423422258371,
+        "topk_best_iou": 0.9581634000575605,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3082762658596039
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006018",
+      "image_id": "3710353645",
+      "prompt": "a young girl",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9748283403067762,
+        "topk_best_iou": 0.9748283403067762,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7488951086997986
+      },
+      "thinkdet": {
+        "top1_iou": 0.9752577649551828,
+        "topk_best_iou": 0.9752577649551828,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.46328654885292053
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9752577649551828,
+        "topk_best_iou": 0.9752577649551828,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.46328654885292053
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_000176",
+      "image_id": "116569042",
+      "prompt": "a blue shirt",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8381166290483354,
+        "topk_best_iou": 0.8381166290483354,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.716937243938446
+      },
+      "thinkdet": {
+        "top1_iou": 0.846702727387503,
+        "topk_best_iou": 0.846702727387503,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4809710383415222
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.846702727387503,
+        "topk_best_iou": 0.846702727387503,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4809710383415222
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_002621",
+      "image_id": "2536808189",
+      "prompt": "cable",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.41259660729419695,
+        "topk_best_iou": 0.41259660729419695,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.2617150843143463
+      },
+      "thinkdet": {
+        "top1_iou": 0.08270833630981032,
+        "topk_best_iou": 0.76188493866094,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2265133410692215
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.08270833630981032,
+        "topk_best_iou": 0.76188493866094,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2265133410692215
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010120",
+      "image_id": "6034056358",
+      "prompt": "the water",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9827599744166722,
+        "topk_best_iou": 0.9827599744166722,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.45095622539520264
+      },
+      "thinkdet": {
+        "top1_iou": 0.9856568685286202,
+        "topk_best_iou": 0.9856568685286202,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.41404521465301514
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9856568685286202,
+        "topk_best_iou": 0.9856568685286202,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.41404521465301514
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009735",
+      "image_id": "534886684",
+      "prompt": "a black and tan dog",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8780644701377196,
+        "topk_best_iou": 0.9043039092342113,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5690934062004089
+      },
+      "thinkdet": {
+        "top1_iou": 0.8906275357107872,
+        "topk_best_iou": 0.9030035819031728,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.46495118737220764
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8906275357107872,
+        "topk_best_iou": 0.9030035819031728,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.46495118737220764
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010435",
+      "image_id": "6323932349",
+      "prompt": "child",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9773411879210665,
+        "topk_best_iou": 0.9773411879210665,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.9247273802757263
+      },
+      "thinkdet": {
+        "top1_iou": 0.9719073456394938,
+        "topk_best_iou": 0.9719073456394938,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6827282905578613
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9719073456394938,
+        "topk_best_iou": 0.9719073456394938,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6827282905578613
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_001819",
+      "image_id": "2255338013",
+      "prompt": "a man",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9438567424017476,
+        "topk_best_iou": 0.9438567424017476,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.8039560914039612
+      },
+      "thinkdet": {
+        "top1_iou": 0.9284035017481338,
+        "topk_best_iou": 0.9284035017481338,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.48402100801467896
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9284035017481338,
+        "topk_best_iou": 0.9284035017481338,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.48402100801467896
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010899",
+      "image_id": "6911576445",
+      "prompt": "the man",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9722709083429002,
+        "topk_best_iou": 0.9722709083429002,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5571070909500122
+      },
+      "thinkdet": {
+        "top1_iou": 0.9724281171617125,
+        "topk_best_iou": 0.9724281171617125,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4021699130535126
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9724281171617125,
+        "topk_best_iou": 0.9724281171617125,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4021699130535126
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_008683",
+      "image_id": "4858186528",
+      "prompt": "a person",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.98144169199115,
+        "topk_best_iou": 0.98144169199115,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.33398282527923584
+      },
+      "thinkdet": {
+        "top1_iou": 0.9809823939240286,
+        "topk_best_iou": 0.9809823939240286,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.257624089717865
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9809823939240286,
+        "topk_best_iou": 0.9809823939240286,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.257624089717865
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_007918",
+      "image_id": "4686256251",
+      "prompt": "a ledge",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9796032002380753,
+        "topk_best_iou": 0.9796032002380753,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.47650012373924255
+      },
+      "thinkdet": {
+        "top1_iou": 0.9552993250798681,
+        "topk_best_iou": 0.9552993250798681,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.41320323944091797
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9552993250798681,
+        "topk_best_iou": 0.9552993250798681,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.41320323944091797
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009669",
+      "image_id": "528980321",
+      "prompt": "a green shirt",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9284956505169172,
+        "topk_best_iou": 0.9284956505169172,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.8776270151138306
+      },
+      "thinkdet": {
+        "top1_iou": 0.9253299264502046,
+        "topk_best_iou": 0.9253299264502046,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6304484009742737
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9253299264502046,
+        "topk_best_iou": 0.9253299264502046,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6304484009742737
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_008954",
+      "image_id": "4931239366",
+      "prompt": "two men",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8395820351892965,
+        "topk_best_iou": 0.8395820351892965,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.717322826385498
+      },
+      "thinkdet": {
+        "top1_iou": 0.8312102260225311,
+        "topk_best_iou": 0.8312102260225311,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4550158381462097
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8312102260225311,
+        "topk_best_iou": 0.8312102260225311,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4550158381462097
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_000287",
+      "image_id": "1301532463",
+      "prompt": "several people",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.534898775323609,
+        "topk_best_iou": 0.9806542634836755,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.41369354724884033
+      },
+      "thinkdet": {
+        "top1_iou": 0.5249657252467306,
+        "topk_best_iou": 0.9709085354246558,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.31516313552856445
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.5249657252467306,
+        "topk_best_iou": 0.9709085354246558,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.31516313552856445
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_005982",
+      "image_id": "370256193",
+      "prompt": "her purse",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8753190901071023,
+        "topk_best_iou": 0.8753190901071023,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3291245996952057
+      },
+      "thinkdet": {
+        "top1_iou": 0.8851100622141141,
+        "topk_best_iou": 0.8851100622141141,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2641904950141907
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8851100622141141,
+        "topk_best_iou": 0.8851100622141141,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2641904950141907
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009717",
+      "image_id": "531124063",
+      "prompt": "a guy",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.06638441843704833,
+        "topk_best_iou": 0.9581973100980818,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3644704818725586
+      },
+      "thinkdet": {
+        "top1_iou": 0.9516121352871816,
+        "topk_best_iou": 0.9516121352871816,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2842406928539276
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9516121352871816,
+        "topk_best_iou": 0.9516121352871816,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.2842406928539276
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006169",
+      "image_id": "3838585113",
+      "prompt": "a red dress",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.874162659186599,
+        "topk_best_iou": 0.874162659186599,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5854964256286621
+      },
+      "thinkdet": {
+        "top1_iou": 0.8680052546833493,
+        "topk_best_iou": 0.8680052546833493,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.46119916439056396
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8680052546833493,
+        "topk_best_iou": 0.8680052546833493,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.46119916439056396
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_000858",
+      "image_id": "162743064",
+      "prompt": "a brown dog",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9235559605878377,
+        "topk_best_iou": 0.9235559605878377,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.9507741928100586
+      },
+      "thinkdet": {
+        "top1_iou": 0.9217782597457844,
+        "topk_best_iou": 0.9217782597457844,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6833781599998474
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9217782597457844,
+        "topk_best_iou": 0.9217782597457844,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.6833781599998474
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_009420",
+      "image_id": "50594334",
+      "prompt": "kids",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8639037352692567,
+        "topk_best_iou": 0.9833271641292279,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.4240270256996155
+      },
+      "thinkdet": {
+        "top1_iou": 0.8552487276374484,
+        "topk_best_iou": 0.9781671759547752,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3376668095588684
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8552487276374484,
+        "topk_best_iou": 0.9781671759547752,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3376668095588684
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_011043",
+      "image_id": "7171533329",
+      "prompt": "two bicyclists",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8390636668049829,
+        "topk_best_iou": 0.8971700643734465,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.3116222023963928
+      },
+      "thinkdet": {
+        "top1_iou": 0.8352839529702563,
+        "topk_best_iou": 0.9101716732348404,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.23743903636932373
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8352839529702563,
+        "topk_best_iou": 0.9101716732348404,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.23743903636932373
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_001885",
+      "image_id": "2272750492",
+      "prompt": "a man",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9473949600829751,
+        "topk_best_iou": 0.9473949600829751,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5074143409729004
+      },
+      "thinkdet": {
+        "top1_iou": 0.9504716523044974,
+        "topk_best_iou": 0.9504716523044974,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.36100661754608154
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9504716523044974,
+        "topk_best_iou": 0.9504716523044974,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.36100661754608154
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_005499",
+      "image_id": "3540768808",
+      "prompt": "sunglasses",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.5916052289947109,
+        "topk_best_iou": 0.5916052289947109,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.7035579085350037
+      },
+      "thinkdet": {
+        "top1_iou": 0.5893550226257012,
+        "topk_best_iou": 0.6318775405303197,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.5796010494232178
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.5893550226257012,
+        "topk_best_iou": 0.6318775405303197,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.5796010494232178
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_008530",
+      "image_id": "482830610",
+      "prompt": "woman",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.8417323501289802,
+        "topk_best_iou": 0.8417323501289802,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.9195794463157654
+      },
+      "thinkdet": {
+        "top1_iou": 0.8454383194057388,
+        "topk_best_iou": 0.8454383194057388,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7319151759147644
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.8454383194057388,
+        "topk_best_iou": 0.8454383194057388,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7319151759147644
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_010882",
+      "image_id": "6888161449",
+      "prompt": "black uniforms",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.962223489936987,
+        "topk_best_iou": 0.962223489936987,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.42395201325416565
+      },
+      "thinkdet": {
+        "top1_iou": 0.9636802419169141,
+        "topk_best_iou": 0.9636802419169141,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.33097583055496216
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9636802419169141,
+        "topk_best_iou": 0.9636802419169141,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.33097583055496216
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_008317",
+      "image_id": "4787660637",
+      "prompt": "chalk",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.07436287412278611,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.3464089035987854
+      },
+      "thinkdet": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.07483557291988847,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.29142484068870544
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.07483557291988847,
+        "hit50_top1": 0.0,
+        "hit50_topk": 0.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 0.0,
+        "top1_score": 0.29142484068870544
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_006232",
+      "image_id": "3867054856",
+      "prompt": "a shirtless man",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9467811794324594,
+        "topk_best_iou": 0.9467811794324594,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.8521308302879333
+      },
+      "thinkdet": {
+        "top1_iou": 0.9448402282772614,
+        "topk_best_iou": 0.9448402282772614,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5433017015457153
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9448402282772614,
+        "topk_best_iou": 0.9448402282772614,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5433017015457153
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_005764",
+      "image_id": "3653462288",
+      "prompt": "a green shirt",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.9196745049978365,
+        "topk_best_iou": 0.9196745049978365,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.7540155053138733
+      },
+      "thinkdet": {
+        "top1_iou": 0.9215710928028639,
+        "topk_best_iou": 0.9215710928028639,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5846890807151794
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.9215710928028639,
+        "topk_best_iou": 0.9215710928028639,
+        "hit50_top1": 1.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 1.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5846890807151794
+      }
+    },
+    {
+      "benchmark_id": "flickr_val_003071",
+      "image_id": "2687539673",
+      "prompt": "young boy",
+      "group_id": null,
+      "group_name": null,
+      "fallback_selected_stage": "primary",
+      "baseline": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.9033955246887446,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.5010913610458374
+      },
+      "thinkdet": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.8922663197003899,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.41238337755203247
+      },
+      "thinkdet_fallback": {
+        "top1_iou": 0.0,
+        "topk_best_iou": 0.8922663197003899,
+        "hit50_top1": 0.0,
+        "hit50_topk": 1.0,
+        "hit75_top1": 0.0,
+        "hit75_topk": 1.0,
+        "top1_score": 0.41238337755203247
+      }
+    }
+  ]
+}

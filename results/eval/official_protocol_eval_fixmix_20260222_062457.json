@@ -1,0 +1,34 @@
+{
+  "num_select": 300,
+  "protocol": "official (no conf_thresh)",
+  "world_size": 8,
+  "baseline": {
+    "metrics": {
+      "AP": 0.4853,
+      "AP_50": 0.6446,
+      "AP_75": 0.5299,
+      "AP_S": 0.3395,
+      "AP_M": 0.518,
+      "AP_L": 0.6345,
+      "AR_1": 0.3859,
+      "AR_10": 0.6684,
+      "AR_100": 0.7375
+    },
+    "num_predictions": 1485600
+  },
+  "tma": {
+    "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage2_tma/layer9_tma_m8_fixmix_8gpu_20260222_062457/thinkdet_tma_stage2_best.pth",
+    "metrics": {
+      "AP": 0.4596,
+      "AP_50": 0.6079,
+      "AP_75": 0.5038,
+      "AP_S": 0.3226,
+      "AP_M": 0.4947,
+      "AP_L": 0.604,
+      "AR_1": 0.3807,
+      "AR_10": 0.6625,
+      "AR_100": 0.7408
+    },
+    "num_predictions": 1485600
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "image_path": "/home/iibrohimm/project/next_step/thinkdet/data/Screenshot 2026-03-12 112130.png",
+  "prompt_raw": "tool to eat with",
+  "query_used": "tool to eat with .",
+  "device": "cuda:0",
+  "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+  "checkpoint_meta": {
+    "checkpoint_extract_layers": [
+      9
+    ],
+    "checkpoint_layer_fusion": "mean",
+    "extract_layers": [
+      9
+    ],
+    "layer_fusion": "mean",
+    "injection_layers": [
+      1,
+      3,
+      5
+    ],
+    "tma_m": 8,
+    "tma_n_heads": 8,
+    "fusion_mode": "residual"
+  },
+  "stats": {
+    "top1": 0.09274056553840637,
+    "top2": 0.08048207312822342,
+    "top3_mean": 0.07841649527351062,
+    "margin": 0.012258492410182953,
+    "gate_mean": 0.0015233154020582635,
+    "reliability": 0.1067114612708489
+  },
+  "predictions": [
+    {
+      "score": 0.09274056553840637,
+      "box_abs_xyxy": [
+        1048.077928237617,
+        330.7962211370468,
+        1196.233566351235,
+        605.2342334985733
+      ]
+    },
+    {
+      "score": 0.08048207312822342,
+      "box_abs_xyxy": [
+        969.3327621370554,
+        298.6231005191803,
+        1109.7413762658834,
+        606.729737997055
+      ]
+    },
+    {
+      "score": 0.062026847153902054,
+      "box_abs_xyxy": [
+        1055.3291784524918,
+        18.16634225845337,
+        1235.7204777002335,
+        150.7605710029602
+      ]
+    },
+    {
+      "score": 0.05688876658678055,
+      "box_abs_xyxy": [
+        968.6840756982565,
+        297.4148098230362,
+        1197.411175623536,
+        608.4117711782455
+      ]
+    },
+    {
+      "score": 0.047982487827539444,
+      "box_abs_xyxy": [
+        249.41302187740803,
+        197.93733528256416,
+        383.628105327487,
+        274.28485986590385
+      ]
+    }
+  ],
+  "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/qualitative/thinkdet_screenshot_20260312_112130_tool_to_eat_with.jpg"
+}

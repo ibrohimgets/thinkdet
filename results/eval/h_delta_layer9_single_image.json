@@ -1,0 +1,114 @@
+{
+  "layer": 9,
+  "device": "cuda:0",
+  "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000000139.jpg",
+  "neutral_prompt": "a photo",
+  "prompts": [
+    "the man",
+    "the tall man",
+    "the man on the left"
+  ],
+  "prompt_metrics": {
+    "the man": {
+      "raw_norm": {
+        "fro_norm": 613.243896484375,
+        "token_norm_mean": 38.11346435546875,
+        "token_norm_std": 4.0480780601501465,
+        "token_norm_min": 31.32434844970703,
+        "token_norm_max": 56.387413024902344
+      },
+      "delta_norm": {
+        "fro_norm": 109.23068237304688,
+        "token_norm_mean": 6.647459506988525,
+        "token_norm_std": 1.5550439357757568,
+        "token_norm_min": 4.70182991027832,
+        "token_norm_max": 14.632587432861328
+      },
+      "delta_over_raw_fro_ratio": 0.1781194774204002
+    },
+    "the tall man": {
+      "raw_norm": {
+        "fro_norm": 625.679931640625,
+        "token_norm_mean": 38.88331604003906,
+        "token_norm_std": 4.15873908996582,
+        "token_norm_min": 30.579933166503906,
+        "token_norm_max": 57.4089469909668
+      },
+      "delta_norm": {
+        "fro_norm": 101.53279113769531,
+        "token_norm_mean": 6.175951957702637,
+        "token_norm_std": 1.4583791494369507,
+        "token_norm_min": 4.094592571258545,
+        "token_norm_max": 13.732545852661133
+      },
+      "delta_over_raw_fro_ratio": 0.16227592736027407
+    },
+    "the man on the left": {
+      "raw_norm": {
+        "fro_norm": 597.0990600585938,
+        "token_norm_mean": 37.10443878173828,
+        "token_norm_std": 3.9943907260894775,
+        "token_norm_min": 30.061765670776367,
+        "token_norm_max": 54.79322052001953
+      },
+      "delta_norm": {
+        "fro_norm": 152.31231689453125,
+        "token_norm_mean": 9.353458404541016,
+        "token_norm_std": 1.7704311609268188,
+        "token_norm_min": 6.842875003814697,
+        "token_norm_max": 16.69980812072754
+      },
+      "delta_over_raw_fro_ratio": 0.2550871824845692
+    }
+  },
+  "pairwise_prompt_metrics": {
+    "the man  ||  the tall man": {
+      "raw_cosine": {
+        "flat_cosine": 0.9930577874183655,
+        "token_cosine_mean": 0.9926905632019043,
+        "token_cosine_std": 0.004339114297181368,
+        "token_cosine_min": 0.9668841361999512,
+        "token_cosine_max": 0.9974912405014038
+      },
+      "delta_cosine": {
+        "flat_cosine": 0.7553642988204956,
+        "token_cosine_mean": 0.7479490637779236,
+        "token_cosine_std": 0.04567200317978859,
+        "token_cosine_min": 0.47355276346206665,
+        "token_cosine_max": 0.8603724837303162
+      }
+    },
+    "the man  ||  the man on the left": {
+      "raw_cosine": {
+        "flat_cosine": 0.9854141473770142,
+        "token_cosine_mean": 0.9848026633262634,
+        "token_cosine_std": 0.0059912619180977345,
+        "token_cosine_min": 0.952268660068512,
+        "token_cosine_max": 0.9934095740318298
+      },
+      "delta_cosine": {
+        "flat_cosine": 0.726800262928009,
+        "token_cosine_mean": 0.7128798365592957,
+        "token_cosine_std": 0.06244053319096565,
+        "token_cosine_min": 0.5650997161865234,
+        "token_cosine_max": 0.8546326160430908
+      }
+    },
+    "the tall man  ||  the man on the left": {
+      "raw_cosine": {
+        "flat_cosine": 0.9818894267082214,
+        "token_cosine_mean": 0.9811744689941406,
+        "token_cosine_std": 0.007848144508898258,
+        "token_cosine_min": 0.9429290294647217,
+        "token_cosine_max": 0.9920386075973511
+      },
+      "delta_cosine": {
+        "flat_cosine": 0.6193143129348755,
+        "token_cosine_mean": 0.6066060662269592,
+        "token_cosine_std": 0.06505473703145981,
+        "token_cosine_min": 0.35221678018569946,
+        "token_cosine_max": 0.7934455871582031
+      }
+    }
+  }
+}

@@ -1,0 +1,497 @@
+{
+  "config": {
+    "num_images": 500,
+    "num_prompts": 18,
+    "num_forwards": 9000,
+    "prompt_groups": {
+      "literal_vs_affordance": [
+        "chair .",
+        "object to sit on .",
+        "something you rest on ."
+      ],
+      "literal_vs_function": [
+        "bicycle .",
+        "rideable part .",
+        "vehicle with pedals ."
+      ],
+      "literal_vs_attribute": [
+        "red thing .",
+        "bright colored object .",
+        "warm toned item ."
+      ],
+      "spatial_reasoning": [
+        "person on the left .",
+        "object in the center .",
+        "thing in the background ."
+      ],
+      "abstract_vs_concrete": [
+        "dog .",
+        "pet animal .",
+        "furry companion ."
+      ],
+      "scene_understanding": [
+        "food on the table .",
+        "something edible .",
+        "meal being served ."
+      ]
+    },
+    "all_prompts": [
+      "bicycle .",
+      "bright colored object .",
+      "chair .",
+      "dog .",
+      "food on the table .",
+      "furry companion .",
+      "meal being served .",
+      "object in the center .",
+      "object to sit on .",
+      "person on the left .",
+      "pet animal .",
+      "red thing .",
+      "rideable part .",
+      "something edible .",
+      "something you rest on .",
+      "thing in the background .",
+      "vehicle with pedals .",
+      "warm toned item ."
+    ],
+    "max_images": 500,
+    "seed": 42,
+    "time_min": 4.7,
+    "composite_weights": "40% sensitivity_l2 + 35% token_diversity + 25% (1 - cross_image_sim)"
+  },
+  "top_layers": [
+    {
+      "rank": 1,
+      "layer": 27,
+      "composite": 0.66061
+    },
+    {
+      "rank": 2,
+      "layer": 26,
+      "composite": 0.481494
+    }
+  ],
+  "layers": [
+    {
+      "layer": 0,
+      "text_sensitivity_l2": 0.548769,
+      "text_sensitivity_cosine": 0.000321,
+      "token_diversity": 0.496683,
+      "cross_image_similarity": 0.871458,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.428568,
+      "composite_components": {
+        "sensitivity_norm": 0.0,
+        "diversity_norm": 1.0,
+        "cross_image_inv_norm": 0.3143
+      }
+    },
+    {
+      "layer": 1,
+      "text_sensitivity_l2": 0.823468,
+      "text_sensitivity_cosine": 0.000672,
+      "token_diversity": 0.425967,
+      "cross_image_similarity": 0.902501,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.337296,
+      "composite_components": {
+        "sensitivity_norm": 0.0011,
+        "diversity_norm": 0.8387,
+        "cross_image_inv_norm": 0.1733
+      }
+    },
+    {
+      "layer": 2,
+      "text_sensitivity_l2": 0.878688,
+      "text_sensitivity_cosine": 0.000394,
+      "token_diversity": 0.31792,
+      "cross_image_similarity": 0.939399,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.209235,
+      "composite_components": {
+        "sensitivity_norm": 0.0013,
+        "diversity_norm": 0.5923,
+        "cross_image_inv_norm": 0.0056
+      }
+    },
+    {
+      "layer": 3,
+      "text_sensitivity_l2": 3.06547,
+      "text_sensitivity_cosine": 0.004979,
+      "token_diversity": 0.26091,
+      "cross_image_similarity": 0.940639,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.165738,
+      "composite_components": {
+        "sensitivity_norm": 0.0098,
+        "diversity_norm": 0.4623,
+        "cross_image_inv_norm": 0.0
+      }
+    },
+    {
+      "layer": 4,
+      "text_sensitivity_l2": 3.39001,
+      "text_sensitivity_cosine": 0.005506,
+      "token_diversity": 0.26526,
+      "cross_image_similarity": 0.938035,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.172674,
+      "composite_components": {
+        "sensitivity_norm": 0.0111,
+        "diversity_norm": 0.4722,
+        "cross_image_inv_norm": 0.0118
+      }
+    },
+    {
+      "layer": 5,
+      "text_sensitivity_l2": 4.274178,
+      "text_sensitivity_cosine": 0.007513,
+      "token_diversity": 0.257235,
+      "cross_image_similarity": 0.922722,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.185041,
+      "composite_components": {
+        "sensitivity_norm": 0.0146,
+        "diversity_norm": 0.4539,
+        "cross_image_inv_norm": 0.0814
+      }
+    },
+    {
+      "layer": 6,
+      "text_sensitivity_l2": 4.491249,
+      "text_sensitivity_cosine": 0.007762,
+      "token_diversity": 0.257612,
+      "cross_image_similarity": 0.919616,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.189209,
+      "composite_components": {
+        "sensitivity_norm": 0.0154,
+        "diversity_norm": 0.4548,
+        "cross_image_inv_norm": 0.0955
+      }
+    },
+    {
+      "layer": 7,
+      "text_sensitivity_l2": 5.369066,
+      "text_sensitivity_cosine": 0.013398,
+      "token_diversity": 0.275313,
+      "cross_image_similarity": 0.915789,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.209055,
+      "composite_components": {
+        "sensitivity_norm": 0.0188,
+        "diversity_norm": 0.4951,
+        "cross_image_inv_norm": 0.1129
+      }
+    },
+    {
+      "layer": 8,
+      "text_sensitivity_l2": 6.504457,
+      "text_sensitivity_cosine": 0.016229,
+      "token_diversity": 0.253099,
+      "cross_image_similarity": 0.915025,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.193966,
+      "composite_components": {
+        "sensitivity_norm": 0.0233,
+        "diversity_norm": 0.4445,
+        "cross_image_inv_norm": 0.1164
+      }
+    },
+    {
+      "layer": 9,
+      "text_sensitivity_l2": 7.774633,
+      "text_sensitivity_cosine": 0.022538,
+      "token_diversity": 0.243766,
+      "cross_image_similarity": 0.905321,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.199521,
+      "composite_components": {
+        "sensitivity_norm": 0.0282,
+        "diversity_norm": 0.4232,
+        "cross_image_inv_norm": 0.1604
+      }
+    },
+    {
+      "layer": 10,
+      "text_sensitivity_l2": 9.062394,
+      "text_sensitivity_cosine": 0.027113,
+      "token_diversity": 0.25015,
+      "cross_image_similarity": 0.90189,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.210526,
+      "composite_components": {
+        "sensitivity_norm": 0.0333,
+        "diversity_norm": 0.4378,
+        "cross_image_inv_norm": 0.176
+      }
+    },
+    {
+      "layer": 11,
+      "text_sensitivity_l2": 9.989636,
+      "text_sensitivity_cosine": 0.022702,
+      "token_diversity": 0.268385,
+      "cross_image_similarity": 0.917103,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.209252,
+      "composite_components": {
+        "sensitivity_norm": 0.0369,
+        "diversity_norm": 0.4793,
+        "cross_image_inv_norm": 0.1069
+      }
+    },
+    {
+      "layer": 12,
+      "text_sensitivity_l2": 11.438513,
+      "text_sensitivity_cosine": 0.025342,
+      "token_diversity": 0.2394,
+      "cross_image_similarity": 0.918271,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.187054,
+      "composite_components": {
+        "sensitivity_norm": 0.0425,
+        "diversity_norm": 0.4132,
+        "cross_image_inv_norm": 0.1016
+      }
+    },
+    {
+      "layer": 13,
+      "text_sensitivity_l2": 12.188536,
+      "text_sensitivity_cosine": 0.026529,
+      "token_diversity": 0.2376,
+      "cross_image_similarity": 0.918517,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.18651,
+      "composite_components": {
+        "sensitivity_norm": 0.0455,
+        "diversity_norm": 0.4091,
+        "cross_image_inv_norm": 0.1005
+      }
+    },
+    {
+      "layer": 14,
+      "text_sensitivity_l2": 13.483212,
+      "text_sensitivity_cosine": 0.024368,
+      "token_diversity": 0.204362,
+      "cross_image_similarity": 0.928904,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.150206,
+      "composite_components": {
+        "sensitivity_norm": 0.0505,
+        "diversity_norm": 0.3333,
+        "cross_image_inv_norm": 0.0533
+      }
+    },
+    {
+      "layer": 15,
+      "text_sensitivity_l2": 17.546982,
+      "text_sensitivity_cosine": 0.035163,
+      "token_diversity": 0.183676,
+      "cross_image_similarity": 0.913601,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.157423,
+      "composite_components": {
+        "sensitivity_norm": 0.0664,
+        "diversity_norm": 0.2862,
+        "cross_image_inv_norm": 0.1228
+      }
+    },
+    {
+      "layer": 16,
+      "text_sensitivity_l2": 21.549004,
+      "text_sensitivity_cosine": 0.034933,
+      "token_diversity": 0.193946,
+      "cross_image_similarity": 0.906807,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.179589,
+      "composite_components": {
+        "sensitivity_norm": 0.082,
+        "diversity_norm": 0.3096,
+        "cross_image_inv_norm": 0.1537
+      }
+    },
+    {
+      "layer": 17,
+      "text_sensitivity_l2": 27.049056,
+      "text_sensitivity_cosine": 0.037972,
+      "token_diversity": 0.163736,
+      "cross_image_similarity": 0.905854,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.165151,
+      "composite_components": {
+        "sensitivity_norm": 0.1035,
+        "diversity_norm": 0.2407,
+        "cross_image_inv_norm": 0.158
+      }
+    },
+    {
+      "layer": 18,
+      "text_sensitivity_l2": 34.079739,
+      "text_sensitivity_cosine": 0.038258,
+      "token_diversity": 0.132702,
+      "cross_image_similarity": 0.90891,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.147894,
+      "composite_components": {
+        "sensitivity_norm": 0.131,
+        "diversity_norm": 0.1699,
+        "cross_image_inv_norm": 0.1441
+      }
+    },
+    {
+      "layer": 19,
+      "text_sensitivity_l2": 39.366737,
+      "text_sensitivity_cosine": 0.035758,
+      "token_diversity": 0.137825,
+      "cross_image_similarity": 0.910207,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.158771,
+      "composite_components": {
+        "sensitivity_norm": 0.1516,
+        "diversity_norm": 0.1816,
+        "cross_image_inv_norm": 0.1382
+      }
+    },
+    {
+      "layer": 20,
+      "text_sensitivity_l2": 47.432626,
+      "text_sensitivity_cosine": 0.036486,
+      "token_diversity": 0.136256,
+      "cross_image_similarity": 0.896916,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.185215,
+      "composite_components": {
+        "sensitivity_norm": 0.1831,
+        "diversity_norm": 0.178,
+        "cross_image_inv_norm": 0.1986
+      }
+    },
+    {
+      "layer": 21,
+      "text_sensitivity_l2": 63.270192,
+      "text_sensitivity_cosine": 0.036079,
+      "token_diversity": 0.101656,
+      "cross_image_similarity": 0.888247,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.192188,
+      "composite_components": {
+        "sensitivity_norm": 0.245,
+        "diversity_norm": 0.0991,
+        "cross_image_inv_norm": 0.238
+      }
+    },
+    {
+      "layer": 22,
+      "text_sensitivity_l2": 73.964368,
+      "text_sensitivity_cosine": 0.035504,
+      "token_diversity": 0.094209,
+      "cross_image_similarity": 0.875086,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.2179,
+      "composite_components": {
+        "sensitivity_norm": 0.2868,
+        "diversity_norm": 0.0821,
+        "cross_image_inv_norm": 0.2978
+      }
+    },
+    {
+      "layer": 23,
+      "text_sensitivity_l2": 93.090247,
+      "text_sensitivity_cosine": 0.040097,
+      "token_diversity": 0.095823,
+      "cross_image_similarity": 0.858466,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.267946,
+      "composite_components": {
+        "sensitivity_norm": 0.3615,
+        "diversity_norm": 0.0858,
+        "cross_image_inv_norm": 0.3733
+      }
+    },
+    {
+      "layer": 24,
+      "text_sensitivity_l2": 118.432643,
+      "text_sensitivity_cosine": 0.04066,
+      "token_diversity": 0.079623,
+      "cross_image_similarity": 0.85327,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.300512,
+      "composite_components": {
+        "sensitivity_norm": 0.4605,
+        "diversity_norm": 0.0489,
+        "cross_image_inv_norm": 0.3969
+      }
+    },
+    {
+      "layer": 25,
+      "text_sensitivity_l2": 161.133824,
+      "text_sensitivity_cosine": 0.047877,
+      "token_diversity": 0.066872,
+      "cross_image_similarity": 0.823974,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.390323,
+      "composite_components": {
+        "sensitivity_norm": 0.6273,
+        "diversity_norm": 0.0198,
+        "cross_image_inv_norm": 0.53
+      }
+    },
+    {
+      "layer": 26,
+      "text_sensitivity_l2": 197.201855,
+      "text_sensitivity_cosine": 0.057818,
+      "token_diversity": 0.058197,
+      "cross_image_similarity": 0.78722,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.481494,
+      "composite_components": {
+        "sensitivity_norm": 0.7681,
+        "diversity_norm": 0.0,
+        "cross_image_inv_norm": 0.6969
+      }
+    },
+    {
+      "layer": 27,
+      "text_sensitivity_l2": 256.558633,
+      "text_sensitivity_cosine": 0.077278,
+      "token_diversity": 0.07149,
+      "cross_image_similarity": 0.720507,
+      "n_sensitivity_samples": 9000,
+      "n_diversity_samples": 9000,
+      "composite_score": 0.66061,
+      "composite_components": {
+        "sensitivity_norm": 1.0,
+        "diversity_norm": 0.0303,
+        "cross_image_inv_norm": 1.0
+      }
+    }
+  ]
+}

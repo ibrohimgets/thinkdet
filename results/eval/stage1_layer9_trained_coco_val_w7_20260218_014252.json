@@ -1,0 +1,73 @@
+{
+  "status": "ok",
+  "mode": "trained",
+  "dataset": "COCO val2017",
+  "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage2/heads_kd/layer9_g0.25_kd0.10_e4/thinkdet_stage2_epoch4.pth",
+  "layer_setup": "layer9",
+  "extract_layers": [
+    9
+  ],
+  "layer_fusion": "mean",
+  "world_size": 7,
+  "conf_thresh": 0.3,
+  "max_dets": 100,
+  "max_images": 32,
+  "metrics": {
+    "mAP": 0.005489067656765677,
+    "mAP_50": 0.00657384488448845,
+    "mAP_75": 0.005713696369636964,
+    "mAP_S": 0.0018780940594059405,
+    "mAP_M": 0.00473209973436368,
+    "mAP_L": 0.004987623762376237,
+    "mAR_1": 0.0023351362462624083,
+    "mAR_10": 0.003242029654641867,
+    "mAR_100": 0.0032491049074951663,
+    "num_predictions": 267,
+    "num_images": 32,
+    "eval_time_min": 0.25693490107854206
+  },
+  "runtime": {
+    "processed_images_sum": 32,
+    "errors_sum": 0,
+    "error_rate_pct": 0.0,
+    "error_types": {},
+    "sample_errors": []
+  },
+  "checkpoint_meta": {
+    "epoch": 4,
+    "global_step": 7328,
+    "layer_setup": "layer9",
+    "extract_layers": [
+      9
+    ],
+    "layer_fusion": "mean"
+  },
+  "load_info": {
+    "missing_keys_count": 1589,
+    "unexpected_keys_count": 0,
+    "missing_keys_head": [
+      "grounding_dino.transformer.level_embed",
+      "grounding_dino.transformer.encoder.layers.0.self_attn.sampling_offsets.weight",
+      "grounding_dino.transformer.encoder.layers.0.self_attn.sampling_offsets.bias",
+      "grounding_dino.transformer.encoder.layers.0.self_attn.attention_weights.weight",
+      "grounding_dino.transformer.encoder.layers.0.self_attn.attention_weights.bias",
+      "grounding_dino.transformer.encoder.layers.0.self_attn.value_proj.weight",
+      "grounding_dino.transformer.encoder.layers.0.self_attn.value_proj.bias",
+      "grounding_dino.transformer.encoder.layers.0.self_attn.output_proj.weight",
+      "grounding_dino.transformer.encoder.layers.0.self_attn.output_proj.bias",
+      "grounding_dino.transformer.encoder.layers.0.norm1.weight",
+      "grounding_dino.transformer.encoder.layers.0.norm1.bias",
+      "grounding_dino.transformer.encoder.layers.0.linear1.weight",
+      "grounding_dino.transformer.encoder.layers.0.linear1.bias",
+      "grounding_dino.transformer.encoder.layers.0.linear2.weight",
+      "grounding_dino.transformer.encoder.layers.0.linear2.bias",
+      "grounding_dino.transformer.encoder.layers.0.norm2.weight",
+      "grounding_dino.transformer.encoder.layers.0.norm2.bias",
+      "grounding_dino.transformer.encoder.layers.1.self_attn.sampling_offsets.weight",
+      "grounding_dino.transformer.encoder.layers.1.self_attn.sampling_offsets.bias",
+      "grounding_dino.transformer.encoder.layers.1.self_attn.attention_weights.weight"
+    ],
+    "unexpected_keys_head": []
+  },
+  "timestamp": "2026-02-18 01:44:39"
+}

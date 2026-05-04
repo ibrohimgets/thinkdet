@@ -1,0 +1,39 @@
+{
+  "rank": 2,
+  "idx": 1811,
+  "image_id": 485014,
+  "ref_id": 8445,
+  "prompt": "chair on left by standing person .",
+  "expression": "chair on left by standing person",
+  "baseline": {
+    "top_iou": 0.0,
+    "top_score": 0.11126662790775299,
+    "top_box": [
+      0.5817461609840393,
+      0.5631914138793945,
+      0.6793399453163147,
+      0.8651596903800964
+    ]
+  },
+  "tma": {
+    "top_iou": 0.92561274766922,
+    "top_score": 0.07563960552215576,
+    "top_box": [
+      0.14895948767662048,
+      0.6761122941970825,
+      0.1698065549135208,
+      0.36282265186309814
+    ]
+  },
+  "gt_box": [
+    0.14885938167572021,
+    0.6823333501815796,
+    0.16253125667572021,
+    0.3635833263397217
+  ],
+  "iou_gap": 0.92561274766922,
+  "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank2_img485014_chair_on_left_by_standing_person",
+  "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank2_img485014_chair_on_left_by_standing_person/comparison_grid.png",
+  "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank2_img485014_chair_on_left_by_standing_person/baseline.png",
+  "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank2_img485014_chair_on_left_by_standing_person/stage1_tma.png"
+}

@@ -1,0 +1,297 @@
+{
+  "status": "ok",
+  "timestamp": "20260307_084536",
+  "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+  "ckpt_meta": {
+    "extract_layers": [
+      9
+    ],
+    "injection_layers": [
+      1,
+      3,
+      5
+    ],
+    "tma_m": 8,
+    "tma_n_heads": 8,
+    "fusion_mode": "residual"
+  },
+  "scan_limit": 3,
+  "chosen_case": {
+    "benchmark_id": "carry_in_33221",
+    "image_id": 33221,
+    "image_path": "/home/iibrohimm/project/next_step/dataSets/coco/val2017/000000033221.jpg",
+    "prompt": "something to carry things in .",
+    "primary_top1": {
+      "score": 0.17828433215618134,
+      "box_abs_xyxy": [
+        17.698392271995544,
+        288.60177659243345,
+        80.68287372589111,
+        331.42591942101717
+      ]
+    },
+    "primary_top1_iou": 0.0,
+    "primary_scores": [
+      0.17828433215618134,
+      0.16673453152179718,
+      0.16163156926631927,
+      0.16156524419784546,
+      0.16042007505893707
+    ],
+    "primary_margin": 0.011549800634384155,
+    "feedback_top1": {
+      "score": 0.17828433215618134,
+      "box_abs_xyxy": [
+        17.698392271995544,
+        288.60177659243345,
+        80.68287372589111,
+        331.42591942101717
+      ],
+      "llm_score": 1.0,
+      "combined_score": 0.37828433215618135
+    },
+    "feedback_top1_iou": 0.0,
+    "refined_reports": [
+      {
+        "name": "refine_1",
+        "query_text": "sure, here are three alternatives: .",
+        "top1_score": 0.23921123147010803,
+        "top1_iou": 0.08851720483023587,
+        "top1": {
+          "score": 0.23921123147010803,
+          "box_abs_xyxy": [
+            8.60336422920227,
+            37.65803995728493,
+            496.2795674800873,
+            327.1738254725933
+          ]
+        }
+      },
+      {
+        "name": "refine_2",
+        "query_text": "what is the person carrying in their hand? .",
+        "top1_score": 0.36023226380348206,
+        "top1_iou": 0.0,
+        "top1": {
+          "score": 0.36023226380348206,
+          "box_abs_xyxy": [
+            9.950198233127594,
+            104.48356282711029,
+            141.98236912488937,
+            330.66773986816406
+          ]
+        }
+      },
+      {
+        "name": "refine_3",
+        "query_text": "what is the person holding in their hand? .",
+        "top1_score": 0.3671461343765259,
+        "top1_iou": 0.0,
+        "top1": {
+          "score": 0.3671461343765259,
+          "box_abs_xyxy": [
+            367.67667531967163,
+            41.47141349315643,
+            493.62897872924805,
+            104.75781735777855
+          ]
+        }
+      }
+    ],
+    "selected_stage": "llm_feedback",
+    "selected_name": "llm_feedback",
+    "selected_query_text": "something to carry things in .",
+    "selected_info": {
+      "selected_name": "llm_feedback",
+      "selected_stage": "llm_feedback",
+      "selected_query_text": "something to carry things in .",
+      "selected_stats": {
+        "top1": 0.37828433215618135,
+        "top2": 0.3667345315217972,
+        "top3_mean": 0.3688834776480993,
+        "margin": 0.011549800634384155,
+        "gate_mean": 0.0,
+        "reliability": 0.42094758023818335
+      },
+      "stats_by_name": {
+        "primary": {
+          "top1": 0.17828433215618134,
+          "top2": 0.16673453152179718,
+          "top3_mean": 0.16888347764809927,
+          "margin": 0.011549800634384155,
+          "gate_mean": 0.0,
+          "reliability": 0.20094758023818335
+        },
+        "llm_feedback": {
+          "top1": 0.37828433215618135,
+          "top2": 0.3667345315217972,
+          "top3_mean": 0.3688834776480993,
+          "margin": 0.011549800634384155,
+          "gate_mean": 0.0,
+          "reliability": 0.42094758023818335
+        },
+        "refine_1": {
+          "top1": 0.23921123147010803,
+          "top2": 0.18271701037883759,
+          "top3_mean": 0.18737099568049112,
+          "margin": 0.05649422109127045,
+          "gate_mean": 0.0,
+          "reliability": 0.28619544158379234
+        },
+        "refine_2": {
+          "top1": 0.36023226380348206,
+          "top2": 0.3271811604499817,
+          "top3_mean": 0.3254040678342183,
+          "margin": 0.033051103353500366,
+          "gate_mean": 0.0,
+          "reliability": 0.4092982222636541
+        },
+        "refine_3": {
+          "top1": 0.3671461343765259,
+          "top2": 0.3585588335990906,
+          "top3_mean": 0.33766159415245056,
+          "margin": 0.008587300777435303,
+          "gate_mean": 0.0,
+          "reliability": 0.4052059441804886
+        }
+      },
+      "trace": [
+        {
+          "stage": "primary",
+          "candidate": "primary",
+          "selected": true,
+          "stats": {
+            "top1": 0.17828433215618134,
+            "top2": 0.16673453152179718,
+            "top3_mean": 0.16888347764809927,
+            "margin": 0.011549800634384155,
+            "gate_mean": 0.0,
+            "reliability": 0.20094758023818335
+          }
+        },
+        {
+          "stage": "feedback_check",
+          "candidate": "llm_feedback",
+          "selected": true,
+          "stats": {
+            "top1": 0.37828433215618135,
+            "top2": 0.3667345315217972,
+            "top3_mean": 0.3688834776480993,
+            "margin": 0.011549800634384155,
+            "gate_mean": 0.0,
+            "reliability": 0.42094758023818335
+          }
+        },
+        {
+          "stage": "refine_check",
+          "selected": false,
+          "candidates": [
+            {
+              "candidate": "refine_1",
+              "stats": {
+                "top1": 0.23921123147010803,
+                "top2": 0.18271701037883759,
+                "top3_mean": 0.18737099568049112,
+                "margin": 0.05649422109127045,
+                "gate_mean": 0.0,
+                "reliability": 0.28619544158379234
+              }
+            },
+            {
+              "candidate": "refine_2",
+              "stats": {
+                "top1": 0.36023226380348206,
+                "top2": 0.3271811604499817,
+                "top3_mean": 0.3254040678342183,
+                "margin": 0.033051103353500366,
+                "gate_mean": 0.0,
+                "reliability": 0.4092982222636541
+              }
+            },
+            {
+              "candidate": "refine_3",
+              "stats": {
+                "top1": 0.3671461343765259,
+                "top2": 0.3585588335990906,
+                "top3_mean": 0.33766159415245056,
+                "margin": 0.008587300777435303,
+                "gate_mean": 0.0,
+                "reliability": 0.4052059441804886
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "selected_top1": {
+      "score": 0.17828433215618134,
+      "box_abs_xyxy": [
+        17.698392271995544,
+        288.60177659243345,
+        80.68287372589111,
+        331.42591942101717
+      ],
+      "llm_score": 1.0,
+      "combined_score": 0.37828433215618135
+    },
+    "selected_top1_iou": 0.0,
+    "top1_iou_gain": 0.0,
+    "gt_boxes": [
+      [
+        349.39,
+        188.01,
+        439.53,
+        333.0
+      ],
+      [
+        324.69,
+        170.9,
+        341.96,
+        200.68
+      ],
+      [
+        193.65,
+        171.22,
+        212.74,
+        208.89
+      ],
+      [
+        250.28,
+        212.35,
+        259.27,
+        229.45
+      ]
+    ],
+    "should_try_fallback": true
+  },
+  "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/inference/llm_fallback_single_case_20260307_084536.png",
+  "scanned_cases": [
+    {
+      "benchmark_id": "carry_in_17959",
+      "selected_stage": "primary",
+      "primary_top1_iou": 0.0015369174268272166,
+      "selected_top1_iou": 0.0015369174268272166,
+      "top1_iou_gain": 0.0,
+      "primary_margin": 0.05498597025871277,
+      "should_try_fallback": false
+    },
+    {
+      "benchmark_id": "carry_in_31093",
+      "selected_stage": "primary",
+      "primary_top1_iou": 0.0,
+      "selected_top1_iou": 0.0,
+      "top1_iou_gain": 0.0,
+      "primary_margin": 0.030422300100326538,
+      "should_try_fallback": false
+    },
+    {
+      "benchmark_id": "carry_in_33221",
+      "selected_stage": "llm_feedback",
+      "primary_top1_iou": 0.0,
+      "selected_top1_iou": 0.0,
+      "top1_iou_gain": 0.0,
+      "primary_margin": 0.011549800634384155,
+      "should_try_fallback": true
+    }
+  ]
+}

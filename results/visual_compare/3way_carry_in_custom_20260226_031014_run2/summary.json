@@ -1,0 +1,138 @@
+{
+  "timestamp": "20260226_031540",
+  "stage1_ckpt": "thinkdet/checkpoints/stage1_tma/layer9_tma_m8_full_2ep_7gpu_20260218_152649/thinkdet_tma_stage1_epoch2.pth",
+  "stage2_ckpt": "thinkdet/checkpoints/stage2_tma/layer9_tma_m8_fixmix_8gpu_20260222_062457/thinkdet_tma_stage2_best.pth",
+  "source_summary": "thinkdet/results/visual_compare/custom_inputs/carry_in_custom_cases_20260226_031014.json",
+  "source_meta": {
+    "dataset": {
+      "name": "coco",
+      "split": "val2017",
+      "note": "custom carry_in cases"
+    },
+    "selection_criteria": {
+      "prompt_type": "affordance",
+      "prompt": "something to carry things in .",
+      "affordance": "carry_in",
+      "custom_manual_selection": true
+    }
+  },
+  "cases": [
+    {
+      "case": 1,
+      "image_id": 373382,
+      "image_file": "000000373382.jpg",
+      "prompt": "something to carry things in .",
+      "prompt_type": "Hard-mined baseline-failure",
+      "baseline_top1": {
+        "box": [
+          133.46704959869385,
+          78.26387405395508,
+          335.14233112335205,
+          604.3938255310059
+        ],
+        "score": 0.2977197766304016
+      },
+      "stage1_top1": {
+        "box": [
+          133.5196566581726,
+          78.92219543457031,
+          334.9200654029846,
+          604.0818023681641
+        ],
+        "score": 0.27901357412338257
+      },
+      "stage2_top1": {
+        "box": [
+          133.3889937400818,
+          77.84917831420898,
+          336.1745095252991,
+          604.9381446838379
+        ],
+        "score": 0.2770741283893585
+      },
+      "output_file": "case1_373382_hard-mined_baseline-failure.jpg",
+      "source_rank": 1,
+      "source_iou_gap": null,
+      "source_baseline_iou": null,
+      "source_tma_iou": null
+    },
+    {
+      "case": 2,
+      "image_id": 439593,
+      "image_file": "000000439593.jpg",
+      "prompt": "something to carry things in .",
+      "prompt_type": "Hard-mined baseline-failure",
+      "baseline_top1": {
+        "box": [
+          78.04698944091797,
+          51.529784202575684,
+          635.140266418457,
+          464.51921939849854
+        ],
+        "score": 0.32432690262794495
+      },
+      "stage1_top1": {
+        "box": [
+          78.19559097290039,
+          51.973628997802734,
+          635.0505638122559,
+          464.2627143859863
+        ],
+        "score": 0.30811312794685364
+      },
+      "stage2_top1": {
+        "box": [
+          78.08670043945312,
+          49.624056816101074,
+          635.2425384521484,
+          465.41386127471924
+        ],
+        "score": 0.3122496008872986
+      },
+      "output_file": "case2_439593_hard-mined_baseline-failure.jpg",
+      "source_rank": 2,
+      "source_iou_gap": null,
+      "source_baseline_iou": null,
+      "source_tma_iou": null
+    },
+    {
+      "case": 3,
+      "image_id": 99114,
+      "image_file": "000000099114.jpg",
+      "prompt": "something to carry things in .",
+      "prompt_type": "Hard-mined baseline-failure",
+      "baseline_top1": {
+        "box": [
+          87.10893616080284,
+          107.80111089348793,
+          163.66595402359962,
+          212.1221663057804
+        ],
+        "score": 0.22415778040885925
+      },
+      "stage1_top1": {
+        "box": [
+          87.3475968837738,
+          108.03602918982506,
+          163.40357065200806,
+          212.12627962231636
+        ],
+        "score": 0.22209984064102173
+      },
+      "stage2_top1": {
+        "box": [
+          86.91173791885376,
+          107.74067409336567,
+          164.24643993377686,
+          212.51102946698666
+        ],
+        "score": 0.23599055409431458
+      },
+      "output_file": "case3_99114_hard-mined_baseline-failure.jpg",
+      "source_rank": 3,
+      "source_iou_gap": null,
+      "source_baseline_iou": null,
+      "source_tma_iou": null
+    }
+  ]
+}

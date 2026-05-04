@@ -1,0 +1,19 @@
+image_id: 170670
+image_path: /home/iibrohimm/project/next_step/dataSets/coco/val2017/000000170670.jpg
+target_category: fork (count_in_image=5)
+prompt: the fork .
+
+[baseline] top-5 predictions
+  rank=1 score=0.443742 box_xyxy=(511.0,198.2,608.0,307.1)
+  rank=2 score=0.407654 box_xyxy=(546.0,200.0,631.7,283.5)
+  rank=3 score=0.144383 box_xyxy=(508.3,194.6,629.0,310.5)
+  rank=4 score=0.136115 box_xyxy=(500.7,183.6,630.1,326.6)
+  rank=5 score=0.135083 box_xyxy=(511.2,198.6,542.7,228.6)
+
+[delta] top-5 predictions
+  rank=1 score=0.439809 box_xyxy=(511.1,198.5,608.7,305.7)
+  rank=2 score=0.414474 box_xyxy=(546.3,199.6,631.8,282.2)
+  rank=3 score=0.138845 box_xyxy=(511.6,198.8,542.2,228.3)
+  rank=4 score=0.131377 box_xyxy=(546.9,199.7,581.1,235.5)
+  rank=5 score=0.121016 box_xyxy=(496.8,181.9,629.3,324.3)
+

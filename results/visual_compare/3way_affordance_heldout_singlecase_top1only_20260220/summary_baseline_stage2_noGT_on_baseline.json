@@ -1,0 +1,35 @@
+{
+  "source_folder": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/3way_affordance_heldout_singlecase_top1only_20260220",
+  "source_image": "case1_59598_hard-mined_baseline-failure.jpg",
+  "edited_image": "case1_59598_baseline_stage2_no_detection_baseline.jpg",
+  "edits": {
+    "removed_stage1_panel": true,
+    "removed_baseline_prediction_when_miss": true,
+    "hidden_baseline_gt_overlay": true,
+    "baseline_top1_iou_from_source": 0.0,
+    "stage2_kept_prediction": true,
+    "stage2_kept_gt_overlay": true
+  },
+  "case": {
+    "image_id": 59598,
+    "prompt": "something to talk on .",
+    "baseline_top1": {
+      "box": [
+        168.56632232666016,
+        84.01415348052979,
+        454.26280975341797,
+        331.6883611679077
+      ],
+      "score": 0.2733311057090759
+    },
+    "stage2_top1": {
+      "box": [
+        64.38976287841797,
+        271.89280807971954,
+        162.85085678100586,
+        308.71374785900116
+      ],
+      "score": 0.18252113461494446
+    }
+  }
+}

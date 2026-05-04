@@ -1,0 +1,20 @@
+{
+  "num_select": 300,
+  "protocol": "official (no conf_thresh)",
+  "world_size": 7,
+  "tma": {
+    "checkpoint": "thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+    "metrics": {
+      "AP": 0.4803,
+      "AP_50": 0.6327,
+      "AP_75": 0.5258,
+      "AP_S": 0.3378,
+      "AP_M": 0.5134,
+      "AP_L": 0.6257,
+      "AR_1": 0.3853,
+      "AR_10": 0.6728,
+      "AR_100": 0.7477
+    },
+    "num_predictions": 1486800
+  }
+}

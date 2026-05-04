@@ -1,0 +1,174 @@
+{
+  "image_path": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/unified_single_carry_in_20260226_033826/Screenshot 2026-02-26 124234.png",
+  "checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+  "results": [
+    {
+      "prompt": "something to charge my phone with",
+      "dino_prompt": "something to charge my phone with .",
+      "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/unified_charger_prompts_20260226_035507/something_to_charge_my_phone_with.jpg",
+      "top3": [
+        {
+          "rank": 1,
+          "score": 0.3488980829715729,
+          "box_xyxy": [
+            570.0508412718773,
+            298.12132531404495,
+            677.0647469162941,
+            447.8002616763115
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.21705324947834015,
+          "box_xyxy": [
+            173.2705456018448,
+            227.87694662809372,
+            275.65984785556793,
+            284.8865182995796
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.20678000152111053,
+          "box_xyxy": [
+            547.1097436547279,
+            280.30321979522705,
+            705.7623371481895,
+            464.56833267211914
+          ]
+        }
+      ],
+      "gate_values": [
+        0.0016425460344180465,
+        0.0009118875022977591,
+        0.0020155126694589853
+      ]
+    },
+    {
+      "prompt": "phone charger",
+      "dino_prompt": "phone charger .",
+      "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/unified_charger_prompts_20260226_035507/phone_charger.jpg",
+      "top3": [
+        {
+          "rank": 1,
+          "score": 0.36001068353652954,
+          "box_xyxy": [
+            176.60194516181946,
+            231.1517118513584,
+            271.779043674469,
+            282.5042000710964
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.31492409110069275,
+          "box_xyxy": [
+            570.5774134397507,
+            298.3655485510826,
+            676.2201243638992,
+            447.13148790597916
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.24637845158576965,
+          "box_xyxy": [
+            18.937405347824097,
+            230.49995547533035,
+            274.28741931915283,
+            365.93541234731674
+          ]
+        }
+      ],
+      "gate_values": [
+        0.0016425460344180465,
+        0.0009118875022977591,
+        0.0020155126694589853
+      ]
+    },
+    {
+      "prompt": "charger",
+      "dino_prompt": "charger .",
+      "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/unified_charger_prompts_20260226_035507/charger.jpg",
+      "top3": [
+        {
+          "rank": 1,
+          "score": 0.3497542142868042,
+          "box_xyxy": [
+            176.84839993715286,
+            231.4411947131157,
+            272.0495030283928,
+            282.3590913414955
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.29330530762672424,
+          "box_xyxy": [
+            18.994722962379456,
+            230.6617213189602,
+            274.52501118183136,
+            366.0213696062565
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.26536065340042114,
+          "box_xyxy": [
+            434.96560990810394,
+            258.8080469965935,
+            753.5313183069229,
+            526.0868447422981
+          ]
+        }
+      ],
+      "gate_values": [
+        0.0016425460344180465,
+        0.0009118875022977591,
+        0.0020155126694589853
+      ]
+    },
+    {
+      "prompt": "power adapter",
+      "dino_prompt": "power adapter .",
+      "output_image": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/unified_charger_prompts_20260226_035507/power_adapter.jpg",
+      "top3": [
+        {
+          "rank": 1,
+          "score": 0.3462858200073242,
+          "box_xyxy": [
+            18.9068341255188,
+            230.61522176861763,
+            275.21387815475464,
+            365.8317124545574
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.33902496099472046,
+          "box_xyxy": [
+            176.63474410772324,
+            231.35175396502018,
+            272.62713462114334,
+            282.3607547134161
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.21280807256698608,
+          "box_xyxy": [
+            157.5791734457016,
+            232.04735925793648,
+            274.02643978595734,
+            282.13667675852776
+          ]
+        }
+      ],
+      "gate_values": [
+        0.0016425460344180465,
+        0.0009118875022977591,
+        0.0020155126694589853
+      ]
+    }
+  ]
+}

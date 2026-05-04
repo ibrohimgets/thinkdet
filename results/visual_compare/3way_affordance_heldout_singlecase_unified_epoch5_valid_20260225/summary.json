@@ -1,0 +1,61 @@
+{
+  "timestamp": "20260225_215454",
+  "stage1_ckpt": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/stage1_tma/layer9_tma_m8_full_2ep_7gpu_20260218_152649/thinkdet_tma_stage1_epoch2.pth",
+  "stage2_ckpt": "thinkdet/checkpoints/unified/layer9_kd0p05_l1_1e-4_20260224_135540/thinkdet_unified_epoch5.pth",
+  "source_summary": "thinkdet/results/eval/affordance_heldout_single_case_unified_epoch5_source.json",
+  "source_meta": {
+    "dataset": {
+      "name": "affordance_coco_val_heldout_v1",
+      "split": "test"
+    },
+    "selection_criteria": {
+      "source": "heldout_benchmark_scan_unified_epoch5",
+      "single_positive_only": true,
+      "min_unified_minus_baseline_iou": 0.5,
+      "max_baseline_iou": 0.1,
+      "min_unified_iou": 0.5,
+      "pick": "first_single_positive_win_else_best_gap"
+    }
+  },
+  "cases": [
+    {
+      "case": 1,
+      "image_id": 548339,
+      "image_file": "000000548339.jpg",
+      "prompt": "something to drink from .",
+      "prompt_type": "Hard-mined baseline-failure",
+      "baseline_top1": {
+        "box": [
+          180.57552337646484,
+          30.052534103393555,
+          538.0523300170898,
+          502.16512870788574
+        ],
+        "score": 0.31495749950408936
+      },
+      "stage1_top1": {
+        "box": [
+          180.77951431274414,
+          30.367481231689453,
+          538.1164360046387,
+          502.2959175109863
+        ],
+        "score": 0.26633575558662415
+      },
+      "stage2_top1": {
+        "box": [
+          99.44559931755066,
+          122.94621276855469,
+          127.71412968635559,
+          186.37581253051758
+        ],
+        "score": 0.25296032428741455
+      },
+      "output_file": "case1_548339_hard-mined_baseline-failure.jpg",
+      "source_rank": 1,
+      "source_iou_gap": 0.7603765118699453,
+      "source_baseline_iou": 0.0,
+      "source_tma_iou": 0.7603765118699453
+    }
+  ]
+}

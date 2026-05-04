@@ -1,0 +1,814 @@
+{
+  "image_path": "/home/iibrohimm/project/next_step/thinkdet/data/Screenshot 2026-03-12 112130.png",
+  "image_name": "Screenshot 2026-03-12 112130.png",
+  "extract_layer": 9,
+  "device": "cuda:0",
+  "reference_prompt_index": 0,
+  "reference_prompt_text": "i need something to cut the tofu with .",
+  "prompts": [
+    {
+      "prompt_index": 0,
+      "prompt_text": "i need something to cut the tofu with .",
+      "tensor_path": "/home/iibrohimm/project/next_step/thinkdet/results/analysis/tofu_layer9_prompts_20260312/00_i_need_something_to_cut_the_tofu_with_layer9.pt",
+      "grid_side": 16,
+      "feature_shape": [
+        256,
+        1024
+      ],
+      "token_norm_mean": 35.65361022949219,
+      "token_norm_std": 3.790691614151001,
+      "token_norm_min": 27.71897315979004,
+      "token_norm_max": 48.3936653137207,
+      "top_tokens": [
+        {
+          "token_index": 248,
+          "row": 15,
+          "col": 8,
+          "norm": 48.3936653137207,
+          "approx_center_xy": [
+            666.19,
+            643.25
+          ]
+        },
+        {
+          "token_index": 229,
+          "row": 14,
+          "col": 5,
+          "norm": 47.3703727722168,
+          "approx_center_xy": [
+            431.06,
+            601.75
+          ]
+        },
+        {
+          "token_index": 9,
+          "row": 0,
+          "col": 9,
+          "norm": 45.777400970458984,
+          "approx_center_xy": [
+            744.56,
+            20.75
+          ]
+        },
+        {
+          "token_index": 94,
+          "row": 5,
+          "col": 14,
+          "norm": 45.13228988647461,
+          "approx_center_xy": [
+            1136.44,
+            228.25
+          ]
+        },
+        {
+          "token_index": 172,
+          "row": 10,
+          "col": 12,
+          "norm": 44.19341278076172,
+          "approx_center_xy": [
+            979.69,
+            435.75
+          ]
+        },
+        {
+          "token_index": 33,
+          "row": 2,
+          "col": 1,
+          "norm": 44.0621452331543,
+          "approx_center_xy": [
+            117.56,
+            103.75
+          ]
+        },
+        {
+          "token_index": 228,
+          "row": 14,
+          "col": 4,
+          "norm": 43.94563674926758,
+          "approx_center_xy": [
+            352.69,
+            601.75
+          ]
+        },
+        {
+          "token_index": 55,
+          "row": 3,
+          "col": 7,
+          "norm": 43.7068977355957,
+          "approx_center_xy": [
+            587.81,
+            145.25
+          ]
+        },
+        {
+          "token_index": 213,
+          "row": 13,
+          "col": 5,
+          "norm": 43.52189254760742,
+          "approx_center_xy": [
+            431.06,
+            560.25
+          ]
+        },
+        {
+          "token_index": 230,
+          "row": 14,
+          "col": 6,
+          "norm": 43.403987884521484,
+          "approx_center_xy": [
+            509.44,
+            601.75
+          ]
+        }
+      ]
+    },
+    {
+      "prompt_index": 1,
+      "prompt_text": "fork .",
+      "tensor_path": "/home/iibrohimm/project/next_step/thinkdet/results/analysis/tofu_layer9_prompts_20260312/01_fork_layer9.pt",
+      "grid_side": 16,
+      "feature_shape": [
+        256,
+        1024
+      ],
+      "token_norm_mean": 36.5006217956543,
+      "token_norm_std": 4.210715293884277,
+      "token_norm_min": 28.063100814819336,
+      "token_norm_max": 50.847625732421875,
+      "top_tokens": [
+        {
+          "token_index": 248,
+          "row": 15,
+          "col": 8,
+          "norm": 50.847625732421875,
+          "approx_center_xy": [
+            666.19,
+            643.25
+          ]
+        },
+        {
+          "token_index": 9,
+          "row": 0,
+          "col": 9,
+          "norm": 49.48280334472656,
+          "approx_center_xy": [
+            744.56,
+            20.75
+          ]
+        },
+        {
+          "token_index": 229,
+          "row": 14,
+          "col": 5,
+          "norm": 49.00876235961914,
+          "approx_center_xy": [
+            431.06,
+            601.75
+          ]
+        },
+        {
+          "token_index": 246,
+          "row": 15,
+          "col": 6,
+          "norm": 48.22657012939453,
+          "approx_center_xy": [
+            509.44,
+            643.25
+          ]
+        },
+        {
+          "token_index": 33,
+          "row": 2,
+          "col": 1,
+          "norm": 46.331512451171875,
+          "approx_center_xy": [
+            117.56,
+            103.75
+          ]
+        },
+        {
+          "token_index": 94,
+          "row": 5,
+          "col": 14,
+          "norm": 46.25461959838867,
+          "approx_center_xy": [
+            1136.44,
+            228.25
+          ]
+        },
+        {
+          "token_index": 244,
+          "row": 15,
+          "col": 4,
+          "norm": 46.038692474365234,
+          "approx_center_xy": [
+            352.69,
+            643.25
+          ]
+        },
+        {
+          "token_index": 228,
+          "row": 14,
+          "col": 4,
+          "norm": 45.84285354614258,
+          "approx_center_xy": [
+            352.69,
+            601.75
+          ]
+        },
+        {
+          "token_index": 172,
+          "row": 10,
+          "col": 12,
+          "norm": 45.636051177978516,
+          "approx_center_xy": [
+            979.69,
+            435.75
+          ]
+        },
+        {
+          "token_index": 230,
+          "row": 14,
+          "col": 6,
+          "norm": 45.3287467956543,
+          "approx_center_xy": [
+            509.44,
+            601.75
+          ]
+        }
+      ]
+    },
+    {
+      "prompt_index": 2,
+      "prompt_text": "spoon .",
+      "tensor_path": "/home/iibrohimm/project/next_step/thinkdet/results/analysis/tofu_layer9_prompts_20260312/02_spoon_layer9.pt",
+      "grid_side": 16,
+      "feature_shape": [
+        256,
+        1024
+      ],
+      "token_norm_mean": 35.52527618408203,
+      "token_norm_std": 3.9945719242095947,
+      "token_norm_min": 28.516836166381836,
+      "token_norm_max": 48.96574783325195,
+      "top_tokens": [
+        {
+          "token_index": 248,
+          "row": 15,
+          "col": 8,
+          "norm": 48.96574783325195,
+          "approx_center_xy": [
+            666.19,
+            643.25
+          ]
+        },
+        {
+          "token_index": 9,
+          "row": 0,
+          "col": 9,
+          "norm": 48.34568786621094,
+          "approx_center_xy": [
+            744.56,
+            20.75
+          ]
+        },
+        {
+          "token_index": 229,
+          "row": 14,
+          "col": 5,
+          "norm": 47.75273895263672,
+          "approx_center_xy": [
+            431.06,
+            601.75
+          ]
+        },
+        {
+          "token_index": 246,
+          "row": 15,
+          "col": 6,
+          "norm": 46.244998931884766,
+          "approx_center_xy": [
+            509.44,
+            643.25
+          ]
+        },
+        {
+          "token_index": 33,
+          "row": 2,
+          "col": 1,
+          "norm": 45.647430419921875,
+          "approx_center_xy": [
+            117.56,
+            103.75
+          ]
+        },
+        {
+          "token_index": 94,
+          "row": 5,
+          "col": 14,
+          "norm": 44.74960708618164,
+          "approx_center_xy": [
+            1136.44,
+            228.25
+          ]
+        },
+        {
+          "token_index": 172,
+          "row": 10,
+          "col": 12,
+          "norm": 44.47411346435547,
+          "approx_center_xy": [
+            979.69,
+            435.75
+          ]
+        },
+        {
+          "token_index": 230,
+          "row": 14,
+          "col": 6,
+          "norm": 44.459068298339844,
+          "approx_center_xy": [
+            509.44,
+            601.75
+          ]
+        },
+        {
+          "token_index": 228,
+          "row": 14,
+          "col": 4,
+          "norm": 44.202335357666016,
+          "approx_center_xy": [
+            352.69,
+            601.75
+          ]
+        },
+        {
+          "token_index": 244,
+          "row": 15,
+          "col": 4,
+          "norm": 44.025611877441406,
+          "approx_center_xy": [
+            352.69,
+            643.25
+          ]
+        }
+      ]
+    },
+    {
+      "prompt_index": 3,
+      "prompt_text": "knife .",
+      "tensor_path": "/home/iibrohimm/project/next_step/thinkdet/results/analysis/tofu_layer9_prompts_20260312/03_knife_layer9.pt",
+      "grid_side": 16,
+      "feature_shape": [
+        256,
+        1024
+      ],
+      "token_norm_mean": 35.71800231933594,
+      "token_norm_std": 4.00856351852417,
+      "token_norm_min": 28.444915771484375,
+      "token_norm_max": 49.13261795043945,
+      "top_tokens": [
+        {
+          "token_index": 248,
+          "row": 15,
+          "col": 8,
+          "norm": 49.13261795043945,
+          "approx_center_xy": [
+            666.19,
+            643.25
+          ]
+        },
+        {
+          "token_index": 9,
+          "row": 0,
+          "col": 9,
+          "norm": 48.26708984375,
+          "approx_center_xy": [
+            744.56,
+            20.75
+          ]
+        },
+        {
+          "token_index": 229,
+          "row": 14,
+          "col": 5,
+          "norm": 47.981658935546875,
+          "approx_center_xy": [
+            431.06,
+            601.75
+          ]
+        },
+        {
+          "token_index": 246,
+          "row": 15,
+          "col": 6,
+          "norm": 46.597084045410156,
+          "approx_center_xy": [
+            509.44,
+            643.25
+          ]
+        },
+        {
+          "token_index": 33,
+          "row": 2,
+          "col": 1,
+          "norm": 45.24566650390625,
+          "approx_center_xy": [
+            117.56,
+            103.75
+          ]
+        },
+        {
+          "token_index": 94,
+          "row": 5,
+          "col": 14,
+          "norm": 45.14244842529297,
+          "approx_center_xy": [
+            1136.44,
+            228.25
+          ]
+        },
+        {
+          "token_index": 228,
+          "row": 14,
+          "col": 4,
+          "norm": 45.00265121459961,
+          "approx_center_xy": [
+            352.69,
+            601.75
+          ]
+        },
+        {
+          "token_index": 230,
+          "row": 14,
+          "col": 6,
+          "norm": 44.7626838684082,
+          "approx_center_xy": [
+            509.44,
+            601.75
+          ]
+        },
+        {
+          "token_index": 213,
+          "row": 13,
+          "col": 5,
+          "norm": 44.3253059387207,
+          "approx_center_xy": [
+            431.06,
+            560.25
+          ]
+        },
+        {
+          "token_index": 244,
+          "row": 15,
+          "col": 4,
+          "norm": 44.20082092285156,
+          "approx_center_xy": [
+            352.69,
+            643.25
+          ]
+        }
+      ]
+    },
+    {
+      "prompt_index": 4,
+      "prompt_text": "tofu .",
+      "tensor_path": "/home/iibrohimm/project/next_step/thinkdet/results/analysis/tofu_layer9_prompts_20260312/04_tofu_layer9.pt",
+      "grid_side": 16,
+      "feature_shape": [
+        256,
+        1024
+      ],
+      "token_norm_mean": 35.78966522216797,
+      "token_norm_std": 4.0180583000183105,
+      "token_norm_min": 28.59455108642578,
+      "token_norm_max": 48.81546401977539,
+      "top_tokens": [
+        {
+          "token_index": 9,
+          "row": 0,
+          "col": 9,
+          "norm": 48.81546401977539,
+          "approx_center_xy": [
+            744.56,
+            20.75
+          ]
+        },
+        {
+          "token_index": 248,
+          "row": 15,
+          "col": 8,
+          "norm": 48.775211334228516,
+          "approx_center_xy": [
+            666.19,
+            643.25
+          ]
+        },
+        {
+          "token_index": 229,
+          "row": 14,
+          "col": 5,
+          "norm": 47.83121109008789,
+          "approx_center_xy": [
+            431.06,
+            601.75
+          ]
+        },
+        {
+          "token_index": 246,
+          "row": 15,
+          "col": 6,
+          "norm": 46.72035598754883,
+          "approx_center_xy": [
+            509.44,
+            643.25
+          ]
+        },
+        {
+          "token_index": 33,
+          "row": 2,
+          "col": 1,
+          "norm": 45.94917297363281,
+          "approx_center_xy": [
+            117.56,
+            103.75
+          ]
+        },
+        {
+          "token_index": 94,
+          "row": 5,
+          "col": 14,
+          "norm": 45.39418411254883,
+          "approx_center_xy": [
+            1136.44,
+            228.25
+          ]
+        },
+        {
+          "token_index": 172,
+          "row": 10,
+          "col": 12,
+          "norm": 44.72718811035156,
+          "approx_center_xy": [
+            979.69,
+            435.75
+          ]
+        },
+        {
+          "token_index": 244,
+          "row": 15,
+          "col": 4,
+          "norm": 44.58493423461914,
+          "approx_center_xy": [
+            352.69,
+            643.25
+          ]
+        },
+        {
+          "token_index": 230,
+          "row": 14,
+          "col": 6,
+          "norm": 44.51177978515625,
+          "approx_center_xy": [
+            509.44,
+            601.75
+          ]
+        },
+        {
+          "token_index": 228,
+          "row": 14,
+          "col": 4,
+          "norm": 44.294044494628906,
+          "approx_center_xy": [
+            352.69,
+            601.75
+          ]
+        }
+      ]
+    },
+    {
+      "prompt_index": 5,
+      "prompt_text": "plate .",
+      "tensor_path": "/home/iibrohimm/project/next_step/thinkdet/results/analysis/tofu_layer9_prompts_20260312/05_plate_layer9.pt",
+      "grid_side": 16,
+      "feature_shape": [
+        256,
+        1024
+      ],
+      "token_norm_mean": 35.97541427612305,
+      "token_norm_std": 4.137410640716553,
+      "token_norm_min": 28.903480529785156,
+      "token_norm_max": 49.45886993408203,
+      "top_tokens": [
+        {
+          "token_index": 9,
+          "row": 0,
+          "col": 9,
+          "norm": 49.45886993408203,
+          "approx_center_xy": [
+            744.56,
+            20.75
+          ]
+        },
+        {
+          "token_index": 248,
+          "row": 15,
+          "col": 8,
+          "norm": 49.151371002197266,
+          "approx_center_xy": [
+            666.19,
+            643.25
+          ]
+        },
+        {
+          "token_index": 229,
+          "row": 14,
+          "col": 5,
+          "norm": 48.44001770019531,
+          "approx_center_xy": [
+            431.06,
+            601.75
+          ]
+        },
+        {
+          "token_index": 246,
+          "row": 15,
+          "col": 6,
+          "norm": 47.608680725097656,
+          "approx_center_xy": [
+            509.44,
+            643.25
+          ]
+        },
+        {
+          "token_index": 244,
+          "row": 15,
+          "col": 4,
+          "norm": 45.88410568237305,
+          "approx_center_xy": [
+            352.69,
+            643.25
+          ]
+        },
+        {
+          "token_index": 33,
+          "row": 2,
+          "col": 1,
+          "norm": 45.83210754394531,
+          "approx_center_xy": [
+            117.56,
+            103.75
+          ]
+        },
+        {
+          "token_index": 228,
+          "row": 14,
+          "col": 4,
+          "norm": 45.39493179321289,
+          "approx_center_xy": [
+            352.69,
+            601.75
+          ]
+        },
+        {
+          "token_index": 94,
+          "row": 5,
+          "col": 14,
+          "norm": 45.28374481201172,
+          "approx_center_xy": [
+            1136.44,
+            228.25
+          ]
+        },
+        {
+          "token_index": 230,
+          "row": 14,
+          "col": 6,
+          "norm": 45.22895812988281,
+          "approx_center_xy": [
+            509.44,
+            601.75
+          ]
+        },
+        {
+          "token_index": 172,
+          "row": 10,
+          "col": 12,
+          "norm": 45.06602096557617,
+          "approx_center_xy": [
+            979.69,
+            435.75
+          ]
+        }
+      ]
+    }
+  ],
+  "prompt_similarity_matrix": {
+    "labels": [
+      "0: i_need_something_t",
+      "1: fork",
+      "2: spoon",
+      "3: knife",
+      "4: tofu",
+      "5: plate"
+    ],
+    "matrix": [
+      [
+        0.9999998807907104,
+        0.9825143218040466,
+        0.982778787612915,
+        0.9836505055427551,
+        0.9780994057655334,
+        0.9744303226470947
+      ],
+      [
+        0.9825143218040466,
+        1.000000238418579,
+        0.9930683374404907,
+        0.9934766292572021,
+        0.9916274547576904,
+        0.9919626116752625
+      ],
+      [
+        0.982778787612915,
+        0.9930683374404907,
+        1.0,
+        0.9933745861053467,
+        0.9906614422798157,
+        0.9893929958343506
+      ],
+      [
+        0.9836505055427551,
+        0.9934766292572021,
+        0.9933745861053467,
+        1.000000238418579,
+        0.990179181098938,
+        0.9894477128982544
+      ],
+      [
+        0.9780992269515991,
+        0.99162757396698,
+        0.9906610250473022,
+        0.9901793003082275,
+        0.9999998807907104,
+        0.9921989440917969
+      ],
+      [
+        0.9744301438331604,
+        0.9919622540473938,
+        0.9893933534622192,
+        0.9894477128982544,
+        0.9921989440917969,
+        0.9999997615814209
+      ]
+    ],
+    "heatmap_path": "/home/iibrohimm/project/next_step/thinkdet/results/analysis/tofu_layer9_prompts_20260312/prompt_similarity_heatmap.png"
+  },
+  "delta_summaries": [
+    {
+      "reference_prompt": "i need something to cut the tofu with .",
+      "target_prompt": "fork .",
+      "delta_norm_mean": 7.674654006958008,
+      "delta_norm_max": 16.067724227905273,
+      "token_cosine_mean": 0.9765856266021729,
+      "token_cosine_min": 0.8531941175460815,
+      "token_cosine_max": 0.9882130026817322
+    },
+    {
+      "reference_prompt": "i need something to cut the tofu with .",
+      "target_prompt": "spoon .",
+      "delta_norm_mean": 7.492465972900391,
+      "delta_norm_max": 13.83838939666748,
+      "token_cosine_mean": 0.9769338965415955,
+      "token_cosine_min": 0.8963766694068909,
+      "token_cosine_max": 0.9892518520355225
+    },
+    {
+      "reference_prompt": "i need something to cut the tofu with .",
+      "target_prompt": "knife .",
+      "delta_norm_mean": 7.3700056076049805,
+      "delta_norm_max": 14.002821922302246,
+      "token_cosine_mean": 0.977618932723999,
+      "token_cosine_min": 0.886612057685852,
+      "token_cosine_max": 0.9898580312728882
+    },
+    {
+      "reference_prompt": "i need something to cut the tofu with .",
+      "target_prompt": "tofu .",
+      "delta_norm_mean": 8.270528793334961,
+      "delta_norm_max": 16.047481536865234,
+      "token_cosine_mean": 0.9718948602676392,
+      "token_cosine_min": 0.8720056414604187,
+      "token_cosine_max": 0.9871777892112732
+    },
+    {
+      "reference_prompt": "i need something to cut the tofu with .",
+      "target_prompt": "plate .",
+      "delta_norm_mean": 8.767426490783691,
+      "delta_norm_max": 15.766441345214844,
+      "token_cosine_mean": 0.9687938690185547,
+      "token_cosine_min": 0.8667307496070862,
+      "token_cosine_max": 0.9846020936965942
+    }
+  ]
+}

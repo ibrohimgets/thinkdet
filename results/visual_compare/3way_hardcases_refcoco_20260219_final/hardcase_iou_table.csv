@@ -1,0 +1,6 @@
+case,image_id,prompt,baseline_iou,stage1_iou,stage2_iou,s1_minus_base,s2_minus_base
+1,538544,the right most glass glass top right corner lowest .,0.000,0.963,0.967,+0.963,+0.967
+2,485014,chair on left by standing person .,0.000,0.926,0.931,+0.926,+0.931
+3,538263,guy on the left in back .,0.910,0.913,0.916,+0.003,+0.006
+4,505884,the wonderful father in the middle he is glorious .,0.045,0.939,0.937,+0.894,+0.892
+5,508429,the guy in orange behind the guy on phone .,0.046,0.000,0.000,-0.046,-0.046

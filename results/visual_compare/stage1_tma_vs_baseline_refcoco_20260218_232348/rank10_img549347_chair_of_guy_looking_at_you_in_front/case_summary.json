@@ -1,0 +1,39 @@
+{
+  "rank": 10,
+  "idx": 603,
+  "image_id": 549347,
+  "ref_id": 2887,
+  "prompt": "chair of guy looking at you in front .",
+  "expression": "chair of guy looking at you in front",
+  "baseline": {
+    "top_iou": 0.0,
+    "top_score": 0.06395368278026581,
+    "top_box": [
+      0.7584697008132935,
+      0.8588414788246155,
+      0.34483885765075684,
+      0.27407586574554443
+    ]
+  },
+  "tma": {
+    "top_iou": 0.8253316283226013,
+    "top_score": 0.0607159323990345,
+    "top_box": [
+      0.37261101603507996,
+      0.8897127509117126,
+      0.31642431020736694,
+      0.21214884519577026
+    ]
+  },
+  "gt_box": [
+    0.3661249876022339,
+    0.9050729274749756,
+    0.31337499618530273,
+    0.18985415995121002
+  ],
+  "iou_gap": 0.8253316283226013,
+  "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank10_img549347_chair_of_guy_looking_at_you_in_front",
+  "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank10_img549347_chair_of_guy_looking_at_you_in_front/comparison_grid.png",
+  "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank10_img549347_chair_of_guy_looking_at_you_in_front/baseline.png",
+  "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_232348/rank10_img549347_chair_of_guy_looking_at_you_in_front/stage1_tma.png"
+}

@@ -1,0 +1,39 @@
+{
+  "rank": 1,
+  "idx": 567,
+  "image_id": 550311,
+  "ref_id": 2793,
+  "prompt": "a black behind next to the white elderly guy .",
+  "expression": "a black behind next to the white elderly guy",
+  "baseline": {
+    "top_iou": 0.14378537237644196,
+    "top_score": 0.29721638560295105,
+    "top_box": [
+      0.6322587728500366,
+      0.5210974216461182,
+      0.6548777222633362,
+      0.9477128982543945
+    ]
+  },
+  "tma": {
+    "top_iou": 0.9773706793785095,
+    "top_score": 0.15579864382743835,
+    "top_box": [
+      0.2535240650177002,
+      0.508492648601532,
+      0.36113065481185913,
+      0.9684391021728516
+    ]
+  },
+  "gt_box": [
+    0.2525078058242798,
+    0.5087500214576721,
+    0.3642031252384186,
+    0.9825000166893005
+  ],
+  "iou_gap": 0.8335853070020676,
+  "case_dir": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank1_img550311_a_black_behind_next_to_the_white_eld",
+  "comparison_grid": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank1_img550311_a_black_behind_next_to_the_white_eld/comparison_grid.png",
+  "baseline_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank1_img550311_a_black_behind_next_to_the_white_eld/baseline.png",
+  "stage1_tma_file": "/home/iibrohimm/project/next_step/thinkdet/results/visual_compare/stage1_tma_vs_baseline_refcoco_20260218_231315/rank1_img550311_a_black_behind_next_to_the_white_eld/stage1_tma.png"
+}

@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "timestamp": "20260220_153930",
+  "dataset": {
+    "name": "refcocog",
+    "split_by": "umd",
+    "split": "val",
+    "total_samples": 4896,
+    "evaluated_samples": 4896
+  },
+  "config": {
+    "conf_thresh": 0.05,
+    "iou_thresh": 0.5,
+    "thinkdet_checkpoint": "/home/iibrohimm/project/next_step/thinkdet/checkpoints/refcoco_stage2_tma_8gpu_20260220_094146/thinkdet_refcoco_stage2_tma_epoch2.pth"
+  },
+  "summary": {
+    "baseline": {
+      "samples": 4896,
+      "top1_acc": 0.6049836601307189,
+      "top1_fp_rate": 0.39501633986928103,
+      "det_fp_rate": 0.6839445064138315,
+      "no_det_rate": 0.0004084967320261438,
+      "img_has_fp_rate": 0.9101307189542484
+    },
+    "thinkdet": {
+      "samples": 4896,
+      "top1_acc": 0.5218545751633987,
+      "top1_fp_rate": 0.47814542483660133,
+      "det_fp_rate": 0.7038481914944854,
+      "no_det_rate": 0.0004084967320261438,
+      "img_has_fp_rate": 0.9707924836601307
+    }
+  }
+}
