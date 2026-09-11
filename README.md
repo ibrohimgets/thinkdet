@@ -1,9 +1,35 @@
 # ThinkDet
 
-ThinkDet is an experimental adapter for open-vocabulary grounding.
-It keeps GroundingDINO and InternVL frozen, extracts query-conditioned
-InternVL hidden states, compresses them into a small set of summary tokens,
-and fuses those tokens into GroundingDINO's decoder text memory.
+ThinkDet investigates whether query-conditioned features from a multimodal
+language model can improve a frozen open-vocabulary detector on ambiguous,
+functional requests.
+
+The adapter keeps GroundingDINO and InternVL frozen, compresses selected
+InternVL hidden states into a small set of summary tokens, and injects them into
+GroundingDINO through a gated residual path.
+
+## Result at a glance
+
+| Evaluation | GroundingDINO baseline | ThinkDet | Interpretation |
+| --- | ---: | ---: | --- |
+| Corrected held-out affordance benchmark, top-1 Hit@0.5 | 16.99% | 17.77% | Small gain on a narrow functional-query stress test |
+
+The broader evaluation is mixed: early checkpoints regress on standard COCO AP
+and RefCOCO-family evaluation, while the unified residual run mostly recovers
+the baseline. This repository intentionally reports both positive and negative
+results.
+
+## Why this work is useful
+
+- Demonstrates a real MLLM-to-detector adapter rather than prompt-only wrapping.
+- Includes corrected evaluation artifacts and diagnostics for ranking failures.
+- Provides reusable training, inference, and benchmark scripts.
+- Shows how to build baseline-safe residual adaptation and how to audit claims
+  when an evaluation bug changes the conclusion.
+
+**Status:** research prototype. It is evidence of multimodal-model engineering
+and evaluation discipline, not a production detector or a general improvement
+over GroundingDINO.
 
 ## Active Architecture
 
